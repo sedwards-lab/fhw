@@ -1,0 +1,1065 @@
+%module base:DataziChar
+  %data base:DataziChar.GeneralCategory =
+    {base:DataziChar.UppercaseLetter;
+     base:DataziChar.LowercaseLetter;
+     base:DataziChar.TitlecaseLetter;
+     base:DataziChar.ModifierLetter;
+     base:DataziChar.OtherLetter;
+     base:DataziChar.NonSpacingMark;
+     base:DataziChar.SpacingCombiningMark;
+     base:DataziChar.EnclosingMark;
+     base:DataziChar.DecimalNumber;
+     base:DataziChar.LetterNumber;
+     base:DataziChar.OtherNumber;
+     base:DataziChar.ConnectorPunctuation;
+     base:DataziChar.DashPunctuation;
+     base:DataziChar.OpenPunctuation;
+     base:DataziChar.ClosePunctuation;
+     base:DataziChar.InitialQuote;
+     base:DataziChar.FinalQuote;
+     base:DataziChar.OtherPunctuation;
+     base:DataziChar.MathSymbol;
+     base:DataziChar.CurrencySymbol;
+     base:DataziChar.ModifierSymbol;
+     base:DataziChar.OtherSymbol;
+     base:DataziChar.Space;
+     base:DataziChar.LineSeparator;
+     base:DataziChar.ParagraphSeparator;
+     base:DataziChar.Control;
+     base:DataziChar.Format;
+     base:DataziChar.Surrogate;
+     base:DataziChar.PrivateUse;
+     base:DataziChar.NotAssigned};
+  base:DataziChar.generalCategory :: ghczmprim:GHCziTypes.Char ->
+                                     base:DataziChar.GeneralCategory =
+    \ (dsdhLX::ghczmprim:GHCziTypes.Char) ->
+        base:DataziChar.UppercaseLetter;
+  base:DataziChar.isLetter :: ghczmprim:GHCziTypes.Char ->
+                              ghczmprim:GHCziTypes.Bool =
+    \ (cahIe::ghczmprim:GHCziTypes.Char) -> ghczmprim:GHCziTypes.True;
+  base:DataziChar.isMark :: ghczmprim:GHCziTypes.Char ->
+                            ghczmprim:GHCziTypes.Bool =
+    \ (cahIf::ghczmprim:GHCziTypes.Char) -> ghczmprim:GHCziTypes.False;
+  base:DataziChar.isNumber :: ghczmprim:GHCziTypes.Char ->
+                              ghczmprim:GHCziTypes.Bool =
+    base:DataziChar.isMark;
+  base:DataziChar.isPunctuation :: ghczmprim:GHCziTypes.Char ->
+                                   ghczmprim:GHCziTypes.Bool =
+    base:DataziChar.isMark;
+  base:DataziChar.isSymbol :: ghczmprim:GHCziTypes.Char ->
+                              ghczmprim:GHCziTypes.Bool =
+    base:DataziChar.isMark;
+  base:DataziChar.isSeparator :: ghczmprim:GHCziTypes.Char ->
+                                 ghczmprim:GHCziTypes.Bool =
+    base:DataziChar.isMark;
+  base:DataziChar.zdfBoundedGeneralCategory :: base:GHCziEnum.Bounded
+                                               base:DataziChar.GeneralCategory =
+    base:GHCziEnum.DZCBounded @ base:DataziChar.GeneralCategory
+    base:DataziChar.UppercaseLetter base:DataziChar.NotAssigned;
+  base:DataziChar.zdfShowGeneralCategory60 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("UppercaseLetter"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory59 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory60;
+  base:DataziChar.zdfShowGeneralCategory58 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("LowercaseLetter"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory57 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory58;
+  base:DataziChar.zdfShowGeneralCategory56 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("TitlecaseLetter"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory55 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory56;
+  base:DataziChar.zdfShowGeneralCategory54 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("ModifierLetter"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory53 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory54;
+  base:DataziChar.zdfShowGeneralCategory52 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("OtherLetter"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory51 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory52;
+  base:DataziChar.zdfShowGeneralCategory50 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("NonSpacingMark"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory49 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory50;
+  base:DataziChar.zdfShowGeneralCategory48 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("SpacingCombiningMark"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory47 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory48;
+  base:DataziChar.zdfShowGeneralCategory46 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("EnclosingMark"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory45 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory46;
+  base:DataziChar.zdfShowGeneralCategory44 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("DecimalNumber"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory43 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory44;
+  base:DataziChar.zdfShowGeneralCategory42 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("LetterNumber"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory41 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory42;
+  base:DataziChar.zdfShowGeneralCategory40 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("OtherNumber"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory39 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory40;
+  base:DataziChar.zdfShowGeneralCategory38 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("ConnectorPunctuation"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory37 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory38;
+  base:DataziChar.zdfShowGeneralCategory36 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("DashPunctuation"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory35 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory36;
+  base:DataziChar.zdfShowGeneralCategory34 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("OpenPunctuation"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory33 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory34;
+  base:DataziChar.zdfShowGeneralCategory32 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("ClosePunctuation"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory31 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory32;
+  base:DataziChar.zdfShowGeneralCategory30 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("InitialQuote"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory29 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory30;
+  base:DataziChar.zdfShowGeneralCategory28 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("FinalQuote"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory27 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory28;
+  base:DataziChar.zdfShowGeneralCategory26 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("OtherPunctuation"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory25 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory26;
+  base:DataziChar.zdfShowGeneralCategory24 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("MathSymbol"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory23 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory24;
+  base:DataziChar.zdfShowGeneralCategory22 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("CurrencySymbol"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory21 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory22;
+  base:DataziChar.zdfShowGeneralCategory20 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("ModifierSymbol"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory19 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory20;
+  base:DataziChar.zdfShowGeneralCategory18 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("OtherSymbol"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory17 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory18;
+  base:DataziChar.zdfShowGeneralCategory16 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Space"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory15 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory16;
+  base:DataziChar.zdfShowGeneralCategory14 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("LineSeparator"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory13 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory14;
+  base:DataziChar.zdfShowGeneralCategory12 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("ParagraphSeparator"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory11 :: (ghczmprim:GHCziTypes.ZMZN
+                                               ghczmprim:GHCziTypes.Char)
+                                              ->
+                                              ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory12;
+  base:DataziChar.zdfShowGeneralCategory10 :: ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Control"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory9 :: (ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char)
+                                             ->
+                                             ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory10;
+  base:DataziChar.zdfShowGeneralCategory8 :: ghczmprim:GHCziTypes.ZMZN
+                                             ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Format"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory7 :: (ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char)
+                                             ->
+                                             ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory8;
+  base:DataziChar.zdfShowGeneralCategory6 :: ghczmprim:GHCziTypes.ZMZN
+                                             ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Surrogate"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory5 :: (ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char)
+                                             ->
+                                             ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory6;
+  base:DataziChar.zdfShowGeneralCategory4 :: ghczmprim:GHCziTypes.ZMZN
+                                             ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("PrivateUse"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory3 :: (ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char)
+                                             ->
+                                             ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory4;
+  base:DataziChar.zdfShowGeneralCategory2 :: ghczmprim:GHCziTypes.ZMZN
+                                             ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("NotAssigned"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfShowGeneralCategory1 :: (ghczmprim:GHCziTypes.ZMZN
+                                              ghczmprim:GHCziTypes.Char)
+                                             ->
+                                             ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:DataziChar.zdfShowGeneralCategory2;
+  base:DataziChar.zdwzdcshowsPrec :: base:DataziChar.GeneralCategory
+                                     ->
+                                     (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                                     ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    \ (wsi1i::base:DataziChar.GeneralCategory) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) wsi1i
+        %of (wildXM::base:DataziChar.GeneralCategory)
+          {base:DataziChar.UppercaseLetter ->
+             base:DataziChar.zdfShowGeneralCategory59;
+           base:DataziChar.LowercaseLetter ->
+             base:DataziChar.zdfShowGeneralCategory57;
+           base:DataziChar.TitlecaseLetter ->
+             base:DataziChar.zdfShowGeneralCategory55;
+           base:DataziChar.ModifierLetter ->
+             base:DataziChar.zdfShowGeneralCategory53;
+           base:DataziChar.OtherLetter ->
+             base:DataziChar.zdfShowGeneralCategory51;
+           base:DataziChar.NonSpacingMark ->
+             base:DataziChar.zdfShowGeneralCategory49;
+           base:DataziChar.SpacingCombiningMark ->
+             base:DataziChar.zdfShowGeneralCategory47;
+           base:DataziChar.EnclosingMark ->
+             base:DataziChar.zdfShowGeneralCategory45;
+           base:DataziChar.DecimalNumber ->
+             base:DataziChar.zdfShowGeneralCategory43;
+           base:DataziChar.LetterNumber ->
+             base:DataziChar.zdfShowGeneralCategory41;
+           base:DataziChar.OtherNumber ->
+             base:DataziChar.zdfShowGeneralCategory39;
+           base:DataziChar.ConnectorPunctuation ->
+             base:DataziChar.zdfShowGeneralCategory37;
+           base:DataziChar.DashPunctuation ->
+             base:DataziChar.zdfShowGeneralCategory35;
+           base:DataziChar.OpenPunctuation ->
+             base:DataziChar.zdfShowGeneralCategory33;
+           base:DataziChar.ClosePunctuation ->
+             base:DataziChar.zdfShowGeneralCategory31;
+           base:DataziChar.InitialQuote ->
+             base:DataziChar.zdfShowGeneralCategory29;
+           base:DataziChar.FinalQuote ->
+             base:DataziChar.zdfShowGeneralCategory27;
+           base:DataziChar.OtherPunctuation ->
+             base:DataziChar.zdfShowGeneralCategory25;
+           base:DataziChar.MathSymbol ->
+             base:DataziChar.zdfShowGeneralCategory23;
+           base:DataziChar.CurrencySymbol ->
+             base:DataziChar.zdfShowGeneralCategory21;
+           base:DataziChar.ModifierSymbol ->
+             base:DataziChar.zdfShowGeneralCategory19;
+           base:DataziChar.OtherSymbol ->
+             base:DataziChar.zdfShowGeneralCategory17;
+           base:DataziChar.Space ->
+             base:DataziChar.zdfShowGeneralCategory15;
+           base:DataziChar.LineSeparator ->
+             base:DataziChar.zdfShowGeneralCategory13;
+           base:DataziChar.ParagraphSeparator ->
+             base:DataziChar.zdfShowGeneralCategory11;
+           base:DataziChar.Control ->
+             base:DataziChar.zdfShowGeneralCategory9;
+           base:DataziChar.Format ->
+             base:DataziChar.zdfShowGeneralCategory7;
+           base:DataziChar.Surrogate ->
+             base:DataziChar.zdfShowGeneralCategory5;
+           base:DataziChar.PrivateUse ->
+             base:DataziChar.zdfShowGeneralCategory3;
+           base:DataziChar.NotAssigned ->
+             base:DataziChar.zdfShowGeneralCategory1};
+  base:DataziChar.zdfShowGeneralCategoryzuzdcshowsPrec :: ghczmprim:GHCziTypes.Int
+                                                          ->
+                                                          base:DataziChar.GeneralCategory ->
+                                                          (ghczmprim:GHCziTypes.ZMZN
+                                                           ghczmprim:GHCziTypes.Char)
+                                                          ->
+                                                          ghczmprim:GHCziTypes.ZMZN
+                                                          ghczmprim:GHCziTypes.Char =
+    \ (wsi1h::ghczmprim:GHCziTypes.Int)
+      (w1si1i::base:DataziChar.GeneralCategory) ->
+        base:DataziChar.zdwzdcshowsPrec w1si1i;
+  base:DataziChar.zdfShowGeneralCategoryzuzdcshowList :: (ghczmprim:GHCziTypes.ZMZN
+                                                          base:DataziChar.GeneralCategory)
+                                                         ->
+                                                         (ghczmprim:GHCziTypes.ZMZN
+                                                          ghczmprim:GHCziTypes.Char)
+                                                         ->
+                                                         ghczmprim:GHCziTypes.ZMZN
+                                                         ghczmprim:GHCziTypes.Char =
+    base:GHCziShow.showListzuzu @ base:DataziChar.GeneralCategory
+    base:DataziChar.zdwzdcshowsPrec;
+  base:DataziChar.zdfShowGeneralCategoryzuzdcshow :: base:DataziChar.GeneralCategory
+                                                     ->
+                                                     ghczmprim:GHCziTypes.ZMZN
+                                                     ghczmprim:GHCziTypes.Char =
+    \ (xa59u::base:DataziChar.GeneralCategory) ->
+        base:DataziChar.zdwzdcshowsPrec xa59u
+        (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char);
+  base:DataziChar.zdfShowGeneralCategory :: base:GHCziShow.Show
+                                            base:DataziChar.GeneralCategory =
+    base:GHCziShow.DZCShow @ base:DataziChar.GeneralCategory
+    base:DataziChar.zdfShowGeneralCategoryzuzdcshowsPrec
+    base:DataziChar.zdfShowGeneralCategoryzuzdcshow
+    base:DataziChar.zdfShowGeneralCategoryzuzdcshowList;
+  %rec
+  {base:DataziChar.zdfEnumGeneralCategoryzugo :: ghczmprim:GHCziPrim.Intzh
+                                                 ->
+                                                 ghczmprim:GHCziTypes.ZMZN
+                                                 base:DataziChar.GeneralCategory =
+     \ (xaa2w::ghczmprim:GHCziPrim.Intzh) ->
+         ghczmprim:GHCziTypes.ZC @ base:DataziChar.GeneralCategory
+         (ghczmprim:GHCziPrim.tagToEnumzh @ base:DataziChar.GeneralCategory
+          xaa2w)
+         (%case (ghczmprim:GHCziTypes.ZMZN
+                 base:DataziChar.GeneralCategory) xaa2w
+          %of (wildX36::ghczmprim:GHCziPrim.Intzh)
+            {%_ ->
+               base:DataziChar.zdfEnumGeneralCategoryzugo
+               (ghczmprim:GHCziPrim.zpzh wildX36 (1::ghczmprim:GHCziPrim.Intzh));
+             (29::ghczmprim:GHCziPrim.Intzh) ->
+               ghczmprim:GHCziTypes.ZMZN @ base:DataziChar.GeneralCategory})};
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFrom :: base:DataziChar.GeneralCategory
+                                                         ->
+                                                         ghczmprim:GHCziTypes.ZMZN
+                                                         base:DataziChar.GeneralCategory =
+    \ (aahK4::base:DataziChar.GeneralCategory) ->
+        %case (ghczmprim:GHCziTypes.ZMZN
+               base:DataziChar.GeneralCategory) aahK4
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %let x0aa2t :: ghczmprim:GHCziPrim.Intzh =
+                    ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                    x1X81
+             %in %case (ghczmprim:GHCziTypes.ZMZN
+                        base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zgzh x0aa2t
+                                                          (29::ghczmprim:GHCziPrim.Intzh))
+                 %of (wildX2A::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      base:DataziChar.zdfEnumGeneralCategoryzugo x0aa2t;
+                    ghczmprim:GHCziTypes.True ->
+                      ghczmprim:GHCziTypes.ZMZN @ base:DataziChar.GeneralCategory}};
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcfromEnum :: base:DataziChar.GeneralCategory
+                                                         -> ghczmprim:GHCziTypes.Int =
+    \ (aahKa::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Int aahKa
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             ghczmprim:GHCziTypes.Izh
+             (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+              x1X81)};
+  base:DataziChar.zdfEnumGeneralCategoryzuc1 :: ghczmprim:GHCziTypes.Int
+                                                ->
+                                                (ghczmprim:GHCziTypes.ZMZN
+                                                 base:DataziChar.GeneralCategory)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                base:DataziChar.GeneralCategory =
+    \ (xa7u::ghczmprim:GHCziTypes.Int)
+      (ysa7v::ghczmprim:GHCziTypes.ZMZN
+              base:DataziChar.GeneralCategory) ->
+        ghczmprim:GHCziTypes.ZC @ base:DataziChar.GeneralCategory
+        (%case base:DataziChar.GeneralCategory xa7u
+         %of (wildXC::ghczmprim:GHCziTypes.Int)
+           {ghczmprim:GHCziTypes.Izh (aahJy::ghczmprim:GHCziPrim.Intzh) ->
+              ghczmprim:GHCziPrim.tagToEnumzh @ base:DataziChar.GeneralCategory
+              aahJy})
+        ysa7v;
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromThen :: base:DataziChar.GeneralCategory
+                                                             ->
+                                                             base:DataziChar.GeneralCategory ->
+                                                             ghczmprim:GHCziTypes.ZMZN
+                                                             base:DataziChar.GeneralCategory =
+    \ (aahK6::base:DataziChar.GeneralCategory)
+      (bahK7::base:DataziChar.GeneralCategory) ->
+        %case (ghczmprim:GHCziTypes.ZMZN
+               base:DataziChar.GeneralCategory) aahK6
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case (ghczmprim:GHCziTypes.ZMZN
+                    base:DataziChar.GeneralCategory) bahK7
+             %of (x2Xc0::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %let bzhahK9 :: ghczmprim:GHCziPrim.Intzh =
+                         ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                         x2Xc0
+                  %in %let azhahK8 :: ghczmprim:GHCziPrim.Intzh =
+                             ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                             x1X81
+                      %in %let zdjshT6 :: ghczmprim:GHCziPrim.Intzh ->
+                                          ghczmprim:GHCziTypes.ZMZN
+                                          base:DataziChar.GeneralCategory =
+                                 \ (yaa4e::ghczmprim:GHCziPrim.Intzh) ->
+                                     %case (ghczmprim:GHCziTypes.ZMZN
+                                            base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zgzezh
+                                                                              bzhahK9 azhahK8)
+                                     %of (wildX2w::ghczmprim:GHCziTypes.Bool)
+                                       {ghczmprim:GHCziTypes.False ->
+                                          base:GHCziEnum.efdtIntDnFB
+                                          @ (ghczmprim:GHCziTypes.ZMZN
+                                             base:DataziChar.GeneralCategory)
+                                          base:DataziChar.zdfEnumGeneralCategoryzuc1
+                                          (ghczmprim:GHCziTypes.ZMZN
+                                           @ base:DataziChar.GeneralCategory)
+                                          azhahK8 bzhahK9 yaa4e;
+                                        ghczmprim:GHCziTypes.True ->
+                                          base:GHCziEnum.efdtIntUpFB
+                                          @ (ghczmprim:GHCziTypes.ZMZN
+                                             base:DataziChar.GeneralCategory)
+                                          base:DataziChar.zdfEnumGeneralCategoryzuc1
+                                          (ghczmprim:GHCziTypes.ZMZN
+                                           @ base:DataziChar.GeneralCategory)
+                                          azhahK8 bzhahK9 yaa4e}
+                          %in %case (ghczmprim:GHCziTypes.ZMZN
+                                     base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zgzh
+                                                                       azhahK8 bzhahK9)
+                              %of (wildXY::ghczmprim:GHCziTypes.Bool)
+                                {ghczmprim:GHCziTypes.False ->
+                                   zdjshT6 (29::ghczmprim:GHCziPrim.Intzh);
+                                 ghczmprim:GHCziTypes.True ->
+                                   zdjshT6 (0::ghczmprim:GHCziPrim.Intzh)}}};
+  lvlri8ZZ :: ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziTypes.Czh (')'::ghczmprim:GHCziPrim.Charzh);
+  lvl1ri90 :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char lvlri8ZZ
+    (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char);
+  lvl2ri91 :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziShow.zdwshowSignedInt (0::ghczmprim:GHCziPrim.Intzh)
+    (29::ghczmprim:GHCziPrim.Intzh) lvl1ri90;
+  lvl3ri92 :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackAppendCStringzh
+    (") is outside of enumeration\x27s range (0,"::ghczmprim:GHCziPrim.Addrzh)
+    lvl2ri91;
+  base:DataziChar.zdfEnumGeneralCategory1 :: ghczmprim:GHCziPrim.Intzh
+                                             -> base:DataziChar.GeneralCategory =
+    \ (wwsi1n::ghczmprim:GHCziPrim.Intzh) ->
+        base:GHCziErr.error @ base:DataziChar.GeneralCategory
+        (ghczmprim:GHCziCString.unpackAppendCStringzh
+         ("toEnum{GeneralCategory}: tag ("::ghczmprim:GHCziPrim.Addrzh)
+         (base:GHCziShow.zdwshowSignedInt (0::ghczmprim:GHCziPrim.Intzh)
+          wwsi1n lvl3ri92));
+  base:DataziChar.zdwzdctoEnum :: ghczmprim:GHCziPrim.Intzh ->
+                                  base:DataziChar.GeneralCategory =
+    \ (wwsi1t::ghczmprim:GHCziPrim.Intzh) ->
+        %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zgzezh
+                                               wwsi1t (0::ghczmprim:GHCziPrim.Intzh))
+        %of (wildahq::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             base:DataziChar.zdfEnumGeneralCategory1 wwsi1t;
+           ghczmprim:GHCziTypes.True ->
+             %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zlzezh
+                                                    wwsi1t (29::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1XU::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  base:DataziChar.zdfEnumGeneralCategory1 wwsi1t;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziPrim.tagToEnumzh @ base:DataziChar.GeneralCategory
+                  wwsi1t}};
+  base:DataziChar.zdfEnumGeneralCategoryzuzdctoEnum :: ghczmprim:GHCziTypes.Int
+                                                       -> base:DataziChar.GeneralCategory =
+    \ (wsi1r::ghczmprim:GHCziTypes.Int) ->
+        %case base:DataziChar.GeneralCategory wsi1r
+        %of (w1Xi4t::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsi1t::ghczmprim:GHCziPrim.Intzh) ->
+             base:DataziChar.zdwzdctoEnum wwsi1t};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdczlze :: base:DataziChar.GeneralCategory
+                                                    ->
+                                                    base:DataziChar.GeneralCategory ->
+                                                    ghczmprim:GHCziTypes.Bool =
+    \ (aahJN::base:DataziChar.GeneralCategory)
+      (bahJO::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJN
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJO
+             %of (x2Xc7::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  ghczmprim:GHCziPrim.zlzezh
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x1X81)
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x2Xc7)}};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdczg :: base:DataziChar.GeneralCategory
+                                                  ->
+                                                  base:DataziChar.GeneralCategory ->
+                                                  ghczmprim:GHCziTypes.Bool =
+    \ (aahJV::base:DataziChar.GeneralCategory)
+      (bahJW::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJV
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJW
+             %of (x2Xc8::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  ghczmprim:GHCziPrim.zgzh
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x1X81)
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x2Xc8)}};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdczgze :: base:DataziChar.GeneralCategory
+                                                    ->
+                                                    base:DataziChar.GeneralCategory ->
+                                                    ghczmprim:GHCziTypes.Bool =
+    \ (aahJR::base:DataziChar.GeneralCategory)
+      (bahJS::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJR
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJS
+             %of (x2Xc9::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  ghczmprim:GHCziPrim.zgzezh
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x1X81)
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x2Xc9)}};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdczl :: base:DataziChar.GeneralCategory
+                                                  ->
+                                                  base:DataziChar.GeneralCategory ->
+                                                  ghczmprim:GHCziTypes.Bool =
+    \ (aahJJ::base:DataziChar.GeneralCategory)
+      (bahJK::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJJ
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJK
+             %of (x2Xca::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  ghczmprim:GHCziPrim.zlzh
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x1X81)
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x2Xca)}};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdccompare :: base:DataziChar.GeneralCategory
+                                                       ->
+                                                       base:DataziChar.GeneralCategory ->
+                                                       ghczmprim:GHCziTypes.Ordering =
+    \ (aahJF::base:DataziChar.GeneralCategory)
+      (bahJG::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Ordering aahJF
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Ordering bahJG
+             %of (x2Xcb::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %let bzhahJI :: ghczmprim:GHCziPrim.Intzh =
+                         ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                         x2Xcb
+                  %in %let azhahJH :: ghczmprim:GHCziPrim.Intzh =
+                             ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                             x1X81
+                      %in %case ghczmprim:GHCziTypes.Ordering (ghczmprim:GHCziPrim.zlzh
+                                                               azhahJH bzhahJI)
+                          %of (wildX14::ghczmprim:GHCziTypes.Bool)
+                            {ghczmprim:GHCziTypes.False ->
+                               %case ghczmprim:GHCziTypes.Ordering (ghczmprim:GHCziPrim.zezezh
+                                                                    azhahJH bzhahJI)
+                               %of (wild1Xt::ghczmprim:GHCziTypes.Bool)
+                                 {ghczmprim:GHCziTypes.False ->
+                                    ghczmprim:GHCziTypes.GT;
+                                  ghczmprim:GHCziTypes.True ->
+                                    ghczmprim:GHCziTypes.EQ};
+                             ghczmprim:GHCziTypes.True ->
+                               ghczmprim:GHCziTypes.LT}}};
+  base:DataziChar.zdfEqGeneralCategoryzuzdczeze :: base:DataziChar.GeneralCategory
+                                                   ->
+                                                   base:DataziChar.GeneralCategory ->
+                                                   ghczmprim:GHCziTypes.Bool =
+    \ (aahJzz::base:DataziChar.GeneralCategory)
+      (bahJA::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJzz
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJA
+             %of (x2Xcc::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  ghczmprim:GHCziPrim.zezezh
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x1X81)
+                  (ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                   x2Xcc)}};
+  base:DataziChar.zdfEqGeneralCategoryzuzdczsze :: base:DataziChar.GeneralCategory
+                                                   ->
+                                                   base:DataziChar.GeneralCategory ->
+                                                   ghczmprim:GHCziTypes.Bool =
+    \ (aahJD::base:DataziChar.GeneralCategory)
+      (bahJE::base:DataziChar.GeneralCategory) ->
+        %case ghczmprim:GHCziTypes.Bool aahJD
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case ghczmprim:GHCziTypes.Bool bahJE
+             %of (x2Xcc::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.zezezh
+                                                   (ghczmprim:GHCziPrim.dataToTagzh
+                                                    @ base:DataziChar.GeneralCategory x1X81)
+                                                   (ghczmprim:GHCziPrim.dataToTagzh
+                                                    @ base:DataziChar.GeneralCategory x2Xcc))
+                  %of (wilda2kV::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.True;
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.False}}};
+  base:DataziChar.zdfEqGeneralCategory :: ghczmprim:GHCziClasses.Eq
+                                          base:DataziChar.GeneralCategory =
+    ghczmprim:GHCziClasses.DZCEq @ base:DataziChar.GeneralCategory
+    base:DataziChar.zdfEqGeneralCategoryzuzdczeze
+    base:DataziChar.zdfEqGeneralCategoryzuzdczsze;
+  base:DataziChar.zdfOrdGeneralCategoryzuzdcmin :: base:DataziChar.GeneralCategory
+                                                   ->
+                                                   base:DataziChar.GeneralCategory ->
+                                                   base:DataziChar.GeneralCategory =
+    \ (xa2kw::base:DataziChar.GeneralCategory)
+      (ya2kx::base:DataziChar.GeneralCategory) ->
+        %case base:DataziChar.GeneralCategory xa2kw
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case base:DataziChar.GeneralCategory ya2kx
+             %of (x2Xc7::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zlzezh
+                                                         (ghczmprim:GHCziPrim.dataToTagzh
+                                                          @ base:DataziChar.GeneralCategory x1X81)
+                                                         (ghczmprim:GHCziPrim.dataToTagzh
+                                                          @ base:DataziChar.GeneralCategory x2Xc7))
+                  %of (wilda2ky::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       x2Xc7;
+                     ghczmprim:GHCziTypes.True ->
+                       x1X81}}};
+  base:DataziChar.zdfOrdGeneralCategoryzuzdcmax :: base:DataziChar.GeneralCategory
+                                                   ->
+                                                   base:DataziChar.GeneralCategory ->
+                                                   base:DataziChar.GeneralCategory =
+    \ (xa2kG::base:DataziChar.GeneralCategory)
+      (ya2kH::base:DataziChar.GeneralCategory) ->
+        %case base:DataziChar.GeneralCategory xa2kG
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case base:DataziChar.GeneralCategory ya2kH
+             %of (x2Xc7::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zlzezh
+                                                         (ghczmprim:GHCziPrim.dataToTagzh
+                                                          @ base:DataziChar.GeneralCategory x1X81)
+                                                         (ghczmprim:GHCziPrim.dataToTagzh
+                                                          @ base:DataziChar.GeneralCategory x2Xc7))
+                  %of (wilda2kI::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       x1X81;
+                     ghczmprim:GHCziTypes.True ->
+                       x2Xc7}}};
+  base:DataziChar.zdfOrdGeneralCategory :: ghczmprim:GHCziClasses.Ord
+                                           base:DataziChar.GeneralCategory =
+    ghczmprim:GHCziClasses.DZCOrd @ base:DataziChar.GeneralCategory
+    base:DataziChar.zdfEqGeneralCategory
+    base:DataziChar.zdfOrdGeneralCategoryzuzdccompare
+    base:DataziChar.zdfOrdGeneralCategoryzuzdczl
+    base:DataziChar.zdfOrdGeneralCategoryzuzdczgze
+    base:DataziChar.zdfOrdGeneralCategoryzuzdczg
+    base:DataziChar.zdfOrdGeneralCategoryzuzdczlze
+    base:DataziChar.zdfOrdGeneralCategoryzuzdcmax
+    base:DataziChar.zdfOrdGeneralCategoryzuzdcmin;
+  lvl4ri93 :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("succ{GeneralCategory}: tried to take `succ\x27 of last tag in enumeration"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfEnumGeneralCategory3 :: base:DataziChar.GeneralCategory =
+    base:GHCziErr.error @ base:DataziChar.GeneralCategory lvl4ri93;
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcsucc :: base:DataziChar.GeneralCategory
+                                                     -> base:DataziChar.GeneralCategory =
+    \ (aahJZZ::base:DataziChar.GeneralCategory) ->
+        %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.dataToTagzh
+                                               @ base:DataziChar.GeneralCategory aahJZZ)
+        %of (wildX4k::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             ghczmprim:GHCziPrim.tagToEnumzh @ base:DataziChar.GeneralCategory
+             (ghczmprim:GHCziPrim.zpzh wildX4k (1::ghczmprim:GHCziPrim.Intzh));
+           (29::ghczmprim:GHCziPrim.Intzh) ->
+             base:DataziChar.zdfEnumGeneralCategory3};
+  lvl5ri94 :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("pred{GeneralCategory}: tried to take `pred\x27 of first tag in enumeration"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziChar.zdfEnumGeneralCategory2 :: base:DataziChar.GeneralCategory =
+    base:GHCziErr.error @ base:DataziChar.GeneralCategory lvl5ri94;
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcpred :: base:DataziChar.GeneralCategory
+                                                     -> base:DataziChar.GeneralCategory =
+    \ (aahK1::base:DataziChar.GeneralCategory) ->
+        %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.dataToTagzh
+                                               @ base:DataziChar.GeneralCategory aahK1)
+        %of (wildX4o::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             ghczmprim:GHCziPrim.tagToEnumzh @ base:DataziChar.GeneralCategory
+             (ghczmprim:GHCziPrim.zpzh wildX4o (-1::ghczmprim:GHCziPrim.Intzh));
+           (0::ghczmprim:GHCziPrim.Intzh) ->
+             base:DataziChar.zdfEnumGeneralCategory2};
+  base:DataziChar.zdfEnumGeneralCategoryzuc :: ghczmprim:GHCziTypes.Int
+                                               ->
+                                               (ghczmprim:GHCziTypes.ZMZN
+                                                base:DataziChar.GeneralCategory)
+                                               ->
+                                               ghczmprim:GHCziTypes.ZMZN
+                                               base:DataziChar.GeneralCategory =
+    \ (xa7u::ghczmprim:GHCziTypes.Int)
+      (ysa7v::ghczmprim:GHCziTypes.ZMZN
+              base:DataziChar.GeneralCategory) ->
+        ghczmprim:GHCziTypes.ZC @ base:DataziChar.GeneralCategory
+        (base:DataziChar.zdfEnumGeneralCategoryzuzdctoEnum xa7u) ysa7v;
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromThenTo :: base:DataziChar.GeneralCategory
+                                                               ->
+                                                               base:DataziChar.GeneralCategory ->
+                                                               base:DataziChar.GeneralCategory ->
+                                                               ghczmprim:GHCziTypes.ZMZN
+                                                               base:DataziChar.GeneralCategory =
+    \ (x1aa0Y::base:DataziChar.GeneralCategory)
+      (x2aa0ZZ::base:DataziChar.GeneralCategory)
+      (yaa10::base:DataziChar.GeneralCategory) ->
+        %case (ghczmprim:GHCziTypes.ZMZN
+               base:DataziChar.GeneralCategory) x1aa0Y
+        %of (x3X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case (ghczmprim:GHCziTypes.ZMZN
+                    base:DataziChar.GeneralCategory) x2aa0ZZ
+             %of (x4Xcs::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %case (ghczmprim:GHCziTypes.ZMZN
+                         base:DataziChar.GeneralCategory) yaa10
+                  %of (x5Xcw::base:DataziChar.GeneralCategory)
+                    {%_ ->
+                       %let x6aa2H :: ghczmprim:GHCziPrim.Intzh =
+                              ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                              x4Xcs
+                       %in %let x7aa2G :: ghczmprim:GHCziPrim.Intzh =
+                                  ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                                  x3X81
+                           %in %case (ghczmprim:GHCziTypes.ZMZN
+                                      base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zgzezh
+                                                                        x6aa2H x7aa2G)
+                               %of (wildX2w::ghczmprim:GHCziTypes.Bool)
+                                 {ghczmprim:GHCziTypes.False ->
+                                    base:GHCziEnum.efdtIntDnFB
+                                    @ (ghczmprim:GHCziTypes.ZMZN base:DataziChar.GeneralCategory)
+                                    base:DataziChar.zdfEnumGeneralCategoryzuc
+                                    (ghczmprim:GHCziTypes.ZMZN @ base:DataziChar.GeneralCategory)
+                                    x7aa2G x6aa2H
+                                    (ghczmprim:GHCziPrim.dataToTagzh
+                                     @ base:DataziChar.GeneralCategory x5Xcw);
+                                  ghczmprim:GHCziTypes.True ->
+                                    base:GHCziEnum.efdtIntUpFB
+                                    @ (ghczmprim:GHCziTypes.ZMZN base:DataziChar.GeneralCategory)
+                                    base:DataziChar.zdfEnumGeneralCategoryzuc
+                                    (ghczmprim:GHCziTypes.ZMZN @ base:DataziChar.GeneralCategory)
+                                    x7aa2G x6aa2H
+                                    (ghczmprim:GHCziPrim.dataToTagzh
+                                     @ base:DataziChar.GeneralCategory x5Xcw)}}}};
+  base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromTo :: base:DataziChar.GeneralCategory
+                                                           ->
+                                                           base:DataziChar.GeneralCategory ->
+                                                           ghczmprim:GHCziTypes.ZMZN
+                                                           base:DataziChar.GeneralCategory =
+    \ (xaa0W::base:DataziChar.GeneralCategory)
+      (yaa0X::base:DataziChar.GeneralCategory) ->
+        %case (ghczmprim:GHCziTypes.ZMZN
+               base:DataziChar.GeneralCategory) xaa0W
+        %of (x1X81::base:DataziChar.GeneralCategory)
+          {%_ ->
+             %case (ghczmprim:GHCziTypes.ZMZN
+                    base:DataziChar.GeneralCategory) yaa0X
+             %of (x2Xcs::base:DataziChar.GeneralCategory)
+               {%_ ->
+                  %let y1aa2u :: ghczmprim:GHCziPrim.Intzh =
+                         ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                         x2Xcs
+                  %in %let x0aa2t :: ghczmprim:GHCziPrim.Intzh =
+                             ghczmprim:GHCziPrim.dataToTagzh @ base:DataziChar.GeneralCategory
+                             x1X81
+                      %in %case (ghczmprim:GHCziTypes.ZMZN
+                                 base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zgzh x0aa2t
+                                                                   y1aa2u)
+                          %of (wildX2A::ghczmprim:GHCziTypes.Bool)
+                            {ghczmprim:GHCziTypes.False ->
+                               %let %rec
+                                    {goaaas :: ghczmprim:GHCziPrim.Intzh ->
+                                               ghczmprim:GHCziTypes.ZMZN
+                                               base:DataziChar.GeneralCategory =
+                                       \ (x3aa2w::ghczmprim:GHCziPrim.Intzh) ->
+                                           ghczmprim:GHCziTypes.ZC @ base:DataziChar.GeneralCategory
+                                           (%case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zgzezh
+                                                                                   x3aa2w
+                                                                                   (0::ghczmprim:GHCziPrim.Intzh))
+                                            %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+                                              {ghczmprim:GHCziTypes.False ->
+                                                 base:DataziChar.zdfEnumGeneralCategory1 x3aa2w;
+                                               ghczmprim:GHCziTypes.True ->
+                                                 %case base:DataziChar.GeneralCategory (ghczmprim:GHCziPrim.zlzezh
+                                                                                        x3aa2w
+                                                                                        (29::ghczmprim:GHCziPrim.Intzh))
+                                                 %of (wild2XU::ghczmprim:GHCziTypes.Bool)
+                                                   {ghczmprim:GHCziTypes.False ->
+                                                      base:DataziChar.zdfEnumGeneralCategory1
+                                                      x3aa2w;
+                                                    ghczmprim:GHCziTypes.True ->
+                                                      ghczmprim:GHCziPrim.tagToEnumzh
+                                                      @ base:DataziChar.GeneralCategory x3aa2w}})
+                                           (%case (ghczmprim:GHCziTypes.ZMZN
+                                                   base:DataziChar.GeneralCategory) (ghczmprim:GHCziPrim.zezezh
+                                                                                     x3aa2w y1aa2u)
+                                            %of (wild1Xn::ghczmprim:GHCziTypes.Bool)
+                                              {ghczmprim:GHCziTypes.False ->
+                                                 goaaas
+                                                 (ghczmprim:GHCziPrim.zpzh x3aa2w
+                                                  (1::ghczmprim:GHCziPrim.Intzh));
+                                               ghczmprim:GHCziTypes.True ->
+                                                 ghczmprim:GHCziTypes.ZMZN
+                                                 @ base:DataziChar.GeneralCategory})}
+                               %in goaaas x0aa2t;
+                             ghczmprim:GHCziTypes.True ->
+                               ghczmprim:GHCziTypes.ZMZN @ base:DataziChar.GeneralCategory}}};
+  base:DataziChar.zdfEnumGeneralCategory :: base:GHCziEnum.Enum
+                                            base:DataziChar.GeneralCategory =
+    base:GHCziEnum.DZCEnum @ base:DataziChar.GeneralCategory
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcsucc
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcpred
+    base:DataziChar.zdfEnumGeneralCategoryzuzdctoEnum
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcfromEnum
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFrom
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromThen
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromTo
+    base:DataziChar.zdfEnumGeneralCategoryzuzdcenumFromThenTo;
+  base:DataziChar.zdwdigitToInt :: ghczmprim:GHCziPrim.Charzh ->
+                                   ghczmprim:GHCziPrim.Intzh =
+    \ (wwsi1F::ghczmprim:GHCziPrim.Charzh) ->
+        %let zdwzdjsi1P :: (ghczmprim:GHCziPrim.Statezh
+                            ghczmprim:GHCziPrim.RealWorld)
+                           -> ghczmprim:GHCziPrim.Intzh =
+               \ (void0E::ghczmprim:GHCziPrim.Statezh
+                          ghczmprim:GHCziPrim.RealWorld) ->
+                   %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.geCharzh
+                                                    wwsi1F ('a'::ghczmprim:GHCziPrim.Charzh))
+                   %of (wildahq::ghczmprim:GHCziTypes.Bool)
+                     {ghczmprim:GHCziTypes.False ->
+                        %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.geCharzh
+                                                         wwsi1F ('A'::ghczmprim:GHCziPrim.Charzh))
+                        %of (wild1Xm6::ghczmprim:GHCziTypes.Bool)
+                          {ghczmprim:GHCziTypes.False ->
+                             (0::ghczmprim:GHCziPrim.Intzh);
+                           ghczmprim:GHCziTypes.True ->
+                             %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.leCharzh
+                                                              wwsi1F
+                                                              ('F'::ghczmprim:GHCziPrim.Charzh))
+                             %of (wild2X1f::ghczmprim:GHCziTypes.Bool)
+                               {ghczmprim:GHCziTypes.False ->
+                                  (0::ghczmprim:GHCziPrim.Intzh);
+                                ghczmprim:GHCziTypes.True ->
+                                  ghczmprim:GHCziPrim.zpzh
+                                  (ghczmprim:GHCziPrim.zmzh (ghczmprim:GHCziPrim.ordzh wwsi1F)
+                                   (65::ghczmprim:GHCziPrim.Intzh))
+                                  (10::ghczmprim:GHCziPrim.Intzh)}};
+                      ghczmprim:GHCziTypes.True ->
+                        %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.leCharzh
+                                                         wwsi1F ('f'::ghczmprim:GHCziPrim.Charzh))
+                        %of (wild1X1d::ghczmprim:GHCziTypes.Bool)
+                          {ghczmprim:GHCziTypes.False ->
+                             %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.geCharzh
+                                                              wwsi1F
+                                                              ('A'::ghczmprim:GHCziPrim.Charzh))
+                             %of (wild2Xma::ghczmprim:GHCziTypes.Bool)
+                               {ghczmprim:GHCziTypes.False ->
+                                  (0::ghczmprim:GHCziPrim.Intzh);
+                                ghczmprim:GHCziTypes.True ->
+                                  %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.leCharzh
+                                                                   wwsi1F
+                                                                   ('F'::ghczmprim:GHCziPrim.Charzh))
+                                  %of (wild3X1f::ghczmprim:GHCziTypes.Bool)
+                                    {ghczmprim:GHCziTypes.False ->
+                                       (0::ghczmprim:GHCziPrim.Intzh);
+                                     ghczmprim:GHCziTypes.True ->
+                                       ghczmprim:GHCziPrim.zpzh
+                                       (ghczmprim:GHCziPrim.zmzh (ghczmprim:GHCziPrim.ordzh wwsi1F)
+                                        (65::ghczmprim:GHCziPrim.Intzh))
+                                       (10::ghczmprim:GHCziPrim.Intzh)}};
+                           ghczmprim:GHCziTypes.True ->
+                             ghczmprim:GHCziPrim.zpzh
+                             (ghczmprim:GHCziPrim.zmzh (ghczmprim:GHCziPrim.ordzh wwsi1F)
+                              (97::ghczmprim:GHCziPrim.Intzh))
+                             (10::ghczmprim:GHCziPrim.Intzh)}}
+        %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.geCharzh
+                                             wwsi1F ('0'::ghczmprim:GHCziPrim.Charzh))
+            %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+              {ghczmprim:GHCziTypes.False ->
+                 zdwzdjsi1P ghczmprim:GHCziPrim.realWorldzh;
+               ghczmprim:GHCziTypes.True ->
+                 %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.leCharzh
+                                                  wwsi1F ('9'::ghczmprim:GHCziPrim.Charzh))
+                 %of (wildX1b::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      zdwzdjsi1P ghczmprim:GHCziPrim.realWorldzh;
+                    ghczmprim:GHCziTypes.True ->
+                      ghczmprim:GHCziPrim.zmzh (ghczmprim:GHCziPrim.ordzh wwsi1F)
+                      (48::ghczmprim:GHCziPrim.Intzh)}};
+  base:DataziChar.digitToInt :: ghczmprim:GHCziTypes.Char ->
+                                ghczmprim:GHCziTypes.Int =
+    \ (wsi1D::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Int wsi1D
+        %of (w1Xi50::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (wwsi1F::ghczmprim:GHCziPrim.Charzh) ->
+             %case ghczmprim:GHCziTypes.Int (base:DataziChar.zdwdigitToInt
+                                             wwsi1F)
+             %of (ww1si1J::ghczmprim:GHCziPrim.Intzh)
+               {%_ ->
+                  ghczmprim:GHCziTypes.Izh ww1si1J}};

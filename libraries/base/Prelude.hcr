@@ -1,0 +1,7 @@
+%module base:Prelude
+  base:Prelude.zdzn :: %forall aa1543 ba1544 . (aa1543 -> ba1544) ->
+                                               aa1543 -> ba1544 =
+    \ @ ac @ bd (fa1545::ac -> bd) (xa1546::ac) ->
+        %case bd xa1546 %of (vxa1547::ac)
+          {%_ ->
+             fa1545 vxa1547};

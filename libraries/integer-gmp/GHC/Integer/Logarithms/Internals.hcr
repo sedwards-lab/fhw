@@ -1,0 +1,915 @@
+%module integerzmgmp:GHCziIntegerziLogarithmsziInternals
+  %data integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA =
+    {integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA ghczmprim:GHCziPrim.ByteArrayzh};
+  integerzmgmp:GHCziIntegerziLogarithmsziInternals.leadingZZeros :: integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA =
+    %case integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA (ghczmprim:GHCziPrim.newByteArrayzh
+                                                               @ ghczmprim:GHCziPrim.RealWorld
+                                                               (256::ghczmprim:GHCziPrim.Intzh)
+                                                               ghczmprim:GHCziPrim.realWorldzh)
+    %of (dsd3as::ghczmprim:GHCziPrim.Z2H
+                 (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                 (ghczmprim:GHCziPrim.MutableByteArrayzh
+                  ghczmprim:GHCziPrim.RealWorld))
+      {ghczmprim:GHCziPrim.Z2H
+       (ipvs3aY::ghczmprim:GHCziPrim.Statezh
+                 ghczmprim:GHCziPrim.RealWorld)
+       (ipv1s3aZZ::ghczmprim:GHCziPrim.MutableByteArrayzh
+                   ghczmprim:GHCziPrim.RealWorld) ->
+         %case integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA (ghczmprim:GHCziPrim.writeInt8Arrayzh
+                                                                    @ ghczmprim:GHCziPrim.RealWorld
+                                                                    ipv1s3aZZ
+                                                                    (0::ghczmprim:GHCziPrim.Intzh)
+                                                                    (9::ghczmprim:GHCziPrim.Intzh)
+                                                                    ipvs3aY)
+         %of (s2a39I::ghczmprim:GHCziPrim.Statezh
+                      ghczmprim:GHCziPrim.RealWorld)
+           {%_ ->
+              %let %rec
+                   {fillAs3eC :: ghczmprim:GHCziPrim.Intzh ->
+                                 ghczmprim:GHCziPrim.Intzh ->
+                                 ghczmprim:GHCziPrim.Intzh ->
+                                 (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld) ->
+                                 ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld =
+                      \ (lima39K::ghczmprim:GHCziPrim.Intzh)
+                        (vala39L::ghczmprim:GHCziPrim.Intzh)
+                        (idxa39M::ghczmprim:GHCziPrim.Intzh)
+                        (sta39N::ghczmprim:GHCziPrim.Statezh
+                                 ghczmprim:GHCziPrim.RealWorld) ->
+                          %case (ghczmprim:GHCziPrim.Statezh
+                                 ghczmprim:GHCziPrim.RealWorld) idxa39M
+                          %of (wildXj::ghczmprim:GHCziPrim.Intzh)
+                            {%_ ->
+                               %case (ghczmprim:GHCziPrim.Statezh
+                                      ghczmprim:GHCziPrim.RealWorld) (ghczmprim:GHCziPrim.zlzh
+                                                                      wildXj lima39K)
+                               %of (wild1Xe::ghczmprim:GHCziTypes.Bool)
+                                 {ghczmprim:GHCziTypes.False ->
+                                    fillAs3eC
+                                    (ghczmprim:GHCziPrim.ztzh (2::ghczmprim:GHCziPrim.Intzh)
+                                     lima39K)
+                                    (ghczmprim:GHCziPrim.zmzh vala39L
+                                     (1::ghczmprim:GHCziPrim.Intzh))
+                                    wildXj sta39N;
+                                  ghczmprim:GHCziTypes.True ->
+                                    %case (ghczmprim:GHCziPrim.Statezh
+                                           ghczmprim:GHCziPrim.RealWorld) (ghczmprim:GHCziPrim.writeInt8Arrayzh
+                                                                           @ ghczmprim:GHCziPrim.RealWorld
+                                                                           ipv1s3aZZ wildXj vala39L
+                                                                           sta39N)
+                                    %of (nxa39O::ghczmprim:GHCziPrim.Statezh
+                                                 ghczmprim:GHCziPrim.RealWorld)
+                                      {%_ ->
+                                         fillAs3eC lima39K vala39L
+                                         (ghczmprim:GHCziPrim.zpzh wildXj
+                                          (1::ghczmprim:GHCziPrim.Intzh))
+                                         nxa39O}};
+                             (256::ghczmprim:GHCziPrim.Intzh) ->
+                               sta39N}}
+              %in %case integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA (fillAs3eC
+                                                                             (2::ghczmprim:GHCziPrim.Intzh)
+                                                                             (8::ghczmprim:GHCziPrim.Intzh)
+                                                                             (1::ghczmprim:GHCziPrim.Intzh)
+                                                                             s2a39I)
+                  %of (s3a39P::ghczmprim:GHCziPrim.Statezh
+                               ghczmprim:GHCziPrim.RealWorld)
+                    {%_ ->
+                       %case integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA (ghczmprim:GHCziPrim.unsafeFreezzeByteArrayzh
+                                                                                  @ ghczmprim:GHCziPrim.RealWorld
+                                                                                  ipv1s3aZZ s3a39P)
+                       %of (ds1d3ap::ghczmprim:GHCziPrim.Z2H
+                                     (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                                     ghczmprim:GHCziPrim.ByteArrayzh)
+                         {ghczmprim:GHCziPrim.Z2H
+                          (ipv2s3b8::ghczmprim:GHCziPrim.Statezh
+                                     ghczmprim:GHCziPrim.RealWorld)
+                          (ipv3s3b9::ghczmprim:GHCziPrim.ByteArrayzh) ->
+                            integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA ipv3s3b9}}}};
+  integerzmgmp:GHCziIntegerziLogarithmsziInternals.wordLog2zh :: ghczmprim:GHCziPrim.Wordzh
+                                                                 -> ghczmprim:GHCziPrim.Intzh =
+    \ (etaB1::ghczmprim:GHCziPrim.Wordzh) ->
+        %case ghczmprim:GHCziPrim.Intzh integerzmgmp:GHCziIntegerziLogarithmsziInternals.leadingZZeros
+        %of (wildX9::integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA)
+          {integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA
+           (lzza39u::ghczmprim:GHCziPrim.ByteArrayzh) ->
+             %let as3ezz :: ghczmprim:GHCziPrim.Wordzh =
+                    ghczmprim:GHCziPrim.uncheckedShiftRLzh etaB1
+                    (56::ghczmprim:GHCziPrim.Intzh)
+             %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                  as3ezz (0::ghczmprim:GHCziPrim.Wordzh))
+                 %of (wild1X8::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      %let bs3ey :: ghczmprim:GHCziPrim.Wordzh =
+                             ghczmprim:GHCziPrim.uncheckedShiftRLzh etaB1
+                             (48::ghczmprim:GHCziPrim.Intzh)
+                      %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                           bs3ey (0::ghczmprim:GHCziPrim.Wordzh))
+                          %of (wild2Xa::ghczmprim:GHCziTypes.Bool)
+                            {ghczmprim:GHCziTypes.False ->
+                               %let cs3ex :: ghczmprim:GHCziPrim.Wordzh =
+                                      ghczmprim:GHCziPrim.uncheckedShiftRLzh etaB1
+                                      (40::ghczmprim:GHCziPrim.Intzh)
+                               %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                    cs3ex
+                                                                    (0::ghczmprim:GHCziPrim.Wordzh))
+                                   %of (wild3Xc::ghczmprim:GHCziTypes.Bool)
+                                     {ghczmprim:GHCziTypes.False ->
+                                        %let ds3ew :: ghczmprim:GHCziPrim.Wordzh =
+                                               ghczmprim:GHCziPrim.uncheckedShiftRLzh etaB1
+                                               (32::ghczmprim:GHCziPrim.Intzh)
+                                        %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                             ds3ew
+                                                                             (0::ghczmprim:GHCziPrim.Wordzh))
+                                            %of (wild4Xe::ghczmprim:GHCziTypes.Bool)
+                                              {ghczmprim:GHCziTypes.False ->
+                                                 %let es3ev :: ghczmprim:GHCziPrim.Wordzh =
+                                                        ghczmprim:GHCziPrim.uncheckedShiftRLzh etaB1
+                                                        (24::ghczmprim:GHCziPrim.Intzh)
+                                                 %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                      es3ev
+                                                                                      (0::ghczmprim:GHCziPrim.Wordzh))
+                                                     %of (wild5Xg::ghczmprim:GHCziTypes.Bool)
+                                                       {ghczmprim:GHCziTypes.False ->
+                                                          %let fs3eu :: ghczmprim:GHCziPrim.Wordzh =
+                                                                 ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                 etaB1
+                                                                 (16::ghczmprim:GHCziPrim.Intzh)
+                                                          %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                               fs3eu
+                                                                                               (0::ghczmprim:GHCziPrim.Wordzh))
+                                                              %of (wild6Xi::ghczmprim:GHCziTypes.Bool)
+                                                                {ghczmprim:GHCziTypes.False ->
+                                                                   %let gs3et :: ghczmprim:GHCziPrim.Wordzh =
+                                                                          ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                          etaB1
+                                                                          (8::ghczmprim:GHCziPrim.Intzh)
+                                                                   %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                        gs3et
+                                                                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                       %of (wild7Xk::ghczmprim:GHCziTypes.Bool)
+                                                                         {ghczmprim:GHCziTypes.False
+                                                                          ->
+                                                                            %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                             lzza39u
+                                                                                                             (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                              etaB1))
+                                                                            %of (wild8Xl::ghczmprim:GHCziPrim.Intzh)
+                                                                              {%_ ->
+                                                                                 ghczmprim:GHCziPrim.zmzh
+                                                                                 (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                 wild8Xl};
+                                                                          ghczmprim:GHCziTypes.True
+                                                                          ->
+                                                                            %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                             lzza39u
+                                                                                                             (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                              gs3et))
+                                                                            %of (wild8Xl::ghczmprim:GHCziPrim.Intzh)
+                                                                              {%_ ->
+                                                                                 ghczmprim:GHCziPrim.zmzh
+                                                                                 (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                 wild8Xl}};
+                                                                 ghczmprim:GHCziTypes.True ->
+                                                                   %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                    lzza39u
+                                                                                                    (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                     fs3eu))
+                                                                   %of (wild7Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                     {%_ ->
+                                                                        ghczmprim:GHCziPrim.zmzh
+                                                                        (24::ghczmprim:GHCziPrim.Intzh)
+                                                                        wild7Xj}};
+                                                        ghczmprim:GHCziTypes.True ->
+                                                          %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                           lzza39u
+                                                                                           (ghczmprim:GHCziPrim.word2Intzh
+                                                                                            es3ev))
+                                                          %of (wild6Xh::ghczmprim:GHCziPrim.Intzh)
+                                                            {%_ ->
+                                                               ghczmprim:GHCziPrim.zmzh
+                                                               (32::ghczmprim:GHCziPrim.Intzh)
+                                                               wild6Xh}};
+                                               ghczmprim:GHCziTypes.True ->
+                                                 %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                  lzza39u
+                                                                                  (ghczmprim:GHCziPrim.word2Intzh
+                                                                                   ds3ew))
+                                                 %of (wild5Xf::ghczmprim:GHCziPrim.Intzh)
+                                                   {%_ ->
+                                                      ghczmprim:GHCziPrim.zmzh
+                                                      (40::ghczmprim:GHCziPrim.Intzh) wild5Xf}};
+                                      ghczmprim:GHCziTypes.True ->
+                                        %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                         lzza39u
+                                                                         (ghczmprim:GHCziPrim.word2Intzh
+                                                                          cs3ex))
+                                        %of (wild4Xd::ghczmprim:GHCziPrim.Intzh)
+                                          {%_ ->
+                                             ghczmprim:GHCziPrim.zmzh
+                                             (48::ghczmprim:GHCziPrim.Intzh) wild4Xd}};
+                             ghczmprim:GHCziTypes.True ->
+                               %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                lzza39u
+                                                                (ghczmprim:GHCziPrim.word2Intzh
+                                                                 bs3ey))
+                               %of (wild3Xb::ghczmprim:GHCziPrim.Intzh)
+                                 {%_ ->
+                                    ghczmprim:GHCziPrim.zmzh (56::ghczmprim:GHCziPrim.Intzh)
+                                    wild3Xb}};
+                    ghczmprim:GHCziTypes.True ->
+                      %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                       lzza39u
+                                                       (ghczmprim:GHCziPrim.word2Intzh as3ezz))
+                      %of (wild2Xs::ghczmprim:GHCziPrim.Intzh)
+                        {%_ ->
+                           ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                           wild2Xs}}};
+  integerzmgmp:GHCziIntegerziLogarithmsziInternals.roundingModezh :: integerzmgmp:GHCziIntegerziType.Integer
+                                                                     ->
+                                                                     ghczmprim:GHCziPrim.Intzh ->
+                                                                     ghczmprim:GHCziPrim.Intzh =
+    \ (dsd3aw::integerzmgmp:GHCziIntegerziType.Integer)
+      (ta39i::ghczmprim:GHCziPrim.Intzh) ->
+        %case ghczmprim:GHCziPrim.Intzh dsd3aw
+        %of (wildXa::integerzmgmp:GHCziIntegerziType.Integer)
+          {integerzmgmp:GHCziIntegerziType.Szh
+           (ia39h::ghczmprim:GHCziPrim.Intzh) ->
+             %let ks3ec :: ghczmprim:GHCziPrim.Wordzh =
+                    ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh ia39h)
+                    (ghczmprim:GHCziPrim.minusWordzh
+                     (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                      (2::ghczmprim:GHCziPrim.Wordzh) ta39i)
+                     (1::ghczmprim:GHCziPrim.Wordzh))
+             %in %let cs3eb :: ghczmprim:GHCziPrim.Wordzh =
+                        ghczmprim:GHCziPrim.uncheckedShiftLzh
+                        (1::ghczmprim:GHCziPrim.Wordzh) ta39i
+                 %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.gtWordzh
+                                                      cs3eb ks3ec)
+                     %of (wild1X9::ghczmprim:GHCziTypes.Bool)
+                       {ghczmprim:GHCziTypes.False ->
+                          %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.ltWordzh cs3eb
+                                                           ks3ec)
+                          %of (wild2Xu::ghczmprim:GHCziTypes.Bool)
+                            {ghczmprim:GHCziTypes.False ->
+                               (1::ghczmprim:GHCziPrim.Intzh);
+                             ghczmprim:GHCziTypes.True ->
+                               (2::ghczmprim:GHCziPrim.Intzh)};
+                        ghczmprim:GHCziTypes.True ->
+                          (0::ghczmprim:GHCziPrim.Intzh)};
+           integerzmgmp:GHCziIntegerziType.Jzh
+           (ds1d3ax::ghczmprim:GHCziPrim.Intzh)
+           (baa39l::ghczmprim:GHCziPrim.ByteArrayzh) ->
+             %let ks3ej :: ghczmprim:GHCziPrim.Intzh =
+                    ghczmprim:GHCziPrim.uncheckedIShiftRAzh ta39i
+                    (6::ghczmprim:GHCziPrim.Intzh)
+             %in %let js3ek :: ghczmprim:GHCziPrim.Intzh =
+                        ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh ta39i)
+                         (63::ghczmprim:GHCziPrim.Wordzh))
+                 %in %let cs3ei :: ghczmprim:GHCziPrim.Wordzh =
+                            ghczmprim:GHCziPrim.uncheckedShiftLzh
+                            (1::ghczmprim:GHCziPrim.Wordzh) js3ek
+                     %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexWordArrayzh
+                                                          baa39l ks3ej)
+                         %of (wild1Xt::ghczmprim:GHCziPrim.Wordzh)
+                           {%_ ->
+                              %let ra39r :: ghczmprim:GHCziPrim.Wordzh =
+                                     ghczmprim:GHCziPrim.andzh wild1Xt
+                                     (ghczmprim:GHCziPrim.minusWordzh
+                                      (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                                       (2::ghczmprim:GHCziPrim.Wordzh) js3ek)
+                                      (1::ghczmprim:GHCziPrim.Wordzh))
+                              %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.gtWordzh
+                                                                   cs3ei ra39r)
+                                  %of (wild2Xc::ghczmprim:GHCziTypes.Bool)
+                                    {ghczmprim:GHCziTypes.False ->
+                                       %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.ltWordzh
+                                                                        cs3ei ra39r)
+                                       %of (wild3Xd::ghczmprim:GHCziTypes.Bool)
+                                         {ghczmprim:GHCziTypes.False ->
+                                            %let %rec
+                                                 {tests3eh :: ghczmprim:GHCziPrim.Intzh ->
+                                                              ghczmprim:GHCziPrim.Intzh =
+                                                    \ (ia39o::ghczmprim:GHCziPrim.Intzh) ->
+                                                        %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.zlzh
+                                                                                         ia39o
+                                                                                         (0::ghczmprim:GHCziPrim.Intzh))
+                                                        %of (wild4XD::ghczmprim:GHCziTypes.Bool)
+                                                          {ghczmprim:GHCziTypes.False ->
+                                                             %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexWordArrayzh
+                                                                                              baa39l
+                                                                                              ia39o)
+                                                             %of (ds2d3azz::ghczmprim:GHCziPrim.Wordzh)
+                                                               {%_ ->
+                                                                  (2::ghczmprim:GHCziPrim.Intzh);
+                                                                (0::ghczmprim:GHCziPrim.Wordzh) ->
+                                                                  tests3eh
+                                                                  (ghczmprim:GHCziPrim.zmzh ia39o
+                                                                   (1::ghczmprim:GHCziPrim.Intzh))};
+                                                           ghczmprim:GHCziTypes.True ->
+                                                             (1::ghczmprim:GHCziPrim.Intzh)}}
+                                            %in tests3eh
+                                                (ghczmprim:GHCziPrim.zmzh ks3ej
+                                                 (1::ghczmprim:GHCziPrim.Intzh));
+                                          ghczmprim:GHCziTypes.True ->
+                                            (2::ghczmprim:GHCziPrim.Intzh)};
+                                     ghczmprim:GHCziTypes.True ->
+                                       (0::ghczmprim:GHCziPrim.Intzh)}}};
+  integerzmgmp:GHCziIntegerziLogarithmsziInternals.integerLog2IsPowerOf2zh :: integerzmgmp:GHCziIntegerziType.Integer
+                                                                              ->
+                                                                              ghczmprim:GHCziPrim.Z2H
+                                                                              ghczmprim:GHCziPrim.Intzh
+                                                                              ghczmprim:GHCziPrim.Intzh =
+    \ (dsd3aD::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case (ghczmprim:GHCziPrim.Z2H
+               ghczmprim:GHCziPrim.Intzh
+               ghczmprim:GHCziPrim.Intzh) dsd3aD
+        %of (wildXa::integerzmgmp:GHCziIntegerziType.Integer)
+          {integerzmgmp:GHCziIntegerziType.Szh
+           (ia398::ghczmprim:GHCziPrim.Intzh) ->
+             %let ws3e4 :: ghczmprim:GHCziPrim.Wordzh =
+                    ghczmprim:GHCziPrim.int2Wordzh ia398
+             %in ghczmprim:GHCziPrim.Z2H @ ghczmprim:GHCziPrim.Intzh
+                 @ ghczmprim:GHCziPrim.Intzh
+                 (integerzmgmp:GHCziIntegerziLogarithmsziInternals.wordLog2zh ws3e4)
+                 (ghczmprim:GHCziPrim.word2Intzh
+                  (ghczmprim:GHCziPrim.andzh ws3e4
+                   (ghczmprim:GHCziPrim.minusWordzh ws3e4
+                    (1::ghczmprim:GHCziPrim.Wordzh))));
+           integerzmgmp:GHCziIntegerziType.Jzh
+           (sa39a::ghczmprim:GHCziPrim.Intzh)
+           (baa39b::ghczmprim:GHCziPrim.ByteArrayzh) ->
+             %let %rec
+                  {tests3e8 :: ghczmprim:GHCziPrim.Intzh ->
+                               ghczmprim:GHCziPrim.Intzh =
+                     \ (ia39g::ghczmprim:GHCziPrim.Intzh) ->
+                         %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.zlzh ia39g
+                                                          (0::ghczmprim:GHCziPrim.Intzh))
+                         %of (wild1Xr::ghczmprim:GHCziTypes.Bool)
+                           {ghczmprim:GHCziTypes.False ->
+                              %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexWordArrayzh
+                                                               baa39b ia39g)
+                              %of (ds1d3aL::ghczmprim:GHCziPrim.Wordzh)
+                                {%_ ->
+                                   (1::ghczmprim:GHCziPrim.Intzh);
+                                 (0::ghczmprim:GHCziPrim.Wordzh) ->
+                                   tests3e8
+                                   (ghczmprim:GHCziPrim.zmzh ia39g (1::ghczmprim:GHCziPrim.Intzh))};
+                            ghczmprim:GHCziTypes.True ->
+                              (0::ghczmprim:GHCziPrim.Intzh)}}
+             %in %let %rec
+                      {checks3e7 :: ghczmprim:GHCziPrim.Intzh ->
+                                    ghczmprim:GHCziPrim.Z2H
+                                    ghczmprim:GHCziPrim.Intzh
+                                    ghczmprim:GHCziPrim.Intzh =
+                         \ (ia39e::ghczmprim:GHCziPrim.Intzh) ->
+                             %case (ghczmprim:GHCziPrim.Z2H
+                                    ghczmprim:GHCziPrim.Intzh
+                                    ghczmprim:GHCziPrim.Intzh) (ghczmprim:GHCziPrim.indexWordArrayzh
+                                                                baa39b ia39e)
+                             %of (ds1d3aI::ghczmprim:GHCziPrim.Wordzh)
+                               {%_ ->
+                                  ghczmprim:GHCziPrim.Z2H @ ghczmprim:GHCziPrim.Intzh
+                                  @ ghczmprim:GHCziPrim.Intzh
+                                  (%case ghczmprim:GHCziPrim.Intzh integerzmgmp:GHCziIntegerziLogarithmsziInternals.leadingZZeros
+                                   %of (wild1X8::integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA)
+                                     {integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA
+                                      (lzza39u::ghczmprim:GHCziPrim.ByteArrayzh) ->
+                                        %let aa39x :: ghczmprim:GHCziPrim.Wordzh =
+                                               ghczmprim:GHCziPrim.uncheckedShiftRLzh ds1d3aI
+                                               (56::ghczmprim:GHCziPrim.Intzh)
+                                        %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                             aa39x
+                                                                             (0::ghczmprim:GHCziPrim.Wordzh))
+                                            %of (wild2X6::ghczmprim:GHCziTypes.Bool)
+                                              {ghczmprim:GHCziTypes.False ->
+                                                 %let ba39y :: ghczmprim:GHCziPrim.Wordzh =
+                                                        ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                        ds1d3aI (48::ghczmprim:GHCziPrim.Intzh)
+                                                 %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                      ba39y
+                                                                                      (0::ghczmprim:GHCziPrim.Wordzh))
+                                                     %of (wild3Xs::ghczmprim:GHCziTypes.Bool)
+                                                       {ghczmprim:GHCziTypes.False ->
+                                                          %let ca39zz :: ghczmprim:GHCziPrim.Wordzh =
+                                                                 ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                 ds1d3aI
+                                                                 (40::ghczmprim:GHCziPrim.Intzh)
+                                                          %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                               ca39zz
+                                                                                               (0::ghczmprim:GHCziPrim.Wordzh))
+                                                              %of (wild4XM::ghczmprim:GHCziTypes.Bool)
+                                                                {ghczmprim:GHCziTypes.False ->
+                                                                   %let da39A :: ghczmprim:GHCziPrim.Wordzh =
+                                                                          ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                          ds1d3aI
+                                                                          (32::ghczmprim:GHCziPrim.Intzh)
+                                                                   %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                        da39A
+                                                                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                       %of (wild5Xc::ghczmprim:GHCziTypes.Bool)
+                                                                         {ghczmprim:GHCziTypes.False
+                                                                          ->
+                                                                            %let ea39B :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                   ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                   ds1d3aI
+                                                                                   (24::ghczmprim:GHCziPrim.Intzh)
+                                                                            %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                 ea39B
+                                                                                                                 (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                %of (wild6Xe::ghczmprim:GHCziTypes.Bool)
+                                                                                  {ghczmprim:GHCziTypes.False
+                                                                                   ->
+                                                                                     %let fa39C :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                            ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                            ds1d3aI
+                                                                                            (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                     %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                          fa39C
+                                                                                                                          (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                         %of (wild7Xg::ghczmprim:GHCziTypes.Bool)
+                                                                                           {ghczmprim:GHCziTypes.False
+                                                                                            ->
+                                                                                              %let ga39D :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                                     ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                                     ds1d3aI
+                                                                                                     (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                              %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                                   ga39D
+                                                                                                                                   (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                                  %of (wild8Xi::ghczmprim:GHCziTypes.Bool)
+                                                                                                    {ghczmprim:GHCziTypes.False
+                                                                                                     ->
+                                                                                                       %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                                        lzza39u
+                                                                                                                                        (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                                         ds1d3aI))
+                                                                                                       %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                                         {%_ ->
+                                                                                                            ghczmprim:GHCziPrim.zpzh
+                                                                                                            (ghczmprim:GHCziPrim.zmzh
+                                                                                                             (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                                             wild9Xj)
+                                                                                                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                                             ia39e
+                                                                                                             (6::ghczmprim:GHCziPrim.Intzh))};
+                                                                                                     ghczmprim:GHCziTypes.True
+                                                                                                     ->
+                                                                                                       %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                                        lzza39u
+                                                                                                                                        (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                                         ga39D))
+                                                                                                       %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                                         {%_ ->
+                                                                                                            ghczmprim:GHCziPrim.zpzh
+                                                                                                            (ghczmprim:GHCziPrim.zmzh
+                                                                                                             (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                                             wild9Xj)
+                                                                                                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                                             ia39e
+                                                                                                             (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                                            ghczmprim:GHCziTypes.True
+                                                                                            ->
+                                                                                              %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                               lzza39u
+                                                                                                                               (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                                fa39C))
+                                                                                              %of (wild8Xh::ghczmprim:GHCziPrim.Intzh)
+                                                                                                {%_ ->
+                                                                                                   ghczmprim:GHCziPrim.zpzh
+                                                                                                   (ghczmprim:GHCziPrim.zmzh
+                                                                                                    (24::ghczmprim:GHCziPrim.Intzh)
+                                                                                                    wild8Xh)
+                                                                                                   (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                                    ia39e
+                                                                                                    (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                                   ghczmprim:GHCziTypes.True
+                                                                                   ->
+                                                                                     %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                      lzza39u
+                                                                                                                      (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                       ea39B))
+                                                                                     %of (wild7Xf::ghczmprim:GHCziPrim.Intzh)
+                                                                                       {%_ ->
+                                                                                          ghczmprim:GHCziPrim.zpzh
+                                                                                          (ghczmprim:GHCziPrim.zmzh
+                                                                                           (32::ghczmprim:GHCziPrim.Intzh)
+                                                                                           wild7Xf)
+                                                                                          (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                           ia39e
+                                                                                           (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                          ghczmprim:GHCziTypes.True
+                                                                          ->
+                                                                            %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                             lzza39u
+                                                                                                             (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                              da39A))
+                                                                            %of (wild6Xd::ghczmprim:GHCziPrim.Intzh)
+                                                                              {%_ ->
+                                                                                 ghczmprim:GHCziPrim.zpzh
+                                                                                 (ghczmprim:GHCziPrim.zmzh
+                                                                                  (40::ghczmprim:GHCziPrim.Intzh)
+                                                                                  wild6Xd)
+                                                                                 (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                  ia39e
+                                                                                  (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                 ghczmprim:GHCziTypes.True ->
+                                                                   %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                    lzza39u
+                                                                                                    (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                     ca39zz))
+                                                                   %of (wild5Xb::ghczmprim:GHCziPrim.Intzh)
+                                                                     {%_ ->
+                                                                        ghczmprim:GHCziPrim.zpzh
+                                                                        (ghczmprim:GHCziPrim.zmzh
+                                                                         (48::ghczmprim:GHCziPrim.Intzh)
+                                                                         wild5Xb)
+                                                                        (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                         ia39e
+                                                                         (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                        ghczmprim:GHCziTypes.True ->
+                                                          %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                           lzza39u
+                                                                                           (ghczmprim:GHCziPrim.word2Intzh
+                                                                                            ba39y))
+                                                          %of (wild4X9::ghczmprim:GHCziPrim.Intzh)
+                                                            {%_ ->
+                                                               ghczmprim:GHCziPrim.zpzh
+                                                               (ghczmprim:GHCziPrim.zmzh
+                                                                (56::ghczmprim:GHCziPrim.Intzh)
+                                                                wild4X9)
+                                                               (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                ia39e
+                                                                (6::ghczmprim:GHCziPrim.Intzh))}};
+                                               ghczmprim:GHCziTypes.True ->
+                                                 %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                  lzza39u
+                                                                                  (ghczmprim:GHCziPrim.word2Intzh
+                                                                                   aa39x))
+                                                 %of (wild3X7::ghczmprim:GHCziPrim.Intzh)
+                                                   {%_ ->
+                                                      ghczmprim:GHCziPrim.zpzh
+                                                      (ghczmprim:GHCziPrim.zmzh
+                                                       (64::ghczmprim:GHCziPrim.Intzh) wild3X7)
+                                                      (ghczmprim:GHCziPrim.uncheckedIShiftLzh ia39e
+                                                       (6::ghczmprim:GHCziPrim.Intzh))}}})
+                                  (%case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.andzh
+                                                                    ds1d3aI
+                                                                    (ghczmprim:GHCziPrim.minusWordzh
+                                                                     ds1d3aI
+                                                                     (1::ghczmprim:GHCziPrim.Wordzh)))
+                                   %of (ds2d3aF::ghczmprim:GHCziPrim.Wordzh)
+                                     {%_ ->
+                                        (1::ghczmprim:GHCziPrim.Intzh);
+                                      (0::ghczmprim:GHCziPrim.Wordzh) ->
+                                        tests3e8
+                                        (ghczmprim:GHCziPrim.zmzh ia39e
+                                         (1::ghczmprim:GHCziPrim.Intzh))});
+                                (0::ghczmprim:GHCziPrim.Wordzh) ->
+                                  checks3e7
+                                  (ghczmprim:GHCziPrim.zmzh ia39e (1::ghczmprim:GHCziPrim.Intzh))}}
+                 %in checks3e7
+                     (ghczmprim:GHCziPrim.zmzh sa39a (1::ghczmprim:GHCziPrim.Intzh))};
+  integerzmgmp:GHCziIntegerziLogarithmsziInternals.integerLog2zh :: integerzmgmp:GHCziIntegerziType.Integer
+                                                                    -> ghczmprim:GHCziPrim.Intzh =
+    \ (dsd3aP::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case ghczmprim:GHCziPrim.Intzh dsd3aP
+        %of (wildXb::integerzmgmp:GHCziIntegerziType.Integer)
+          {integerzmgmp:GHCziIntegerziType.Szh
+           (ia392::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziPrim.Intzh integerzmgmp:GHCziIntegerziLogarithmsziInternals.leadingZZeros
+             %of (wild1X8::integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA)
+               {integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA
+                (lzza39u::ghczmprim:GHCziPrim.ByteArrayzh) ->
+                  %let wa39t :: ghczmprim:GHCziPrim.Wordzh =
+                         ghczmprim:GHCziPrim.int2Wordzh ia392
+                  %in %let aa39x :: ghczmprim:GHCziPrim.Wordzh =
+                             ghczmprim:GHCziPrim.uncheckedShiftRLzh wa39t
+                             (56::ghczmprim:GHCziPrim.Intzh)
+                      %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                           aa39x (0::ghczmprim:GHCziPrim.Wordzh))
+                          %of (wild2X6::ghczmprim:GHCziTypes.Bool)
+                            {ghczmprim:GHCziTypes.False ->
+                               %let ba39y :: ghczmprim:GHCziPrim.Wordzh =
+                                      ghczmprim:GHCziPrim.uncheckedShiftRLzh wa39t
+                                      (48::ghczmprim:GHCziPrim.Intzh)
+                               %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                    ba39y
+                                                                    (0::ghczmprim:GHCziPrim.Wordzh))
+                                   %of (wild3Xs::ghczmprim:GHCziTypes.Bool)
+                                     {ghczmprim:GHCziTypes.False ->
+                                        %let ca39zz :: ghczmprim:GHCziPrim.Wordzh =
+                                               ghczmprim:GHCziPrim.uncheckedShiftRLzh wa39t
+                                               (40::ghczmprim:GHCziPrim.Intzh)
+                                        %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                             ca39zz
+                                                                             (0::ghczmprim:GHCziPrim.Wordzh))
+                                            %of (wild4Xa::ghczmprim:GHCziTypes.Bool)
+                                              {ghczmprim:GHCziTypes.False ->
+                                                 %let da39A :: ghczmprim:GHCziPrim.Wordzh =
+                                                        ghczmprim:GHCziPrim.uncheckedShiftRLzh wa39t
+                                                        (32::ghczmprim:GHCziPrim.Intzh)
+                                                 %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                      da39A
+                                                                                      (0::ghczmprim:GHCziPrim.Wordzh))
+                                                     %of (wild5Xc::ghczmprim:GHCziTypes.Bool)
+                                                       {ghczmprim:GHCziTypes.False ->
+                                                          %let ea39B :: ghczmprim:GHCziPrim.Wordzh =
+                                                                 ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                 wa39t
+                                                                 (24::ghczmprim:GHCziPrim.Intzh)
+                                                          %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                               ea39B
+                                                                                               (0::ghczmprim:GHCziPrim.Wordzh))
+                                                              %of (wild6Xe::ghczmprim:GHCziTypes.Bool)
+                                                                {ghczmprim:GHCziTypes.False ->
+                                                                   %let fa39C :: ghczmprim:GHCziPrim.Wordzh =
+                                                                          ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                          wa39t
+                                                                          (16::ghczmprim:GHCziPrim.Intzh)
+                                                                   %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                        fa39C
+                                                                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                       %of (wild7Xg::ghczmprim:GHCziTypes.Bool)
+                                                                         {ghczmprim:GHCziTypes.False
+                                                                          ->
+                                                                            %let ga39D :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                   ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                   wa39t
+                                                                                   (8::ghczmprim:GHCziPrim.Intzh)
+                                                                            %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                 ga39D
+                                                                                                                 (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                %of (wild8Xi::ghczmprim:GHCziTypes.Bool)
+                                                                                  {ghczmprim:GHCziTypes.False
+                                                                                   ->
+                                                                                     %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                      lzza39u
+                                                                                                                      (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                       wa39t))
+                                                                                     %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                       {%_ ->
+                                                                                          ghczmprim:GHCziPrim.zmzh
+                                                                                          (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                          wild9Xj};
+                                                                                   ghczmprim:GHCziTypes.True
+                                                                                   ->
+                                                                                     %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                      lzza39u
+                                                                                                                      (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                       ga39D))
+                                                                                     %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                       {%_ ->
+                                                                                          ghczmprim:GHCziPrim.zmzh
+                                                                                          (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                          wild9Xj}};
+                                                                          ghczmprim:GHCziTypes.True
+                                                                          ->
+                                                                            %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                             lzza39u
+                                                                                                             (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                              fa39C))
+                                                                            %of (wild8Xh::ghczmprim:GHCziPrim.Intzh)
+                                                                              {%_ ->
+                                                                                 ghczmprim:GHCziPrim.zmzh
+                                                                                 (24::ghczmprim:GHCziPrim.Intzh)
+                                                                                 wild8Xh}};
+                                                                 ghczmprim:GHCziTypes.True ->
+                                                                   %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                    lzza39u
+                                                                                                    (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                     ea39B))
+                                                                   %of (wild7Xf::ghczmprim:GHCziPrim.Intzh)
+                                                                     {%_ ->
+                                                                        ghczmprim:GHCziPrim.zmzh
+                                                                        (32::ghczmprim:GHCziPrim.Intzh)
+                                                                        wild7Xf}};
+                                                        ghczmprim:GHCziTypes.True ->
+                                                          %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                           lzza39u
+                                                                                           (ghczmprim:GHCziPrim.word2Intzh
+                                                                                            da39A))
+                                                          %of (wild6Xd::ghczmprim:GHCziPrim.Intzh)
+                                                            {%_ ->
+                                                               ghczmprim:GHCziPrim.zmzh
+                                                               (40::ghczmprim:GHCziPrim.Intzh)
+                                                               wild6Xd}};
+                                               ghczmprim:GHCziTypes.True ->
+                                                 %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                  lzza39u
+                                                                                  (ghczmprim:GHCziPrim.word2Intzh
+                                                                                   ca39zz))
+                                                 %of (wild5XK::ghczmprim:GHCziPrim.Intzh)
+                                                   {%_ ->
+                                                      ghczmprim:GHCziPrim.zmzh
+                                                      (48::ghczmprim:GHCziPrim.Intzh) wild5XK}};
+                                      ghczmprim:GHCziTypes.True ->
+                                        %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                         lzza39u
+                                                                         (ghczmprim:GHCziPrim.word2Intzh
+                                                                          ba39y))
+                                        %of (wild4X9::ghczmprim:GHCziPrim.Intzh)
+                                          {%_ ->
+                                             ghczmprim:GHCziPrim.zmzh
+                                             (56::ghczmprim:GHCziPrim.Intzh) wild4X9}};
+                             ghczmprim:GHCziTypes.True ->
+                               %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                lzza39u
+                                                                (ghczmprim:GHCziPrim.word2Intzh
+                                                                 aa39x))
+                               %of (wild3X7::ghczmprim:GHCziPrim.Intzh)
+                                 {%_ ->
+                                    ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                                    wild3X7}}};
+           integerzmgmp:GHCziIntegerziType.Jzh
+           (sa393::ghczmprim:GHCziPrim.Intzh)
+           (baa394::ghczmprim:GHCziPrim.ByteArrayzh) ->
+             %let %rec
+                  {checks3e2 :: ghczmprim:GHCziPrim.Intzh ->
+                                ghczmprim:GHCziPrim.Intzh =
+                     \ (ia396::ghczmprim:GHCziPrim.Intzh) ->
+                         %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexWordArrayzh
+                                                          baa394 ia396)
+                         %of (ds1d3aR::ghczmprim:GHCziPrim.Wordzh)
+                           {%_ ->
+                              %case ghczmprim:GHCziPrim.Intzh integerzmgmp:GHCziIntegerziLogarithmsziInternals.leadingZZeros
+                              %of (wild1X8::integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA)
+                                {integerzmgmp:GHCziIntegerziLogarithmsziInternals.BA
+                                 (lzza39u::ghczmprim:GHCziPrim.ByteArrayzh) ->
+                                   %let aa39x :: ghczmprim:GHCziPrim.Wordzh =
+                                          ghczmprim:GHCziPrim.uncheckedShiftRLzh ds1d3aR
+                                          (56::ghczmprim:GHCziPrim.Intzh)
+                                   %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                        aa39x
+                                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                                       %of (wild2X6::ghczmprim:GHCziTypes.Bool)
+                                         {ghczmprim:GHCziTypes.False ->
+                                            %let ba39y :: ghczmprim:GHCziPrim.Wordzh =
+                                                   ghczmprim:GHCziPrim.uncheckedShiftRLzh ds1d3aR
+                                                   (48::ghczmprim:GHCziPrim.Intzh)
+                                            %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                 ba39y
+                                                                                 (0::ghczmprim:GHCziPrim.Wordzh))
+                                                %of (wild3Xs::ghczmprim:GHCziTypes.Bool)
+                                                  {ghczmprim:GHCziTypes.False ->
+                                                     %let ca39zz :: ghczmprim:GHCziPrim.Wordzh =
+                                                            ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                            ds1d3aR (40::ghczmprim:GHCziPrim.Intzh)
+                                                     %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                          ca39zz
+                                                                                          (0::ghczmprim:GHCziPrim.Wordzh))
+                                                         %of (wild4Xa::ghczmprim:GHCziTypes.Bool)
+                                                           {ghczmprim:GHCziTypes.False ->
+                                                              %let da39A :: ghczmprim:GHCziPrim.Wordzh =
+                                                                     ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                     ds1d3aR
+                                                                     (32::ghczmprim:GHCziPrim.Intzh)
+                                                              %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                   da39A
+                                                                                                   (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                  %of (wild5Xc::ghczmprim:GHCziTypes.Bool)
+                                                                    {ghczmprim:GHCziTypes.False ->
+                                                                       %let ea39B :: ghczmprim:GHCziPrim.Wordzh =
+                                                                              ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                              ds1d3aR
+                                                                              (24::ghczmprim:GHCziPrim.Intzh)
+                                                                       %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                            ea39B
+                                                                                                            (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                           %of (wild6Xe::ghczmprim:GHCziTypes.Bool)
+                                                                             {ghczmprim:GHCziTypes.False
+                                                                              ->
+                                                                                %let fa39C :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                       ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                       ds1d3aR
+                                                                                       (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                     fa39C
+                                                                                                                     (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                    %of (wild7Xg::ghczmprim:GHCziTypes.Bool)
+                                                                                      {ghczmprim:GHCziTypes.False
+                                                                                       ->
+                                                                                         %let ga39D :: ghczmprim:GHCziPrim.Wordzh =
+                                                                                                ghczmprim:GHCziPrim.uncheckedShiftRLzh
+                                                                                                ds1d3aR
+                                                                                                (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                         %in %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.neWordzh
+                                                                                                                              ga39D
+                                                                                                                              (0::ghczmprim:GHCziPrim.Wordzh))
+                                                                                             %of (wild8Xi::ghczmprim:GHCziTypes.Bool)
+                                                                                               {ghczmprim:GHCziTypes.False
+                                                                                                ->
+                                                                                                  %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                                   lzza39u
+                                                                                                                                   (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                                    ds1d3aR))
+                                                                                                  %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                                    {%_ ->
+                                                                                                       ghczmprim:GHCziPrim.zpzh
+                                                                                                       (ghczmprim:GHCziPrim.zmzh
+                                                                                                        (8::ghczmprim:GHCziPrim.Intzh)
+                                                                                                        wild9Xj)
+                                                                                                       (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                                        ia396
+                                                                                                        (6::ghczmprim:GHCziPrim.Intzh))};
+                                                                                                ghczmprim:GHCziTypes.True
+                                                                                                ->
+                                                                                                  %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                                   lzza39u
+                                                                                                                                   (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                                    ga39D))
+                                                                                                  %of (wild9Xj::ghczmprim:GHCziPrim.Intzh)
+                                                                                                    {%_ ->
+                                                                                                       ghczmprim:GHCziPrim.zpzh
+                                                                                                       (ghczmprim:GHCziPrim.zmzh
+                                                                                                        (16::ghczmprim:GHCziPrim.Intzh)
+                                                                                                        wild9Xj)
+                                                                                                       (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                                        ia396
+                                                                                                        (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                                       ghczmprim:GHCziTypes.True
+                                                                                       ->
+                                                                                         %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                          lzza39u
+                                                                                                                          (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                           fa39C))
+                                                                                         %of (wild8Xh::ghczmprim:GHCziPrim.Intzh)
+                                                                                           {%_ ->
+                                                                                              ghczmprim:GHCziPrim.zpzh
+                                                                                              (ghczmprim:GHCziPrim.zmzh
+                                                                                               (24::ghczmprim:GHCziPrim.Intzh)
+                                                                                               wild8Xh)
+                                                                                              (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                               ia396
+                                                                                               (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                              ghczmprim:GHCziTypes.True
+                                                                              ->
+                                                                                %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                                 lzza39u
+                                                                                                                 (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                                  ea39B))
+                                                                                %of (wild7Xf::ghczmprim:GHCziPrim.Intzh)
+                                                                                  {%_ ->
+                                                                                     ghczmprim:GHCziPrim.zpzh
+                                                                                     (ghczmprim:GHCziPrim.zmzh
+                                                                                      (32::ghczmprim:GHCziPrim.Intzh)
+                                                                                      wild7Xf)
+                                                                                     (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                                      ia396
+                                                                                      (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                                     ghczmprim:GHCziTypes.True ->
+                                                                       %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                                        lzza39u
+                                                                                                        (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                         da39A))
+                                                                       %of (wild6Xd::ghczmprim:GHCziPrim.Intzh)
+                                                                         {%_ ->
+                                                                            ghczmprim:GHCziPrim.zpzh
+                                                                            (ghczmprim:GHCziPrim.zmzh
+                                                                             (40::ghczmprim:GHCziPrim.Intzh)
+                                                                             wild6Xd)
+                                                                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                             ia396
+                                                                             (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                            ghczmprim:GHCziTypes.True ->
+                                                              %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                               lzza39u
+                                                                                               (ghczmprim:GHCziPrim.word2Intzh
+                                                                                                ca39zz))
+                                                              %of (wild5XO::ghczmprim:GHCziPrim.Intzh)
+                                                                {%_ ->
+                                                                   ghczmprim:GHCziPrim.zpzh
+                                                                   (ghczmprim:GHCziPrim.zmzh
+                                                                    (48::ghczmprim:GHCziPrim.Intzh)
+                                                                    wild5XO)
+                                                                   (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                                    ia396
+                                                                    (6::ghczmprim:GHCziPrim.Intzh))}};
+                                                   ghczmprim:GHCziTypes.True ->
+                                                     %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                                      lzza39u
+                                                                                      (ghczmprim:GHCziPrim.word2Intzh
+                                                                                       ba39y))
+                                                     %of (wild4X9::ghczmprim:GHCziPrim.Intzh)
+                                                       {%_ ->
+                                                          ghczmprim:GHCziPrim.zpzh
+                                                          (ghczmprim:GHCziPrim.zmzh
+                                                           (56::ghczmprim:GHCziPrim.Intzh) wild4X9)
+                                                          (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                           ia396 (6::ghczmprim:GHCziPrim.Intzh))}};
+                                          ghczmprim:GHCziTypes.True ->
+                                            %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexInt8Arrayzh
+                                                                             lzza39u
+                                                                             (ghczmprim:GHCziPrim.word2Intzh
+                                                                              aa39x))
+                                            %of (wild3X7::ghczmprim:GHCziPrim.Intzh)
+                                              {%_ ->
+                                                 ghczmprim:GHCziPrim.zpzh
+                                                 (ghczmprim:GHCziPrim.zmzh
+                                                  (64::ghczmprim:GHCziPrim.Intzh) wild3X7)
+                                                 (ghczmprim:GHCziPrim.uncheckedIShiftLzh ia396
+                                                  (6::ghczmprim:GHCziPrim.Intzh))}}};
+                            (0::ghczmprim:GHCziPrim.Wordzh) ->
+                              checks3e2
+                              (ghczmprim:GHCziPrim.zmzh ia396 (1::ghczmprim:GHCziPrim.Intzh))}}
+             %in checks3e2
+                 (ghczmprim:GHCziPrim.zmzh sa393 (1::ghczmprim:GHCziPrim.Intzh))};

@@ -1,0 +1,18 @@
+name:           fhw
+version:        0.0.0.1
+license:        BSD3
+synopsis:       Primitive Hardware Libraries
+description:
+cabal-version:  >=1.6
+build-type: Simple
+
+
+Library {
+    build-depends: ghc-prim >= 0.3.0.1
+    build-depends: base
+
+    exposed-modules:
+           FHW, StackOps
+
+    ghc-options: -fext-core -Wall -no-global-package-db -no-user-package-db
+}

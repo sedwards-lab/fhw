@@ -1,0 +1,38 @@
+%module base:GHCziErr
+  base:GHCziErr.overflowError :: %forall aakN1 . aakN1 =
+    \ @ ab ->
+        base:GHCziException.throw2 @ base:GHCziException.ArithException
+        @ ab base:GHCziException.Overflow
+        (base:GHCziException.SomeException
+         @ base:GHCziException.ArithException);
+  base:GHCziErr.ratioZZeroDenominatorError :: %forall aakN2 . aakN2 =
+    \ @ ad ->
+        base:GHCziException.throw2 @ base:GHCziException.ArithException
+        @ ad base:GHCziException.RatioZZeroDenominator
+        (base:GHCziException.SomeException
+         @ base:GHCziException.ArithException);
+  base:GHCziErr.divZZeroError :: %forall aakN3 . aakN3 =
+    \ @ af ->
+        base:GHCziException.throw2 @ base:GHCziException.ArithException
+        @ af base:GHCziException.DivideByZZero
+        (base:GHCziException.SomeException
+         @ base:GHCziException.ArithException);
+  base:GHCziErr.error :: %forall aakN6 . (ghczmprim:GHCziTypes.ZMZN
+                                          ghczmprim:GHCziTypes.Char)
+                                         -> aakN6 =
+    \ @ al
+      (sakN7::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziException.throw2 @ base:GHCziException.ErrorCall @ al
+        (base:GHCziException.ErrorCall sakN7)
+        (base:GHCziException.SomeException
+         @ base:GHCziException.ErrorCall);
+  lvlrkNO :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Prelude.undefined"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziErr.undefined :: %forall aakN5 . aakN5 =
+    \ @ aj -> base:GHCziErr.error @ aj lvlrkNO;
+  lvl1rkNP :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Oops! The program has entered an `absent\x27 argument!\x0a"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziErr.absentErr :: %forall aakN4 . aakN4 =
+    \ @ ah -> base:GHCziErr.error @ ah lvl1rkNP;

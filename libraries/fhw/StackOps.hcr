@@ -1,0 +1,90 @@
+%module fhwzm0zi0zi0zi1:StackOps
+  %data fhwzm0zi0zi0zi1:StackOps.RecurseAction arga1J0 reta1J1 conta1J2 =
+    {fhwzm0zi0zi0zi1:StackOps.Call arga1J0 conta1J2;
+     fhwzm0zi0zi0zi1:StackOps.Ret reta1J1;
+     fhwzm0zi0zi0zi1:StackOps.NOP};
+  fhwzm0zi0zi0zi1:StackOps.spUpdate :: %forall aa1J3 ba1J4 ca1J5 . (fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                                                                    aa1J3
+                                                                    ba1J4
+                                                                    ca1J5)
+                                                                   ->
+                                                                   (fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                                                                    aa1J3
+                                                                    ba1J4
+                                                                    ca1J5)
+                                                                   ->
+                                                                   base:GHCziWord.Word32 ->
+                                                                   base:GHCziWord.Word32 =
+    \ @ aa1J3
+      @ ba1J4
+      @ ca1J5
+      (ws1KX::fhwzm0zi0zi0zi1:StackOps.RecurseAction aa1J3 ba1J4 ca1J5)
+      (w1s1KY::fhwzm0zi0zi0zi1:StackOps.RecurseAction aa1J3 ba1J4 ca1J5)
+      (w2s1KZZ::base:GHCziWord.Word32) ->
+        %case base:GHCziWord.Word32 w2s1KZZ
+        %of (w3X1Lc::base:GHCziWord.Word32)
+          {base:GHCziWord.W32zh (wws1L1::ghczmprim:GHCziPrim.Wordzh) ->
+             %case base:GHCziWord.Word32 ws1KX
+             %of (wildXb::fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                          aa1J3
+                          ba1J4
+                          ca1J5)
+               {fhwzm0zi0zi0zi1:StackOps.Call (dsd1JB::aa1J3) (ds1d1JC::ca1J5) ->
+                  %case base:GHCziWord.Word32 w1s1KY
+                  %of (wild1Xr::fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                                aa1J3
+                                ba1J4
+                                ca1J5)
+                    {%_ ->
+                       base:GHCziWord.W32zh wws1L1;
+                     fhwzm0zi0zi0zi1:StackOps.Call (ds2d1JD::aa1J3) (ds3d1JE::ca1J5) ->
+                       base:GHCziWord.W32zh
+                       (ghczmprim:GHCziPrim.narrow32Wordzh
+                        (ghczmprim:GHCziPrim.plusWordzh wws1L1
+                         (1::ghczmprim:GHCziPrim.Wordzh)))};
+                fhwzm0zi0zi0zi1:StackOps.Ret (dsd1Jzz::ba1J4) ->
+                  %case base:GHCziWord.Word32 w1s1KY
+                  %of (wild1Xa::fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                                aa1J3
+                                ba1J4
+                                ca1J5)
+                    {%_ ->
+                       base:GHCziWord.W32zh wws1L1;
+                     fhwzm0zi0zi0zi1:StackOps.Ret (ds1d1JA::ba1J4) ->
+                       base:GHCziWord.W32zh
+                       (ghczmprim:GHCziPrim.narrow32Wordzh
+                        (ghczmprim:GHCziPrim.minusWordzh wws1L1
+                         (1::ghczmprim:GHCziPrim.Wordzh)))};
+                fhwzm0zi0zi0zi1:StackOps.NOP ->
+                  base:GHCziWord.W32zh wws1L1}};
+  fhwzm0zi0zi0zi1:StackOps.stackOp2 :: base:GHCziWord.Word32 =
+    base:GHCziWord.W32zh (0::ghczmprim:GHCziPrim.Wordzh);
+  fhwzm0zi0zi0zi1:StackOps.stackOp1 :: %forall ct . fhwzm0zi0zi0zi1:FHW.MemOp
+                                                    base:GHCziWord.Word32
+                                                    ct =
+    \ @ ct ->
+        fhwzm0zi0zi0zi1:FHW.MemRead @ base:GHCziWord.Word32 @ ct
+        fhwzm0zi0zi0zi1:StackOps.stackOp2;
+  fhwzm0zi0zi0zi1:StackOps.stackOp :: %forall aa1J6 ba1J7 ca1J8 . (fhwzm0zi0zi0zi1:StackOps.RecurseAction
+                                                                   aa1J6
+                                                                   ba1J7
+                                                                   ca1J8)
+                                                                  ->
+                                                                  base:GHCziWord.Word32 ->
+                                                                  fhwzm0zi0zi0zi1:FHW.MemOp
+                                                                  base:GHCziWord.Word32
+                                                                  ca1J8 =
+    \ @ ar
+      @ bs
+      @ ct
+      (dsd1JL::fhwzm0zi0zi0zi1:StackOps.RecurseAction ar bs ct)
+      (spa1J9::base:GHCziWord.Word32) ->
+        %case (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 ct) dsd1JL
+        %of (wildX9::fhwzm0zi0zi0zi1:StackOps.RecurseAction ar bs ct)
+          {fhwzm0zi0zi0zi1:StackOps.Call (ds1d1JN::ar) (ka1Ja::ct) ->
+             fhwzm0zi0zi0zi1:FHW.MemWrite @ base:GHCziWord.Word32 @ ct spa1J9
+             ka1Ja;
+           fhwzm0zi0zi0zi1:StackOps.Ret (ds1d1JM::bs) ->
+             fhwzm0zi0zi0zi1:FHW.MemRead @ base:GHCziWord.Word32 @ ct spa1J9;
+           fhwzm0zi0zi0zi1:StackOps.NOP ->
+             fhwzm0zi0zi0zi1:StackOps.stackOp1 @ ct};

@@ -1,0 +1,386 @@
+%module integerzmgmp:GHCziIntegerziGMPziPrim
+  integerzmgmp:GHCziIntegerziGMPziPrim.integer2Intzh :: ghczmprim:GHCziPrim.Intzh
+                                                        ->
+                                                        ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                        ghczmprim:GHCziPrim.Intzh =
+    \ (saq::ghczmprim:GHCziPrim.Intzh)
+      (dar::ghczmprim:GHCziPrim.ByteArrayzh) ->
+        %case ghczmprim:GHCziPrim.Intzh saq
+        %of (wildXt::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.indexIntArrayzh
+                                              dar (0::ghczmprim:GHCziPrim.Intzh))
+             %of (vas::ghczmprim:GHCziPrim.Intzh)
+               {%_ ->
+                  %case ghczmprim:GHCziPrim.Intzh (ghczmprim:GHCziPrim.zlzh wildXt
+                                                   (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild1X6::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       vas;
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziPrim.negateIntzh vas}};
+           (0::ghczmprim:GHCziPrim.Intzh) ->
+             (0::ghczmprim:GHCziPrim.Intzh)};
+  integerzmgmp:GHCziIntegerziGMPziPrim.integer2Wordzh :: ghczmprim:GHCziPrim.Intzh
+                                                         ->
+                                                         ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                         ghczmprim:GHCziPrim.Wordzh =
+    \ (sat::ghczmprim:GHCziPrim.Intzh)
+      (dau::ghczmprim:GHCziPrim.ByteArrayzh) ->
+        %case ghczmprim:GHCziPrim.Wordzh sat
+        %of (wildXt::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             %case ghczmprim:GHCziPrim.Wordzh (ghczmprim:GHCziPrim.indexIntArrayzh
+                                               dau (0::ghczmprim:GHCziPrim.Intzh))
+             %of (vas::ghczmprim:GHCziPrim.Intzh)
+               {%_ ->
+                  %case ghczmprim:GHCziPrim.Wordzh (ghczmprim:GHCziPrim.zlzh wildXt
+                                                    (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild1X6::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziPrim.int2Wordzh vas;
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziPrim.int2Wordzh
+                       (ghczmprim:GHCziPrim.negateIntzh vas)}};
+           (0::ghczmprim:GHCziPrim.Intzh) ->
+             (0::ghczmprim:GHCziPrim.Wordzh)};
+  integerzmgmp:GHCziIntegerziGMPziPrim.cmpIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh =
+    %external prim "integer_cmm_cmpIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh -> ghczmprim:GHCziPrim.Intzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.cmpIntegerIntzh :: ghczmprim:GHCziPrim.Intzh
+                                                          ->
+                                                          ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                          ghczmprim:GHCziPrim.Intzh ->
+                                                          ghczmprim:GHCziPrim.Intzh =
+    %external prim "integer_cmm_cmpIntegerIntzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh -> ghczmprim:GHCziPrim.Intzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.plusIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                        ->
+                                                        ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                        ghczmprim:GHCziPrim.Intzh ->
+                                                        ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                        ghczmprim:GHCziPrim.Z2H
+                                                        ghczmprim:GHCziPrim.Intzh
+                                                        ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_plusIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.minusIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                         ->
+                                                         ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                         ghczmprim:GHCziPrim.Intzh ->
+                                                         ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                         ghczmprim:GHCziPrim.Z2H
+                                                         ghczmprim:GHCziPrim.Intzh
+                                                         ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_minusIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.timesIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                         ->
+                                                         ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                         ghczmprim:GHCziPrim.Intzh ->
+                                                         ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                         ghczmprim:GHCziPrim.Z2H
+                                                         ghczmprim:GHCziPrim.Intzh
+                                                         ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_timesIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.quotRemIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                           ->
+                                                           ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                           ghczmprim:GHCziPrim.Intzh ->
+                                                           ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                           ghczmprim:GHCziPrim.Z4H
+                                                           ghczmprim:GHCziPrim.Intzh
+                                                           ghczmprim:GHCziPrim.ByteArrayzh
+                                                           ghczmprim:GHCziPrim.Intzh
+                                                           ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_quotRemIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z4H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.quotIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                        ->
+                                                        ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                        ghczmprim:GHCziPrim.Intzh ->
+                                                        ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                        ghczmprim:GHCziPrim.Z2H
+                                                        ghczmprim:GHCziPrim.Intzh
+                                                        ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_quotIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.remIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_remIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.divModIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                          ->
+                                                          ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                          ghczmprim:GHCziPrim.Intzh ->
+                                                          ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                          ghczmprim:GHCziPrim.Z4H
+                                                          ghczmprim:GHCziPrim.Intzh
+                                                          ghczmprim:GHCziPrim.ByteArrayzh
+                                                          ghczmprim:GHCziPrim.Intzh
+                                                          ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_divModIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z4H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.divIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_divIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.modIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_modIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.divExactIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                            ->
+                                                            ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                            ghczmprim:GHCziPrim.Intzh ->
+                                                            ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                            ghczmprim:GHCziPrim.Z2H
+                                                            ghczmprim:GHCziPrim.Intzh
+                                                            ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_divExactIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.gcdIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_gcdIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.gcdIntegerIntzh :: ghczmprim:GHCziPrim.Intzh
+                                                          ->
+                                                          ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                          ghczmprim:GHCziPrim.Intzh ->
+                                                          ghczmprim:GHCziPrim.Intzh =
+    %external prim "integer_cmm_gcdIntegerIntzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh -> ghczmprim:GHCziPrim.Intzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.gcdIntzh :: ghczmprim:GHCziPrim.Intzh
+                                                   ->
+                                                   ghczmprim:GHCziPrim.Intzh ->
+                                                   ghczmprim:GHCziPrim.Intzh =
+    %external prim "integer_cmm_gcdIntzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.Intzh -> ghczmprim:GHCziPrim.Intzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.decodeDoublezh :: ghczmprim:GHCziPrim.Doublezh
+                                                         ->
+                                                         ghczmprim:GHCziPrim.Z3H
+                                                         ghczmprim:GHCziPrim.Intzh
+                                                         ghczmprim:GHCziPrim.Intzh
+                                                         ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_decodeDoublezh"
+    (ghczmprim:GHCziPrim.Doublezh ->
+     ghczmprim:GHCziPrim.Z3H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.int2Integerzh :: ghczmprim:GHCziPrim.Intzh
+                                                        ->
+                                                        ghczmprim:GHCziPrim.Z2H
+                                                        ghczmprim:GHCziPrim.Intzh
+                                                        ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_int2Integerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.word2Integerzh :: ghczmprim:GHCziPrim.Wordzh
+                                                         ->
+                                                         ghczmprim:GHCziPrim.Z2H
+                                                         ghczmprim:GHCziPrim.Intzh
+                                                         ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_word2Integerzh"
+    (ghczmprim:GHCziPrim.Wordzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.andIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_andIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.orIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                      ->
+                                                      ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                      ghczmprim:GHCziPrim.Intzh ->
+                                                      ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                      ghczmprim:GHCziPrim.Z2H
+                                                      ghczmprim:GHCziPrim.Intzh
+                                                      ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_orIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.xorIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                       ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Intzh ->
+                                                       ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       ghczmprim:GHCziPrim.Intzh
+                                                       ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_xorIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.mul2ExpIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                           ->
+                                                           ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                           ghczmprim:GHCziPrim.Intzh ->
+                                                           ghczmprim:GHCziPrim.Z2H
+                                                           ghczmprim:GHCziPrim.Intzh
+                                                           ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_mul2ExpIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.fdivQ2ExpIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                             ->
+                                                             ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                             ghczmprim:GHCziPrim.Intzh ->
+                                                             ghczmprim:GHCziPrim.Z2H
+                                                             ghczmprim:GHCziPrim.Intzh
+                                                             ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_fdivQ2ExpIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);
+  integerzmgmp:GHCziIntegerziGMPziPrim.complementIntegerzh :: ghczmprim:GHCziPrim.Intzh
+                                                              ->
+                                                              ghczmprim:GHCziPrim.ByteArrayzh ->
+                                                              ghczmprim:GHCziPrim.Z2H
+                                                              ghczmprim:GHCziPrim.Intzh
+                                                              ghczmprim:GHCziPrim.ByteArrayzh =
+    %external prim "integer_cmm_complementIntegerzh"
+    (ghczmprim:GHCziPrim.Intzh ->
+     ghczmprim:GHCziPrim.ByteArrayzh ->
+     ghczmprim:GHCziPrim.Z2H
+     ghczmprim:GHCziPrim.Intzh
+     ghczmprim:GHCziPrim.ByteArrayzh);

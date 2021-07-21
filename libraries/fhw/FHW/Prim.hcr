@@ -1,0 +1,849 @@
+%module fhwzm0zi0zi0zi1:FHWziPrim
+  %data fhwzm0zi0zi0zi1:FHWziPrim.Stream aadV =
+    {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg aadV
+                                    (fhwzm0zi0zi0zi1:FHWziPrim.Stream aadV)};
+  %rec
+  {fhwzm0zi0zi0zi1:FHWziPrim.zzipWith3 :: %forall aadZZ bae0 cae1 dae2 . (aadZZ
+                                                                          -> bae0 -> cae1 -> dae2)
+                                                                         ->
+                                                                         (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                          aadZZ)
+                                                                         ->
+                                                                         (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                          bae0)
+                                                                         ->
+                                                                         (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                          cae1)
+                                                                         ->
+                                                                         fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                         dae2 =
+     \ @ att
+       @ btu
+       @ ctv
+       @ dtw
+       (faej::att -> btu -> ctv -> dtw)
+       (dsdvp::fhwzm0zi0zi0zi1:FHWziPrim.Stream att)
+       (ds1dvq::fhwzm0zi0zi0zi1:FHWziPrim.Stream btu)
+       (ds2dvr::fhwzm0zi0zi0zi1:FHWziPrim.Stream ctv) ->
+         %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream dtw) dsdvp
+         %of (wildXo::fhwzm0zi0zi0zi1:FHWziPrim.Stream att)
+           {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+            (aaek::att) (asael::fhwzm0zi0zi0zi1:FHWziPrim.Stream att) ->
+              %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream dtw) ds1dvq
+              %of (wild1Xd::fhwzm0zi0zi0zi1:FHWziPrim.Stream btu)
+                {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+                 (baem::btu) (bsaen::fhwzm0zi0zi0zi1:FHWziPrim.Stream btu) ->
+                   %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream dtw) ds2dvr
+                   %of (wild2Xg::fhwzm0zi0zi0zi1:FHWziPrim.Stream ctv)
+                     {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+                      (caeo::ctv) (csaep::fhwzm0zi0zi0zi1:FHWziPrim.Stream ctv) ->
+                        fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ dtw (faej aaek baem caeo)
+                        (fhwzm0zi0zi0zi1:FHWziPrim.zzipWith3 @ att @ btu @ ctv @ dtw faej
+                         asael bsaen csaep)}}}};
+  %rec
+  {fhwzm0zi0zi0zi1:FHWziPrim.zzipWith :: %forall aae3 bae4 cae5 . (aae3
+                                                                   -> bae4 -> cae5)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aae3)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   bae4)
+                                                                  ->
+                                                                  fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                  cae5 =
+     \ @ atD
+       @ btE
+       @ ctF
+       (faee::atD -> btE -> ctF)
+       (dsdvv::fhwzm0zi0zi0zi1:FHWziPrim.Stream atD)
+       (ds1dvw::fhwzm0zi0zi0zi1:FHWziPrim.Stream btE) ->
+         %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream ctF) dsdvv
+         %of (wildXn::fhwzm0zi0zi0zi1:FHWziPrim.Stream atD)
+           {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+            (aaef::atD) (asaeg::fhwzm0zi0zi0zi1:FHWziPrim.Stream atD) ->
+              %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream ctF) ds1dvw
+              %of (wild1Xc::fhwzm0zi0zi0zi1:FHWziPrim.Stream btE)
+                {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+                 (baeh::btE) (bsaei::fhwzm0zi0zi0zi1:FHWziPrim.Stream btE) ->
+                   fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ ctF (faee aaef baeh)
+                   (fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ atD @ btE @ ctF faee asaeg
+                    bsaei)}}};
+  lvlrPR :: base:GHCziWord.Word32 =
+    base:GHCziWord.W32zh (0::ghczmprim:GHCziPrim.Wordzh);
+  lvl1rPS :: %forall wordr . (base:GHCziArr.Array
+                              base:GHCziWord.Word32
+                              wordr)
+                             -> base:GHCziWord.Word32 -> wordr =
+    \ @ wordr
+      (arrai3::base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+      (adai4::base:GHCziWord.Word32) ->
+        %case wordr arrai3
+        %of (wildaxQ::base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+          {base:GHCziArr.Array
+           (laxS::base:GHCziWord.Word32)
+           (uaxT::base:GHCziWord.Word32)
+           (rbaxU::ghczmprim:GHCziPrim.Intzh)
+           (dsaxV::ghczmprim:GHCziPrim.Arrayzh wordr) ->
+             %case wordr laxS %of (wild2sNy::base:GHCziWord.Word32)
+               {base:GHCziWord.W32zh (yzhsNx::ghczmprim:GHCziPrim.Wordzh) ->
+                  %case wordr adai4 %of (wild1aEC::base:GHCziWord.Word32)
+                    {base:GHCziWord.W32zh (xzhaEE::ghczmprim:GHCziPrim.Wordzh) ->
+                       %case wordr (ghczmprim:GHCziPrim.indexArrayzh @ wordr dsaxV
+                                    (ghczmprim:GHCziPrim.word2Intzh
+                                     (ghczmprim:GHCziPrim.narrow32Wordzh
+                                      (ghczmprim:GHCziPrim.minusWordzh xzhaEE yzhsNx))))
+                       %of (ds1ay1::ghczmprim:GHCziPrim.Z1H wordr)
+                         {ghczmprim:GHCziPrim.Z1H (ipvay3::wordr) ->
+                            ipvay3}}}};
+  lvl2rPT :: %forall wordr . (base:GHCziArr.Array
+                              base:GHCziWord.Word32
+                              wordr)
+                             ->
+                             (ghczmprim:GHCziTuple.Z3T
+                              ghczmprim:GHCziTypes.Bool
+                              base:GHCziWord.Word32
+                              wordr)
+                             -> base:GHCziArr.Array base:GHCziWord.Word32 wordr =
+    \ @ wordr
+      (wsJu::base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+      (w1sJB::ghczmprim:GHCziTuple.Z3T
+              ghczmprim:GHCziTypes.Bool
+              base:GHCziWord.Word32
+              wordr) ->
+        %case (base:GHCziArr.Array base:GHCziWord.Word32 wordr) wsJu
+        %of (w2XJX::base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+          {base:GHCziArr.Array
+           (wwsJw::base:GHCziWord.Word32)
+           (ww1sJx::base:GHCziWord.Word32)
+           (ww2sJy::ghczmprim:GHCziPrim.Intzh)
+           (ww3sJzz::ghczmprim:GHCziPrim.Arrayzh wordr) ->
+             %case (base:GHCziArr.Array base:GHCziWord.Word32 wordr) wwsJw
+             %of (wild2sNC::base:GHCziWord.Word32)
+               {base:GHCziWord.W32zh (yzhsNB::ghczmprim:GHCziPrim.Wordzh) ->
+                  %case (base:GHCziArr.Array base:GHCziWord.Word32 wordr) w1sJB
+                  %of (w3XKd::ghczmprim:GHCziTuple.Z3T
+                              ghczmprim:GHCziTypes.Bool
+                              base:GHCziWord.Word32
+                              wordr)
+                    {ghczmprim:GHCziTuple.Z3T
+                     (ww4sJD::ghczmprim:GHCziTypes.Bool)
+                     (ww5sJE::base:GHCziWord.Word32)
+                     (ww6sJF::wordr) ->
+                       %case (base:GHCziArr.Array base:GHCziWord.Word32 wordr) ww4sJD
+                       %of (wildXi::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            base:GHCziArr.Array @ base:GHCziWord.Word32 @ wordr wild2sNC ww1sJx
+                            ww2sJy ww3sJzz;
+                          ghczmprim:GHCziTypes.True ->
+                            %case (base:GHCziArr.Array
+                                   base:GHCziWord.Word32
+                                   wordr) (base:GHCziArr.zdwthawSTArray @ base:GHCziWord.Word32
+                                           @ wordr @ ghczmprim:GHCziPrim.RealWorld wild2sNC ww1sJx
+                                           ww2sJy ww3sJzz)
+                            %of (ww7aGs::ghczmprim:GHCziPrim.Z1H
+                                         ((ghczmprim:GHCziPrim.Statezh
+                                           ghczmprim:GHCziPrim.RealWorld)
+                                          ->
+                                          ghczmprim:GHCziPrim.Z2H
+                                          (ghczmprim:GHCziPrim.Statezh
+                                           ghczmprim:GHCziPrim.RealWorld)
+                                          (base:GHCziArr.STArray
+                                           ghczmprim:GHCziPrim.RealWorld
+                                           base:GHCziWord.Word32
+                                           wordr)))
+                              {ghczmprim:GHCziPrim.Z1H
+                               (ww8aGu::(ghczmprim:GHCziPrim.Statezh
+                                         ghczmprim:GHCziPrim.RealWorld)
+                                        ->
+                                        ghczmprim:GHCziPrim.Z2H
+                                        (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                                        (base:GHCziArr.STArray
+                                         ghczmprim:GHCziPrim.RealWorld
+                                         base:GHCziWord.Word32
+                                         wordr)) ->
+                                 %case (base:GHCziArr.Array base:GHCziWord.Word32 wordr) (ww8aGu
+                                                                                          ghczmprim:GHCziPrim.realWorldzh)
+                                 %of (ds1ayJ::ghczmprim:GHCziPrim.Z2H
+                                              (ghczmprim:GHCziPrim.Statezh
+                                               ghczmprim:GHCziPrim.RealWorld)
+                                              (base:GHCziArr.STArray
+                                               ghczmprim:GHCziPrim.RealWorld
+                                               base:GHCziWord.Word32
+                                               wordr))
+                                   {ghczmprim:GHCziPrim.Z2H
+                                    (ipvayL::ghczmprim:GHCziPrim.Statezh
+                                             ghczmprim:GHCziPrim.RealWorld)
+                                    (ipv1ayM::base:GHCziArr.STArray
+                                              ghczmprim:GHCziPrim.RealWorld
+                                              base:GHCziWord.Word32
+                                              wordr) ->
+                                      %case (base:GHCziArr.Array
+                                             base:GHCziWord.Word32
+                                             wordr) ipv1ayM
+                                      %of (wild1ayO::base:GHCziArr.STArray
+                                                     ghczmprim:GHCziPrim.RealWorld
+                                                     base:GHCziWord.Word32
+                                                     wordr)
+                                        {base:GHCziArr.STArray
+                                         (l1ayS::base:GHCziWord.Word32)
+                                         (u1ayT::base:GHCziWord.Word32)
+                                         (rb1ayU::ghczmprim:GHCziPrim.Intzh)
+                                         (marrzhayV::ghczmprim:GHCziPrim.MutableArrayzh
+                                                     ghczmprim:GHCziPrim.RealWorld
+                                                     wordr) ->
+                                           %case (base:GHCziArr.Array
+                                                  base:GHCziWord.Word32
+                                                  wordr) ww5sJE
+                                           %of (wild3aEC::base:GHCziWord.Word32)
+                                             {base:GHCziWord.W32zh
+                                              (xzhaEE::ghczmprim:GHCziPrim.Wordzh) ->
+                                                %case (base:GHCziArr.Array
+                                                       base:GHCziWord.Word32
+                                                       wordr) (ghczmprim:GHCziPrim.writeArrayzh
+                                                               @ ghczmprim:GHCziPrim.RealWorld
+                                                               @ wordr marrzhayV
+                                                               (ghczmprim:GHCziPrim.word2Intzh
+                                                                (ghczmprim:GHCziPrim.narrow32Wordzh
+                                                                 (ghczmprim:GHCziPrim.minusWordzh
+                                                                  xzhaEE yzhsNB)))
+                                                               ww6sJF ipvayL)
+                                                %of (s2zhazz7::ghczmprim:GHCziPrim.Statezh
+                                                               ghczmprim:GHCziPrim.RealWorld)
+                                                  {%_ ->
+                                                     %case (base:GHCziArr.Array
+                                                            base:GHCziWord.Word32
+                                                            wordr) (ghczmprim:GHCziPrim.unsafeFreezzeArrayzh
+                                                                    @ ghczmprim:GHCziPrim.RealWorld
+                                                                    @ wordr marrzhayV s2zhazz7)
+                                                     %of (ds2azz9::ghczmprim:GHCziPrim.Z2H
+                                                                   (ghczmprim:GHCziPrim.Statezh
+                                                                    ghczmprim:GHCziPrim.RealWorld)
+                                                                   (ghczmprim:GHCziPrim.Arrayzh
+                                                                    wordr))
+                                                       {ghczmprim:GHCziPrim.Z2H
+                                                        (ipv2azzb::ghczmprim:GHCziPrim.Statezh
+                                                                   ghczmprim:GHCziPrim.RealWorld)
+                                                        (ipv3azzc::ghczmprim:GHCziPrim.Arrayzh
+                                                                   wordr) ->
+                                                          base:GHCziArr.Array
+                                                          @ base:GHCziWord.Word32 @ wordr l1ayS
+                                                          u1ayT rb1ayU ipv3azzc}}}}}}}}}};
+  fhwzm0zi0zi0zi1:FHWziPrim.memoryzh :: %forall wordadX . ghczmprim:GHCziPrim.Wordzh
+                                                          ->
+                                                          wordadX ->
+                                                          (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                           ghczmprim:GHCziTypes.Bool)
+                                                          ->
+                                                          (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                           base:GHCziWord.Word32)
+                                                          ->
+                                                          (fhwzm0zi0zi0zi1:FHWziPrim.Stream wordadX)
+                                                          ->
+                                                          fhwzm0zi0zi0zi1:FHWziPrim.Stream wordadX =
+    \ @ wordr
+      (sizzeaet::ghczmprim:GHCziPrim.Wordzh)
+      (initaeu::wordr)
+      (writeaev::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                 ghczmprim:GHCziTypes.Bool)
+      (addraew::fhwzm0zi0zi0zi1:FHWziPrim.Stream base:GHCziWord.Word32)
+      (wdataaex::fhwzm0zi0zi0zi1:FHWziPrim.Stream wordr) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ wordr initaeu
+        (%let initialMemsAu :: base:GHCziArr.Array
+                               base:GHCziWord.Word32
+                               wordr =
+                %let asC5 :: ghczmprim:GHCziPrim.Wordzh =
+                       ghczmprim:GHCziPrim.narrow32Wordzh
+                       (ghczmprim:GHCziPrim.minusWordzh sizzeaet
+                        (1::ghczmprim:GHCziPrim.Wordzh))
+                %in %let zdjsHB :: ghczmprim:GHCziPrim.Intzh ->
+                                   base:GHCziArr.Array base:GHCziWord.Word32 wordr =
+                           \ (nzhawK::ghczmprim:GHCziPrim.Intzh) ->
+                               %case (base:GHCziArr.Array
+                                      base:GHCziWord.Word32
+                                      wordr) (ghczmprim:GHCziPrim.newArrayzh @ wordr
+                                              @ ghczmprim:GHCziPrim.RealWorld nzhawK
+                                              (base:GHCziArr.arrEleBottom @ wordr)
+                                              ghczmprim:GHCziPrim.realWorldzh)
+                               %of (ds1awN::ghczmprim:GHCziPrim.Z2H
+                                            (ghczmprim:GHCziPrim.Statezh
+                                             ghczmprim:GHCziPrim.RealWorld)
+                                            (ghczmprim:GHCziPrim.MutableArrayzh
+                                             ghczmprim:GHCziPrim.RealWorld
+                                             wordr))
+                                 {ghczmprim:GHCziPrim.Z2H
+                                  (ipvawR::ghczmprim:GHCziPrim.Statezh
+                                           ghczmprim:GHCziPrim.RealWorld)
+                                  (ipv1awS::ghczmprim:GHCziPrim.MutableArrayzh
+                                            ghczmprim:GHCziPrim.RealWorld
+                                            wordr) ->
+                                    %let lvl3sNE :: base:GHCziWord.Word32 =
+                                           base:GHCziWord.W32zh asC5
+                                    %in %let %rec
+                                             {goaxx :: (ghczmprim:GHCziTypes.ZMZN
+                                                        base:GHCziWord.Word32)
+                                                       ->
+                                                       (ghczmprim:GHCziPrim.Statezh
+                                                        ghczmprim:GHCziPrim.RealWorld)
+                                                       ->
+                                                       ghczmprim:GHCziPrim.Z2H
+                                                       (ghczmprim:GHCziPrim.Statezh
+                                                        ghczmprim:GHCziPrim.RealWorld)
+                                                       (base:GHCziArr.Array
+                                                        base:GHCziWord.Word32
+                                                        wordr) =
+                                                \ (dsaxy::ghczmprim:GHCziTypes.ZMZN
+                                                          base:GHCziWord.Word32)
+                                                  (etaB1::ghczmprim:GHCziPrim.Statezh
+                                                          ghczmprim:GHCziPrim.RealWorld) ->
+                                                    %case (ghczmprim:GHCziPrim.Z2H
+                                                           (ghczmprim:GHCziPrim.Statezh
+                                                            ghczmprim:GHCziPrim.RealWorld)
+                                                           (base:GHCziArr.Array
+                                                            base:GHCziWord.Word32
+                                                            wordr)) dsaxy
+                                                    %of (wildaxzz::ghczmprim:GHCziTypes.ZMZN
+                                                                   base:GHCziWord.Word32)
+                                                      {ghczmprim:GHCziTypes.ZMZN ->
+                                                         %case (ghczmprim:GHCziPrim.Z2H
+                                                                (ghczmprim:GHCziPrim.Statezh
+                                                                 ghczmprim:GHCziPrim.RealWorld)
+                                                                (base:GHCziArr.Array
+                                                                 base:GHCziWord.Word32
+                                                                 wordr)) (ghczmprim:GHCziPrim.unsafeFreezzeArrayzh
+                                                                          @ ghczmprim:GHCziPrim.RealWorld
+                                                                          @ wordr ipv1awS etaB1)
+                                                         %of (ds2ax7::ghczmprim:GHCziPrim.Z2H
+                                                                      (ghczmprim:GHCziPrim.Statezh
+                                                                       ghczmprim:GHCziPrim.RealWorld)
+                                                                      (ghczmprim:GHCziPrim.Arrayzh
+                                                                       wordr))
+                                                           {ghczmprim:GHCziPrim.Z2H
+                                                            (ipv2ax9::ghczmprim:GHCziPrim.Statezh
+                                                                      ghczmprim:GHCziPrim.RealWorld)
+                                                            (ipv3axa::ghczmprim:GHCziPrim.Arrayzh
+                                                                      wordr) ->
+                                                              ghczmprim:GHCziPrim.Z2H
+                                                              @ (ghczmprim:GHCziPrim.Statezh
+                                                                 ghczmprim:GHCziPrim.RealWorld)
+                                                              @ (base:GHCziArr.Array
+                                                                 base:GHCziWord.Word32
+                                                                 wordr)
+                                                              ipv2ax9
+                                                              (base:GHCziArr.Array
+                                                               @ base:GHCziWord.Word32 @ wordr
+                                                               lvlrPR lvl3sNE nzhawK ipv3axa)};
+                                                       ghczmprim:GHCziTypes.ZC
+                                                       (yaxD::base:GHCziWord.Word32)
+                                                       (ysaxE::ghczmprim:GHCziTypes.ZMZN
+                                                               base:GHCziWord.Word32) ->
+                                                         %case (ghczmprim:GHCziPrim.Z2H
+                                                                (ghczmprim:GHCziPrim.Statezh
+                                                                 ghczmprim:GHCziPrim.RealWorld)
+                                                                (base:GHCziArr.Array
+                                                                 base:GHCziWord.Word32
+                                                                 wordr)) yaxD
+                                                         %of (wild1aEC::base:GHCziWord.Word32)
+                                                           {base:GHCziWord.W32zh
+                                                            (xzhaEE::ghczmprim:GHCziPrim.Wordzh) ->
+                                                              %case (ghczmprim:GHCziPrim.Z2H
+                                                                     (ghczmprim:GHCziPrim.Statezh
+                                                                      ghczmprim:GHCziPrim.RealWorld)
+                                                                     (base:GHCziArr.Array
+                                                                      base:GHCziWord.Word32
+                                                                      wordr)) (ghczmprim:GHCziPrim.writeArrayzh
+                                                                               @ ghczmprim:GHCziPrim.RealWorld
+                                                                               @ wordr ipv1awS
+                                                                               (ghczmprim:GHCziPrim.word2Intzh
+                                                                                (ghczmprim:GHCziPrim.narrow32Wordzh
+                                                                                 (ghczmprim:GHCziPrim.minusWordzh
+                                                                                  xzhaEE
+                                                                                  (0::ghczmprim:GHCziPrim.Wordzh))))
+                                                                               initaeu etaB1)
+                                                              %of (s2zhax5::ghczmprim:GHCziPrim.Statezh
+                                                                            ghczmprim:GHCziPrim.RealWorld)
+                                                                {%_ ->
+                                                                   goaxx ysaxE s2zhax5}}}}
+                                        %in %case (base:GHCziArr.Array
+                                                   base:GHCziWord.Word32
+                                                   wordr) (goaxx
+                                                           (base:GHCziWord.zdwzdcenumFromTo1
+                                                            (0::ghczmprim:GHCziPrim.Wordzh)
+                                                            (ghczmprim:GHCziPrim.narrow32Wordzh
+                                                             (ghczmprim:GHCziPrim.minusWordzh
+                                                              sizzeaet
+                                                              (1::ghczmprim:GHCziPrim.Wordzh))))
+                                                           ipvawR)
+                                            %of (dsaBC::ghczmprim:GHCziPrim.Z2H
+                                                        (ghczmprim:GHCziPrim.Statezh
+                                                         ghczmprim:GHCziPrim.RealWorld)
+                                                        (base:GHCziArr.Array
+                                                         base:GHCziWord.Word32
+                                                         wordr))
+                                              {ghczmprim:GHCziPrim.Z2H
+                                               (ipv2aBE::ghczmprim:GHCziPrim.Statezh
+                                                         ghczmprim:GHCziPrim.RealWorld)
+                                               (ipv3aBF::base:GHCziArr.Array
+                                                         base:GHCziWord.Word32
+                                                         wordr) ->
+                                                 ipv3aBF}}
+                    %in %case (base:GHCziArr.Array
+                               base:GHCziWord.Word32
+                               wordr) (ghczmprim:GHCziPrim.leWordzh asC5 asC5)
+                        %of (wild1aCo::ghczmprim:GHCziTypes.Bool)
+                          {ghczmprim:GHCziTypes.False ->
+                             zdjsHB (0::ghczmprim:GHCziPrim.Intzh);
+                           ghczmprim:GHCziTypes.True ->
+                             zdjsHB
+                             (ghczmprim:GHCziPrim.zpzh
+                              (ghczmprim:GHCziPrim.word2Intzh
+                               (ghczmprim:GHCziPrim.narrow32Wordzh
+                                (ghczmprim:GHCziPrim.minusWordzh asC5
+                                 (0::ghczmprim:GHCziPrim.Wordzh))))
+                              (1::ghczmprim:GHCziPrim.Intzh))}
+         %in %let %rec
+                  {memoryStatesAs :: fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                     (base:GHCziArr.Array base:GHCziWord.Word32 wordr) =
+                     fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+                     @ (base:GHCziArr.Array base:GHCziWord.Word32 wordr) initialMemsAu
+                     updatedMemorysAt;
+                   updatedMemorysAt :: fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                       (base:GHCziArr.Array base:GHCziWord.Word32 wordr) =
+                     fhwzm0zi0zi0zi1:FHWziPrim.zzipWith
+                     @ (base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+                     @ (ghczmprim:GHCziTuple.Z3T
+                        ghczmprim:GHCziTypes.Bool
+                        base:GHCziWord.Word32
+                        wordr)
+                     @ (base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+                     (lvl2rPT @ wordr) memoryStatesAs
+                     (fhwzm0zi0zi0zi1:FHWziPrim.zzipWith3 @ ghczmprim:GHCziTypes.Bool
+                      @ base:GHCziWord.Word32 @ wordr
+                      @ (ghczmprim:GHCziTuple.Z3T
+                         ghczmprim:GHCziTypes.Bool
+                         base:GHCziWord.Word32
+                         wordr)
+                      (ghczmprim:GHCziTuple.Z3T @ ghczmprim:GHCziTypes.Bool
+                       @ base:GHCziWord.Word32 @ wordr)
+                      writeaev addraew wdataaex)}
+             %in fhwzm0zi0zi0zi1:FHWziPrim.zzipWith
+                 @ (base:GHCziArr.Array base:GHCziWord.Word32 wordr)
+                 @ base:GHCziWord.Word32 @ wordr (lvl1rPS @ wordr) memoryStatesAs
+                 addraew);
+  %rec
+  {fhwzm0zi0zi0zi1:FHWziPrim.map :: %forall aae6 bae7 . (aae6 ->
+                                                         bae7)
+                                                        ->
+                                                        (fhwzm0zi0zi0zi1:FHWziPrim.Stream aae6) ->
+                                                        fhwzm0zi0zi0zi1:FHWziPrim.Stream bae7 =
+     \ @ atK
+       @ btL
+       (faeb::atK -> btL)
+       (dsdvS::fhwzm0zi0zi0zi1:FHWziPrim.Stream atK) ->
+         %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream btL) dsdvS
+         %of (wildXn::fhwzm0zi0zi0zi1:FHWziPrim.Stream atK)
+           {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+            (haec::atK) (taed::fhwzm0zi0zi0zi1:FHWziPrim.Stream atK) ->
+              fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ btL (faeb haec)
+              (fhwzm0zi0zi0zi1:FHWziPrim.map @ atK @ btL faeb taed)}};
+  fhwzm0zi0zi0zi1:FHWziPrim.repeat :: %forall aae8 . aae8 ->
+                                                     fhwzm0zi0zi0zi1:FHWziPrim.Stream aae8 =
+    \ @ atO (aae9::atO) ->
+        %let %rec
+             {ssAo :: fhwzm0zi0zi0zi1:FHWziPrim.Stream atO =
+                fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ atO aae9 ssAo}
+        %in ssAo;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcfromInteger :: %forall aaiA . (base:GHCziNum.Num
+                                                                            aaiA)
+                                                                           ->
+                                                                           integerzmgmp:GHCziIntegerziType.Integer
+                                                                           ->
+                                                                           fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                           aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (iaiB::integerzmgmp:GHCziIntegerziType.Integer) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.repeat @ aaiA
+        (base:GHCziNum.fromInteger @ aaiA zddNumau3 iaiB);
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcsignum :: %forall aaiA . (base:GHCziNum.Num
+                                                                       aaiA)
+                                                                      ->
+                                                                      (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                       aaiA)
+                                                                      ->
+                                                                      fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                      aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.map @ aaiA @ aaiA
+        (base:GHCziNum.signum @ aaiA zddNumau3) etaB1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcabs :: %forall aaiA . (base:GHCziNum.Num
+                                                                    aaiA)
+                                                                   ->
+                                                                   (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                    aaiA)
+                                                                   ->
+                                                                   fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.map @ aaiA @ aaiA
+        (base:GHCziNum.abs @ aaiA zddNumau3) etaB1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcnegate :: %forall aaiA . (base:GHCziNum.Num
+                                                                       aaiA)
+                                                                      ->
+                                                                      (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                       aaiA)
+                                                                      ->
+                                                                      fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                      aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.map @ aaiA @ aaiA
+        (base:GHCziNum.negate @ aaiA zddNumau3) etaB1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczm :: %forall aaiA . (base:GHCziNum.Num
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                  aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB2::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA)
+      (eta1B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ aaiA @ aaiA @ aaiA
+        (base:GHCziNum.zm @ aaiA zddNumau3) etaB2 eta1B1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczt :: %forall aaiA . (base:GHCziNum.Num
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                  aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB2::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA)
+      (eta1B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ aaiA @ aaiA @ aaiA
+        (base:GHCziNum.zt @ aaiA zddNumau3) etaB2 eta1B1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczp :: %forall aaiA . (base:GHCziNum.Num
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                   aaiA)
+                                                                  ->
+                                                                  fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                                  aaiA =
+    \ @ aaiA
+      (zddNumau3::base:GHCziNum.Num aaiA)
+      (etaB2::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA)
+      (eta1B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ aaiA @ aaiA @ aaiA
+        (base:GHCziNum.zp @ aaiA zddNumau3) etaB2 eta1B1;
+  fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStream :: %forall aaiA . (base:GHCziNum.Num
+                                                            aaiA)
+                                                           ->
+                                                           base:GHCziNum.Num
+                                                           (fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA) =
+    \ @ aaiA (zddNumau3::base:GHCziNum.Num aaiA) ->
+        base:GHCziNum.DZCNum @ (fhwzm0zi0zi0zi1:FHWziPrim.Stream aaiA)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczp @ aaiA zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczt @ aaiA zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdczm @ aaiA zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcnegate @ aaiA
+         zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcabs @ aaiA zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcsignum @ aaiA
+         zddNumau3)
+        (fhwzm0zi0zi0zi1:FHWziPrim.zdfNumStreamzuzdcfromInteger @ aaiA
+         zddNumau3);
+  %rec
+  {fhwzm0zi0zi0zi1:FHWziPrim.takeStream :: %forall aadY . ghczmprim:GHCziTypes.Int
+                                                          ->
+                                                          (fhwzm0zi0zi0zi1:FHWziPrim.Stream aadY) ->
+                                                          ghczmprim:GHCziTypes.ZMZN aadY =
+     \ @ au
+       (dsdvi::ghczmprim:GHCziTypes.Int)
+       (ds1dvj::fhwzm0zi0zi0zi1:FHWziPrim.Stream au) ->
+         %case (ghczmprim:GHCziTypes.ZMZN au) dsdvi
+         %of (wildXw::ghczmprim:GHCziTypes.Int)
+           {ghczmprim:GHCziTypes.Izh (ds2dvk::ghczmprim:GHCziPrim.Intzh) ->
+              %case (ghczmprim:GHCziTypes.ZMZN au) ds2dvk
+              %of (ds3XvE::ghczmprim:GHCziPrim.Intzh)
+                {%_ ->
+                   %case (ghczmprim:GHCziTypes.ZMZN au) ds1dvj
+                   %of (wild1XD::fhwzm0zi0zi0zi1:FHWziPrim.Stream au)
+                     {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+                      (hdaer::au) (tlaes::fhwzm0zi0zi0zi1:FHWziPrim.Stream au) ->
+                        ghczmprim:GHCziTypes.ZC @ au hdaer
+                        (fhwzm0zi0zi0zi1:FHWziPrim.takeStream @ au
+                         (ghczmprim:GHCziTypes.Izh
+                          (ghczmprim:GHCziPrim.zmzh ds3XvE (1::ghczmprim:GHCziPrim.Intzh)))
+                         tlaes)};
+                 (0::ghczmprim:GHCziPrim.Intzh) ->
+                   ghczmprim:GHCziTypes.ZMZN @ au}}};
+  %rec
+  {fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses :: ghczmprim:GHCziTypes.Int
+                                                 ->
+                                                 ghczmprim:GHCziTypes.Int ->
+                                                 (ghczmprim:GHCziTuple.Z3T
+                                                  ghczmprim:GHCziTypes.Int
+                                                  ghczmprim:GHCziTypes.Int
+                                                  ghczmprim:GHCziTypes.Int)
+                                                 ->
+                                                 (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                  ghczmprim:GHCziTypes.Int)
+                                                 ->
+                                                 ghczmprim:GHCziPrim.Z3H
+                                                 ghczmprim:GHCziTypes.Int
+                                                 ghczmprim:GHCziTypes.Int
+                                                 (ghczmprim:GHCziTuple.Z3T
+                                                  ghczmprim:GHCziTypes.Int
+                                                  ghczmprim:GHCziTypes.Int
+                                                  ghczmprim:GHCziTypes.Int) =
+     \ (wwsJM::ghczmprim:GHCziTypes.Int)
+       (ww1sJN::ghczmprim:GHCziTypes.Int)
+       (ww2sJO::ghczmprim:GHCziTuple.Z3T
+                ghczmprim:GHCziTypes.Int
+                ghczmprim:GHCziTypes.Int
+                ghczmprim:GHCziTypes.Int)
+       (wsJQ::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+              ghczmprim:GHCziTypes.Int) ->
+         %case (ghczmprim:GHCziPrim.Z3H
+                ghczmprim:GHCziTypes.Int
+                ghczmprim:GHCziTypes.Int
+                (ghczmprim:GHCziTuple.Z3T
+                 ghczmprim:GHCziTypes.Int
+                 ghczmprim:GHCziTypes.Int
+                 ghczmprim:GHCziTypes.Int)) wsJQ
+         %of (wildXw::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                      ghczmprim:GHCziTypes.Int)
+           {fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+            (dsdv2::ghczmprim:GHCziTypes.Int)
+            (ds1dv3::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                     ghczmprim:GHCziTypes.Int) ->
+              %case (ghczmprim:GHCziPrim.Z3H
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int
+                     (ghczmprim:GHCziTuple.Z3T
+                      ghczmprim:GHCziTypes.Int
+                      ghczmprim:GHCziTypes.Int
+                      ghczmprim:GHCziTypes.Int)) dsdv2
+              %of (wild1Xl::ghczmprim:GHCziTypes.Int)
+                {ghczmprim:GHCziTypes.Izh (ds2dv4::ghczmprim:GHCziPrim.Intzh) ->
+                   %case (ghczmprim:GHCziPrim.Z3H
+                          ghczmprim:GHCziTypes.Int
+                          ghczmprim:GHCziTypes.Int
+                          (ghczmprim:GHCziTuple.Z3T
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int)) ds2dv4
+                   %of (ds3Xvr::ghczmprim:GHCziPrim.Intzh)
+                     {%_ ->
+                        %case (ghczmprim:GHCziPrim.Z3H
+                               ghczmprim:GHCziTypes.Int
+                               ghczmprim:GHCziTypes.Int
+                               (ghczmprim:GHCziTuple.Z3T
+                                ghczmprim:GHCziTypes.Int
+                                ghczmprim:GHCziTypes.Int
+                                ghczmprim:GHCziTypes.Int)) ww2sJO
+                        %of (wild2Xn::ghczmprim:GHCziTuple.Z3T
+                                      ghczmprim:GHCziTypes.Int
+                                      ghczmprim:GHCziTypes.Int
+                                      ghczmprim:GHCziTypes.Int)
+                          {ghczmprim:GHCziTuple.Z3T
+                           (wBaseai8::ghczmprim:GHCziTypes.Int)
+                           (wRecai9::ghczmprim:GHCziTypes.Int)
+                           (wRecPaia::ghczmprim:GHCziTypes.Int) ->
+                             %case (ghczmprim:GHCziPrim.Z3H
+                                    ghczmprim:GHCziTypes.Int
+                                    ghczmprim:GHCziTypes.Int
+                                    (ghczmprim:GHCziTuple.Z3T
+                                     ghczmprim:GHCziTypes.Int
+                                     ghczmprim:GHCziTypes.Int
+                                     ghczmprim:GHCziTypes.Int)) ds3Xvr
+                             %of (ds4XvD::ghczmprim:GHCziPrim.Intzh)
+                               {%_ ->
+                                  fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                  (%case ghczmprim:GHCziTypes.Int wwsJM
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  ww1sJN wild2Xn ds1dv3;
+                                (1::ghczmprim:GHCziPrim.Intzh) ->
+                                  fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                  (%case ghczmprim:GHCziTypes.Int wwsJM
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  (%case ghczmprim:GHCziTypes.Int ww1sJN
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  wild2Xn ds1dv3;
+                                (2::ghczmprim:GHCziPrim.Intzh) ->
+                                  fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                  (%case ghczmprim:GHCziTypes.Int wwsJM
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  ww1sJN
+                                  (ghczmprim:GHCziTuple.Z3T @ ghczmprim:GHCziTypes.Int
+                                   @ ghczmprim:GHCziTypes.Int @ ghczmprim:GHCziTypes.Int
+                                   (%case ghczmprim:GHCziTypes.Int wBaseai8
+                                    %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                      {ghczmprim:GHCziTypes.Izh
+                                       (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                         ghczmprim:GHCziTypes.Izh
+                                         (ghczmprim:GHCziPrim.zpzh xazzG
+                                          (1::ghczmprim:GHCziPrim.Intzh))})
+                                   wRecai9 wRecPaia)
+                                  ds1dv3;
+                                (3::ghczmprim:GHCziPrim.Intzh) ->
+                                  fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                  (%case ghczmprim:GHCziTypes.Int wwsJM
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  ww1sJN
+                                  (ghczmprim:GHCziTuple.Z3T @ ghczmprim:GHCziTypes.Int
+                                   @ ghczmprim:GHCziTypes.Int @ ghczmprim:GHCziTypes.Int wBaseai8
+                                   (%case ghczmprim:GHCziTypes.Int wRecai9
+                                    %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                      {ghczmprim:GHCziTypes.Izh
+                                       (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                         ghczmprim:GHCziTypes.Izh
+                                         (ghczmprim:GHCziPrim.zpzh xazzG
+                                          (1::ghczmprim:GHCziPrim.Intzh))})
+                                   wRecPaia)
+                                  ds1dv3;
+                                (4::ghczmprim:GHCziPrim.Intzh) ->
+                                  fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                  (%case ghczmprim:GHCziTypes.Int wwsJM
+                                   %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                     {ghczmprim:GHCziTypes.Izh (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                        ghczmprim:GHCziTypes.Izh
+                                        (ghczmprim:GHCziPrim.zpzh xazzG
+                                         (1::ghczmprim:GHCziPrim.Intzh))})
+                                  ww1sJN
+                                  (ghczmprim:GHCziTuple.Z3T @ ghczmprim:GHCziTypes.Int
+                                   @ ghczmprim:GHCziTypes.Int @ ghczmprim:GHCziTypes.Int wBaseai8
+                                   wRecai9
+                                   (%case ghczmprim:GHCziTypes.Int wRecPaia
+                                    %of (wild3azzE::ghczmprim:GHCziTypes.Int)
+                                      {ghczmprim:GHCziTypes.Izh
+                                       (xazzG::ghczmprim:GHCziPrim.Intzh) ->
+                                         ghczmprim:GHCziTypes.Izh
+                                         (ghczmprim:GHCziPrim.zpzh xazzG
+                                          (1::ghczmprim:GHCziPrim.Intzh))}))
+                                  ds1dv3}};
+                      (0::ghczmprim:GHCziPrim.Intzh) ->
+                        ghczmprim:GHCziPrim.Z3H @ ghczmprim:GHCziTypes.Int
+                        @ ghczmprim:GHCziTypes.Int
+                        @ (ghczmprim:GHCziTuple.Z3T
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int)
+                        wwsJM ww1sJN ww2sJO}}}};
+  fhwzm0zi0zi0zi1:FHWziPrim.countAccesses :: (ghczmprim:GHCziTuple.Z3T
+                                              ghczmprim:GHCziTypes.Int
+                                              ghczmprim:GHCziTypes.Int
+                                              (ghczmprim:GHCziTuple.Z3T
+                                               ghczmprim:GHCziTypes.Int
+                                               ghczmprim:GHCziTypes.Int
+                                               ghczmprim:GHCziTypes.Int))
+                                             ->
+                                             (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                              ghczmprim:GHCziTypes.Int)
+                                             ->
+                                             ghczmprim:GHCziTuple.Z3T
+                                             ghczmprim:GHCziTypes.Int
+                                             ghczmprim:GHCziTypes.Int
+                                             (ghczmprim:GHCziTuple.Z3T
+                                              ghczmprim:GHCziTypes.Int
+                                              ghczmprim:GHCziTypes.Int
+                                              ghczmprim:GHCziTypes.Int) =
+    \ (wsJK::ghczmprim:GHCziTuple.Z3T
+             ghczmprim:GHCziTypes.Int
+             ghczmprim:GHCziTypes.Int
+             (ghczmprim:GHCziTuple.Z3T
+              ghczmprim:GHCziTypes.Int
+              ghczmprim:GHCziTypes.Int
+              ghczmprim:GHCziTypes.Int))
+      (w1sJQ::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+              ghczmprim:GHCziTypes.Int) ->
+        %case (ghczmprim:GHCziTuple.Z3T
+               ghczmprim:GHCziTypes.Int
+               ghczmprim:GHCziTypes.Int
+               (ghczmprim:GHCziTuple.Z3T
+                ghczmprim:GHCziTypes.Int
+                ghczmprim:GHCziTypes.Int
+                ghczmprim:GHCziTypes.Int)) wsJK
+        %of (w2XKp::ghczmprim:GHCziTuple.Z3T
+                    ghczmprim:GHCziTypes.Int
+                    ghczmprim:GHCziTypes.Int
+                    (ghczmprim:GHCziTuple.Z3T
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int))
+          {ghczmprim:GHCziTuple.Z3T
+           (wwsJM::ghczmprim:GHCziTypes.Int)
+           (ww1sJN::ghczmprim:GHCziTypes.Int)
+           (ww2sJO::ghczmprim:GHCziTuple.Z3T
+                    ghczmprim:GHCziTypes.Int
+                    ghczmprim:GHCziTypes.Int
+                    ghczmprim:GHCziTypes.Int) ->
+             %case (ghczmprim:GHCziTuple.Z3T
+                    ghczmprim:GHCziTypes.Int
+                    ghczmprim:GHCziTypes.Int
+                    (ghczmprim:GHCziTuple.Z3T
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int)) (fhwzm0zi0zi0zi1:FHWziPrim.zdwcountAccesses
+                                                 wwsJM ww1sJN ww2sJO w1sJQ)
+             %of (ww3sJV::ghczmprim:GHCziPrim.Z3H
+                          ghczmprim:GHCziTypes.Int
+                          ghczmprim:GHCziTypes.Int
+                          (ghczmprim:GHCziTuple.Z3T
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int
+                           ghczmprim:GHCziTypes.Int))
+               {ghczmprim:GHCziPrim.Z3H
+                (ww4sJX::ghczmprim:GHCziTypes.Int)
+                (ww5sJY::ghczmprim:GHCziTypes.Int)
+                (ww6sJZZ::ghczmprim:GHCziTuple.Z3T
+                          ghczmprim:GHCziTypes.Int
+                          ghczmprim:GHCziTypes.Int
+                          ghczmprim:GHCziTypes.Int) ->
+                  ghczmprim:GHCziTuple.Z3T @ ghczmprim:GHCziTypes.Int
+                  @ ghczmprim:GHCziTypes.Int
+                  @ (ghczmprim:GHCziTuple.Z3T
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int
+                     ghczmprim:GHCziTypes.Int)
+                  ww4sJX ww5sJY ww6sJZZ}};

@@ -1,0 +1,27 @@
+name:           integer-gmp
+version:        0.5.0.0
+license:        BSD3
+
+synopsis:       Integer library based on GMP
+description:
+    This package contains an Integer library based on GMP.
+cabal-version:  >=1.6
+build-type: Simple
+
+Library {
+    build-depends: ghc-prim
+    exposed-modules: GHC.Integer
+                     GHC.Integer.GMP.Internals
+                     GHC.Integer.GMP.Prim
+                     GHC.Integer.Logarithms
+                     GHC.Integer.Logarithms.Internals
+    other-modules: GHC.Integer.Type
+
+    include-dirs: ../includes
+    includes: MachDeps.h
+
+    extensions: CPP, MagicHash, UnboxedTuples, NoImplicitPrelude,
+                ForeignFunctionInterface, UnliftedFFITypes
+    ghc-options: -package-name integer-gmp -fext-core -no-global-package-db
+                 -no-user-package-db -Wall
+}

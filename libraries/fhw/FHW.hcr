@@ -1,0 +1,257 @@
+%module fhwzm0zi0zi0zi1:FHW
+  %data fhwzm0zi0zi0zi1:FHW.HeapOut aa1lX =
+    {fhwzm0zi0zi0zi1:FHW.ReadOut aa1lX;
+     fhwzm0zi0zi0zi1:FHW.WriteOut base:GHCziWord.Word32};
+  %data fhwzm0zi0zi0zi1:FHW.HeapIn aa1lY =
+    {fhwzm0zi0zi0zi1:FHW.Read base:GHCziWord.Word32;
+     fhwzm0zi0zi0zi1:FHW.Write aa1lY;
+     fhwzm0zi0zi0zi1:FHW.InNOP};
+  %data fhwzm0zi0zi0zi1:FHW.MemOp addra1lZZ worda1m0 =
+    {fhwzm0zi0zi0zi1:FHW.MemRead addra1lZZ;
+     fhwzm0zi0zi0zi1:FHW.MemWrite addra1lZZ worda1m0};
+  lvlr1uH :: %forall wordo . (fhwzm0zi0zi0zi1:FHW.MemOp
+                              base:GHCziWord.Word32
+                              wordo)
+                             -> ghczmprim:GHCziTypes.Bool =
+    \ @ wordo
+      (dsd1oW::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo) ->
+        %case ghczmprim:GHCziTypes.Bool dsd1oW
+        %of (wildXk::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo)
+          {fhwzm0zi0zi0zi1:FHW.MemRead (ipvs1pD::base:GHCziWord.Word32) ->
+             ghczmprim:GHCziTypes.False;
+           fhwzm0zi0zi0zi1:FHW.MemWrite
+           (ds1d1oX::base:GHCziWord.Word32) (ds2d1oY::wordo) ->
+             ghczmprim:GHCziTypes.True};
+  lvl1r1uI :: %forall wordo . (fhwzm0zi0zi0zi1:FHW.MemOp
+                               base:GHCziWord.Word32
+                               wordo)
+                              -> base:GHCziWord.Word32 =
+    \ @ wordo
+      (dsd1p2::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo) ->
+        %case base:GHCziWord.Word32 dsd1p2
+        %of (wildXk::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo)
+          {fhwzm0zi0zi0zi1:FHW.MemRead (a4a1mB::base:GHCziWord.Word32) ->
+             a4a1mB;
+           fhwzm0zi0zi0zi1:FHW.MemWrite
+           (a4a1mC::base:GHCziWord.Word32) (ds1d1p3::wordo) ->
+             a4a1mC};
+  fhwzm0zi0zi0zi1:FHW.memory :: %forall worda1m2 . base:GHCziWord.Word32
+                                                   ->
+                                                   worda1m2 ->
+                                                   (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                    (fhwzm0zi0zi0zi1:FHW.MemOp
+                                                     base:GHCziWord.Word32
+                                                     worda1m2))
+                                                   -> fhwzm0zi0zi0zi1:FHWziPrim.Stream worda1m2 =
+    \ @ wordo
+      (etaB3::base:GHCziWord.Word32)
+      (eta1B2::wordo)
+      (eta2B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+               (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo)) ->
+        %case (fhwzm0zi0zi0zi1:FHWziPrim.Stream wordo) etaB3
+        %of (wildXf::base:GHCziWord.Word32)
+          {base:GHCziWord.W32zh (sizzezqa1mx::ghczmprim:GHCziPrim.Wordzh) ->
+             fhwzm0zi0zi0zi1:FHWziPrim.memoryzh @ wordo sizzezqa1mx eta1B2
+             (fhwzm0zi0zi0zi1:FHWziPrim.map
+              @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo)
+              @ ghczmprim:GHCziTypes.Bool (lvlr1uH @ wordo) eta2B1)
+             (fhwzm0zi0zi0zi1:FHWziPrim.map
+              @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo)
+              @ base:GHCziWord.Word32 (lvl1r1uI @ wordo) eta2B1)
+             (fhwzm0zi0zi0zi1:FHWziPrim.map
+              @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 wordo) @ wordo
+              (\ (dsd1p6::fhwzm0zi0zi0zi1:FHW.MemOp
+                          base:GHCziWord.Word32
+                          wordo) ->
+                   %case wordo dsd1p6
+                   %of (wild1Xk::fhwzm0zi0zi0zi1:FHW.MemOp
+                                 base:GHCziWord.Word32
+                                 wordo)
+                     {fhwzm0zi0zi0zi1:FHW.MemRead (ipvs1pH::base:GHCziWord.Word32) ->
+                        eta1B2;
+                      fhwzm0zi0zi0zi1:FHW.MemWrite
+                      (ds1d1p7::base:GHCziWord.Word32) (da1mD::wordo) ->
+                        da1mD})
+              eta2B1)};
+  ar1uJ :: base:GHCziWord.Word32 =
+    base:GHCziWord.W32zh (0::ghczmprim:GHCziPrim.Wordzh);
+  lvl2r1uK :: %forall instj . (fhwzm0zi0zi0zi1:FHW.HeapIn instj) ->
+                              base:GHCziWord.Word32 -> base:GHCziWord.Word32 =
+    \ @ instj
+      (dsd1pl::fhwzm0zi0zi0zi1:FHW.HeapIn instj)
+      (na1mR::base:GHCziWord.Word32) ->
+        %case base:GHCziWord.Word32 dsd1pl
+        %of (wildXm::fhwzm0zi0zi0zi1:FHW.HeapIn instj)
+          {%_ ->
+             na1mR;
+           fhwzm0zi0zi0zi1:FHW.Write (ds1d1pm::instj) ->
+             %case base:GHCziWord.Word32 na1mR
+             %of (wild1a1qzz::base:GHCziWord.Word32)
+               {base:GHCziWord.W32zh (xzha1qB::ghczmprim:GHCziPrim.Wordzh) ->
+                  base:GHCziWord.W32zh
+                  (ghczmprim:GHCziPrim.narrow32Wordzh
+                   (ghczmprim:GHCziPrim.plusWordzh xzha1qB
+                    (1::ghczmprim:GHCziPrim.Wordzh)))}};
+  lvl3r1uL :: %forall instj . fhwzm0zi0zi0zi1:FHW.MemOp
+                              base:GHCziWord.Word32
+                              instj =
+    \ @ instj ->
+        fhwzm0zi0zi0zi1:FHW.MemRead @ base:GHCziWord.Word32 @ instj ar1uJ;
+  lvl4r1uM :: %forall instj . (fhwzm0zi0zi0zi1:FHW.HeapIn instj) ->
+                              base:GHCziWord.Word32 ->
+                              fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj =
+    \ @ instj
+      (dsd1pg::fhwzm0zi0zi0zi1:FHW.HeapIn instj)
+      (ds1d1ph::base:GHCziWord.Word32) ->
+        %case (fhwzm0zi0zi0zi1:FHW.MemOp
+               base:GHCziWord.Word32
+               instj) dsd1pg
+        %of (wildXo::fhwzm0zi0zi0zi1:FHW.HeapIn instj)
+          {fhwzm0zi0zi0zi1:FHW.Read (ra1mN::base:GHCziWord.Word32) ->
+             fhwzm0zi0zi0zi1:FHW.MemRead @ base:GHCziWord.Word32 @ instj ra1mN;
+           fhwzm0zi0zi0zi1:FHW.Write (la1mO::instj) ->
+             fhwzm0zi0zi0zi1:FHW.MemWrite @ base:GHCziWord.Word32 @ instj
+             ds1d1ph la1mO;
+           fhwzm0zi0zi0zi1:FHW.InNOP ->
+             lvl3r1uL @ instj};
+  lvl5r1uN :: %forall instj . (fhwzm0zi0zi0zi1:FHW.MemOp
+                               base:GHCziWord.Word32
+                               instj)
+                              -> instj -> fhwzm0zi0zi0zi1:FHW.HeapOut instj =
+    \ @ instj
+      (dsd1pb::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj)
+      (la1mK::instj) ->
+        %case (fhwzm0zi0zi0zi1:FHW.HeapOut instj) dsd1pb
+        %of (wildXp::fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj)
+          {fhwzm0zi0zi0zi1:FHW.MemRead (ds1d1pd::base:GHCziWord.Word32) ->
+             fhwzm0zi0zi0zi1:FHW.ReadOut @ instj la1mK;
+           fhwzm0zi0zi0zi1:FHW.MemWrite
+           (addra1mL::base:GHCziWord.Word32) (ds1d1pc::instj) ->
+             fhwzm0zi0zi0zi1:FHW.WriteOut @ instj addra1mL};
+  lvl6r1uO :: %forall instj . fhwzm0zi0zi0zi1:FHW.MemOp
+                              base:GHCziWord.Word32
+                              instj =
+    \ @ instj ->
+        fhwzm0zi0zi0zi1:FHW.MemRead @ base:GHCziWord.Word32 @ instj ar1uJ;
+  fhwzm0zi0zi0zi1:FHW.heap :: %forall insta1m1 . base:GHCziWord.Word32
+                                                 ->
+                                                 insta1m1 ->
+                                                 (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                  (fhwzm0zi0zi0zi1:FHW.HeapIn insta1m1))
+                                                 ->
+                                                 fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                 (fhwzm0zi0zi0zi1:FHW.HeapOut insta1m1) =
+    \ @ instj
+      (etaB3::base:GHCziWord.Word32)
+      (eta1B2::instj)
+      (eta2B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream
+               (fhwzm0zi0zi0zi1:FHW.HeapIn instj)) ->
+        %let heapOpss1rl :: fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                            (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj) =
+               %let %rec
+                    {heapPointers1ri :: fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                        base:GHCziWord.Word32 =
+                       fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ base:GHCziWord.Word32 ar1uJ
+                       a4s1rj;
+                     a4s1rj :: fhwzm0zi0zi0zi1:FHWziPrim.Stream base:GHCziWord.Word32 =
+                       fhwzm0zi0zi0zi1:FHWziPrim.zzipWith
+                       @ (fhwzm0zi0zi0zi1:FHW.HeapIn instj) @ base:GHCziWord.Word32
+                       @ base:GHCziWord.Word32 (lvl2r1uK @ instj) eta2B1 heapPointers1ri}
+               %in fhwzm0zi0zi0zi1:FHWziPrim.zzipWith
+                   @ (fhwzm0zi0zi0zi1:FHW.HeapIn instj) @ base:GHCziWord.Word32
+                   @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj)
+                   (lvl4r1uM @ instj) eta2B1 heapPointers1ri
+        %in fhwzm0zi0zi0zi1:FHWziPrim.zzipWith
+            @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj) @ instj
+            @ (fhwzm0zi0zi0zi1:FHW.HeapOut instj) (lvl5r1uN @ instj)
+            (fhwzm0zi0zi0zi1:FHWziPrim.ZCzg
+             @ (fhwzm0zi0zi0zi1:FHW.MemOp base:GHCziWord.Word32 instj)
+             (lvl6r1uO @ instj) heapOpss1rl)
+            (fhwzm0zi0zi0zi1:FHW.memory @ instj etaB3 eta1B2 heapOpss1rl);
+  a1r1uP :: %forall au . ghczmprim:GHCziTypes.Bool ->
+                         au -> au -> au =
+    \ @ au
+      (a4a1mr::ghczmprim:GHCziTypes.Bool)
+      (ba1ms::au)
+      (ca1mt::au) ->
+        %case au a4a1mr %of (wildXf::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             ca1mt;
+           ghczmprim:GHCziTypes.True ->
+             ba1ms};
+  fhwzm0zi0zi0zi1:FHW.ite :: %forall aa1m3 . (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                              ghczmprim:GHCziTypes.Bool)
+                                             ->
+                                             (fhwzm0zi0zi0zi1:FHWziPrim.Stream aa1m3) ->
+                                             (fhwzm0zi0zi0zi1:FHWziPrim.Stream aa1m3) ->
+                                             fhwzm0zi0zi0zi1:FHWziPrim.Stream aa1m3 =
+    \ @ au ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith3 @ ghczmprim:GHCziTypes.Bool
+        @ au @ au @ au (a1r1uP @ au);
+  a2r1uQ :: %forall azz btq . (ghczmprim:GHCziTuple.Z2T azz btq) ->
+                              btq =
+    \ @ azz @ btq (dsd1pq::ghczmprim:GHCziTuple.Z2T azz btq) ->
+        %case btq dsd1pq %of (wildXg::ghczmprim:GHCziTuple.Z2T azz btq)
+          {ghczmprim:GHCziTuple.Z2T (ds1d1pr::azz) (ya1mq::btq) ->
+             ya1mq};
+  fhwzm0zi0zi0zi1:FHW.snd :: %forall aa1m4 ba1m5 . (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                    (ghczmprim:GHCziTuple.Z2T aa1m4 ba1m5))
+                                                   -> fhwzm0zi0zi0zi1:FHWziPrim.Stream ba1m5 =
+    \ @ azz @ btq ->
+        fhwzm0zi0zi0zi1:FHWziPrim.map @ (ghczmprim:GHCziTuple.Z2T azz btq)
+        @ btq (a2r1uQ @ azz @ btq);
+  a3r1uR :: %forall atv btw . (ghczmprim:GHCziTuple.Z2T atv btw) ->
+                              atv =
+    \ @ atv @ btw (dsd1pt::ghczmprim:GHCziTuple.Z2T atv btw) ->
+        %case atv dsd1pt %of (wildXi::ghczmprim:GHCziTuple.Z2T atv btw)
+          {ghczmprim:GHCziTuple.Z2T (xa1mp::atv) (ds1d1pu::btw) ->
+             xa1mp};
+  fhwzm0zi0zi0zi1:FHW.fst :: %forall aa1m6 ba1m7 . (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                    (ghczmprim:GHCziTuple.Z2T aa1m6 ba1m7))
+                                                   -> fhwzm0zi0zi0zi1:FHWziPrim.Stream aa1m6 =
+    \ @ atv @ btw ->
+        fhwzm0zi0zi0zi1:FHWziPrim.map @ (ghczmprim:GHCziTuple.Z2T atv btw)
+        @ atv (a3r1uR @ atv @ btw);
+  fhwzm0zi0zi0zi1:FHW.zzip3 :: %forall aa1m8 ba1m9 ca1ma . (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                            aa1m8)
+                                                           ->
+                                                           (fhwzm0zi0zi0zi1:FHWziPrim.Stream ba1m9)
+                                                           ->
+                                                           (fhwzm0zi0zi0zi1:FHWziPrim.Stream ca1ma)
+                                                           ->
+                                                           fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                           (ghczmprim:GHCziTuple.Z3T
+                                                            aa1m8
+                                                            ba1m9
+                                                            ca1ma) =
+    \ @ atE @ btF @ ctG ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith3 @ atE @ btF @ ctG
+        @ (ghczmprim:GHCziTuple.Z3T atE btF ctG)
+        (ghczmprim:GHCziTuple.Z3T @ atE @ btF @ ctG);
+  fhwzm0zi0zi0zi1:FHW.zzip :: %forall aa1mb ba1mc . (fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                     aa1mb)
+                                                    ->
+                                                    (fhwzm0zi0zi0zi1:FHWziPrim.Stream ba1mc) ->
+                                                    fhwzm0zi0zi0zi1:FHWziPrim.Stream
+                                                    (ghczmprim:GHCziTuple.Z2T aa1mb ba1mc) =
+    \ @ atM @ btN ->
+        fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ atM @ btN
+        @ (ghczmprim:GHCziTuple.Z2T atM btN)
+        (ghczmprim:GHCziTuple.Z2T @ atM @ btN);
+  fhwzm0zi0zi0zi1:FHW.scanl :: %forall ba1md aa1me . (ba1md ->
+                                                      aa1me -> ba1md)
+                                                     ->
+                                                     ba1md ->
+                                                     (fhwzm0zi0zi0zi1:FHWziPrim.Stream aa1me) ->
+                                                     fhwzm0zi0zi0zi1:FHWziPrim.Stream ba1md =
+    \ @ btS
+      @ atT
+      (etaB3::btS -> atT -> btS)
+      (eta1B2::btS)
+      (eta2B1::fhwzm0zi0zi0zi1:FHWziPrim.Stream atT) ->
+        %let %rec
+             {nextzustates1rf :: fhwzm0zi0zi0zi1:FHWziPrim.Stream btS =
+                fhwzm0zi0zi0zi1:FHWziPrim.zzipWith @ btS @ atT @ btS etaB3
+                (fhwzm0zi0zi0zi1:FHWziPrim.ZCzg @ btS eta1B2 nextzustates1rf)
+                eta2B1}
+        %in nextzustates1rf;

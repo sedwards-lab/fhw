@@ -1,0 +1,65 @@
+%module integerzmgmp:GHCziIntegerziLogarithms
+  integerzmgmp:GHCziIntegerziLogarithms.wordLog2zh :: ghczmprim:GHCziPrim.Wordzh
+                                                      -> ghczmprim:GHCziPrim.Intzh =
+    integerzmgmp:GHCziIntegerziLogarithmsziInternals.wordLog2zh;
+  integerzmgmp:GHCziIntegerziLogarithms.integerLog2zh :: integerzmgmp:GHCziIntegerziType.Integer
+                                                         -> ghczmprim:GHCziPrim.Intzh =
+    integerzmgmp:GHCziIntegerziLogarithmsziInternals.integerLog2zh;
+  integerzmgmp:GHCziIntegerziLogarithms.integerLogBasezh :: integerzmgmp:GHCziIntegerziType.Integer
+                                                            ->
+                                                            integerzmgmp:GHCziIntegerziType.Integer
+                                                            -> ghczmprim:GHCziPrim.Intzh =
+    \ (ba44B::integerzmgmp:GHCziIntegerziType.Integer)
+      (ma44C::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %let %rec
+             {steps45e :: integerzmgmp:GHCziIntegerziType.Integer ->
+                          ghczmprim:GHCziPrim.Z2H
+                          integerzmgmp:GHCziIntegerziType.Integer
+                          ghczmprim:GHCziPrim.Intzh =
+                \ (pwa44E::integerzmgmp:GHCziIntegerziType.Integer) ->
+                    %case (ghczmprim:GHCziPrim.Z2H
+                           integerzmgmp:GHCziIntegerziType.Integer
+                           ghczmprim:GHCziPrim.Intzh) (integerzmgmp:GHCziIntegerziType.ltInteger
+                                                       ma44C pwa44E)
+                    %of (wildXa::ghczmprim:GHCziTypes.Bool)
+                      {ghczmprim:GHCziTypes.False ->
+                         %case (ghczmprim:GHCziPrim.Z2H
+                                integerzmgmp:GHCziIntegerziType.Integer
+                                ghczmprim:GHCziPrim.Intzh) (steps45e
+                                                            (integerzmgmp:GHCziIntegerziType.timesInteger
+                                                             pwa44E pwa44E))
+                         %of (dsd44T::ghczmprim:GHCziPrim.Z2H
+                                      integerzmgmp:GHCziIntegerziType.Integer
+                                      ghczmprim:GHCziPrim.Intzh)
+                           {ghczmprim:GHCziPrim.Z2H
+                            (ipvs44ZZ::integerzmgmp:GHCziIntegerziType.Integer)
+                            (ipv1s450::ghczmprim:GHCziPrim.Intzh) ->
+                              %case (ghczmprim:GHCziPrim.Z2H
+                                     integerzmgmp:GHCziIntegerziType.Integer
+                                     ghczmprim:GHCziPrim.Intzh) (integerzmgmp:GHCziIntegerziType.ltInteger
+                                                                 ipvs44ZZ pwa44E)
+                              %of (wild1Xc::ghczmprim:GHCziTypes.Bool)
+                                {ghczmprim:GHCziTypes.False ->
+                                   ghczmprim:GHCziPrim.Z2H @ integerzmgmp:GHCziIntegerziType.Integer
+                                   @ ghczmprim:GHCziPrim.Intzh
+                                   (integerzmgmp:GHCziIntegerziType.quotInteger ipvs44ZZ pwa44E)
+                                   (ghczmprim:GHCziPrim.zpzh
+                                    (ghczmprim:GHCziPrim.ztzh (2::ghczmprim:GHCziPrim.Intzh)
+                                     ipv1s450)
+                                    (1::ghczmprim:GHCziPrim.Intzh));
+                                 ghczmprim:GHCziTypes.True ->
+                                   ghczmprim:GHCziPrim.Z2H @ integerzmgmp:GHCziIntegerziType.Integer
+                                   @ ghczmprim:GHCziPrim.Intzh ipvs44ZZ
+                                   (ghczmprim:GHCziPrim.ztzh (2::ghczmprim:GHCziPrim.Intzh)
+                                    ipv1s450)}};
+                       ghczmprim:GHCziTypes.True ->
+                         ghczmprim:GHCziPrim.Z2H @ integerzmgmp:GHCziIntegerziType.Integer
+                         @ ghczmprim:GHCziPrim.Intzh ma44C (0::ghczmprim:GHCziPrim.Intzh)}}
+        %in %case ghczmprim:GHCziPrim.Intzh (steps45e ba44B)
+            %of (dsd44Q::ghczmprim:GHCziPrim.Z2H
+                         integerzmgmp:GHCziIntegerziType.Integer
+                         ghczmprim:GHCziPrim.Intzh)
+              {ghczmprim:GHCziPrim.Z2H
+               (ipvs454::integerzmgmp:GHCziIntegerziType.Integer)
+               (ipv1s455::ghczmprim:GHCziPrim.Intzh) ->
+                 ipv1s455};

@@ -1,0 +1,8 @@
+%module base:ControlziExceptionziBase
+  base:ControlziExceptionziBase.absentError :: %forall aa1NZZ . ghczmprim:GHCziPrim.Addrzh
+                                                                -> aa1NZZ =
+    \ @ ab (sa1O0::ghczmprim:GHCziPrim.Addrzh) ->
+        base:GHCziErr.error @ ab
+        (ghczmprim:GHCziCString.unpackAppendCStringzh
+         ("Oops!  Entered absent arg "::ghczmprim:GHCziPrim.Addrzh)
+         (ghczmprim:GHCziCString.unpackCStringUtf8zh sa1O0));

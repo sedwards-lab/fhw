@@ -1,0 +1,8 @@
+*.code-workspace
+**/dist/**
+examples/**/*.hcr
+examples/**/*.df
+examples/**/*.sv
+examples/**/*.hi
+examples/**/*.o
+!examples/sample-test.sv

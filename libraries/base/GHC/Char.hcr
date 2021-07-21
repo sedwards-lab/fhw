@@ -1,0 +1,30 @@
+%module base:GHCziChar
+  base:GHCziChar.chr2 :: ghczmprim:GHCziPrim.Intzh ->
+                         ghczmprim:GHCziTypes.Char =
+    \ (wws9Xl::ghczmprim:GHCziPrim.Intzh) ->
+        base:GHCziErr.error @ ghczmprim:GHCziTypes.Char
+        (ghczmprim:GHCziCString.unpackAppendCStringzh
+         ("Prelude.chr: bad argument: "::ghczmprim:GHCziPrim.Addrzh)
+         (base:GHCziShow.zdwshowSignedInt (9::ghczmprim:GHCziPrim.Intzh)
+          wws9Xl (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char)));
+  base:GHCziChar.chr1 :: ghczmprim:GHCziTypes.Int ->
+                         ghczmprim:GHCziTypes.Char =
+    \ (ws9Xj::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Char ws9Xj
+        %of (w1X9Xp::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wws9Xl::ghczmprim:GHCziPrim.Intzh) ->
+             base:GHCziChar.chr2 wws9Xl};
+  base:GHCziChar.chr :: ghczmprim:GHCziTypes.Int ->
+                        ghczmprim:GHCziTypes.Char =
+    \ (ia9Wt::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Char ia9Wt
+        %of (wildX3::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izha9Wu::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.leWordzh
+                                              (ghczmprim:GHCziPrim.int2Wordzh izha9Wu)
+                                              (1114111::ghczmprim:GHCziPrim.Wordzh))
+             %of (wild1X4::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  base:GHCziChar.chr2 izha9Wu;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziTypes.Czh (ghczmprim:GHCziPrim.chrzh izha9Wu)}};

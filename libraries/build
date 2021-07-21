@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Echo commands as they are executed
+set -x
+
+cd ghc-prim
+cabal clean
+cabal configure
+cabal build
+
+# This adds "GHC.Prim" the list of exported modules in the package
+# It "should" be in the ghc-prim.cabal file, but advertising it there
+# confuses the preprocessing stage since it wanted to find a Prim.hs file,
+# which ghc really doesn't like to compile
+
+sed --in-place=.bak 's/GHC.Types/GHC.Prim","GHC.Types/' dist/package.conf.inplace
+cd ..
+
+cd integer-gmp
+cabal clean
+cabal configure \
+      --package-db=../ghc-prim/dist/package.conf.inplace
+cabal build
+cd ..
+
+cd base
+cabal clean
+cabal configure \
+      --package-db=../ghc-prim/dist/package.conf.inplace \
+      --package-db=../integer-gmp/dist/package.conf.inplace
+cabal build
+cd ..    
+
+cd fhw
+cabal clean
+cabal configure \
+      --package-db=../ghc-prim/dist/package.conf.inplace \
+      --package-db=../integer-gmp/dist/package.conf.inplace \
+      --package-db=../base/dist/package.conf.inplace
+cabal build
+cd ..    

@@ -1,0 +1,248 @@
+%module ghczmprim:GHCziCString
+  ghczmprim:GHCziCString.unpackNByteszh :: ghczmprim:GHCziPrim.Addrzh
+                                           ->
+                                           ghczmprim:GHCziPrim.Intzh ->
+                                           ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    \ (zuaddra5b::ghczmprim:GHCziPrim.Addrzh)
+      (dsd5E::ghczmprim:GHCziPrim.Intzh) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) dsd5E
+        %of (ds1X5H::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             %let %rec
+                  {unpacks7I :: (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char)
+                                ->
+                                ghczmprim:GHCziPrim.Intzh ->
+                                ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                     \ (acca5f::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char)
+                       (izha5g::ghczmprim:GHCziPrim.Intzh) ->
+                         %case (ghczmprim:GHCziTypes.ZMZN
+                                ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.zlzh izha5g
+                                                            (0::ghczmprim:GHCziPrim.Intzh))
+                         %of (wildXe::ghczmprim:GHCziTypes.Bool)
+                           {ghczmprim:GHCziTypes.False ->
+                              %case (ghczmprim:GHCziTypes.ZMZN
+                                     ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                 zuaddra5b izha5g)
+                              %of (cha5h::ghczmprim:GHCziPrim.Charzh)
+                                {%_ ->
+                                   unpacks7I
+                                   (ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                                    (ghczmprim:GHCziTypes.Czh cha5h) acca5f)
+                                   (ghczmprim:GHCziPrim.zmzh izha5g
+                                    (1::ghczmprim:GHCziPrim.Intzh))};
+                            ghczmprim:GHCziTypes.True ->
+                              acca5f}}
+             %in unpacks7I
+                 (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char)
+                 (ghczmprim:GHCziPrim.zmzh ds1X5H (1::ghczmprim:GHCziPrim.Intzh));
+           (0::ghczmprim:GHCziPrim.Intzh) ->
+             ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char};
+  ghczmprim:GHCziCString.unpackAppendCStringzh :: ghczmprim:GHCziPrim.Addrzh
+                                                  ->
+                                                  (ghczmprim:GHCziTypes.ZMZN
+                                                   ghczmprim:GHCziTypes.Char)
+                                                  ->
+                                                  ghczmprim:GHCziTypes.ZMZN
+                                                  ghczmprim:GHCziTypes.Char =
+    \ (addra4W::ghczmprim:GHCziPrim.Addrzh)
+      (resta4X::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        %let %rec
+             {unpacks7G :: ghczmprim:GHCziPrim.Intzh ->
+                           ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                \ (nha4ZZ::ghczmprim:GHCziPrim.Intzh) ->
+                    %case (ghczmprim:GHCziTypes.ZMZN
+                           ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                       addra4W nha4ZZ)
+                    %of (cha50::ghczmprim:GHCziPrim.Charzh)
+                      {%_ ->
+                         ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                         (ghczmprim:GHCziTypes.Czh cha50)
+                         (unpacks7G
+                          (ghczmprim:GHCziPrim.zpzh nha4ZZ (1::ghczmprim:GHCziPrim.Intzh)));
+                       ('\x00'::ghczmprim:GHCziPrim.Charzh) ->
+                         resta4X}}
+        %in unpacks7G (0::ghczmprim:GHCziPrim.Intzh);
+  ghczmprim:GHCziCString.unpackCStringzh :: ghczmprim:GHCziPrim.Addrzh
+                                            -> ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    \ (addra4S::ghczmprim:GHCziPrim.Addrzh) ->
+        %let %rec
+             {unpacks7E :: ghczmprim:GHCziPrim.Intzh ->
+                           ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                \ (nha4U::ghczmprim:GHCziPrim.Intzh) ->
+                    %case (ghczmprim:GHCziTypes.ZMZN
+                           ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                       addra4S nha4U)
+                    %of (cha4V::ghczmprim:GHCziPrim.Charzh)
+                      {%_ ->
+                         ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                         (ghczmprim:GHCziTypes.Czh cha4V)
+                         (unpacks7E
+                          (ghczmprim:GHCziPrim.zpzh nha4U (1::ghczmprim:GHCziPrim.Intzh)));
+                       ('\x00'::ghczmprim:GHCziPrim.Charzh) ->
+                         ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char}}
+        %in unpacks7E (0::ghczmprim:GHCziPrim.Intzh);
+  ghczmprim:GHCziCString.unpackFoldrCStringzh :: %forall aa4R . ghczmprim:GHCziPrim.Addrzh
+                                                                ->
+                                                                (ghczmprim:GHCziTypes.Char ->
+                                                                 aa4R -> aa4R)
+                                                                -> aa4R -> aa4R =
+    \ @ ab
+      (addra51::ghczmprim:GHCziPrim.Addrzh)
+      (fa52::ghczmprim:GHCziTypes.Char -> ab -> ab)
+      (zza53::ab) ->
+        %let %rec
+             {unpacks7C :: ghczmprim:GHCziPrim.Intzh -> ab =
+                \ (nha55::ghczmprim:GHCziPrim.Intzh) ->
+                    %case ab (ghczmprim:GHCziPrim.indexCharOffAddrzh addra51 nha55)
+                    %of (cha56::ghczmprim:GHCziPrim.Charzh)
+                      {%_ ->
+                         fa52 (ghczmprim:GHCziTypes.Czh cha56)
+                         (unpacks7C
+                          (ghczmprim:GHCziPrim.zpzh nha55 (1::ghczmprim:GHCziPrim.Intzh)));
+                       ('\x00'::ghczmprim:GHCziPrim.Charzh) ->
+                         zza53}}
+        %in unpacks7C (0::ghczmprim:GHCziPrim.Intzh);
+  ghczmprim:GHCziCString.unpackCStringUtf8zh :: ghczmprim:GHCziPrim.Addrzh
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    \ (addra57::ghczmprim:GHCziPrim.Addrzh) ->
+        %let %rec
+             {unpacks7A :: ghczmprim:GHCziPrim.Intzh ->
+                           ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                \ (nha59::ghczmprim:GHCziPrim.Intzh) ->
+                    %case (ghczmprim:GHCziTypes.ZMZN
+                           ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                       addra57 nha59)
+                    %of (cha5a::ghczmprim:GHCziPrim.Charzh)
+                      {%_ ->
+                         %case (ghczmprim:GHCziTypes.ZMZN
+                                ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.leCharzh cha5a
+                                                            ('\x7f'::ghczmprim:GHCziPrim.Charzh))
+                         %of (wildXi::ghczmprim:GHCziTypes.Bool)
+                           {ghczmprim:GHCziTypes.False ->
+                              %case (ghczmprim:GHCziTypes.ZMZN
+                                     ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.leCharzh cha5a
+                                                                 ('\xdf'::ghczmprim:GHCziPrim.Charzh))
+                              %of (wild1Xk::ghczmprim:GHCziTypes.Bool)
+                                {ghczmprim:GHCziTypes.False ->
+                                   %case (ghczmprim:GHCziTypes.ZMZN
+                                          ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.leCharzh
+                                                                      cha5a
+                                                                      ('\xef'::ghczmprim:GHCziPrim.Charzh))
+                                   %of (wild2Xm::ghczmprim:GHCziTypes.Bool)
+                                     {ghczmprim:GHCziTypes.False ->
+                                        ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                                        (%case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                          addra57
+                                                                          (ghczmprim:GHCziPrim.zpzh
+                                                                           nha59
+                                                                           (3::ghczmprim:GHCziPrim.Intzh)))
+                                         %of (wild3Xo::ghczmprim:GHCziPrim.Charzh)
+                                           {%_ ->
+                                              %case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                               addra57
+                                                                               (ghczmprim:GHCziPrim.zpzh
+                                                                                nha59
+                                                                                (2::ghczmprim:GHCziPrim.Intzh)))
+                                              %of (wild4Xf::ghczmprim:GHCziPrim.Charzh)
+                                                {%_ ->
+                                                   %case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                                    addra57
+                                                                                    (ghczmprim:GHCziPrim.zpzh
+                                                                                     nha59
+                                                                                     (1::ghczmprim:GHCziPrim.Intzh)))
+                                                   %of (wild5XI::ghczmprim:GHCziPrim.Charzh)
+                                                     {%_ ->
+                                                        ghczmprim:GHCziTypes.Czh
+                                                        (ghczmprim:GHCziPrim.chrzh
+                                                         (ghczmprim:GHCziPrim.zpzh
+                                                          (ghczmprim:GHCziPrim.zpzh
+                                                           (ghczmprim:GHCziPrim.zpzh
+                                                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                             (ghczmprim:GHCziPrim.zmzh
+                                                              (ghczmprim:GHCziPrim.ordzh cha5a)
+                                                              (240::ghczmprim:GHCziPrim.Intzh))
+                                                             (18::ghczmprim:GHCziPrim.Intzh))
+                                                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                             (ghczmprim:GHCziPrim.zmzh
+                                                              (ghczmprim:GHCziPrim.ordzh wild5XI)
+                                                              (128::ghczmprim:GHCziPrim.Intzh))
+                                                             (12::ghczmprim:GHCziPrim.Intzh)))
+                                                           (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                            (ghczmprim:GHCziPrim.zmzh
+                                                             (ghczmprim:GHCziPrim.ordzh wild4Xf)
+                                                             (128::ghczmprim:GHCziPrim.Intzh))
+                                                            (6::ghczmprim:GHCziPrim.Intzh)))
+                                                          (ghczmprim:GHCziPrim.zmzh
+                                                           (ghczmprim:GHCziPrim.ordzh wild3Xo)
+                                                           (128::ghczmprim:GHCziPrim.Intzh))))}}})
+                                        (unpacks7A
+                                         (ghczmprim:GHCziPrim.zpzh nha59
+                                          (4::ghczmprim:GHCziPrim.Intzh)));
+                                      ghczmprim:GHCziTypes.True ->
+                                        ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                                        (%case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                          addra57
+                                                                          (ghczmprim:GHCziPrim.zpzh
+                                                                           nha59
+                                                                           (2::ghczmprim:GHCziPrim.Intzh)))
+                                         %of (wild3Xe::ghczmprim:GHCziPrim.Charzh)
+                                           {%_ ->
+                                              %case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                               addra57
+                                                                               (ghczmprim:GHCziPrim.zpzh
+                                                                                nha59
+                                                                                (1::ghczmprim:GHCziPrim.Intzh)))
+                                              %of (wild4Xf::ghczmprim:GHCziPrim.Charzh)
+                                                {%_ ->
+                                                   ghczmprim:GHCziTypes.Czh
+                                                   (ghczmprim:GHCziPrim.chrzh
+                                                    (ghczmprim:GHCziPrim.zpzh
+                                                     (ghczmprim:GHCziPrim.zpzh
+                                                      (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                       (ghczmprim:GHCziPrim.zmzh
+                                                        (ghczmprim:GHCziPrim.ordzh cha5a)
+                                                        (224::ghczmprim:GHCziPrim.Intzh))
+                                                       (12::ghczmprim:GHCziPrim.Intzh))
+                                                      (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                       (ghczmprim:GHCziPrim.zmzh
+                                                        (ghczmprim:GHCziPrim.ordzh wild4Xf)
+                                                        (128::ghczmprim:GHCziPrim.Intzh))
+                                                       (6::ghczmprim:GHCziPrim.Intzh)))
+                                                     (ghczmprim:GHCziPrim.zmzh
+                                                      (ghczmprim:GHCziPrim.ordzh wild3Xe)
+                                                      (128::ghczmprim:GHCziPrim.Intzh))))}})
+                                        (unpacks7A
+                                         (ghczmprim:GHCziPrim.zpzh nha59
+                                          (3::ghczmprim:GHCziPrim.Intzh)))};
+                                 ghczmprim:GHCziTypes.True ->
+                                   ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                                   (%case ghczmprim:GHCziTypes.Char (ghczmprim:GHCziPrim.indexCharOffAddrzh
+                                                                     addra57
+                                                                     (ghczmprim:GHCziPrim.zpzh nha59
+                                                                      (1::ghczmprim:GHCziPrim.Intzh)))
+                                    %of (wild2Xd::ghczmprim:GHCziPrim.Charzh)
+                                      {%_ ->
+                                         ghczmprim:GHCziTypes.Czh
+                                         (ghczmprim:GHCziPrim.chrzh
+                                          (ghczmprim:GHCziPrim.zpzh
+                                           (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                            (ghczmprim:GHCziPrim.zmzh
+                                             (ghczmprim:GHCziPrim.ordzh cha5a)
+                                             (192::ghczmprim:GHCziPrim.Intzh))
+                                            (6::ghczmprim:GHCziPrim.Intzh))
+                                           (ghczmprim:GHCziPrim.zmzh
+                                            (ghczmprim:GHCziPrim.ordzh wild2Xd)
+                                            (128::ghczmprim:GHCziPrim.Intzh))))})
+                                   (unpacks7A
+                                    (ghczmprim:GHCziPrim.zpzh nha59
+                                     (2::ghczmprim:GHCziPrim.Intzh)))};
+                            ghczmprim:GHCziTypes.True ->
+                              ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                              (ghczmprim:GHCziTypes.Czh cha5a)
+                              (unpacks7A
+                               (ghczmprim:GHCziPrim.zpzh nha59 (1::ghczmprim:GHCziPrim.Intzh)))};
+                       ('\x00'::ghczmprim:GHCziPrim.Charzh) ->
+                         ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char}}
+        %in unpacks7A (0::ghczmprim:GHCziPrim.Intzh);

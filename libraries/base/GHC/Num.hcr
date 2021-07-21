@@ -1,0 +1,314 @@
+%module base:GHCziNum
+  %data base:GHCziNum.Num aa1lE =
+    {base:GHCziNum.DZCNum (aa1lE -> aa1lE -> aa1lE)
+                          (aa1lE -> aa1lE -> aa1lE)
+                          (aa1lE -> aa1lE -> aa1lE)
+                          (aa1lE -> aa1lE)
+                          (aa1lE -> aa1lE)
+                          (aa1lE -> aa1lE)
+                          (integerzmgmp:GHCziIntegerziType.Integer -> aa1lE)};
+  base:GHCziNum.zp :: %forall aa1lE . (base:GHCziNum.Num aa1lE) ->
+                                      aa1lE -> aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE -> aa1lE) tplB1
+        %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB2};
+  base:GHCziNum.zt :: %forall aa1lE . (base:GHCziNum.Num aa1lE) ->
+                                      aa1lE -> aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE -> aa1lE) tplB1
+        %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB3};
+  base:GHCziNum.zm :: %forall aa1lE . (base:GHCziNum.Num aa1lE) ->
+                                      aa1lE -> aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE -> aa1lE) tplB1
+        %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB4};
+  base:GHCziNum.negate :: %forall aa1lE . (base:GHCziNum.Num aa1lE)
+                                          -> aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE) tplB1 %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB5};
+  base:GHCziNum.abs :: %forall aa1lE . (base:GHCziNum.Num aa1lE) ->
+                                       aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE) tplB1 %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB6};
+  base:GHCziNum.signum :: %forall aa1lE . (base:GHCziNum.Num aa1lE)
+                                          -> aa1lE -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (aa1lE -> aa1lE) tplB1 %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB7};
+  base:GHCziNum.fromInteger :: %forall aa1lE . (base:GHCziNum.Num
+                                                aa1lE)
+                                               -> integerzmgmp:GHCziIntegerziType.Integer -> aa1lE =
+    \ @ aa1lE (tplB1::base:GHCziNum.Num aa1lE) ->
+        %case (integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) tplB1
+        %of (tplX4::base:GHCziNum.Num aa1lE)
+          {base:GHCziNum.DZCNum
+           (tplB2::aa1lE -> aa1lE -> aa1lE)
+           (tplB3::aa1lE -> aa1lE -> aa1lE)
+           (tplB4::aa1lE -> aa1lE -> aa1lE)
+           (tplB5::aa1lE -> aa1lE)
+           (tplB6::aa1lE -> aa1lE)
+           (tplB7::aa1lE -> aa1lE)
+           (tplB8::integerzmgmp:GHCziIntegerziType.Integer -> aa1lE) ->
+             tplB8};
+  lvlr1uO :: integerzmgmp:GHCziIntegerziType.Integer =
+    (0::integerzmgmp:GHCziIntegerziType.Integer);
+  base:GHCziNum.zddmnegate :: %forall aa1lE . (base:GHCziNum.Num
+                                               aa1lE)
+                                              -> aa1lE -> aa1lE =
+    \ @ aa1lE (zddNuma1mq::base:GHCziNum.Num aa1lE) (xa1lH::aa1lE) ->
+        base:GHCziNum.zm @ aa1lE zddNuma1mq
+        (base:GHCziNum.fromInteger @ aa1lE zddNuma1mq lvlr1uO) xa1lH;
+  base:GHCziNum.zddmzm :: %forall aa1lE . (base:GHCziNum.Num aa1lE)
+                                          -> aa1lE -> aa1lE -> aa1lE =
+    \ @ aa1lE
+      (zddNuma1mq::base:GHCziNum.Num aa1lE)
+      (xa1lF::aa1lE)
+      (ya1lG::aa1lE) ->
+        base:GHCziNum.zp @ aa1lE zddNuma1mq xa1lF
+        (base:GHCziNum.negate @ aa1lE zddNuma1mq ya1lG);
+  base:GHCziNum.subtract :: %forall aa1lI . (base:GHCziNum.Num aa1lI)
+                                            -> aa1lI -> aa1lI -> aa1lI =
+    \ @ ag
+      (zddNuma1mm::base:GHCziNum.Num ag)
+      (etaB2::ag)
+      (eta1B1::ag) ->
+        base:GHCziNum.zm @ ag zddNuma1mm eta1B1 etaB2;
+  base:GHCziNum.zdfNumIntzuzdcfromInteger :: integerzmgmp:GHCziIntegerziType.Integer
+                                             -> ghczmprim:GHCziTypes.Int =
+    \ (etaB1::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case ghczmprim:GHCziTypes.Int (integerzmgmp:GHCziIntegerziType.integerToInt
+                                        etaB1)
+        %of (wildXq::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             ghczmprim:GHCziTypes.Izh wildXq};
+  base:GHCziNum.zdfNumIntzuzdcnegate :: ghczmprim:GHCziTypes.Int ->
+                                        ghczmprim:GHCziTypes.Int =
+    \ (dsd1oj::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsd1oj
+        %of (wildXr::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+             ghczmprim:GHCziTypes.Izh (ghczmprim:GHCziPrim.negateIntzh xa1lZZ)};
+  base:GHCziNum.zdfNumIntzuzdczm :: ghczmprim:GHCziTypes.Int ->
+                                    ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsd1of::ghczmprim:GHCziTypes.Int)
+      (ds1d1og::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsd1of
+        %of (wildXt::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1lX::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1d1og
+             %of (wild1Xa::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ya1lY::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh (ghczmprim:GHCziPrim.zmzh xa1lX ya1lY)}};
+  base:GHCziNum.zdfNumIntzuzdczt :: ghczmprim:GHCziTypes.Int ->
+                                    ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsd1ob::ghczmprim:GHCziTypes.Int)
+      (ds1d1oc::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsd1ob
+        %of (wildXu::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1m0::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1d1oc
+             %of (wild1Xb::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ya1m1::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh (ghczmprim:GHCziPrim.ztzh xa1m0 ya1m1)}};
+  base:GHCziNum.zdfNumIntzuzdczp :: ghczmprim:GHCziTypes.Int ->
+                                    ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsd1o7::ghczmprim:GHCziTypes.Int)
+      (ds1d1o8::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsd1o7
+        %of (wildXv::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1lV::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1d1o8
+             %of (wild1Xc::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ya1lW::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh (ghczmprim:GHCziPrim.zpzh xa1lV ya1lW)}};
+  base:GHCziNum.zdfNumInt3 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (1::ghczmprim:GHCziPrim.Intzh);
+  base:GHCziNum.zdfNumInt2 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (0::ghczmprim:GHCziPrim.Intzh);
+  base:GHCziNum.zdfNumInt1 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (-1::ghczmprim:GHCziPrim.Intzh);
+  base:GHCziNum.zdfNumIntzuzdcsignum :: ghczmprim:GHCziTypes.Int ->
+                                        ghczmprim:GHCziTypes.Int =
+    \ (na1m3::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int na1m3
+        %of (wilda1oB::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1oD::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zlzh xa1oD
+                                             (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1Xw::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  %case ghczmprim:GHCziTypes.Int xa1oD
+                  %of (wild2XU::ghczmprim:GHCziPrim.Intzh)
+                    {%_ ->
+                       base:GHCziNum.zdfNumInt3;
+                     (0::ghczmprim:GHCziPrim.Intzh) ->
+                       base:GHCziNum.zdfNumInt2};
+                ghczmprim:GHCziTypes.True ->
+                  base:GHCziNum.zdfNumInt1}};
+  base:GHCziNum.zdfNumIntzuzdcabs :: ghczmprim:GHCziTypes.Int ->
+                                     ghczmprim:GHCziTypes.Int =
+    \ (na1m2::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int na1m2
+        %of (wilda1oL::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1oN::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh xa1oN
+                                             (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1Xx::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.Izh (ghczmprim:GHCziPrim.negateIntzh xa1oN);
+                ghczmprim:GHCziTypes.True ->
+                  wilda1oL}};
+  base:GHCziNum.zdfNumInt :: base:GHCziNum.Num
+                             ghczmprim:GHCziTypes.Int =
+    base:GHCziNum.DZCNum @ ghczmprim:GHCziTypes.Int
+    base:GHCziNum.zdfNumIntzuzdczp base:GHCziNum.zdfNumIntzuzdczt
+    base:GHCziNum.zdfNumIntzuzdczm base:GHCziNum.zdfNumIntzuzdcnegate
+    base:GHCziNum.zdfNumIntzuzdcabs base:GHCziNum.zdfNumIntzuzdcsignum
+    base:GHCziNum.zdfNumIntzuzdcfromInteger;
+  base:GHCziNum.zdfNumWordzuzdcfromInteger :: integerzmgmp:GHCziIntegerziType.Integer
+                                              -> ghczmprim:GHCziTypes.Word =
+    \ (ia1lU::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case ghczmprim:GHCziTypes.Word (integerzmgmp:GHCziIntegerziType.integerToWord
+                                         ia1lU)
+        %of (wildXy::ghczmprim:GHCziPrim.Wordzh)
+          {%_ ->
+             ghczmprim:GHCziTypes.Wzh wildXy};
+  base:GHCziNum.zdfNumWord2 :: ghczmprim:GHCziTypes.Word =
+    ghczmprim:GHCziTypes.Wzh (1::ghczmprim:GHCziPrim.Wordzh);
+  base:GHCziNum.zdfNumWord1 :: ghczmprim:GHCziTypes.Word =
+    ghczmprim:GHCziTypes.Wzh (0::ghczmprim:GHCziPrim.Wordzh);
+  base:GHCziNum.zdfNumWordzuzdcsignum :: ghczmprim:GHCziTypes.Word ->
+                                         ghczmprim:GHCziTypes.Word =
+    \ (dsd1o2::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsd1o2
+        %of (wildXzz::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (ds1d1o3::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1d1o3
+             %of (ds2X1ol::ghczmprim:GHCziPrim.Wordzh)
+               {%_ ->
+                  base:GHCziNum.zdfNumWord2;
+                (0::ghczmprim:GHCziPrim.Wordzh) ->
+                  base:GHCziNum.zdfNumWord1}};
+  base:GHCziNum.zdfNumWordzuzdcabs :: ghczmprim:GHCziTypes.Word ->
+                                      ghczmprim:GHCziTypes.Word =
+    \ (xa1lT::ghczmprim:GHCziTypes.Word) -> xa1lT;
+  base:GHCziNum.zdfNumWordzuzdcnegate :: ghczmprim:GHCziTypes.Word ->
+                                         ghczmprim:GHCziTypes.Word =
+    \ (dsd1o0::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsd1o0
+        %of (wildXB::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzha1lS::ghczmprim:GHCziPrim.Wordzh) ->
+             ghczmprim:GHCziTypes.Wzh
+             (ghczmprim:GHCziPrim.int2Wordzh
+              (ghczmprim:GHCziPrim.negateIntzh
+               (ghczmprim:GHCziPrim.word2Intzh xzha1lS)))};
+  base:GHCziNum.zdfNumWordzuzdczm :: ghczmprim:GHCziTypes.Word ->
+                                     ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsd1nW::ghczmprim:GHCziTypes.Word)
+      (ds1d1nX::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsd1nW
+        %of (wildXD::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzha1lO::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1d1nX
+             %of (wild1Xm::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzha1lP::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.minusWordzh xzha1lO yzha1lP)}};
+  base:GHCziNum.zdfNumWordzuzdczt :: ghczmprim:GHCziTypes.Word ->
+                                     ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsd1nS::ghczmprim:GHCziTypes.Word)
+      (ds1d1nT::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsd1nS
+        %of (wildXE::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzha1lQ::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1d1nT
+             %of (wild1Xn::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzha1lR::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.timesWordzh xzha1lQ yzha1lR)}};
+  base:GHCziNum.zdfNumWordzuzdczp :: ghczmprim:GHCziTypes.Word ->
+                                     ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsd1nO::ghczmprim:GHCziTypes.Word)
+      (ds1d1nP::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsd1nO
+        %of (wildXF::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzha1lM::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1d1nP
+             %of (wild1Xo::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzha1lN::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.plusWordzh xzha1lM yzha1lN)}};
+  base:GHCziNum.zdfNumWord :: base:GHCziNum.Num
+                              ghczmprim:GHCziTypes.Word =
+    base:GHCziNum.DZCNum @ ghczmprim:GHCziTypes.Word
+    base:GHCziNum.zdfNumWordzuzdczp base:GHCziNum.zdfNumWordzuzdczt
+    base:GHCziNum.zdfNumWordzuzdczm base:GHCziNum.zdfNumWordzuzdcnegate
+    base:GHCziNum.zdfNumWordzuzdcabs
+    base:GHCziNum.zdfNumWordzuzdcsignum
+    base:GHCziNum.zdfNumWordzuzdcfromInteger;
+  base:GHCziNum.zdfNumIntegerzuzdcfromInteger :: integerzmgmp:GHCziIntegerziType.Integer
+                                                 -> integerzmgmp:GHCziIntegerziType.Integer =
+    \ (xa1lL::integerzmgmp:GHCziIntegerziType.Integer) -> xa1lL;
+  base:GHCziNum.zdfNumInteger :: base:GHCziNum.Num
+                                 integerzmgmp:GHCziIntegerziType.Integer =
+    base:GHCziNum.DZCNum @ integerzmgmp:GHCziIntegerziType.Integer
+    integerzmgmp:GHCziIntegerziType.plusInteger
+    integerzmgmp:GHCziIntegerziType.timesInteger
+    integerzmgmp:GHCziIntegerziType.minusInteger
+    integerzmgmp:GHCziIntegerziType.negateInteger
+    integerzmgmp:GHCziIntegerziType.absInteger
+    integerzmgmp:GHCziIntegerziType.signumInteger
+    base:GHCziNum.zdfNumIntegerzuzdcfromInteger;

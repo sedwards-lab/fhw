@@ -1,0 +1,250 @@
+#!/bin/sh
+
+# Front-end of the Functional HardWare compiler
+
+# Locate the directory in which this script resides; we will find things
+# relative to it
+execfile="`which $0`"
+execfile=`readlink --canonicalize $execfile`
+dir=`dirname $execfile`
+
+FHWC=${dir}/dist/build/fhw/fhw
+DFC=${dir}/dist/build/dfc/dfc
+GHC=ghc
+LIBDIR=${dir}/libraries
+PACKAGE=dist/package.conf.inplace
+
+# Run the given command, possibly echoing it if the verbose flag is enabled
+RunVerb() {
+    if [ $verbose -ne 0 ]; then
+	echo $*
+    fi
+    eval $* || {
+	echo "FAILURE: $1 terminated"
+	return 1
+    }
+    return 0
+}
+
+# Remember one or more generated files
+Generated() {
+    generatedfiles="$* ${generatedfiles}"
+}
+
+Usage() {
+    echo "Usage: $0 [options] <.hs .lhs .hcr files>
+
+Overall options:
+
+-v --verbose     Enable verbose mode
+-h --help        Print this help message
+-k --keep        Keep intermediate files
+
+Code generation options:
+
+--system-verilog Generate a SystemVerilog file (default)
+--dataflow       Generate a Dataflow text file 
+--mem-dataflow   Generate a Dataflow text file with explicit memory nodes
+--haskell        Generate a Haskell file
+--hask-dataflow  Perform transformations leading to Dataflow, then output Haskell
+--ext-core       Dump external core
+--simplified     Dump simplified external core (no paths, z encoding)
+
+Optimization options:
+
+-O0              Disable GHC optimization
+
+Other options:
+
+-f <flag>        Pass <flag> to the compiler
+" 1>&2
+
+    exit 1
+}
+
+verbose=0
+hsfiles=
+hcrfiles=
+output=systemverilog
+ghcopt=1
+link=1
+keep=0
+generatedfiles=
+fhwflags=
+dot=0
+
+# To add a command-line argument, add it in the case below and to the Usage
+
+
+
+while [ $# -ne 0 ]; do
+    case x"$1" in
+	x-v | x--verbose)	# Verbose flag
+	    verbose=1
+	    shift
+	    ;;
+	x-h | x--help)		# Print usage
+	    Usage
+	    ;;
+	x-k | x--keep)		# Keep intermediate files
+	    keep=1
+	    shift
+	    ;;
+	x--system-verilog)	# Generate System Verilog
+	    output=systemverilog
+	    shift
+	    ;;
+	x--haskell)		# Generate Haskell
+	    output=haskell
+	    shift
+	    ;;
+	x--ext-core)		# Generate an external core file
+	    output=extcore
+	    shift
+	    ;;
+	x--dataflow)		# Generate a dataflow representation
+	    output=dataflow
+		dot=1
+	    shift
+	    ;;
+	x--hask-dataflow)	# Generate a Haskell file with pre-dataflow transformations
+	    output=hask-dataflow
+	    shift
+	    ;;
+	x--mem-dataflow)	# Generate a dataflow representation with explicit memory
+	    output=mem-dataflow
+	    shift
+	    ;;
+	x--simplified)		# Generate simplified external core
+	    output=simplified
+	    shift
+	    ;;
+	x-O0)			# Disable GHC optimization
+	    ghcopt=0
+	    shift
+	    ;;
+	x-f)			# Pass the following flag directly
+	    shift
+	    fhwflags="$fhwflags $1"
+	    shift
+	    ;;
+	x*.hs | x*.lhs)		# Haskell source file
+	    hsfiles="$hsfiles $1"
+	    shift
+	    ;;
+	x*.hcr)			# External core file
+	    hcrfiles="$hcrfiles $1"
+	    shift
+	    ;;
+	*)			# Something unexpected
+	    echo "Unexpected: \"$1\"" 1>&2
+	    Usage
+	    ;;
+    esac
+done
+
+# Process Haskell source files into .hcr (external core) files
+for hsfile in $hsfiles; do	
+    srcdir=`dirname "$hsfile"`
+    basename=`basename "$hsfile" | sed 's/[.]l\?hs$//'`
+    RunVerb $GHC -fext-core -c -O${ghcopt} -fforce-recomp -Wall \
+	-outputdir . \
+	-no-global-package-db \
+	-no-user-package-db \
+	-package-db ${LIBDIR}/ghc-prim/${PACKAGE} \
+	-package-db ${LIBDIR}/integer-gmp/${PACKAGE} \
+	-package-db ${LIBDIR}/base/${PACKAGE} \
+	-package-db ${LIBDIR}/fhw/${PACKAGE} \
+	"$hsfile" || exit $?
+    rm -f ${basename}.o ${basename}.hi
+    # If the source was in a subdirectory, move the generated external core file here
+    if [ "$srcdir" != "." ]; then
+	RunVerb mv "${srcdir}/${basename}.hcr" .
+    fi
+    Generated "${basename}.hcr"
+    hcrfiles="$hcrfiles ${basename}.hcr"
+done
+
+linkedfiles=
+
+# Link external core files
+if [ $link -ne 0 ]; then
+    unlinked=$hcrfiles
+    hcrfiles=
+    for hcrfile in $unlinked; do
+	basename=`basename $hcrfile .hcr`
+	linkedfile="${basename}_linked.hcr"
+	#need a better policy for choosing the roots
+	RunVerb $FHWC -d [main] \
+	    -l ${LIBDIR}/ghc-prim \
+	    -l ${LIBDIR}/integer-gmp \
+	    -l ${LIBDIR}/base \
+	    -l ${LIBDIR}/fhw \
+	    $hcrfile ">" ${linkedfile} || exit $?
+	hcrfiles="${linkedfile} $hcrfiles"
+	Generated "${linkedfile}"
+	linkedfiles="${linkedfile} $linkedfiles" 
+    done
+fi
+
+case $output in
+    systemverilog)
+	fhwflags="$fhwflags -v --lift-constants --mono --uniquify"
+	;;
+    hask-dataflow)
+        fhwflags="$fhwflags -r --dot --tagmemops --rmrec --lift-function 
+                  --remove-lit-pat --lift-expressions 
+                  --lift-memops
+                  --lambda-lift --defunc
+                  --add-go --partition --mono --uniquify"
+        ;;
+    dataflow)
+        fhwflags="$fhwflags --partition --dataflow --tagmemops --rmrec --lift-function 
+                  --lift-memops
+                  --remove-lit-pat --lift-expressions 
+                  --add-go --mono --uniquify --defunc --buffer-functions --mem-insert"
+        ;;
+    mem-dataflow)
+        fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function
+                  --mem-insert --remove-lit-pat --lift-expressions 
+                  --add-go --mono --uniquify"
+        ;;
+    haskell)
+		fhwflags="$fhwflags -h"
+	;;
+    extcore)
+	fhwflags="$fhwflags -r --partition --tagmemops --rmrec --lift-function 
+                  --lift-memops
+                  --remove-lit-pat --lift-expressions 
+                  --add-go --mono --uniquify --defunc --buffer-functions --mem-insert"
+	;;
+    simplified)
+	fhwflags="$fhwflags -r --simplified"
+	;;
+    *)
+	echo "Internal error: output \"$output\"" 1>&2
+	exit 1
+	;;
+esac
+
+
+# Process External Core (.hcr) files
+if [ ${dot} -eq 1 ]; then
+	for hcrfile in $hcrfiles; do
+		RunVerb $FHWC $fhwflags $hcrfile ">" "${hcrfile}.df" || exit $?
+	done
+	for file in $linkedfiles; do
+		echo "${file}.df"
+		RunVerb perl -i -pe "'BEGIN{undef $/;} s/^\s*{[\S\s]*}\n?//g'" "${file}.df" || exit $?
+	done
+else
+	for hcrfile in $hcrfiles; do
+		RunVerb $FHWC $fhwflags $hcrfile || exit $?
+	done
+
+fi
+
+
+if [ ${keep} -eq 0 ]; then
+    RunVerb rm -f ${generatedfiles}
+fi

@@ -1,0 +1,180 @@
+%module base:GHCziUnicode
+  base:GHCziUnicode.toTitle :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Char =
+    \ (ca1PW::ghczmprim:GHCziTypes.Char) -> ca1PW;
+  base:GHCziUnicode.toLower :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Char =
+    base:GHCziUnicode.toTitle;
+  base:GHCziUnicode.toUpper :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Char =
+    base:GHCziUnicode.toTitle;
+  base:GHCziUnicode.isAlphaNum :: ghczmprim:GHCziTypes.Char ->
+                                  ghczmprim:GHCziTypes.Bool =
+    \ (dsd1QD::ghczmprim:GHCziTypes.Char) ->
+        ghczmprim:GHCziTypes.False;
+  base:GHCziUnicode.isAlpha :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    base:GHCziUnicode.isAlphaNum;
+  base:GHCziUnicode.isLower :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    base:GHCziUnicode.isAlphaNum;
+  base:GHCziUnicode.isUpper :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    base:GHCziUnicode.isAlphaNum;
+  base:GHCziUnicode.isPrint :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    \ (dsd1QH::ghczmprim:GHCziTypes.Char) -> ghczmprim:GHCziTypes.True;
+  base:GHCziUnicode.isControl :: ghczmprim:GHCziTypes.Char ->
+                                 ghczmprim:GHCziTypes.Bool =
+    base:GHCziUnicode.isAlphaNum;
+  base:GHCziUnicode.zdwisSpace :: ghczmprim:GHCziPrim.Charzh ->
+                                  ghczmprim:GHCziTypes.Bool =
+    \ (wws1V2::ghczmprim:GHCziPrim.Charzh) ->
+        %case ghczmprim:GHCziTypes.Bool wws1V2
+        %of (wildX10::ghczmprim:GHCziPrim.Charzh)
+          {%_ ->
+             ghczmprim:GHCziTypes.False;
+           ('\x09'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           ('\x0a'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           ('\x0b'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           ('\x0c'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           ('\x0d'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           (' '::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True;
+           ('\xa0'::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziTypes.True};
+  base:GHCziUnicode.isSpace :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    \ (ws1V0::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ws1V0
+        %of (w1X1Vv::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (wws1V2::ghczmprim:GHCziPrim.Charzh) ->
+             base:GHCziUnicode.zdwisSpace wws1V2};
+  base:GHCziUnicode.isDigit :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    \ (ca1PR::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PR
+        %of (wilda1QX::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1QZZ::ghczmprim:GHCziPrim.Charzh) ->
+             %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                              c1a1QZZ ('0'::ghczmprim:GHCziPrim.Charzh))
+             %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.False;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziPrim.leCharzh c1a1QZZ
+                  ('9'::ghczmprim:GHCziPrim.Charzh)}};
+  base:GHCziUnicode.zdwisHexDigit :: ghczmprim:GHCziPrim.Charzh ->
+                                     ghczmprim:GHCziTypes.Bool =
+    \ (wws1Vb::ghczmprim:GHCziPrim.Charzh) ->
+        %let zdwzdjs1Vg :: ghczmprim:GHCziTypes.Bool =
+               %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                                wws1Vb ('A'::ghczmprim:GHCziPrim.Charzh))
+               %of (wildahq::ghczmprim:GHCziTypes.Bool)
+                 {ghczmprim:GHCziTypes.False ->
+                    %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                                     wws1Vb ('a'::ghczmprim:GHCziPrim.Charzh))
+                    %of (wild1XiD::ghczmprim:GHCziTypes.Bool)
+                      {ghczmprim:GHCziTypes.False ->
+                         ghczmprim:GHCziTypes.False;
+                       ghczmprim:GHCziTypes.True ->
+                         ghczmprim:GHCziPrim.leCharzh wws1Vb
+                         ('f'::ghczmprim:GHCziPrim.Charzh)};
+                  ghczmprim:GHCziTypes.True ->
+                    %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.leCharzh
+                                                     wws1Vb ('F'::ghczmprim:GHCziPrim.Charzh))
+                    %of (wild1X1RV::ghczmprim:GHCziTypes.Bool)
+                      {ghczmprim:GHCziTypes.False ->
+                         %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                                          wws1Vb ('a'::ghczmprim:GHCziPrim.Charzh))
+                         %of (wild2XiH::ghczmprim:GHCziTypes.Bool)
+                           {ghczmprim:GHCziTypes.False ->
+                              ghczmprim:GHCziTypes.False;
+                            ghczmprim:GHCziTypes.True ->
+                              ghczmprim:GHCziPrim.leCharzh wws1Vb
+                              ('f'::ghczmprim:GHCziPrim.Charzh)};
+                       ghczmprim:GHCziTypes.True ->
+                         ghczmprim:GHCziTypes.True}}
+        %in %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                             wws1Vb ('0'::ghczmprim:GHCziPrim.Charzh))
+            %of (wildahq::ghczmprim:GHCziTypes.Bool)
+              {ghczmprim:GHCziTypes.False ->
+                 zdwzdjs1Vg;
+               ghczmprim:GHCziTypes.True ->
+                 %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.leCharzh
+                                                  wws1Vb ('9'::ghczmprim:GHCziPrim.Charzh))
+                 %of (wild1a1QL::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      zdwzdjs1Vg;
+                    ghczmprim:GHCziTypes.True ->
+                      ghczmprim:GHCziTypes.True}};
+  base:GHCziUnicode.isHexDigit :: ghczmprim:GHCziTypes.Char ->
+                                  ghczmprim:GHCziTypes.Bool =
+    \ (ws1V9::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ws1V9
+        %of (w1X1VH::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (wws1Vb::ghczmprim:GHCziPrim.Charzh) ->
+             base:GHCziUnicode.zdwisHexDigit wws1Vb};
+  base:GHCziUnicode.isAsciiUpper :: ghczmprim:GHCziTypes.Char ->
+                                    ghczmprim:GHCziTypes.Bool =
+    \ (ca1PP::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PP
+        %of (wilda1QX::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1QZZ::ghczmprim:GHCziPrim.Charzh) ->
+             %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                              c1a1QZZ ('A'::ghczmprim:GHCziPrim.Charzh))
+             %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.False;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziPrim.leCharzh c1a1QZZ
+                  ('Z'::ghczmprim:GHCziPrim.Charzh)}};
+  base:GHCziUnicode.isAsciiLower :: ghczmprim:GHCziTypes.Char ->
+                                    ghczmprim:GHCziTypes.Bool =
+    \ (ca1PO::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PO
+        %of (wilda1QX::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1QZZ::ghczmprim:GHCziPrim.Charzh) ->
+             %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                              c1a1QZZ ('a'::ghczmprim:GHCziPrim.Charzh))
+             %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.False;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziPrim.leCharzh c1a1QZZ
+                  ('z'::ghczmprim:GHCziPrim.Charzh)}};
+  base:GHCziUnicode.isLatin1 :: ghczmprim:GHCziTypes.Char ->
+                                ghczmprim:GHCziTypes.Bool =
+    \ (ca1PN::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PN
+        %of (wilda1R7::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1R9::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziPrim.leCharzh c1a1R9
+             ('\xff'::ghczmprim:GHCziPrim.Charzh)};
+  base:GHCziUnicode.isAscii :: ghczmprim:GHCziTypes.Char ->
+                               ghczmprim:GHCziTypes.Bool =
+    \ (ca1PM::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PM
+        %of (wilda1Rh::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1Rj::ghczmprim:GHCziPrim.Charzh) ->
+             ghczmprim:GHCziPrim.ltCharzh c1a1Rj
+             ('\x80'::ghczmprim:GHCziPrim.Charzh)};
+  base:GHCziUnicode.isOctDigit :: ghczmprim:GHCziTypes.Char ->
+                                  ghczmprim:GHCziTypes.Bool =
+    \ (ca1PS::ghczmprim:GHCziTypes.Char) ->
+        %case ghczmprim:GHCziTypes.Bool ca1PS
+        %of (wilda1QX::ghczmprim:GHCziTypes.Char)
+          {ghczmprim:GHCziTypes.Czh (c1a1QZZ::ghczmprim:GHCziPrim.Charzh) ->
+             %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.geCharzh
+                                              c1a1QZZ ('0'::ghczmprim:GHCziPrim.Charzh))
+             %of (wild1ahq::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.False;
+                ghczmprim:GHCziTypes.True ->
+                  ghczmprim:GHCziPrim.leCharzh c1a1QZZ
+                  ('7'::ghczmprim:GHCziPrim.Charzh)}};

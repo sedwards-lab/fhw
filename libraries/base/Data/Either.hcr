@@ -1,0 +1,1050 @@
+%module base:DataziEither
+  %data base:DataziEither.Either aaYjx baYjy =
+    {base:DataziEither.Left aaYjx;
+     base:DataziEither.Right baYjy};
+  %rec
+  {base:DataziEither.rights1 :: %forall aw bx . (ghczmprim:GHCziTypes.ZMZN
+                                                 (base:DataziEither.Either aw bx))
+                                                -> ghczmprim:GHCziTypes.ZMZN bx =
+     \ @ aw
+       @ bx
+       (dsilGG::ghczmprim:GHCziTypes.ZMZN
+                (base:DataziEither.Either aw bx)) ->
+         %case (ghczmprim:GHCziTypes.ZMZN bx) dsilGG
+         %of (wildilGH::ghczmprim:GHCziTypes.ZMZN
+                        (base:DataziEither.Either aw bx))
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ghczmprim:GHCziTypes.ZMZN @ bx;
+            ghczmprim:GHCziTypes.ZC
+            (yilGL::base:DataziEither.Either aw bx)
+            (ysilGM::ghczmprim:GHCziTypes.ZMZN
+                     (base:DataziEither.Either aw bx)) ->
+              %case (ghczmprim:GHCziTypes.ZMZN bx) yilGL
+              %of (wild1Xzz::base:DataziEither.Either aw bx)
+                {base:DataziEither.Left (ipvsYsg::aw) ->
+                   base:DataziEither.rights1 @ aw @ bx ysilGM;
+                 base:DataziEither.Right (aaYjP::bx) ->
+                   ghczmprim:GHCziTypes.ZC @ bx aaYjP
+                   (base:DataziEither.rights1 @ aw @ bx ysilGM)}}};
+  base:DataziEither.rights :: %forall aaYjB baYjC . (ghczmprim:GHCziTypes.ZMZN
+                                                     (base:DataziEither.Either aaYjB baYjC))
+                                                    -> ghczmprim:GHCziTypes.ZMZN baYjC =
+    \ @ aw
+      @ bx
+      (xaYjO::ghczmprim:GHCziTypes.ZMZN
+              (base:DataziEither.Either aw bx)) ->
+        base:DataziEither.rights1 @ aw @ bx xaYjO;
+  %rec
+  {base:DataziEither.lefts1 :: %forall atr bts . (ghczmprim:GHCziTypes.ZMZN
+                                                  (base:DataziEither.Either atr bts))
+                                                 -> ghczmprim:GHCziTypes.ZMZN atr =
+     \ @ atr
+       @ bts
+       (dsilGG::ghczmprim:GHCziTypes.ZMZN
+                (base:DataziEither.Either atr bts)) ->
+         %case (ghczmprim:GHCziTypes.ZMZN atr) dsilGG
+         %of (wildilGH::ghczmprim:GHCziTypes.ZMZN
+                        (base:DataziEither.Either atr bts))
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ghczmprim:GHCziTypes.ZMZN @ atr;
+            ghczmprim:GHCziTypes.ZC
+            (yilGL::base:DataziEither.Either atr bts)
+            (ysilGM::ghczmprim:GHCziTypes.ZMZN
+                     (base:DataziEither.Either atr bts)) ->
+              %case (ghczmprim:GHCziTypes.ZMZN atr) yilGL
+              %of (wild1XA::base:DataziEither.Either atr bts)
+                {base:DataziEither.Left (aaYjN::atr) ->
+                   ghczmprim:GHCziTypes.ZC @ atr aaYjN
+                   (base:DataziEither.lefts1 @ atr @ bts ysilGM);
+                 base:DataziEither.Right (ipvsYsj::bts) ->
+                   base:DataziEither.lefts1 @ atr @ bts ysilGM}}};
+  base:DataziEither.lefts :: %forall aaYjD baYjE . (ghczmprim:GHCziTypes.ZMZN
+                                                    (base:DataziEither.Either aaYjD baYjE))
+                                                   -> ghczmprim:GHCziTypes.ZMZN aaYjD =
+    \ @ atr
+      @ bts
+      (xaYjM::ghczmprim:GHCziTypes.ZMZN
+              (base:DataziEither.Either atr bts)) ->
+        base:DataziEither.lefts1 @ atr @ bts xaYjM;
+  base:DataziEither.either :: %forall aaYjF caYjG baYjH . (aaYjF ->
+                                                           caYjG)
+                                                          ->
+                                                          (baYjH -> caYjG) ->
+                                                          (base:DataziEither.Either aaYjF baYjH) ->
+                                                          caYjG =
+    \ @ atx
+      @ cty
+      @ btzz
+      (faYjI::atx -> cty)
+      (dsdYqI::btzz -> cty)
+      (ds1dYqJ::base:DataziEither.Either atx btzz) ->
+        %case cty ds1dYqJ %of (wildXzz::base:DataziEither.Either atx btzz)
+          {base:DataziEither.Left (xaYjJ::atx) ->
+             faYjI xaYjJ;
+           base:DataziEither.Right (yaYjL::btzz) ->
+             dsdYqI yaYjL};
+  %rec
+  {base:DataziEither.zdwpartitionEithers :: %forall aaYjzz baYjA . (ghczmprim:GHCziTypes.ZMZN
+                                                                    (base:DataziEither.Either
+                                                                     aaYjzz
+                                                                     baYjA))
+                                                                   ->
+                                                                   ghczmprim:GHCziPrim.Z2H
+                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                    aaYjzz)
+                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                    baYjA) =
+     \ @ aaYjzz
+       @ baYjA
+       (wsYBw::ghczmprim:GHCziTypes.ZMZN
+               (base:DataziEither.Either aaYjzz baYjA)) ->
+         %case (ghczmprim:GHCziPrim.Z2H
+                (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                (ghczmprim:GHCziTypes.ZMZN baYjA)) wsYBw
+         %of (wildilGH::ghczmprim:GHCziTypes.ZMZN
+                        (base:DataziEither.Either aaYjzz baYjA))
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+              @ (ghczmprim:GHCziTypes.ZMZN baYjA)
+              (ghczmprim:GHCziTypes.ZMZN @ aaYjzz)
+              (ghczmprim:GHCziTypes.ZMZN @ baYjA);
+            ghczmprim:GHCziTypes.ZC
+            (yilGL::base:DataziEither.Either aaYjzz baYjA)
+            (ysilGM::ghczmprim:GHCziTypes.ZMZN
+                     (base:DataziEither.Either aaYjzz baYjA)) ->
+              %let etaB1 :: ghczmprim:GHCziTuple.Z2T
+                            (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                            (ghczmprim:GHCziTypes.ZMZN baYjA) =
+                     %case (ghczmprim:GHCziTuple.Z2T
+                            (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                            (ghczmprim:GHCziTypes.ZMZN
+                             baYjA)) (base:DataziEither.zdwpartitionEithers @ aaYjzz @ baYjA
+                                      ysilGM)
+                     %of (wwsYD1::ghczmprim:GHCziPrim.Z2H
+                                  (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                  (ghczmprim:GHCziTypes.ZMZN baYjA))
+                       {ghczmprim:GHCziPrim.Z2H
+                        (ww1sYD3::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                        (ww2sYD4::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+                          ghczmprim:GHCziTuple.Z2T @ (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                          @ (ghczmprim:GHCziTypes.ZMZN baYjA) ww1sYD3 ww2sYD4}
+              %in %case (ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                         (ghczmprim:GHCziTypes.ZMZN baYjA)) yilGL
+                  %of (wild1Xzz::base:DataziEither.Either aaYjzz baYjA)
+                    {base:DataziEither.Left (xaYjJ::aaYjzz) ->
+                       ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                       @ (ghczmprim:GHCziTypes.ZMZN baYjA)
+                       (ghczmprim:GHCziTypes.ZC @ aaYjzz xaYjJ
+                        (%case (ghczmprim:GHCziTypes.ZMZN aaYjzz) etaB1
+                         %of (wild2XD::ghczmprim:GHCziTuple.Z2T
+                                       (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                       (ghczmprim:GHCziTypes.ZMZN baYjA))
+                           {ghczmprim:GHCziTuple.Z2T
+                            (laYjT::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                            (raYjU::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+                              laYjT}))
+                       (%case (ghczmprim:GHCziTypes.ZMZN baYjA) etaB1
+                        %of (wild2XD::ghczmprim:GHCziTuple.Z2T
+                                      (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                      (ghczmprim:GHCziTypes.ZMZN baYjA))
+                          {ghczmprim:GHCziTuple.Z2T
+                           (laYjT::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                           (raYjU::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+                             raYjU});
+                     base:DataziEither.Right (y1aYjL::baYjA) ->
+                       ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                       @ (ghczmprim:GHCziTypes.ZMZN baYjA)
+                       (%case (ghczmprim:GHCziTypes.ZMZN aaYjzz) etaB1
+                        %of (wild2XB::ghczmprim:GHCziTuple.Z2T
+                                      (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                      (ghczmprim:GHCziTypes.ZMZN baYjA))
+                          {ghczmprim:GHCziTuple.Z2T
+                           (laYjW::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                           (raYjX::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+                             laYjW})
+                       (ghczmprim:GHCziTypes.ZC @ baYjA y1aYjL
+                        (%case (ghczmprim:GHCziTypes.ZMZN baYjA) etaB1
+                         %of (wild2XB::ghczmprim:GHCziTuple.Z2T
+                                       (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                       (ghczmprim:GHCziTypes.ZMZN baYjA))
+                           {ghczmprim:GHCziTuple.Z2T
+                            (laYjW::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                            (raYjX::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+                              raYjX}))}}};
+  base:DataziEither.partitionEithers :: %forall aaYjzz baYjA . (ghczmprim:GHCziTypes.ZMZN
+                                                                (base:DataziEither.Either
+                                                                 aaYjzz
+                                                                 baYjA))
+                                                               ->
+                                                               ghczmprim:GHCziTuple.Z2T
+                                                               (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                                                               (ghczmprim:GHCziTypes.ZMZN baYjA) =
+    \ @ aaYjzz
+      @ baYjA
+      (wsYBw::ghczmprim:GHCziTypes.ZMZN
+              (base:DataziEither.Either aaYjzz baYjA)) ->
+        %case (ghczmprim:GHCziTuple.Z2T
+               (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+               (ghczmprim:GHCziTypes.ZMZN
+                baYjA)) (base:DataziEither.zdwpartitionEithers @ aaYjzz @ baYjA
+                         wsYBw)
+        %of (wwsYD1::ghczmprim:GHCziPrim.Z2H
+                     (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+                     (ghczmprim:GHCziTypes.ZMZN baYjA))
+          {ghczmprim:GHCziPrim.Z2H
+           (ww1sYD3::ghczmprim:GHCziTypes.ZMZN aaYjzz)
+           (ww2sYD4::ghczmprim:GHCziTypes.ZMZN baYjA) ->
+             ghczmprim:GHCziTuple.Z2T @ (ghczmprim:GHCziTypes.ZMZN aaYjzz)
+             @ (ghczmprim:GHCziTypes.ZMZN baYjA) ww1sYD3 ww2sYD4};
+  base:DataziEither.zdfFunctorEitherzuzdcfmap :: %forall aaYk2 a1ivs8 bivs9 . (a1ivs8
+                                                                               -> bivs9)
+                                                                              ->
+                                                                              (base:DataziEither.Either
+                                                                               aaYk2
+                                                                               a1ivs8)
+                                                                              ->
+                                                                              base:DataziEither.Either
+                                                                              aaYk2
+                                                                              bivs9 =
+    \ @ aaYk2
+      @ a1t1K
+      @ bt1L
+      (dsdYs9::a1t1K -> bt1L)
+      (ds1dYsa::base:DataziEither.Either aaYk2 a1t1K) ->
+        %case (base:DataziEither.Either aaYk2 bt1L) ds1dYsa
+        %of (wildXE::base:DataziEither.Either aaYk2 a1t1K)
+          {base:DataziEither.Left (xaYk3::aaYk2) ->
+             base:DataziEither.Left @ aaYk2 @ bt1L xaYk3;
+           base:DataziEither.Right (yaYk5::a1t1K) ->
+             base:DataziEither.Right @ aaYk2 @ bt1L (dsdYs9 yaYk5)};
+  base:DataziEither.zdfFunctorEitherzuzdczlzd :: %forall aaYk2 a1ivsh bivsi . a1ivsh
+                                                                              ->
+                                                                              (base:DataziEither.Either
+                                                                               aaYk2
+                                                                               bivsi)
+                                                                              ->
+                                                                              base:DataziEither.Either
+                                                                              aaYk2
+                                                                              a1ivsh =
+    \ @ aaYk2
+      @ a1iw3E
+      @ biw3F
+      (xiw3H::a1iw3E)
+      (etaB1::base:DataziEither.Either aaYk2 biw3F) ->
+        %case (base:DataziEither.Either aaYk2 a1iw3E) etaB1
+        %of (wildXE::base:DataziEither.Either aaYk2 biw3F)
+          {base:DataziEither.Left (x1aYk3::aaYk2) ->
+             base:DataziEither.Left @ aaYk2 @ a1iw3E x1aYk3;
+           base:DataziEither.Right (yaYk5::biw3F) ->
+             base:DataziEither.Right @ aaYk2 @ a1iw3E xiw3H};
+  base:DataziEither.zdfFunctorEither :: %forall aaYk2 . base:GHCziBase.Functor
+                                                        (base:DataziEither.Either aaYk2) =
+    \ @ aaYk2 ->
+        base:GHCziBase.DZCFunctor @ (base:DataziEither.Either aaYk2)
+        (base:DataziEither.zdfFunctorEitherzuzdcfmap @ aaYk2)
+        (base:DataziEither.zdfFunctorEitherzuzdczlzd @ aaYk2);
+  base:DataziEither.zdfMonadEitherzuzdczgzgze :: %forall eaYjY aivqt bivqu . (base:DataziEither.Either
+                                                                              eaYjY
+                                                                              aivqt)
+                                                                             ->
+                                                                             (aivqt ->
+                                                                              base:DataziEither.Either
+                                                                              eaYjY
+                                                                              bivqu)
+                                                                             ->
+                                                                             base:DataziEither.Either
+                                                                             eaYjY
+                                                                             bivqu =
+    \ @ eaYjY
+      @ at1A
+      @ bt1B
+      (dsdYs5::base:DataziEither.Either eaYjY at1A)
+      (ds1dYs6::at1A -> base:DataziEither.Either eaYjY bt1B) ->
+        %case (base:DataziEither.Either eaYjY bt1B) dsdYs5
+        %of (wildXH::base:DataziEither.Either eaYjY at1A)
+          {base:DataziEither.Left (laYjZZ::eaYjY) ->
+             base:DataziEither.Left @ eaYjY @ bt1B laYjZZ;
+           base:DataziEither.Right (raYk0::at1A) ->
+             ds1dYs6 raYk0};
+  base:DataziEither.zdfMonadEitherzuzdcfail :: %forall eaYjY aivqx . (ghczmprim:GHCziTypes.ZMZN
+                                                                      ghczmprim:GHCziTypes.Char)
+                                                                     ->
+                                                                     base:DataziEither.Either
+                                                                     eaYjY
+                                                                     aivqx =
+    \ @ eaYjY
+      @ aiYsN
+      (etaB1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziErr.error @ (base:DataziEither.Either eaYjY aiYsN) etaB1;
+  base:DataziEither.zdfMonadEitherzuzdczgzg :: %forall eaYjY aivUd bivUe . (base:DataziEither.Either
+                                                                            eaYjY
+                                                                            aivUd)
+                                                                           ->
+                                                                           (base:DataziEither.Either
+                                                                            eaYjY
+                                                                            bivUe)
+                                                                           ->
+                                                                           base:DataziEither.Either
+                                                                           eaYjY
+                                                                           bivUe =
+    \ @ eaYjY
+      @ aivUd
+      @ bivUe
+      (etaB2::base:DataziEither.Either eaYjY aivUd)
+      (eta1B1::base:DataziEither.Either eaYjY bivUe) ->
+        %case (base:DataziEither.Either eaYjY bivUe) etaB2
+        %of (wildXH::base:DataziEither.Either eaYjY aivUd)
+          {base:DataziEither.Left (laYjZZ::eaYjY) ->
+             base:DataziEither.Left @ eaYjY @ bivUe laYjZZ;
+           base:DataziEither.Right (raYk0::aivUd) ->
+             eta1B1};
+  base:DataziEither.zdfMonadEither :: %forall eaYjY . base:GHCziBase.Monad
+                                                      (base:DataziEither.Either eaYjY) =
+    \ @ eaYjY ->
+        base:GHCziBase.DZCMonad @ (base:DataziEither.Either eaYjY)
+        (base:DataziEither.zdfMonadEitherzuzdczgzgze @ eaYjY)
+        (base:DataziEither.zdfMonadEitherzuzdczgzg @ eaYjY)
+        (base:DataziEither.Right @ eaYjY)
+        (base:DataziEither.zdfMonadEitherzuzdcfail @ eaYjY);
+  base:DataziEither.zdfShowEither2 :: ghczmprim:GHCziTypes.ZMZN
+                                      ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Left "::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziEither.zdfShowEither3 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (11::ghczmprim:GHCziPrim.Intzh);
+  base:DataziEither.zdfShowEither1 :: ghczmprim:GHCziTypes.ZMZN
+                                      ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Right "::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziEither.zdwzdcshowsPrec :: %forall aaYjx baYjy . (base:GHCziShow.Show
+                                                              aaYjx)
+                                                             ->
+                                                             (base:GHCziShow.Show baYjy) ->
+                                                             ghczmprim:GHCziPrim.Intzh ->
+                                                             (base:DataziEither.Either aaYjx baYjy)
+                                                             ->
+                                                             (ghczmprim:GHCziTypes.ZMZN
+                                                              ghczmprim:GHCziTypes.Char)
+                                                             ->
+                                                             ghczmprim:GHCziTypes.ZMZN
+                                                             ghczmprim:GHCziTypes.Char =
+    \ @ aaYjx
+      @ baYjy
+      (wsYBD::base:GHCziShow.Show aaYjx)
+      (w1sYBE::base:GHCziShow.Show baYjy)
+      (wwsYBH::ghczmprim:GHCziPrim.Intzh)
+      (w2sYBJ::base:DataziEither.Either aaYjx baYjy) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) w2sYBJ
+        %of (wildXM::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (b1aYnp::aaYjx) ->
+             %let gilE9 :: (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char)
+                           -> ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                    base:GHCziShow.showsPrec @ aaYjx wsYBD
+                    base:DataziEither.zdfShowEither3 b1aYnp
+             %in %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                        ghczmprim:GHCziTypes.ZMZN
+                        ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.zgzezh wwsYBH
+                                                    (11::ghczmprim:GHCziPrim.Intzh))
+                 %of (wild1ilF2::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      \ (xilEa::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                          base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+                          base:DataziEither.zdfShowEither2 (gilE9 xilEa);
+                    ghczmprim:GHCziTypes.True ->
+                      \ (xilF6::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                          ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                          base:GHCziShow.shows11
+                          (base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+                           base:DataziEither.zdfShowEither2
+                           (gilE9
+                            (ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                             base:GHCziShow.shows10 xilF6)))};
+           base:DataziEither.Right (b1aYnr::baYjy) ->
+             %let gilE9 :: (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char)
+                           -> ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+                    base:GHCziShow.showsPrec @ baYjy w1sYBE
+                    base:DataziEither.zdfShowEither3 b1aYnr
+             %in %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                        ghczmprim:GHCziTypes.ZMZN
+                        ghczmprim:GHCziTypes.Char) (ghczmprim:GHCziPrim.zgzezh wwsYBH
+                                                    (11::ghczmprim:GHCziPrim.Intzh))
+                 %of (wild1ilF2::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      \ (xilEa::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                          base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+                          base:DataziEither.zdfShowEither1 (gilE9 xilEa);
+                    ghczmprim:GHCziTypes.True ->
+                      \ (xilF6::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                          ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                          base:GHCziShow.shows11
+                          (base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+                           base:DataziEither.zdfShowEither1
+                           (gilE9
+                            (ghczmprim:GHCziTypes.ZC @ ghczmprim:GHCziTypes.Char
+                             base:GHCziShow.shows10 xilF6)))}};
+  base:DataziEither.zdfShowEitherzuzdcshowsPrec :: %forall aaYjx baYjy . (base:GHCziShow.Show
+                                                                          aaYjx)
+                                                                         ->
+                                                                         (base:GHCziShow.Show baYjy)
+                                                                         ->
+                                                                         ghczmprim:GHCziTypes.Int ->
+                                                                         (base:DataziEither.Either
+                                                                          aaYjx
+                                                                          baYjy)
+                                                                         ->
+                                                                         (ghczmprim:GHCziTypes.ZMZN
+                                                                          ghczmprim:GHCziTypes.Char)
+                                                                         ->
+                                                                         ghczmprim:GHCziTypes.ZMZN
+                                                                         ghczmprim:GHCziTypes.Char =
+    \ @ aaYjx
+      @ baYjy
+      (wsYBD::base:GHCziShow.Show aaYjx)
+      (w1sYBE::base:GHCziShow.Show baYjy)
+      (w2sYBF::ghczmprim:GHCziTypes.Int)
+      (w3sYBJ::base:DataziEither.Either aaYjx baYjy) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) w2sYBF
+        %of (w4XYCJ::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsYBH::ghczmprim:GHCziPrim.Intzh) ->
+             base:DataziEither.zdwzdcshowsPrec @ aaYjx @ baYjy wsYBD w1sYBE
+             wwsYBH w3sYBJ};
+  base:DataziEither.zdfShowEitherzuzdcshowList :: %forall aaYjx baYjy . (base:GHCziShow.Show
+                                                                         aaYjx)
+                                                                        ->
+                                                                        (base:GHCziShow.Show baYjy)
+                                                                        ->
+                                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                                         (base:DataziEither.Either
+                                                                          aaYjx
+                                                                          baYjy))
+                                                                        ->
+                                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                                         ghczmprim:GHCziTypes.Char)
+                                                                        ->
+                                                                        ghczmprim:GHCziTypes.ZMZN
+                                                                        ghczmprim:GHCziTypes.Char =
+    \ @ aaYjx
+      @ baYjy
+      (zddShowaYoP::base:GHCziShow.Show aaYjx)
+      (zddShow1aYoQ::base:GHCziShow.Show baYjy)
+      (etaB2::ghczmprim:GHCziTypes.ZMZN
+              (base:DataziEither.Either aaYjx baYjy))
+      (eta1B1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziShow.showListzuzu
+        @ (base:DataziEither.Either aaYjx baYjy)
+        (\ (wsYBJ::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdcshowsPrec @ aaYjx @ baYjy zddShowaYoP
+             zddShow1aYoQ (0::ghczmprim:GHCziPrim.Intzh) wsYBJ)
+        etaB2 eta1B1;
+  base:DataziEither.zdfShowEitherzuzdcshow :: %forall aaYjx baYjy . (base:GHCziShow.Show
+                                                                     aaYjx)
+                                                                    ->
+                                                                    (base:GHCziShow.Show baYjy) ->
+                                                                    (base:DataziEither.Either
+                                                                     aaYjx
+                                                                     baYjy)
+                                                                    ->
+                                                                    ghczmprim:GHCziTypes.ZMZN
+                                                                    ghczmprim:GHCziTypes.Char =
+    \ @ aaYjx
+      @ baYjy
+      (zddShowaYoP::base:GHCziShow.Show aaYjx)
+      (zddShow1aYoQ::base:GHCziShow.Show baYjy)
+      (xilLE::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdcshowsPrec @ aaYjx @ baYjy zddShowaYoP
+        zddShow1aYoQ (0::ghczmprim:GHCziPrim.Intzh) xilLE
+        (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char);
+  base:DataziEither.zdfShowEither :: %forall aaYjx baYjy . (base:GHCziShow.Show
+                                                            aaYjx)
+                                                           ->
+                                                           (base:GHCziShow.Show baYjy) ->
+                                                           base:GHCziShow.Show
+                                                           (base:DataziEither.Either aaYjx baYjy) =
+    \ @ aaYjx
+      @ baYjy
+      (zddShowaYoP::base:GHCziShow.Show aaYjx)
+      (zddShow1aYoQ::base:GHCziShow.Show baYjy) ->
+        base:GHCziShow.DZCShow @ (base:DataziEither.Either aaYjx baYjy)
+        (base:DataziEither.zdfShowEitherzuzdcshowsPrec @ aaYjx @ baYjy
+         zddShowaYoP zddShow1aYoQ)
+        (base:DataziEither.zdfShowEitherzuzdcshow @ aaYjx @ baYjy
+         zddShowaYoP zddShow1aYoQ)
+        (base:DataziEither.zdfShowEitherzuzdcshowList @ aaYjx @ baYjy
+         zddShowaYoP zddShow1aYoQ);
+  base:DataziEither.zdwzdczlze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                         aaYjx)
+                                                        ->
+                                                        (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                        (base:DataziEither.Either aaYjx baYjy) ->
+                                                        (base:DataziEither.Either aaYjx baYjy) ->
+                                                        ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYBR::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYBS::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYBT::base:DataziEither.Either aaYjx baYjy)
+      (w3sYBU::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool w2sYBT
+        %of (wildXR::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYn8::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYBU
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYn9::aaYjx) ->
+                  ghczmprim:GHCziClasses.zlze @ aaYjx wsYBR a1aYn8 b1aYn9;
+                base:DataziEither.Right (ipvsYsR::baYjy) ->
+                  ghczmprim:GHCziTypes.True};
+           base:DataziEither.Right (a1aYna::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYBU
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYsU::aaYjx) ->
+                  ghczmprim:GHCziTypes.False;
+                base:DataziEither.Right (b1aYnb::baYjy) ->
+                  ghczmprim:GHCziClasses.zlze @ baYjy w1sYBS a1aYna b1aYnb}};
+  base:DataziEither.zdfOrdEitherzuzdczlze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                    (base:DataziEither.Either
+                                                                     aaYjx
+                                                                     baYjy))
+                                                                   ->
+                                                                   (ghczmprim:GHCziClasses.Ord
+                                                                    aaYjx)
+                                                                   ->
+                                                                   (ghczmprim:GHCziClasses.Ord
+                                                                    baYjy)
+                                                                   ->
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy)
+                                                                   ->
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy)
+                                                                   -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYBQ::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYBR::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYBS::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYBT::base:DataziEither.Either aaYjx baYjy)
+      (w4sYBU::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdczlze @ aaYjx @ baYjy w1sYBR w2sYBS w3sYBT
+        w4sYBU;
+  base:DataziEither.zdwzdczg :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                       aaYjx)
+                                                      ->
+                                                      (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                      (base:DataziEither.Either aaYjx baYjy) ->
+                                                      (base:DataziEither.Either aaYjx baYjy) ->
+                                                      ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYC2::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYC3::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYC4::base:DataziEither.Either aaYjx baYjy)
+      (w3sYC5::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool w2sYC4
+        %of (wildXS::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYnk::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYC5
+             %of (wild1Xq::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYnl::aaYjx) ->
+                  ghczmprim:GHCziClasses.zg @ aaYjx wsYC2 a1aYnk b1aYnl;
+                base:DataziEither.Right (ipvsYsY::baYjy) ->
+                  ghczmprim:GHCziTypes.False};
+           base:DataziEither.Right (a1aYnm::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYC5
+             %of (wild1Xq::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYt1::aaYjx) ->
+                  ghczmprim:GHCziTypes.True;
+                base:DataziEither.Right (b1aYnn::baYjy) ->
+                  ghczmprim:GHCziClasses.zg @ baYjy w1sYC3 a1aYnm b1aYnn}};
+  base:DataziEither.zdfOrdEitherzuzdczg :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy))
+                                                                 ->
+                                                                 (ghczmprim:GHCziClasses.Ord aaYjx)
+                                                                 ->
+                                                                 (ghczmprim:GHCziClasses.Ord baYjy)
+                                                                 ->
+                                                                 (base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy)
+                                                                 ->
+                                                                 (base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy)
+                                                                 -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYC1::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYC2::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYC3::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYC4::base:DataziEither.Either aaYjx baYjy)
+      (w4sYC5::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdczg @ aaYjx @ baYjy w1sYC2 w2sYC3 w3sYC4
+        w4sYC5;
+  base:DataziEither.zdwzdczgze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                         aaYjx)
+                                                        ->
+                                                        (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                        (base:DataziEither.Either aaYjx baYjy) ->
+                                                        (base:DataziEither.Either aaYjx baYjy) ->
+                                                        ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCd::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYCe::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYCf::base:DataziEither.Either aaYjx baYjy)
+      (w3sYCg::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool w2sYCf
+        %of (wildXT::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYne::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYCg
+             %of (wild1Xr::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYnf::aaYjx) ->
+                  ghczmprim:GHCziClasses.zgze @ aaYjx wsYCd a1aYne b1aYnf;
+                base:DataziEither.Right (ipvsYt5::baYjy) ->
+                  ghczmprim:GHCziTypes.False};
+           base:DataziEither.Right (a1aYng::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYCg
+             %of (wild1Xr::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYt8::aaYjx) ->
+                  ghczmprim:GHCziTypes.True;
+                base:DataziEither.Right (b1aYnh::baYjy) ->
+                  ghczmprim:GHCziClasses.zgze @ baYjy w1sYCe a1aYng b1aYnh}};
+  base:DataziEither.zdfOrdEitherzuzdczgze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                    (base:DataziEither.Either
+                                                                     aaYjx
+                                                                     baYjy))
+                                                                   ->
+                                                                   (ghczmprim:GHCziClasses.Ord
+                                                                    aaYjx)
+                                                                   ->
+                                                                   (ghczmprim:GHCziClasses.Ord
+                                                                    baYjy)
+                                                                   ->
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy)
+                                                                   ->
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy)
+                                                                   -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCc::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYCd::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYCe::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYCf::base:DataziEither.Either aaYjx baYjy)
+      (w4sYCg::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdczgze @ aaYjx @ baYjy w1sYCd w2sYCe w3sYCf
+        w4sYCg;
+  base:DataziEither.zdwzdczl :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                       aaYjx)
+                                                      ->
+                                                      (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                      (base:DataziEither.Either aaYjx baYjy) ->
+                                                      (base:DataziEither.Either aaYjx baYjy) ->
+                                                      ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCo::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYCp::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYCq::base:DataziEither.Either aaYjx baYjy)
+      (w3sYCr::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool w2sYCq
+        %of (wildXU::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYn2::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYCr
+             %of (wild1Xs::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYn3::aaYjx) ->
+                  ghczmprim:GHCziClasses.zl @ aaYjx wsYCo a1aYn2 b1aYn3;
+                base:DataziEither.Right (ipvsYtc::baYjy) ->
+                  ghczmprim:GHCziTypes.True};
+           base:DataziEither.Right (a1aYn4::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool w3sYCr
+             %of (wild1Xs::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYtf::aaYjx) ->
+                  ghczmprim:GHCziTypes.False;
+                base:DataziEither.Right (b1aYn5::baYjy) ->
+                  ghczmprim:GHCziClasses.zl @ baYjy w1sYCp a1aYn4 b1aYn5}};
+  base:DataziEither.zdfOrdEitherzuzdczl :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy))
+                                                                 ->
+                                                                 (ghczmprim:GHCziClasses.Ord aaYjx)
+                                                                 ->
+                                                                 (ghczmprim:GHCziClasses.Ord baYjy)
+                                                                 ->
+                                                                 (base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy)
+                                                                 ->
+                                                                 (base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy)
+                                                                 -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCn::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYCo::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYCp::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYCq::base:DataziEither.Either aaYjx baYjy)
+      (w4sYCr::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdczl @ aaYjx @ baYjy w1sYCo w2sYCp w3sYCq
+        w4sYCr;
+  base:DataziEither.zdwzdccompare :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                            aaYjx)
+                                                           ->
+                                                           (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                           (base:DataziEither.Either aaYjx baYjy) ->
+                                                           (base:DataziEither.Either aaYjx baYjy) ->
+                                                           ghczmprim:GHCziTypes.Ordering =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCzz::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYCA::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYCB::base:DataziEither.Either aaYjx baYjy)
+      (w3sYCC::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Ordering w2sYCB
+        %of (wildXV::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYmW::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Ordering w3sYCC
+             %of (wild1Xt::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYmX::aaYjx) ->
+                  ghczmprim:GHCziClasses.compare @ aaYjx wsYCzz a1aYmW b1aYmX;
+                base:DataziEither.Right (ipvsYtj::baYjy) ->
+                  ghczmprim:GHCziTypes.LT};
+           base:DataziEither.Right (a1aYmY::baYjy) ->
+             %case ghczmprim:GHCziTypes.Ordering w3sYCC
+             %of (wild1Xt::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYtm::aaYjx) ->
+                  ghczmprim:GHCziTypes.GT;
+                base:DataziEither.Right (b1aYmZZ::baYjy) ->
+                  ghczmprim:GHCziClasses.compare @ baYjy w1sYCA a1aYmY b1aYmZZ}};
+  base:DataziEither.zdfOrdEitherzuzdccompare :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                       (base:DataziEither.Either
+                                                                        aaYjx
+                                                                        baYjy))
+                                                                      ->
+                                                                      (ghczmprim:GHCziClasses.Ord
+                                                                       aaYjx)
+                                                                      ->
+                                                                      (ghczmprim:GHCziClasses.Ord
+                                                                       baYjy)
+                                                                      ->
+                                                                      (base:DataziEither.Either
+                                                                       aaYjx
+                                                                       baYjy)
+                                                                      ->
+                                                                      (base:DataziEither.Either
+                                                                       aaYjx
+                                                                       baYjy)
+                                                                      ->
+                                                                      ghczmprim:GHCziTypes.Ordering =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCy::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYCzz::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYCA::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYCB::base:DataziEither.Either aaYjx baYjy)
+      (w4sYCC::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdccompare @ aaYjx @ baYjy w1sYCzz w2sYCA
+        w3sYCB w4sYCC;
+  base:DataziEither.zdwzdcmin :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                        aaYjx)
+                                                       ->
+                                                       (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                       (base:DataziEither.Either aaYjx baYjy) ->
+                                                       (base:DataziEither.Either aaYjx baYjy) ->
+                                                       base:DataziEither.Either aaYjx baYjy =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCK::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYCL::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYCM::base:DataziEither.Either aaYjx baYjy)
+      (w3sYCN::base:DataziEither.Either aaYjx baYjy) ->
+        %case (base:DataziEither.Either aaYjx baYjy) w2sYCM
+        %of (wildXR::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYn8::aaYjx) ->
+             %case (base:DataziEither.Either aaYjx baYjy) w3sYCN
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYn9::aaYjx) ->
+                  %case (base:DataziEither.Either
+                         aaYjx
+                         baYjy) (ghczmprim:GHCziClasses.zlze @ aaYjx wsYCK a1aYn8 b1aYn9)
+                  %of (wild2a2ky::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       wild1Xp;
+                     ghczmprim:GHCziTypes.True ->
+                       wildXR};
+                base:DataziEither.Right (ipvsYsR::baYjy) ->
+                  wildXR};
+           base:DataziEither.Right (a1aYna::baYjy) ->
+             %case (base:DataziEither.Either aaYjx baYjy) w3sYCN
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYsU::aaYjx) ->
+                  wild1Xp;
+                base:DataziEither.Right (b1aYnb::baYjy) ->
+                  %case (base:DataziEither.Either
+                         aaYjx
+                         baYjy) (ghczmprim:GHCziClasses.zlze @ baYjy w1sYCL a1aYna b1aYnb)
+                  %of (wild2a2ky::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       wild1Xp;
+                     ghczmprim:GHCziTypes.True ->
+                       wildXR}}};
+  base:DataziEither.zdfOrdEitherzuzdcmin :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy))
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Ord aaYjx)
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Ord baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCJ::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYCK::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYCL::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYCM::base:DataziEither.Either aaYjx baYjy)
+      (w4sYCN::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdcmin @ aaYjx @ baYjy w1sYCK w2sYCL w3sYCM
+        w4sYCN;
+  base:DataziEither.zdwzdcmax :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Ord
+                                                        aaYjx)
+                                                       ->
+                                                       (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                       (base:DataziEither.Either aaYjx baYjy) ->
+                                                       (base:DataziEither.Either aaYjx baYjy) ->
+                                                       base:DataziEither.Either aaYjx baYjy =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCV::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w1sYCW::ghczmprim:GHCziClasses.Ord baYjy)
+      (w2sYCX::base:DataziEither.Either aaYjx baYjy)
+      (w3sYCY::base:DataziEither.Either aaYjx baYjy) ->
+        %case (base:DataziEither.Either aaYjx baYjy) w2sYCX
+        %of (wildXR::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYn8::aaYjx) ->
+             %case (base:DataziEither.Either aaYjx baYjy) w3sYCY
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYn9::aaYjx) ->
+                  %case (base:DataziEither.Either
+                         aaYjx
+                         baYjy) (ghczmprim:GHCziClasses.zlze @ aaYjx wsYCV a1aYn8 b1aYn9)
+                  %of (wild2a2kI::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       wildXR;
+                     ghczmprim:GHCziTypes.True ->
+                       wild1Xp};
+                base:DataziEither.Right (ipvsYsR::baYjy) ->
+                  wild1Xp};
+           base:DataziEither.Right (a1aYna::baYjy) ->
+             %case (base:DataziEither.Either aaYjx baYjy) w3sYCY
+             %of (wild1Xp::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYsU::aaYjx) ->
+                  wildXR;
+                base:DataziEither.Right (b1aYnb::baYjy) ->
+                  %case (base:DataziEither.Either
+                         aaYjx
+                         baYjy) (ghczmprim:GHCziClasses.zlze @ baYjy w1sYCW a1aYna b1aYnb)
+                  %of (wild2a2kI::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       wildXR;
+                     ghczmprim:GHCziTypes.True ->
+                       wild1Xp}}};
+  base:DataziEither.zdfOrdEitherzuzdcmax :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                   (base:DataziEither.Either
+                                                                    aaYjx
+                                                                    baYjy))
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Ord aaYjx)
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Ord baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  base:DataziEither.Either
+                                                                  aaYjx
+                                                                  baYjy =
+    \ @ aaYjx
+      @ baYjy
+      (wsYCU::ghczmprim:GHCziClasses.Eq
+              (base:DataziEither.Either aaYjx baYjy))
+      (w1sYCV::ghczmprim:GHCziClasses.Ord aaYjx)
+      (w2sYCW::ghczmprim:GHCziClasses.Ord baYjy)
+      (w3sYCX::base:DataziEither.Either aaYjx baYjy)
+      (w4sYCY::base:DataziEither.Either aaYjx baYjy) ->
+        base:DataziEither.zdwzdcmax @ aaYjx @ baYjy w1sYCV w2sYCW w3sYCX
+        w4sYCY;
+  base:DataziEither.zdfOrdEither :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                           (base:DataziEither.Either aaYjx baYjy))
+                                                          ->
+                                                          (ghczmprim:GHCziClasses.Ord aaYjx) ->
+                                                          (ghczmprim:GHCziClasses.Ord baYjy) ->
+                                                          ghczmprim:GHCziClasses.Ord
+                                                          (base:DataziEither.Either aaYjx baYjy) =
+    \ @ aaYjx
+      @ baYjy
+      (zddEqaYo9::ghczmprim:GHCziClasses.Eq
+                  (base:DataziEither.Either aaYjx baYjy))
+      (zddOrdaYoa::ghczmprim:GHCziClasses.Ord aaYjx)
+      (zddOrd1aYob::ghczmprim:GHCziClasses.Ord baYjy) ->
+        ghczmprim:GHCziClasses.DZCOrd
+        @ (base:DataziEither.Either aaYjx baYjy) zddEqaYo9
+        (\ (wsYCB::base:DataziEither.Either aaYjx baYjy)
+           (w1sYCC::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdccompare @ aaYjx @ baYjy zddOrdaYoa
+             zddOrd1aYob wsYCB w1sYCC)
+        (\ (wsYCq::base:DataziEither.Either aaYjx baYjy)
+           (w1sYCr::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdczl @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYCq w1sYCr)
+        (\ (wsYCf::base:DataziEither.Either aaYjx baYjy)
+           (w1sYCg::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdczgze @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYCf w1sYCg)
+        (\ (wsYC4::base:DataziEither.Either aaYjx baYjy)
+           (w1sYC5::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdczg @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYC4 w1sYC5)
+        (\ (wsYBT::base:DataziEither.Either aaYjx baYjy)
+           (w1sYBU::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdczlze @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYBT w1sYBU)
+        (\ (wsYCX::base:DataziEither.Either aaYjx baYjy)
+           (w1sYCY::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdcmax @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYCX w1sYCY)
+        (\ (wsYCM::base:DataziEither.Either aaYjx baYjy)
+           (w1sYCN::base:DataziEither.Either aaYjx baYjy) ->
+             base:DataziEither.zdwzdcmin @ aaYjx @ baYjy zddOrdaYoa zddOrd1aYob
+             wsYCM w1sYCN);
+  base:DataziEither.zdfEqEitherzuzdczeze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                   aaYjx)
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Eq baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (zddEqaYnV::ghczmprim:GHCziClasses.Eq aaYjx)
+      (zddEq1aYnW::ghczmprim:GHCziClasses.Eq baYjy)
+      (dsdYr1::base:DataziEither.Either aaYjx baYjy)
+      (ds1dYr2::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool dsdYr1
+        %of (wildX10::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYmO::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool ds1dYr2
+             %of (wild1Xx::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYmP::aaYjx) ->
+                  ghczmprim:GHCziClasses.zeze @ aaYjx zddEqaYnV a1aYmO b1aYmP;
+                base:DataziEither.Right (ipvsYts::baYjy) ->
+                  ghczmprim:GHCziTypes.False};
+           base:DataziEither.Right (a1aYmQ::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool ds1dYr2
+             %of (wild1Xx::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYtv::aaYjx) ->
+                  ghczmprim:GHCziTypes.False;
+                base:DataziEither.Right (b1aYmR::baYjy) ->
+                  ghczmprim:GHCziClasses.zeze @ baYjy zddEq1aYnW a1aYmQ b1aYmR}};
+  base:DataziEither.zdfEqEitherzuzdczsze :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                                   aaYjx)
+                                                                  ->
+                                                                  (ghczmprim:GHCziClasses.Eq baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  ->
+                                                                  (base:DataziEither.Either
+                                                                   aaYjx
+                                                                   baYjy)
+                                                                  -> ghczmprim:GHCziTypes.Bool =
+    \ @ aaYjx
+      @ baYjy
+      (zddEqaYnV::ghczmprim:GHCziClasses.Eq aaYjx)
+      (zddEq1aYnW::ghczmprim:GHCziClasses.Eq baYjy)
+      (aaYmS::base:DataziEither.Either aaYjx baYjy)
+      (baYmT::base:DataziEither.Either aaYjx baYjy) ->
+        %case ghczmprim:GHCziTypes.Bool aaYmS
+        %of (wildX10::base:DataziEither.Either aaYjx baYjy)
+          {base:DataziEither.Left (a1aYmO::aaYjx) ->
+             %case ghczmprim:GHCziTypes.Bool baYmT
+             %of (wild1Xx::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (b1aYmP::aaYjx) ->
+                  %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziClasses.zeze
+                                                   @ aaYjx zddEqaYnV a1aYmO b1aYmP)
+                  %of (wild2a2kV::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.True;
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.False};
+                base:DataziEither.Right (ipvsYts::baYjy) ->
+                  ghczmprim:GHCziTypes.True};
+           base:DataziEither.Right (a1aYmQ::baYjy) ->
+             %case ghczmprim:GHCziTypes.Bool baYmT
+             %of (wild1Xx::base:DataziEither.Either aaYjx baYjy)
+               {base:DataziEither.Left (ipvsYtv::aaYjx) ->
+                  ghczmprim:GHCziTypes.True;
+                base:DataziEither.Right (b1aYmR::baYjy) ->
+                  %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziClasses.zeze
+                                                   @ baYjy zddEq1aYnW a1aYmQ b1aYmR)
+                  %of (wild2a2kV::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.True;
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.False}}};
+  base:DataziEither.zdfEqEither :: %forall aaYjx baYjy . (ghczmprim:GHCziClasses.Eq
+                                                          aaYjx)
+                                                         ->
+                                                         (ghczmprim:GHCziClasses.Eq baYjy) ->
+                                                         ghczmprim:GHCziClasses.Eq
+                                                         (base:DataziEither.Either aaYjx baYjy) =
+    \ @ aaYjx
+      @ baYjy
+      (zddEqaYnV::ghczmprim:GHCziClasses.Eq aaYjx)
+      (zddEq1aYnW::ghczmprim:GHCziClasses.Eq baYjy) ->
+        ghczmprim:GHCziClasses.DZCEq
+        @ (base:DataziEither.Either aaYjx baYjy)
+        (base:DataziEither.zdfEqEitherzuzdczeze @ aaYjx @ baYjy zddEqaYnV
+         zddEq1aYnW)
+        (base:DataziEither.zdfEqEitherzuzdczsze @ aaYjx @ baYjy zddEqaYnV
+         zddEq1aYnW);

@@ -1,0 +1,28 @@
+%module ghczmprim:GHCziTypes
+  %data ghczmprim:GHCziTypes.Bool =
+    {ghczmprim:GHCziTypes.False;
+     ghczmprim:GHCziTypes.True};
+  %data ghczmprim:GHCziTypes.Char =
+    {ghczmprim:GHCziTypes.Czh ghczmprim:GHCziPrim.Charzh};
+  %data ghczmprim:GHCziTypes.Double =
+    {ghczmprim:GHCziTypes.Dzh ghczmprim:GHCziPrim.Doublezh};
+  %data ghczmprim:GHCziTypes.Float =
+    {ghczmprim:GHCziTypes.Fzh ghczmprim:GHCziPrim.Floatzh};
+  %data ghczmprim:GHCziTypes.Int =
+    {ghczmprim:GHCziTypes.Izh ghczmprim:GHCziPrim.Intzh};
+  %data ghczmprim:GHCziTypes.ZMZN aa7 =
+    {ghczmprim:GHCziTypes.ZMZN;
+     ghczmprim:GHCziTypes.ZC aa7 (ghczmprim:GHCziTypes.ZMZN aa7)};
+  %data ghczmprim:GHCziTypes.Ordering =
+    {ghczmprim:GHCziTypes.LT;
+     ghczmprim:GHCziTypes.EQ;
+     ghczmprim:GHCziTypes.GT};
+  %data ghczmprim:GHCziTypes.IO aa6 =
+    {ghczmprim:GHCziTypes.IO ((ghczmprim:GHCziPrim.Statezh
+                               ghczmprim:GHCziPrim.RealWorld)
+                              ->
+                              ghczmprim:GHCziPrim.Z2H
+                              (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                              aa6)};
+  %data ghczmprim:GHCziTypes.Word =
+    {ghczmprim:GHCziTypes.Wzh ghczmprim:GHCziPrim.Wordzh};

@@ -1,0 +1,1763 @@
+%module base:ControlziMonad
+  %data base:ControlziMonad.MonadPlus (ma13MN::(*->*)) =
+    {base:ControlziMonad.DZCMonadPlus (base:GHCziBase.Monad ma13MN)
+                                      (%forall aa13MO . ma13MN aa13MO)
+                                      (%forall aa13MP . (ma13MN aa13MP) ->
+                                                        (ma13MN aa13MP) -> ma13MN aa13MP)};
+  base:ControlziMonad.zdp1MonadPlus :: %forall (ma13MN::(*->*)) . (base:ControlziMonad.MonadPlus
+                                                                   ma13MN)
+                                                                  -> base:GHCziBase.Monad ma13MN =
+    \ @ (ma13MN::(*->*))
+      (tplB1::base:ControlziMonad.MonadPlus ma13MN) ->
+        %case (base:GHCziBase.Monad ma13MN) tplB1
+        %of (tplX4::base:ControlziMonad.MonadPlus ma13MN)
+          {base:ControlziMonad.DZCMonadPlus
+           (tplB2::base:GHCziBase.Monad ma13MN)
+           (tplB3::%forall aa13MO . ma13MN aa13MO)
+           (tplB4::%forall aa13MP . (ma13MN aa13MP) ->
+                                    (ma13MN aa13MP) -> ma13MN aa13MP) ->
+             tplB2};
+  base:ControlziMonad.mzzero :: %forall (ma13MN::(*->*)) . (base:ControlziMonad.MonadPlus
+                                                            ma13MN)
+                                                           -> %forall aa13MO . ma13MN aa13MO =
+    \ @ (ma13MN::(*->*))
+      (tplB1::base:ControlziMonad.MonadPlus ma13MN) ->
+        %case (%forall aa13MO . ma13MN aa13MO) tplB1
+        %of (tplX4::base:ControlziMonad.MonadPlus ma13MN)
+          {base:ControlziMonad.DZCMonadPlus
+           (tplB2::base:GHCziBase.Monad ma13MN)
+           (tplB3::%forall aa13MO . ma13MN aa13MO)
+           (tplB4::%forall aa13MP . (ma13MN aa13MP) ->
+                                    (ma13MN aa13MP) -> ma13MN aa13MP) ->
+             tplB3};
+  base:ControlziMonad.mplus :: %forall (ma13MN::(*->*)) . (base:ControlziMonad.MonadPlus
+                                                           ma13MN)
+                                                          ->
+                                                          %forall aa13MP . (ma13MN aa13MP) ->
+                                                                           (ma13MN aa13MP) ->
+                                                                           ma13MN aa13MP =
+    \ @ (ma13MN::(*->*))
+      (tplB1::base:ControlziMonad.MonadPlus ma13MN) ->
+        %case (%forall aa13MP . (ma13MN aa13MP) ->
+                                (ma13MN aa13MP) -> ma13MN aa13MP) tplB1
+        %of (tplX4::base:ControlziMonad.MonadPlus ma13MN)
+          {base:ControlziMonad.DZCMonadPlus
+           (tplB2::base:GHCziBase.Monad ma13MN)
+           (tplB3::%forall aa13MO . ma13MN aa13MO)
+           (tplB4::%forall aa13MP . (ma13MN aa13MP) ->
+                                    (ma13MN aa13MP) -> ma13MN aa13MP) ->
+             tplB4};
+  base:ControlziMonad.zdwmfilter :: %forall aa13MQ (ma13MR::(*->*)) . (base:GHCziBase.Monad
+                                                                       ma13MR)
+                                                                      ->
+                                                                      (%forall a1a13MO . ma13MR
+                                                                                         a1a13MO)
+                                                                      ->
+                                                                      (aa13MQ ->
+                                                                       ghczmprim:GHCziTypes.Bool)
+                                                                      ->
+                                                                      (ma13MR aa13MQ) ->
+                                                                      ma13MR aa13MQ =
+    \ @ aa13MQ
+      @ (ma13MR::(*->*))
+      (wws141g::base:GHCziBase.Monad ma13MR)
+      (ww1s141h::%forall a1a13MO . ma13MR a1a13MO)
+      (ws141k::aa13MQ -> ghczmprim:GHCziTypes.Bool)
+      (w1s141l::ma13MR aa13MQ) ->
+        %case (ma13MR aa13MQ) wws141g
+        %of (zddMonads13Yp::base:GHCziBase.Monad ma13MR)
+          {base:GHCziBase.DZCMonad
+           (ww2s1416::%forall a1ivqt bivqu . (ma13MR a1ivqt) ->
+                                             (a1ivqt -> ma13MR bivqu) -> ma13MR bivqu)
+           (ww3s1417::%forall a1ivUd bivUe . (ma13MR a1ivUd) ->
+                                             (ma13MR bivUe) -> ma13MR bivUe)
+           (ww4s1418::%forall a1ivUf . a1ivUf -> ma13MR a1ivUf)
+           (ww5s1419::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13MR a1ivqx) ->
+             ww2s1416 @ aa13MQ @ aa13MQ w1s141l
+             (\ (aa13PL::aa13MQ) ->
+                  %case (ma13MR aa13MQ) (ws141k aa13PL)
+                  %of (wildXI::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ww1s141h @ aa13MQ;
+                     ghczmprim:GHCziTypes.True ->
+                       ww4s1418 @ aa13MQ aa13PL})};
+  base:ControlziMonad.mfilter :: %forall aa13MQ (ma13MR::(*->*)) . (base:ControlziMonad.MonadPlus
+                                                                    ma13MR)
+                                                                   ->
+                                                                   (aa13MQ ->
+                                                                    ghczmprim:GHCziTypes.Bool)
+                                                                   ->
+                                                                   (ma13MR aa13MQ) ->
+                                                                   ma13MR aa13MQ =
+    \ @ aa13MQ
+      @ (ma13MR::(*->*))
+      (ws141e::base:ControlziMonad.MonadPlus ma13MR)
+      (w1s141k::aa13MQ -> ghczmprim:GHCziTypes.Bool)
+      (w2s141l::ma13MR aa13MQ) ->
+        %case (ma13MR aa13MQ) ws141e
+        %of (w3X1427::base:ControlziMonad.MonadPlus ma13MR)
+          {base:ControlziMonad.DZCMonadPlus
+           (wws141g::base:GHCziBase.Monad ma13MR)
+           (ww1s141h::%forall a1a13MO . ma13MR a1a13MO)
+           (ww2s141i::%forall a1a13MP . (ma13MR a1a13MP) ->
+                                        (ma13MR a1a13MP) -> ma13MR a1a13MP) ->
+             base:ControlziMonad.zdwmfilter @ aa13MQ @ ma13MR wws141g ww1s141h
+             w1s141k w2s141l};
+  base:ControlziMonad.zdwliftM5 :: %forall a1a13MV a2a13MW a3a13MX a4a13MY a5a13MZZ ra13N0 (ma13N1::(*->*)) . (%forall aivqt bivqu . (ma13N1
+                                                                                                                                      aivqt)
+                                                                                                                                     ->
+                                                                                                                                     (aivqt
+                                                                                                                                      ->
+                                                                                                                                      ma13N1
+                                                                                                                                      bivqu)
+                                                                                                                                     ->
+                                                                                                                                     ma13N1
+                                                                                                                                     bivqu)
+                                                                                                              ->
+                                                                                                              (%forall aivUf . aivUf
+                                                                                                                               ->
+                                                                                                                               ma13N1
+                                                                                                                               aivUf)
+                                                                                                              ->
+                                                                                                              (a1a13MV
+                                                                                                               ->
+                                                                                                               a2a13MW
+                                                                                                               ->
+                                                                                                               a3a13MX
+                                                                                                               ->
+                                                                                                               a4a13MY
+                                                                                                               ->
+                                                                                                               a5a13MZZ
+                                                                                                               ->
+                                                                                                               ra13N0)
+                                                                                                              ->
+                                                                                                              (ma13N1
+                                                                                                               a1a13MV)
+                                                                                                              ->
+                                                                                                              (ma13N1
+                                                                                                               a2a13MW)
+                                                                                                              ->
+                                                                                                              (ma13N1
+                                                                                                               a3a13MX)
+                                                                                                              ->
+                                                                                                              (ma13N1
+                                                                                                               a4a13MY)
+                                                                                                              ->
+                                                                                                              (ma13N1
+                                                                                                               a5a13MZZ)
+                                                                                                              ->
+                                                                                                              ma13N1
+                                                                                                              ra13N0 =
+    \ @ a1a13MV
+      @ a2a13MW
+      @ a3a13MX
+      @ a4a13MY
+      @ a5a13MZZ
+      @ ra13N0
+      @ (ma13N1::(*->*))
+      (wws141w::%forall aivqt bivqu . (ma13N1 aivqt) ->
+                                      (aivqt -> ma13N1 bivqu) -> ma13N1 bivqu)
+      (ww1s141y::%forall aivUf . aivUf -> ma13N1 aivUf)
+      (ws141B::a1a13MV ->
+               a2a13MW -> a3a13MX -> a4a13MY -> a5a13MZZ -> ra13N0)
+      (w1s141C::ma13N1 a1a13MV)
+      (w2s141D::ma13N1 a2a13MW)
+      (w3s141E::ma13N1 a3a13MX)
+      (w4s141F::ma13N1 a4a13MY)
+      (w5s141G::ma13N1 a5a13MZZ) ->
+        wws141w @ a1a13MV @ ra13N0 w1s141C
+        (\ (x1a13PE::a1a13MV) ->
+             wws141w @ a2a13MW @ ra13N0 w2s141D
+             (\ (x2a13PF::a2a13MW) ->
+                  wws141w @ a3a13MX @ ra13N0 w3s141E
+                  (\ (x3a13PG::a3a13MX) ->
+                       wws141w @ a4a13MY @ ra13N0 w4s141F
+                       (\ (x4a13PH::a4a13MY) ->
+                            wws141w @ a5a13MZZ @ ra13N0 w5s141G
+                            (\ (x5a13PI::a5a13MZZ) ->
+                                 ww1s141y @ ra13N0
+                                 (ws141B x1a13PE x2a13PF x3a13PG x4a13PH x5a13PI))))));
+  base:ControlziMonad.liftM5 :: %forall a1a13MV a2a13MW a3a13MX a4a13MY a5a13MZZ ra13N0 (ma13N1::(*->*)) . (base:GHCziBase.Monad
+                                                                                                            ma13N1)
+                                                                                                           ->
+                                                                                                           (a1a13MV
+                                                                                                            ->
+                                                                                                            a2a13MW
+                                                                                                            ->
+                                                                                                            a3a13MX
+                                                                                                            ->
+                                                                                                            a4a13MY
+                                                                                                            ->
+                                                                                                            a5a13MZZ
+                                                                                                            ->
+                                                                                                            ra13N0)
+                                                                                                           ->
+                                                                                                           (ma13N1
+                                                                                                            a1a13MV)
+                                                                                                           ->
+                                                                                                           (ma13N1
+                                                                                                            a2a13MW)
+                                                                                                           ->
+                                                                                                           (ma13N1
+                                                                                                            a3a13MX)
+                                                                                                           ->
+                                                                                                           (ma13N1
+                                                                                                            a4a13MY)
+                                                                                                           ->
+                                                                                                           (ma13N1
+                                                                                                            a5a13MZZ)
+                                                                                                           ->
+                                                                                                           ma13N1
+                                                                                                           ra13N0 =
+    \ @ a1a13MV
+      @ a2a13MW
+      @ a3a13MX
+      @ a4a13MY
+      @ a5a13MZZ
+      @ ra13N0
+      @ (ma13N1::(*->*))
+      (ws141u::base:GHCziBase.Monad ma13N1)
+      (w1s141B::a1a13MV ->
+                a2a13MW -> a3a13MX -> a4a13MY -> a5a13MZZ -> ra13N0)
+      (w2s141C::ma13N1 a1a13MV)
+      (w3s141D::ma13N1 a2a13MW)
+      (w4s141E::ma13N1 a3a13MX)
+      (w5s141F::ma13N1 a4a13MY)
+      (w6s141G::ma13N1 a5a13MZZ) ->
+        %case (ma13N1 ra13N0) ws141u
+        %of (w7X142y::base:GHCziBase.Monad ma13N1)
+          {base:GHCziBase.DZCMonad
+           (wws141w::%forall aivqt bivqu . (ma13N1 aivqt) ->
+                                           (aivqt -> ma13N1 bivqu) -> ma13N1 bivqu)
+           (ww1s141x::%forall aivUd bivUe . (ma13N1 aivUd) ->
+                                            (ma13N1 bivUe) -> ma13N1 bivUe)
+           (ww2s141y::%forall aivUf . aivUf -> ma13N1 aivUf)
+           (ww3s141zz::%forall aivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13N1 aivqx) ->
+             base:ControlziMonad.zdwliftM5 @ a1a13MV @ a2a13MW @ a3a13MX
+             @ a4a13MY @ a5a13MZZ @ ra13N0 @ ma13N1 wws141w ww2s141y w1s141B
+             w2s141C w3s141D w4s141E w5s141F w6s141G};
+  base:ControlziMonad.zdwliftM4 :: %forall a1a13N2 a2a13N3 a3a13N4 a4a13N5 ra13N6 (ma13N7::(*->*)) . (%forall aivqt bivqu . (ma13N7
+                                                                                                                             aivqt)
+                                                                                                                            ->
+                                                                                                                            (aivqt
+                                                                                                                             ->
+                                                                                                                             ma13N7
+                                                                                                                             bivqu)
+                                                                                                                            ->
+                                                                                                                            ma13N7
+                                                                                                                            bivqu)
+                                                                                                     ->
+                                                                                                     (%forall aivUf . aivUf
+                                                                                                                      ->
+                                                                                                                      ma13N7
+                                                                                                                      aivUf)
+                                                                                                     ->
+                                                                                                     (a1a13N2
+                                                                                                      ->
+                                                                                                      a2a13N3
+                                                                                                      ->
+                                                                                                      a3a13N4
+                                                                                                      ->
+                                                                                                      a4a13N5
+                                                                                                      ->
+                                                                                                      ra13N6)
+                                                                                                     ->
+                                                                                                     (ma13N7
+                                                                                                      a1a13N2)
+                                                                                                     ->
+                                                                                                     (ma13N7
+                                                                                                      a2a13N3)
+                                                                                                     ->
+                                                                                                     (ma13N7
+                                                                                                      a3a13N4)
+                                                                                                     ->
+                                                                                                     (ma13N7
+                                                                                                      a4a13N5)
+                                                                                                     ->
+                                                                                                     ma13N7
+                                                                                                     ra13N6 =
+    \ @ a1a13N2
+      @ a2a13N3
+      @ a3a13N4
+      @ a4a13N5
+      @ ra13N6
+      @ (ma13N7::(*->*))
+      (wws141Q::%forall aivqt bivqu . (ma13N7 aivqt) ->
+                                      (aivqt -> ma13N7 bivqu) -> ma13N7 bivqu)
+      (ww1s141S::%forall aivUf . aivUf -> ma13N7 aivUf)
+      (ws141V::a1a13N2 -> a2a13N3 -> a3a13N4 -> a4a13N5 -> ra13N6)
+      (w1s141W::ma13N7 a1a13N2)
+      (w2s141X::ma13N7 a2a13N3)
+      (w3s141Y::ma13N7 a3a13N4)
+      (w4s141ZZ::ma13N7 a4a13N5) ->
+        wws141Q @ a1a13N2 @ ra13N6 w1s141W
+        (\ (x1a13Pu::a1a13N2) ->
+             wws141Q @ a2a13N3 @ ra13N6 w2s141X
+             (\ (x2a13Pv::a2a13N3) ->
+                  wws141Q @ a3a13N4 @ ra13N6 w3s141Y
+                  (\ (x3a13Pw::a3a13N4) ->
+                       wws141Q @ a4a13N5 @ ra13N6 w4s141ZZ
+                       (\ (x4a13Px::a4a13N5) ->
+                            ww1s141S @ ra13N6 (ws141V x1a13Pu x2a13Pv x3a13Pw x4a13Px)))));
+  base:ControlziMonad.liftM4 :: %forall a1a13N2 a2a13N3 a3a13N4 a4a13N5 ra13N6 (ma13N7::(*->*)) . (base:GHCziBase.Monad
+                                                                                                   ma13N7)
+                                                                                                  ->
+                                                                                                  (a1a13N2
+                                                                                                   ->
+                                                                                                   a2a13N3
+                                                                                                   ->
+                                                                                                   a3a13N4
+                                                                                                   ->
+                                                                                                   a4a13N5
+                                                                                                   ->
+                                                                                                   ra13N6)
+                                                                                                  ->
+                                                                                                  (ma13N7
+                                                                                                   a1a13N2)
+                                                                                                  ->
+                                                                                                  (ma13N7
+                                                                                                   a2a13N3)
+                                                                                                  ->
+                                                                                                  (ma13N7
+                                                                                                   a3a13N4)
+                                                                                                  ->
+                                                                                                  (ma13N7
+                                                                                                   a4a13N5)
+                                                                                                  ->
+                                                                                                  ma13N7
+                                                                                                  ra13N6 =
+    \ @ a1a13N2
+      @ a2a13N3
+      @ a3a13N4
+      @ a4a13N5
+      @ ra13N6
+      @ (ma13N7::(*->*))
+      (ws141O::base:GHCziBase.Monad ma13N7)
+      (w1s141V::a1a13N2 -> a2a13N3 -> a3a13N4 -> a4a13N5 -> ra13N6)
+      (w2s141W::ma13N7 a1a13N2)
+      (w3s141X::ma13N7 a2a13N3)
+      (w4s141Y::ma13N7 a3a13N4)
+      (w5s141ZZ::ma13N7 a4a13N5) ->
+        %case (ma13N7 ra13N6) ws141O
+        %of (w6X142S::base:GHCziBase.Monad ma13N7)
+          {base:GHCziBase.DZCMonad
+           (wws141Q::%forall aivqt bivqu . (ma13N7 aivqt) ->
+                                           (aivqt -> ma13N7 bivqu) -> ma13N7 bivqu)
+           (ww1s141R::%forall aivUd bivUe . (ma13N7 aivUd) ->
+                                            (ma13N7 bivUe) -> ma13N7 bivUe)
+           (ww2s141S::%forall aivUf . aivUf -> ma13N7 aivUf)
+           (ww3s141T::%forall aivqx . (ghczmprim:GHCziTypes.ZMZN
+                                       ghczmprim:GHCziTypes.Char)
+                                      -> ma13N7 aivqx) ->
+             base:ControlziMonad.zdwliftM4 @ a1a13N2 @ a2a13N3 @ a3a13N4
+             @ a4a13N5 @ ra13N6 @ ma13N7 wws141Q ww2s141S w1s141V w2s141W
+             w3s141X w4s141Y w5s141ZZ};
+  base:ControlziMonad.zdwliftM3 :: %forall a1a13N8 a2a13N9 a3a13Na ra13Nb (ma13Nc::(*->*)) . (%forall aivqt bivqu . (ma13Nc
+                                                                                                                     aivqt)
+                                                                                                                    ->
+                                                                                                                    (aivqt
+                                                                                                                     ->
+                                                                                                                     ma13Nc
+                                                                                                                     bivqu)
+                                                                                                                    ->
+                                                                                                                    ma13Nc
+                                                                                                                    bivqu)
+                                                                                             ->
+                                                                                             (%forall aivUf . aivUf
+                                                                                                              ->
+                                                                                                              ma13Nc
+                                                                                                              aivUf)
+                                                                                             ->
+                                                                                             (a1a13N8
+                                                                                              ->
+                                                                                              a2a13N9
+                                                                                              ->
+                                                                                              a3a13Na
+                                                                                              ->
+                                                                                              ra13Nb)
+                                                                                             ->
+                                                                                             (ma13Nc
+                                                                                              a1a13N8)
+                                                                                             ->
+                                                                                             (ma13Nc
+                                                                                              a2a13N9)
+                                                                                             ->
+                                                                                             (ma13Nc
+                                                                                              a3a13Na)
+                                                                                             ->
+                                                                                             ma13Nc
+                                                                                             ra13Nb =
+    \ @ a1a13N8
+      @ a2a13N9
+      @ a3a13Na
+      @ ra13Nb
+      @ (ma13Nc::(*->*))
+      (wws1428::%forall aivqt bivqu . (ma13Nc aivqt) ->
+                                      (aivqt -> ma13Nc bivqu) -> ma13Nc bivqu)
+      (ww1s142a::%forall aivUf . aivUf -> ma13Nc aivUf)
+      (ws142d::a1a13N8 -> a2a13N9 -> a3a13Na -> ra13Nb)
+      (w1s142e::ma13Nc a1a13N8)
+      (w2s142f::ma13Nc a2a13N9)
+      (w3s142g::ma13Nc a3a13Na) ->
+        wws1428 @ a1a13N8 @ ra13Nb w1s142e
+        (\ (x1a13Pm::a1a13N8) ->
+             wws1428 @ a2a13N9 @ ra13Nb w2s142f
+             (\ (x2a13Pn::a2a13N9) ->
+                  wws1428 @ a3a13Na @ ra13Nb w3s142g
+                  (\ (x3a13Po::a3a13Na) ->
+                       ww1s142a @ ra13Nb (ws142d x1a13Pm x2a13Pn x3a13Po))));
+  base:ControlziMonad.liftM3 :: %forall a1a13N8 a2a13N9 a3a13Na ra13Nb (ma13Nc::(*->*)) . (base:GHCziBase.Monad
+                                                                                           ma13Nc)
+                                                                                          ->
+                                                                                          (a1a13N8
+                                                                                           ->
+                                                                                           a2a13N9
+                                                                                           ->
+                                                                                           a3a13Na
+                                                                                           ->
+                                                                                           ra13Nb)
+                                                                                          ->
+                                                                                          (ma13Nc
+                                                                                           a1a13N8)
+                                                                                          ->
+                                                                                          (ma13Nc
+                                                                                           a2a13N9)
+                                                                                          ->
+                                                                                          (ma13Nc
+                                                                                           a3a13Na)
+                                                                                          ->
+                                                                                          ma13Nc
+                                                                                          ra13Nb =
+    \ @ a1a13N8
+      @ a2a13N9
+      @ a3a13Na
+      @ ra13Nb
+      @ (ma13Nc::(*->*))
+      (ws1426::base:GHCziBase.Monad ma13Nc)
+      (w1s142d::a1a13N8 -> a2a13N9 -> a3a13Na -> ra13Nb)
+      (w2s142e::ma13Nc a1a13N8)
+      (w3s142f::ma13Nc a2a13N9)
+      (w4s142g::ma13Nc a3a13Na) ->
+        %case (ma13Nc ra13Nb) ws1426
+        %of (w5X143a::base:GHCziBase.Monad ma13Nc)
+          {base:GHCziBase.DZCMonad
+           (wws1428::%forall aivqt bivqu . (ma13Nc aivqt) ->
+                                           (aivqt -> ma13Nc bivqu) -> ma13Nc bivqu)
+           (ww1s1429::%forall aivUd bivUe . (ma13Nc aivUd) ->
+                                            (ma13Nc bivUe) -> ma13Nc bivUe)
+           (ww2s142a::%forall aivUf . aivUf -> ma13Nc aivUf)
+           (ww3s142b::%forall aivqx . (ghczmprim:GHCziTypes.ZMZN
+                                       ghczmprim:GHCziTypes.Char)
+                                      -> ma13Nc aivqx) ->
+             base:ControlziMonad.zdwliftM3 @ a1a13N8 @ a2a13N9 @ a3a13Na
+             @ ra13Nb @ ma13Nc wws1428 ww2s142a w1s142d w2s142e w3s142f
+             w4s142g};
+  base:ControlziMonad.zdwliftM2 :: %forall a1a13Nd a2a13Ne ra13Nf (ma13Ng::(*->*)) . (%forall aivqt bivqu . (ma13Ng
+                                                                                                             aivqt)
+                                                                                                            ->
+                                                                                                            (aivqt
+                                                                                                             ->
+                                                                                                             ma13Ng
+                                                                                                             bivqu)
+                                                                                                            ->
+                                                                                                            ma13Ng
+                                                                                                            bivqu)
+                                                                                     ->
+                                                                                     (%forall aivUf . aivUf
+                                                                                                      ->
+                                                                                                      ma13Ng
+                                                                                                      aivUf)
+                                                                                     ->
+                                                                                     (a1a13Nd ->
+                                                                                      a2a13Ne ->
+                                                                                      ra13Nf)
+                                                                                     ->
+                                                                                     (ma13Ng
+                                                                                      a1a13Nd)
+                                                                                     ->
+                                                                                     (ma13Ng
+                                                                                      a2a13Ne)
+                                                                                     ->
+                                                                                     ma13Ng ra13Nf =
+    \ @ a1a13Nd
+      @ a2a13Ne
+      @ ra13Nf
+      @ (ma13Ng::(*->*))
+      (wws142o::%forall aivqt bivqu . (ma13Ng aivqt) ->
+                                      (aivqt -> ma13Ng bivqu) -> ma13Ng bivqu)
+      (ww1s142q::%forall aivUf . aivUf -> ma13Ng aivUf)
+      (ws142t::a1a13Nd -> a2a13Ne -> ra13Nf)
+      (w1s142u::ma13Ng a1a13Nd)
+      (w2s142v::ma13Ng a2a13Ne) ->
+        wws142o @ a1a13Nd @ ra13Nf w1s142u
+        (\ (x1a13Pg::a1a13Nd) ->
+             wws142o @ a2a13Ne @ ra13Nf w2s142v
+             (\ (x2a13Ph::a2a13Ne) ->
+                  ww1s142q @ ra13Nf (ws142t x1a13Pg x2a13Ph)));
+  base:ControlziMonad.liftM2 :: %forall a1a13Nd a2a13Ne ra13Nf (ma13Ng::(*->*)) . (base:GHCziBase.Monad
+                                                                                   ma13Ng)
+                                                                                  ->
+                                                                                  (a1a13Nd ->
+                                                                                   a2a13Ne ->
+                                                                                   ra13Nf)
+                                                                                  ->
+                                                                                  (ma13Ng a1a13Nd)
+                                                                                  ->
+                                                                                  (ma13Ng a2a13Ne)
+                                                                                  -> ma13Ng ra13Nf =
+    \ @ a1a13Nd
+      @ a2a13Ne
+      @ ra13Nf
+      @ (ma13Ng::(*->*))
+      (ws142m::base:GHCziBase.Monad ma13Ng)
+      (w1s142t::a1a13Nd -> a2a13Ne -> ra13Nf)
+      (w2s142u::ma13Ng a1a13Nd)
+      (w3s142v::ma13Ng a2a13Ne) ->
+        %case (ma13Ng ra13Nf) ws142m
+        %of (w4X143q::base:GHCziBase.Monad ma13Ng)
+          {base:GHCziBase.DZCMonad
+           (wws142o::%forall aivqt bivqu . (ma13Ng aivqt) ->
+                                           (aivqt -> ma13Ng bivqu) -> ma13Ng bivqu)
+           (ww1s142p::%forall aivUd bivUe . (ma13Ng aivUd) ->
+                                            (ma13Ng bivUe) -> ma13Ng bivUe)
+           (ww2s142q::%forall aivUf . aivUf -> ma13Ng aivUf)
+           (ww3s142r::%forall aivqx . (ghczmprim:GHCziTypes.ZMZN
+                                       ghczmprim:GHCziTypes.Char)
+                                      -> ma13Ng aivqx) ->
+             base:ControlziMonad.zdwliftM2 @ a1a13Nd @ a2a13Ne @ ra13Nf @ ma13Ng
+             wws142o ww2s142q w1s142t w2s142u w3s142v};
+  base:ControlziMonad.zdwap :: %forall (ma13MS::(*->*)) aa13MT ba13MU . (%forall a1ivqt b1ivqu . (ma13MS
+                                                                                                  a1ivqt)
+                                                                                                 ->
+                                                                                                 (a1ivqt
+                                                                                                  ->
+                                                                                                  ma13MS
+                                                                                                  b1ivqu)
+                                                                                                 ->
+                                                                                                 ma13MS
+                                                                                                 b1ivqu)
+                                                                        ->
+                                                                        (%forall a1ivUf . a1ivUf ->
+                                                                                          ma13MS
+                                                                                          a1ivUf)
+                                                                        ->
+                                                                        (ma13MS (aa13MT -> ba13MU))
+                                                                        ->
+                                                                        (ma13MS aa13MT) ->
+                                                                        ma13MS ba13MU =
+    \ @ (ma13MS::(*->*))
+      @ aa13MT
+      @ ba13MU
+      (wws142C::%forall a1ivqt b1ivqu . (ma13MS a1ivqt) ->
+                                        (a1ivqt -> ma13MS b1ivqu) -> ma13MS b1ivqu)
+      (ww1s142E::%forall a1ivUf . a1ivUf -> ma13MS a1ivUf)
+      (ws142H::ma13MS (aa13MT -> ba13MU))
+      (w1s142I::ma13MS aa13MT) ->
+        wws142C @ (aa13MT -> ba13MU) @ ba13MU ws142H
+        (\ (x1a13Pg::aa13MT -> ba13MU) ->
+             wws142C @ aa13MT @ ba13MU w1s142I
+             (\ (x2a13Ph::aa13MT) -> ww1s142E @ ba13MU (x1a13Pg x2a13Ph)));
+  base:ControlziMonad.ap :: %forall (ma13MS::(*->*)) aa13MT ba13MU . (base:GHCziBase.Monad
+                                                                      ma13MS)
+                                                                     ->
+                                                                     (ma13MS (aa13MT -> ba13MU)) ->
+                                                                     (ma13MS aa13MT) ->
+                                                                     ma13MS ba13MU =
+    \ @ (ma13MS::(*->*))
+      @ aa13MT
+      @ ba13MU
+      (ws142A::base:GHCziBase.Monad ma13MS)
+      (w1s142H::ma13MS (aa13MT -> ba13MU))
+      (w2s142I::ma13MS aa13MT) ->
+        %case (ma13MS ba13MU) ws142A
+        %of (w3X143E::base:GHCziBase.Monad ma13MS)
+          {base:GHCziBase.DZCMonad
+           (wws142C::%forall a1ivqt b1ivqu . (ma13MS a1ivqt) ->
+                                             (a1ivqt -> ma13MS b1ivqu) -> ma13MS b1ivqu)
+           (ww1s142D::%forall a1ivUd b1ivUe . (ma13MS a1ivUd) ->
+                                              (ma13MS b1ivUe) -> ma13MS b1ivUe)
+           (ww2s142E::%forall a1ivUf . a1ivUf -> ma13MS a1ivUf)
+           (ww3s142F::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13MS a1ivqx) ->
+             base:ControlziMonad.zdwap @ ma13MS @ aa13MT @ ba13MU wws142C
+             ww2s142E w1s142H w2s142I};
+  base:ControlziMonad.unless :: %forall (ma13Nk::(*->*)) . (base:GHCziBase.Monad
+                                                            ma13Nk)
+                                                           ->
+                                                           ghczmprim:GHCziTypes.Bool ->
+                                                           (ma13Nk ghczmprim:GHCziTuple.Z0T) ->
+                                                           ma13Nk ghczmprim:GHCziTuple.Z0T =
+    \ @ (mt1P::(*->*))
+      (zddMonada13R1::base:GHCziBase.Monad mt1P)
+      (pa13P8::ghczmprim:GHCziTypes.Bool)
+      (sa13P9::mt1P ghczmprim:GHCziTuple.Z0T) ->
+        %case (mt1P ghczmprim:GHCziTuple.Z0T) pa13P8
+        %of (wildXK::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             sa13P9;
+           ghczmprim:GHCziTypes.True ->
+             base:GHCziBase.return @ mt1P zddMonada13R1
+             @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T};
+  base:ControlziMonad.when :: %forall (ma13Nl::(*->*)) . (base:GHCziBase.Monad
+                                                          ma13Nl)
+                                                         ->
+                                                         ghczmprim:GHCziTypes.Bool ->
+                                                         (ma13Nl ghczmprim:GHCziTuple.Z0T) ->
+                                                         ma13Nl ghczmprim:GHCziTuple.Z0T =
+    \ @ (mt1U::(*->*))
+      (zddMonada13R6::base:GHCziBase.Monad mt1U)
+      (pa13P6::ghczmprim:GHCziTypes.Bool)
+      (sa13P7::mt1U ghczmprim:GHCziTuple.Z0T) ->
+        %case (mt1U ghczmprim:GHCziTuple.Z0T) pa13P6
+        %of (wildXL::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             base:GHCziBase.return @ mt1U zddMonada13R6
+             @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T;
+           ghczmprim:GHCziTypes.True ->
+             sa13P7};
+  %rec
+  {base:ControlziMonad.zdwfoldM :: %forall aa13Nt ba13Nu (ma13Nv::(*->*)) . (%forall a1ivqt b1ivqu . (ma13Nv
+                                                                                                      a1ivqt)
+                                                                                                     ->
+                                                                                                     (a1ivqt
+                                                                                                      ->
+                                                                                                      ma13Nv
+                                                                                                      b1ivqu)
+                                                                                                     ->
+                                                                                                     ma13Nv
+                                                                                                     b1ivqu)
+                                                                            ->
+                                                                            (%forall a1ivUf . a1ivUf
+                                                                                              ->
+                                                                                              ma13Nv
+                                                                                              a1ivUf)
+                                                                            ->
+                                                                            (aa13Nt ->
+                                                                             ba13Nu ->
+                                                                             ma13Nv aa13Nt)
+                                                                            ->
+                                                                            aa13Nt ->
+                                                                            (ghczmprim:GHCziTypes.ZMZN
+                                                                             ba13Nu)
+                                                                            -> ma13Nv aa13Nt =
+     \ @ aa13Nt
+       @ ba13Nu
+       @ (ma13Nv::(*->*))
+       (wws142Q::%forall a1ivqt b1ivqu . (ma13Nv a1ivqt) ->
+                                         (a1ivqt -> ma13Nv b1ivqu) -> ma13Nv b1ivqu)
+       (ww1s142S::%forall a1ivUf . a1ivUf -> ma13Nv a1ivUf)
+       (ws142V::aa13Nt -> ba13Nu -> ma13Nv aa13Nt)
+       (w1s142W::aa13Nt)
+       (w2s142X::ghczmprim:GHCziTypes.ZMZN ba13Nu) ->
+         %case (ma13Nv aa13Nt) w2s142X
+         %of (wildXP::ghczmprim:GHCziTypes.ZMZN ba13Nu)
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ww1s142S @ aa13Nt w1s142W;
+            ghczmprim:GHCziTypes.ZC
+            (xa13OW::ba13Nu) (xsa13OX::ghczmprim:GHCziTypes.ZMZN ba13Nu) ->
+              wws142Q @ aa13Nt @ aa13Nt (ws142V w1s142W xa13OW)
+              (\ (faxa13OY::aa13Nt) ->
+                   base:ControlziMonad.zdwfoldM @ aa13Nt @ ba13Nu @ ma13Nv wws142Q
+                   ww1s142S ws142V faxa13OY xsa13OX)}};
+  base:ControlziMonad.foldM :: %forall aa13Nt ba13Nu (ma13Nv::(*->*)) . (base:GHCziBase.Monad
+                                                                         ma13Nv)
+                                                                        ->
+                                                                        (aa13Nt ->
+                                                                         ba13Nu -> ma13Nv aa13Nt)
+                                                                        ->
+                                                                        aa13Nt ->
+                                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                                         ba13Nu)
+                                                                        -> ma13Nv aa13Nt =
+    \ @ aa13Nt
+      @ ba13Nu
+      @ (ma13Nv::(*->*))
+      (ws142O::base:GHCziBase.Monad ma13Nv)
+      (w1s142V::aa13Nt -> ba13Nu -> ma13Nv aa13Nt)
+      (w2s142W::aa13Nt)
+      (w3s142X::ghczmprim:GHCziTypes.ZMZN ba13Nu) ->
+        %case (ma13Nv aa13Nt) ws142O
+        %of (w4X143W::base:GHCziBase.Monad ma13Nv)
+          {base:GHCziBase.DZCMonad
+           (wws142Q::%forall a1ivqt b1ivqu . (ma13Nv a1ivqt) ->
+                                             (a1ivqt -> ma13Nv b1ivqu) -> ma13Nv b1ivqu)
+           (ww1s142R::%forall a1ivUd b1ivUe . (ma13Nv a1ivUd) ->
+                                              (ma13Nv b1ivUe) -> ma13Nv b1ivUe)
+           (ww2s142S::%forall a1ivUf . a1ivUf -> ma13Nv a1ivUf)
+           (ww3s142T::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13Nv a1ivqx) ->
+             base:ControlziMonad.zdwfoldM @ aa13Nt @ ba13Nu @ ma13Nv wws142Q
+             ww2s142S w1s142V w2s142W w3s142X};
+  base:ControlziMonad.zdwfoldMzu :: %forall aa13Nq ba13Nr (ma13Ns::(*->*)) . (%forall a1ivqt b1ivqu . (ma13Ns
+                                                                                                       a1ivqt)
+                                                                                                      ->
+                                                                                                      (a1ivqt
+                                                                                                       ->
+                                                                                                       ma13Ns
+                                                                                                       b1ivqu)
+                                                                                                      ->
+                                                                                                      ma13Ns
+                                                                                                      b1ivqu)
+                                                                             ->
+                                                                             (%forall a1ivUd b1ivUe . (ma13Ns
+                                                                                                       a1ivUd)
+                                                                                                      ->
+                                                                                                      (ma13Ns
+                                                                                                       b1ivUe)
+                                                                                                      ->
+                                                                                                      ma13Ns
+                                                                                                      b1ivUe)
+                                                                             ->
+                                                                             (%forall a1ivUf . a1ivUf
+                                                                                               ->
+                                                                                               ma13Ns
+                                                                                               a1ivUf)
+                                                                             ->
+                                                                             (aa13Nq ->
+                                                                              ba13Nr ->
+                                                                              ma13Ns aa13Nq)
+                                                                             ->
+                                                                             aa13Nq ->
+                                                                             (ghczmprim:GHCziTypes.ZMZN
+                                                                              ba13Nr)
+                                                                             ->
+                                                                             ma13Ns
+                                                                             ghczmprim:GHCziTuple.Z0T =
+    \ @ aa13Nq
+      @ ba13Nr
+      @ (ma13Ns::(*->*))
+      (wws1435::%forall a1ivqt b1ivqu . (ma13Ns a1ivqt) ->
+                                        (a1ivqt -> ma13Ns b1ivqu) -> ma13Ns b1ivqu)
+      (ww1s1436::%forall a1ivUd b1ivUe . (ma13Ns a1ivUd) ->
+                                         (ma13Ns b1ivUe) -> ma13Ns b1ivUe)
+      (ww2s1437::%forall a1ivUf . a1ivUf -> ma13Ns a1ivUf)
+      (ws143a::aa13Nq -> ba13Nr -> ma13Ns aa13Nq)
+      (w1s143b::aa13Nq)
+      (w2s143c::ghczmprim:GHCziTypes.ZMZN ba13Nr) ->
+        ww1s1436 @ aa13Nq @ ghczmprim:GHCziTuple.Z0T
+        (base:ControlziMonad.zdwfoldM @ aa13Nq @ ba13Nr @ ma13Ns wws1435
+         ww2s1437 ws143a w1s143b w2s143c)
+        (ww2s1437 @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T);
+  base:ControlziMonad.foldMzu :: %forall aa13Nq ba13Nr (ma13Ns::(*->*)) . (base:GHCziBase.Monad
+                                                                           ma13Ns)
+                                                                          ->
+                                                                          (aa13Nq ->
+                                                                           ba13Nr -> ma13Ns aa13Nq)
+                                                                          ->
+                                                                          aa13Nq ->
+                                                                          (ghczmprim:GHCziTypes.ZMZN
+                                                                           ba13Nr)
+                                                                          ->
+                                                                          ma13Ns
+                                                                          ghczmprim:GHCziTuple.Z0T =
+    \ @ aa13Nq
+      @ ba13Nr
+      @ (ma13Ns::(*->*))
+      (ws1433::base:GHCziBase.Monad ma13Ns)
+      (w1s143a::aa13Nq -> ba13Nr -> ma13Ns aa13Nq)
+      (w2s143b::aa13Nq)
+      (w3s143c::ghczmprim:GHCziTypes.ZMZN ba13Nr) ->
+        %case (ma13Ns ghczmprim:GHCziTuple.Z0T) ws1433
+        %of (w4X144e::base:GHCziBase.Monad ma13Ns)
+          {base:GHCziBase.DZCMonad
+           (wws1435::%forall a1ivqt b1ivqu . (ma13Ns a1ivqt) ->
+                                             (a1ivqt -> ma13Ns b1ivqu) -> ma13Ns b1ivqu)
+           (ww1s1436::%forall a1ivUd b1ivUe . (ma13Ns a1ivUd) ->
+                                              (ma13Ns b1ivUe) -> ma13Ns b1ivUe)
+           (ww2s1437::%forall a1ivUf . a1ivUf -> ma13Ns a1ivUf)
+           (ww3s1438::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13Ns a1ivqx) ->
+             base:ControlziMonad.zdwfoldMzu @ aa13Nq @ ba13Nr @ ma13Ns wws1435
+             ww1s1436 ww2s1437 w1s143a w2s143b w3s143c};
+  base:ControlziMonad.join :: %forall (ma13NI::(*->*)) aa13NJ . (base:GHCziBase.Monad
+                                                                 ma13NI)
+                                                                ->
+                                                                (ma13NI (ma13NI aa13NJ)) ->
+                                                                ma13NI aa13NJ =
+    \ @ (mt34::(*->*))
+      @ at35
+      (zddMonada13Rr::base:GHCziBase.Monad mt34)
+      (xa13OK::mt34 (mt34 at35)) ->
+        base:GHCziBase.zgzgze @ mt34 zddMonada13Rr @ (mt34 at35) @ at35
+        xa13OK (base:GHCziBase.id @ (mt34 at35));
+  base:ControlziMonad.void1 :: %forall at3c . at3c ->
+                                              ghczmprim:GHCziTuple.Z0T =
+    \ @ at3c (dsimkE::at3c) -> ghczmprim:GHCziTuple.Z0T;
+  base:ControlziMonad.void :: %forall (fa13NK::(*->*)) aa13NL . (base:GHCziBase.Functor
+                                                                 fa13NK)
+                                                                ->
+                                                                (fa13NK aa13NL) ->
+                                                                fa13NK ghczmprim:GHCziTuple.Z0T =
+    \ @ (ft3b::(*->*))
+      @ at3c
+      (zddFunctora13Rw::base:GHCziBase.Functor ft3b) ->
+        base:GHCziBase.fmap @ ft3b zddFunctora13Rw @ at3c
+        @ ghczmprim:GHCziTuple.Z0T (base:ControlziMonad.void1 @ at3c);
+  base:ControlziMonad.forever :: %forall (ma13NM::(*->*)) aa13NN ba13NO . (base:GHCziBase.Monad
+                                                                           ma13NM)
+                                                                          ->
+                                                                          (ma13NM aa13NN) ->
+                                                                          ma13NM ba13NO =
+    \ @ (mt3j::(*->*))
+      @ at3k
+      @ bt3l
+      (zddMonada13RB::base:GHCziBase.Monad mt3j)
+      (etaB1::mt3j at3k) ->
+        %let %rec
+             {azqs13Yn :: mt3j bt3l =
+                base:GHCziBase.zgzg @ mt3j zddMonada13RB @ at3k @ bt3l etaB1
+                azqs13Yn}
+        %in azqs13Yn;
+  base:ControlziMonad.zgzezg :: %forall aa13NT (ma13NU::(*->*)) ba13NV ca13NW . (base:GHCziBase.Monad
+                                                                                 ma13NU)
+                                                                                ->
+                                                                                (aa13NT ->
+                                                                                 ma13NU ba13NV)
+                                                                                ->
+                                                                                (ba13NV ->
+                                                                                 ma13NU ca13NW)
+                                                                                ->
+                                                                                aa13NT ->
+                                                                                ma13NU ca13NW =
+    \ @ at3G
+      @ (mt3H::(*->*))
+      @ bt3I
+      @ ct3J
+      (zddMonada13RQ::base:GHCziBase.Monad mt3H)
+      (fa13OF::at3G -> mt3H bt3I)
+      (ga13OG::bt3I -> mt3H ct3J)
+      (xa13OH::at3G) ->
+        base:GHCziBase.zgzgze @ mt3H zddMonada13RQ @ bt3I @ ct3J
+        (fa13OF xa13OH) ga13OG;
+  base:ControlziMonad.zlzezl :: %forall ba13NP (ma13NQ::(*->*)) ca13NR aa13NS . (base:GHCziBase.Monad
+                                                                                 ma13NQ)
+                                                                                ->
+                                                                                (ba13NP ->
+                                                                                 ma13NQ ca13NR)
+                                                                                ->
+                                                                                (aa13NS ->
+                                                                                 ma13NQ ba13NP)
+                                                                                ->
+                                                                                aa13NS ->
+                                                                                ma13NQ ca13NR =
+    \ @ bt3u
+      @ (mt3v::(*->*))
+      @ ct3w
+      @ at3x
+      (zddMonada13RV::base:GHCziBase.Monad mt3v)
+      (etaB2::bt3u -> mt3v ct3w)
+      (eta1B1::at3x -> mt3v bt3u)
+      (eta2X2::at3x) ->
+        base:ControlziMonad.zgzezg @ at3x @ mt3v @ bt3u @ ct3w
+        zddMonada13RV eta1B1 etaB2 eta2X2;
+  base:ControlziMonad.msum :: %forall (ma13NX::(*->*)) aa13NY . (base:ControlziMonad.MonadPlus
+                                                                 ma13NX)
+                                                                ->
+                                                                (ghczmprim:GHCziTypes.ZMZN
+                                                                 (ma13NX aa13NY))
+                                                                -> ma13NX aa13NY =
+    \ @ (mt3P::(*->*))
+      @ at3Q
+      (zddMonadPlusa13RZZ::base:ControlziMonad.MonadPlus mt3P)
+      (etaB1::ghczmprim:GHCziTypes.ZMZN (mt3P at3Q)) ->
+        %let zzilGE :: mt3P at3Q =
+               base:ControlziMonad.mzzero @ mt3P zddMonadPlusa13RZZ @ at3Q
+        %in %let kilGD :: (mt3P at3Q) -> (mt3P at3Q) -> mt3P at3Q =
+                   base:ControlziMonad.mplus @ mt3P zddMonadPlusa13RZZ @ at3Q
+            %in %let %rec
+                     {goilGF :: (ghczmprim:GHCziTypes.ZMZN (mt3P at3Q)) -> mt3P at3Q =
+                        \ (dsilGG::ghczmprim:GHCziTypes.ZMZN (mt3P at3Q)) ->
+                            %case (mt3P at3Q) dsilGG
+                            %of (wildilGH::ghczmprim:GHCziTypes.ZMZN (mt3P at3Q))
+                              {ghczmprim:GHCziTypes.ZMZN ->
+                                 zzilGE;
+                               ghczmprim:GHCziTypes.ZC
+                               (yilGL::mt3P at3Q)
+                               (ysilGM::ghczmprim:GHCziTypes.ZMZN (mt3P at3Q)) ->
+                                 kilGD yilGL (goilGF ysilGM)}}
+                %in goilGF etaB1;
+  %rec
+  {base:ControlziMonad.zdwfilterM :: %forall aa13O5 (ma13O6::(*->*)) . (%forall a1ivqt bivqu . (ma13O6
+                                                                                                a1ivqt)
+                                                                                               ->
+                                                                                               (a1ivqt
+                                                                                                ->
+                                                                                                ma13O6
+                                                                                                bivqu)
+                                                                                               ->
+                                                                                               ma13O6
+                                                                                               bivqu)
+                                                                       ->
+                                                                       (%forall a1ivUf . a1ivUf ->
+                                                                                         ma13O6
+                                                                                         a1ivUf)
+                                                                       ->
+                                                                       (aa13O5 ->
+                                                                        ma13O6
+                                                                        ghczmprim:GHCziTypes.Bool)
+                                                                       ->
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        aa13O5)
+                                                                       ->
+                                                                       ma13O6
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        aa13O5) =
+     \ @ aa13O5
+       @ (ma13O6::(*->*))
+       (wws143j::%forall a1ivqt bivqu . (ma13O6 a1ivqt) ->
+                                        (a1ivqt -> ma13O6 bivqu) -> ma13O6 bivqu)
+       (ww1s143l::%forall a1ivUf . a1ivUf -> ma13O6 a1ivUf)
+       (ws143o::aa13O5 -> ma13O6 ghczmprim:GHCziTypes.Bool)
+       (w1s143p::ghczmprim:GHCziTypes.ZMZN aa13O5) ->
+         %case (ma13O6 (ghczmprim:GHCziTypes.ZMZN aa13O5)) w1s143p
+         %of (wildXV::ghczmprim:GHCziTypes.ZMZN aa13O5)
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ww1s143l @ (ghczmprim:GHCziTypes.ZMZN aa13O5)
+              (ghczmprim:GHCziTypes.ZMZN @ aa13O5);
+            ghczmprim:GHCziTypes.ZC
+            (xa13OB::aa13O5) (xsa13OC::ghczmprim:GHCziTypes.ZMZN aa13O5) ->
+              %let lvls13Yw :: ma13O6 (ghczmprim:GHCziTypes.ZMZN aa13O5) =
+                     base:ControlziMonad.zdwfilterM @ aa13O5 @ ma13O6 wws143j ww1s143l
+                     ws143o xsa13OC
+              %in wws143j @ ghczmprim:GHCziTypes.Bool
+                  @ (ghczmprim:GHCziTypes.ZMZN aa13O5) (ws143o xa13OB)
+                  (\ (flga13OD::ghczmprim:GHCziTypes.Bool) ->
+                       wws143j @ (ghczmprim:GHCziTypes.ZMZN aa13O5)
+                       @ (ghczmprim:GHCziTypes.ZMZN aa13O5) lvls13Yw
+                       (\ (ysa13OE::ghczmprim:GHCziTypes.ZMZN aa13O5) ->
+                            ww1s143l @ (ghczmprim:GHCziTypes.ZMZN aa13O5)
+                            (%case (ghczmprim:GHCziTypes.ZMZN aa13O5) flga13OD
+                             %of (wild1Xs::ghczmprim:GHCziTypes.Bool)
+                               {ghczmprim:GHCziTypes.False ->
+                                  ysa13OE;
+                                ghczmprim:GHCziTypes.True ->
+                                  ghczmprim:GHCziTypes.ZC @ aa13O5 xa13OB ysa13OE})))}};
+  base:ControlziMonad.filterM :: %forall aa13O5 (ma13O6::(*->*)) . (base:GHCziBase.Monad
+                                                                    ma13O6)
+                                                                   ->
+                                                                   (aa13O5 ->
+                                                                    ma13O6
+                                                                    ghczmprim:GHCziTypes.Bool)
+                                                                   ->
+                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                    aa13O5)
+                                                                   ->
+                                                                   ma13O6
+                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                    aa13O5) =
+    \ @ aa13O5
+      @ (ma13O6::(*->*))
+      (ws143h::base:GHCziBase.Monad ma13O6)
+      (w1s143o::aa13O5 -> ma13O6 ghczmprim:GHCziTypes.Bool)
+      (w2s143p::ghczmprim:GHCziTypes.ZMZN aa13O5) ->
+        %case (ma13O6 (ghczmprim:GHCziTypes.ZMZN aa13O5)) ws143h
+        %of (w3X144y::base:GHCziBase.Monad ma13O6)
+          {base:GHCziBase.DZCMonad
+           (wws143j::%forall a1ivqt bivqu . (ma13O6 a1ivqt) ->
+                                            (a1ivqt -> ma13O6 bivqu) -> ma13O6 bivqu)
+           (ww1s143k::%forall a1ivUd bivUe . (ma13O6 a1ivUd) ->
+                                             (ma13O6 bivUe) -> ma13O6 bivUe)
+           (ww2s143l::%forall a1ivUf . a1ivUf -> ma13O6 a1ivUf)
+           (ww3s143m::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13O6 a1ivqx) ->
+             base:ControlziMonad.zdwfilterM @ aa13O5 @ ma13O6 wws143j ww2s143l
+             w1s143o w2s143p};
+  base:ControlziMonad.sequencezu :: %forall (ma13Oe::(*->*)) aa13Of . (base:GHCziBase.Monad
+                                                                       ma13Oe)
+                                                                      ->
+                                                                      (ghczmprim:GHCziTypes.ZMZN
+                                                                       (ma13Oe aa13Of))
+                                                                      ->
+                                                                      ma13Oe
+                                                                      ghczmprim:GHCziTuple.Z0T =
+    \ @ (mt4H::(*->*))
+      @ at4I
+      (zddMonada13Sp::base:GHCziBase.Monad mt4H)
+      (etaB1::ghczmprim:GHCziTypes.ZMZN (mt4H at4I)) ->
+        %let zzilGE :: mt4H ghczmprim:GHCziTuple.Z0T =
+               base:GHCziBase.return @ mt4H zddMonada13Sp
+               @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T
+        %in %let kilGD :: (mt4H at4I) ->
+                          (mt4H ghczmprim:GHCziTuple.Z0T) -> mt4H ghczmprim:GHCziTuple.Z0T =
+                   base:GHCziBase.zgzg @ mt4H zddMonada13Sp @ at4I
+                   @ ghczmprim:GHCziTuple.Z0T
+            %in %let %rec
+                     {goilGF :: (ghczmprim:GHCziTypes.ZMZN (mt4H at4I)) ->
+                                mt4H ghczmprim:GHCziTuple.Z0T =
+                        \ (dsilGG::ghczmprim:GHCziTypes.ZMZN (mt4H at4I)) ->
+                            %case (mt4H ghczmprim:GHCziTuple.Z0T) dsilGG
+                            %of (wildilGH::ghczmprim:GHCziTypes.ZMZN (mt4H at4I))
+                              {ghczmprim:GHCziTypes.ZMZN ->
+                                 zzilGE;
+                               ghczmprim:GHCziTypes.ZC
+                               (yilGL::mt4H at4I)
+                               (ysilGM::ghczmprim:GHCziTypes.ZMZN (mt4H at4I)) ->
+                                 kilGD yilGL (goilGF ysilGM)}}
+                %in goilGF etaB1;
+  base:ControlziMonad.mapMzu :: %forall aa13O8 (ma13O9::(*->*)) ba13Oa . (base:GHCziBase.Monad
+                                                                          ma13O9)
+                                                                         ->
+                                                                         (aa13O8 -> ma13O9 ba13Oa)
+                                                                         ->
+                                                                         (ghczmprim:GHCziTypes.ZMZN
+                                                                          aa13O8)
+                                                                         ->
+                                                                         ma13O9
+                                                                         ghczmprim:GHCziTuple.Z0T =
+    \ @ at4q
+      @ (mt4r::(*->*))
+      @ bt4s
+      (zddMonada13Sw::base:GHCziBase.Monad mt4r)
+      (etaB2::at4q -> mt4r bt4s)
+      (eta1B1::ghczmprim:GHCziTypes.ZMZN at4q) ->
+        %let zzilGE :: mt4r ghczmprim:GHCziTuple.Z0T =
+               base:GHCziBase.return @ mt4r zddMonada13Sw
+               @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T
+        %in %let cilGR :: (mt4r bt4s) ->
+                          (mt4r ghczmprim:GHCziTuple.Z0T) -> mt4r ghczmprim:GHCziTuple.Z0T =
+                   base:GHCziBase.zgzg @ mt4r zddMonada13Sw @ bt4s
+                   @ ghczmprim:GHCziTuple.Z0T
+            %in %let %rec
+                     {goilGF :: (ghczmprim:GHCziTypes.ZMZN at4q) ->
+                                mt4r ghczmprim:GHCziTuple.Z0T =
+                        \ (dsilGG::ghczmprim:GHCziTypes.ZMZN at4q) ->
+                            %case (mt4r ghczmprim:GHCziTuple.Z0T) dsilGG
+                            %of (wildilGH::ghczmprim:GHCziTypes.ZMZN at4q)
+                              {ghczmprim:GHCziTypes.ZMZN ->
+                                 zzilGE;
+                               ghczmprim:GHCziTypes.ZC
+                               (yilGL::at4q) (ysilGM::ghczmprim:GHCziTypes.ZMZN at4q) ->
+                                 cilGR (etaB2 yilGL) (goilGF ysilGM)}}
+                %in goilGF eta1B1;
+  base:ControlziMonad.forMzu :: %forall aa13NZZ (ma13O0::(*->*)) ba13O1 . (base:GHCziBase.Monad
+                                                                           ma13O0)
+                                                                          ->
+                                                                          (ghczmprim:GHCziTypes.ZMZN
+                                                                           aa13NZZ)
+                                                                          ->
+                                                                          (aa13NZZ -> ma13O0 ba13O1)
+                                                                          ->
+                                                                          ma13O0
+                                                                          ghczmprim:GHCziTuple.Z0T =
+    \ @ at3X
+      @ (mt3Y::(*->*))
+      @ bt3ZZ
+      (zddMonada13SA::base:GHCziBase.Monad mt3Y)
+      (etaB2::ghczmprim:GHCziTypes.ZMZN at3X)
+      (eta1B1::at3X -> mt3Y bt3ZZ) ->
+        base:ControlziMonad.mapMzu @ at3X @ mt3Y @ bt3ZZ zddMonada13SA
+        eta1B1 etaB2;
+  base:ControlziMonad.zzipWithMzu :: %forall aa13Nw ba13Nx (ma13Ny::(*->*)) ca13Nzz . (base:GHCziBase.Monad
+                                                                                       ma13Ny)
+                                                                                      ->
+                                                                                      (aa13Nw ->
+                                                                                       ba13Nx ->
+                                                                                       ma13Ny
+                                                                                       ca13Nzz)
+                                                                                      ->
+                                                                                      (ghczmprim:GHCziTypes.ZMZN
+                                                                                       aa13Nw)
+                                                                                      ->
+                                                                                      (ghczmprim:GHCziTypes.ZMZN
+                                                                                       ba13Nx)
+                                                                                      ->
+                                                                                      ma13Ny
+                                                                                      ghczmprim:GHCziTuple.Z0T =
+    \ @ at2y
+      @ bt2zz
+      @ (mt2A::(*->*))
+      @ ct2B
+      (zddMonada13SE::base:GHCziBase.Monad mt2A)
+      (fa13OQ::at2y -> bt2zz -> mt2A ct2B)
+      (xsa13OR::ghczmprim:GHCziTypes.ZMZN at2y)
+      (ysa13OS::ghczmprim:GHCziTypes.ZMZN bt2zz) ->
+        base:GHCziList.foldr2 @ at2y @ bt2zz
+        @ (mt2A ghczmprim:GHCziTuple.Z0T)
+        (%let ci13Ws :: (mt2A ct2B) ->
+                        (mt2A ghczmprim:GHCziTuple.Z0T) -> mt2A ghczmprim:GHCziTuple.Z0T =
+                base:GHCziBase.zgzg @ mt2A zddMonada13SE @ ct2B
+                @ ghczmprim:GHCziTuple.Z0T
+         %in \ (xi13Wu::at2y)
+               (yi13Wv::bt2zz)
+               (ri13Ww::mt2A ghczmprim:GHCziTuple.Z0T) ->
+                 ci13Ws (fa13OQ xi13Wu yi13Wv) ri13Ww)
+        (base:GHCziBase.return @ mt2A zddMonada13SE
+         @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T)
+        xsa13OR ysa13OS;
+  base:ControlziMonad.zdwreplicateMzu :: %forall (ma13Nm::(*->*)) aa13Nn . (%forall a1ivUd bivUe . (ma13Nm
+                                                                                                    a1ivUd)
+                                                                                                   ->
+                                                                                                   (ma13Nm
+                                                                                                    bivUe)
+                                                                                                   ->
+                                                                                                   ma13Nm
+                                                                                                   bivUe)
+                                                                           ->
+                                                                           (%forall a1ivUf . a1ivUf
+                                                                                             ->
+                                                                                             ma13Nm
+                                                                                             a1ivUf)
+                                                                           ->
+                                                                           ghczmprim:GHCziPrim.Intzh
+                                                                           ->
+                                                                           (ma13Nm aa13Nn) ->
+                                                                           ma13Nm
+                                                                           ghczmprim:GHCziTuple.Z0T =
+    \ @ (ma13Nm::(*->*))
+      @ aa13Nn
+      (wws143x::%forall a1ivUd bivUe . (ma13Nm a1ivUd) ->
+                                       (ma13Nm bivUe) -> ma13Nm bivUe)
+      (ww1s143y::%forall a1ivUf . a1ivUf -> ma13Nm a1ivUf)
+      (ww2s143D::ghczmprim:GHCziPrim.Intzh)
+      (ws143F::ma13Nm aa13Nn) ->
+        %case (ma13Nm ghczmprim:GHCziTuple.Z0T) (ghczmprim:GHCziPrim.zlzezh
+                                                 ww2s143D (0::ghczmprim:GHCziPrim.Intzh))
+        %of (wild1i13X7::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             %let lvls148j :: ma13Nm ghczmprim:GHCziTuple.Z0T =
+                    wws143x @ aa13Nn @ ghczmprim:GHCziTuple.Z0T ws143F
+                    (ww1s143y @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T)
+             %in %let %rec
+                      {xsiZZUq :: ghczmprim:GHCziPrim.Intzh ->
+                                  ma13Nm ghczmprim:GHCziTuple.Z0T =
+                         \ (mi13YN::ghczmprim:GHCziPrim.Intzh) ->
+                             %case (ma13Nm ghczmprim:GHCziTuple.Z0T) (ghczmprim:GHCziPrim.zlzezh
+                                                                      mi13YN
+                                                                      (1::ghczmprim:GHCziPrim.Intzh))
+                             %of (wildi13YO::ghczmprim:GHCziTypes.Bool)
+                               {ghczmprim:GHCziTypes.False ->
+                                  wws143x @ aa13Nn @ ghczmprim:GHCziTuple.Z0T ws143F
+                                  (xsiZZUq
+                                   (ghczmprim:GHCziPrim.zmzh mi13YN
+                                    (1::ghczmprim:GHCziPrim.Intzh)));
+                                ghczmprim:GHCziTypes.True ->
+                                  lvls148j}}
+                 %in xsiZZUq ww2s143D;
+           ghczmprim:GHCziTypes.True ->
+             ww1s143y @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T};
+  base:ControlziMonad.replicateMzu :: %forall (ma13Nm::(*->*)) aa13Nn . (base:GHCziBase.Monad
+                                                                         ma13Nm)
+                                                                        ->
+                                                                        ghczmprim:GHCziTypes.Int ->
+                                                                        (ma13Nm aa13Nn) ->
+                                                                        ma13Nm
+                                                                        ghczmprim:GHCziTuple.Z0T =
+    \ @ (ma13Nm::(*->*))
+      @ aa13Nn
+      (ws143u::base:GHCziBase.Monad ma13Nm)
+      (w1s143B::ghczmprim:GHCziTypes.Int)
+      (w2s143F::ma13Nm aa13Nn) ->
+        %case (ma13Nm ghczmprim:GHCziTuple.Z0T) ws143u
+        %of (w3X144S::base:GHCziBase.Monad ma13Nm)
+          {base:GHCziBase.DZCMonad
+           (wws143w::%forall a1ivqt bivqu . (ma13Nm a1ivqt) ->
+                                            (a1ivqt -> ma13Nm bivqu) -> ma13Nm bivqu)
+           (ww1s143x::%forall a1ivUd bivUe . (ma13Nm a1ivUd) ->
+                                             (ma13Nm bivUe) -> ma13Nm bivUe)
+           (ww2s143y::%forall a1ivUf . a1ivUf -> ma13Nm a1ivUf)
+           (ww3s143zz::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                         ghczmprim:GHCziTypes.Char)
+                                        -> ma13Nm a1ivqx) ->
+             %case (ma13Nm ghczmprim:GHCziTuple.Z0T) w1s143B
+             %of (w4X1456::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ww4s143D::ghczmprim:GHCziPrim.Intzh) ->
+                  base:ControlziMonad.zdwreplicateMzu @ ma13Nm @ aa13Nn ww1s143x
+                  ww2s143y ww4s143D w2s143F}};
+  base:ControlziMonad.sequence :: %forall (ma13Og::(*->*)) aa13Oh . (base:GHCziBase.Monad
+                                                                     ma13Og)
+                                                                    ->
+                                                                    (ghczmprim:GHCziTypes.ZMZN
+                                                                     (ma13Og aa13Oh))
+                                                                    ->
+                                                                    ma13Og
+                                                                    (ghczmprim:GHCziTypes.ZMZN
+                                                                     aa13Oh) =
+    \ @ (mt4O::(*->*))
+      @ at4P
+      (zddMonada13SQ::base:GHCziBase.Monad mt4O)
+      (etaB1::ghczmprim:GHCziTypes.ZMZN (mt4O at4P)) ->
+        %let zzilGE :: mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+               base:GHCziBase.return @ mt4O zddMonada13SQ
+               @ (ghczmprim:GHCziTypes.ZMZN at4P)
+               (ghczmprim:GHCziTypes.ZMZN @ at4P)
+        %in %let lvls148m :: (ghczmprim:GHCziTypes.ZMZN at4P) ->
+                             mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+                   base:GHCziBase.return @ mt4O zddMonada13SQ
+                   @ (ghczmprim:GHCziTypes.ZMZN at4P)
+            %in %let lvl1s148l :: (mt4O (ghczmprim:GHCziTypes.ZMZN at4P)) ->
+                                  ((ghczmprim:GHCziTypes.ZMZN at4P) ->
+                                   mt4O (ghczmprim:GHCziTypes.ZMZN at4P))
+                                  -> mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+                       base:GHCziBase.zgzgze @ mt4O zddMonada13SQ
+                       @ (ghczmprim:GHCziTypes.ZMZN at4P)
+                       @ (ghczmprim:GHCziTypes.ZMZN at4P)
+                %in %let lvl2s148k :: (mt4O at4P) ->
+                                      (at4P -> mt4O (ghczmprim:GHCziTypes.ZMZN at4P)) ->
+                                      mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+                           base:GHCziBase.zgzgze @ mt4O zddMonada13SQ @ at4P
+                           @ (ghczmprim:GHCziTypes.ZMZN at4P)
+                    %in %let %rec
+                             {goilGF :: (ghczmprim:GHCziTypes.ZMZN (mt4O at4P)) ->
+                                        mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+                                \ (dsilGG::ghczmprim:GHCziTypes.ZMZN (mt4O at4P)) ->
+                                    %case (mt4O (ghczmprim:GHCziTypes.ZMZN at4P)) dsilGG
+                                    %of (wildilGH::ghczmprim:GHCziTypes.ZMZN (mt4O at4P))
+                                      {ghczmprim:GHCziTypes.ZMZN ->
+                                         zzilGE;
+                                       ghczmprim:GHCziTypes.ZC
+                                       (yilGL::mt4O at4P)
+                                       (ysilGM::ghczmprim:GHCziTypes.ZMZN (mt4O at4P)) ->
+                                         %let mzqa13Os :: mt4O (ghczmprim:GHCziTypes.ZMZN at4P) =
+                                                goilGF ysilGM
+                                         %in lvl2s148k yilGL
+                                             (\ (xa13Ot::at4P) ->
+                                                  lvl1s148l mzqa13Os
+                                                  (\ (xsa13Ou::ghczmprim:GHCziTypes.ZMZN at4P) ->
+                                                       lvls148m
+                                                       (ghczmprim:GHCziTypes.ZC @ at4P xa13Ot
+                                                        xsa13Ou)))}}
+                        %in goilGF etaB1;
+  base:ControlziMonad.mapM :: %forall aa13Ob (ma13Oc::(*->*)) ba13Od . (base:GHCziBase.Monad
+                                                                        ma13Oc)
+                                                                       ->
+                                                                       (aa13Ob -> ma13Oc ba13Od) ->
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        aa13Ob)
+                                                                       ->
+                                                                       ma13Oc
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        ba13Od) =
+    \ @ at4zz
+      @ (mt4A::(*->*))
+      @ bt4B
+      (zddMonada13Ti::base:GHCziBase.Monad mt4A)
+      (etaB2::at4zz -> mt4A bt4B)
+      (eta1B1::ghczmprim:GHCziTypes.ZMZN at4zz) ->
+        %let zzilGE :: mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+               base:GHCziBase.return @ mt4A zddMonada13Ti
+               @ (ghczmprim:GHCziTypes.ZMZN bt4B)
+               (ghczmprim:GHCziTypes.ZMZN @ bt4B)
+        %in %let lvls148p :: (ghczmprim:GHCziTypes.ZMZN bt4B) ->
+                             mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+                   base:GHCziBase.return @ mt4A zddMonada13Ti
+                   @ (ghczmprim:GHCziTypes.ZMZN bt4B)
+            %in %let lvl1s148o :: (mt4A (ghczmprim:GHCziTypes.ZMZN bt4B)) ->
+                                  ((ghczmprim:GHCziTypes.ZMZN bt4B) ->
+                                   mt4A (ghczmprim:GHCziTypes.ZMZN bt4B))
+                                  -> mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+                       base:GHCziBase.zgzgze @ mt4A zddMonada13Ti
+                       @ (ghczmprim:GHCziTypes.ZMZN bt4B)
+                       @ (ghczmprim:GHCziTypes.ZMZN bt4B)
+                %in %let lvl2s148n :: (mt4A bt4B) ->
+                                      (bt4B -> mt4A (ghczmprim:GHCziTypes.ZMZN bt4B)) ->
+                                      mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+                           base:GHCziBase.zgzgze @ mt4A zddMonada13Ti @ bt4B
+                           @ (ghczmprim:GHCziTypes.ZMZN bt4B)
+                    %in %let %rec
+                             {goilGF :: (ghczmprim:GHCziTypes.ZMZN at4zz) ->
+                                        mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+                                \ (dsilGG::ghczmprim:GHCziTypes.ZMZN at4zz) ->
+                                    %case (mt4A (ghczmprim:GHCziTypes.ZMZN bt4B)) dsilGG
+                                    %of (wildilGH::ghczmprim:GHCziTypes.ZMZN at4zz)
+                                      {ghczmprim:GHCziTypes.ZMZN ->
+                                         zzilGE;
+                                       ghczmprim:GHCziTypes.ZC
+                                       (yilGL::at4zz) (ysilGM::ghczmprim:GHCziTypes.ZMZN at4zz) ->
+                                         %let ys1ilGU :: mt4A (ghczmprim:GHCziTypes.ZMZN bt4B) =
+                                                goilGF ysilGM
+                                         %in lvl2s148n (etaB2 yilGL)
+                                             (\ (xa13Ot::bt4B) ->
+                                                  lvl1s148o ys1ilGU
+                                                  (\ (xsa13Ou::ghczmprim:GHCziTypes.ZMZN bt4B) ->
+                                                       lvls148p
+                                                       (ghczmprim:GHCziTypes.ZC @ bt4B xa13Ot
+                                                        xsa13Ou)))}}
+                        %in goilGF eta1B1;
+  base:ControlziMonad.forM :: %forall aa13O2 (ma13O3::(*->*)) ba13O4 . (base:GHCziBase.Monad
+                                                                        ma13O3)
+                                                                       ->
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        aa13O2)
+                                                                       ->
+                                                                       (aa13O2 -> ma13O3 ba13O4) ->
+                                                                       ma13O3
+                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                        ba13O4) =
+    \ @ at46
+      @ (mt47::(*->*))
+      @ bt48
+      (zddMonada13Tm::base:GHCziBase.Monad mt47)
+      (etaB2::ghczmprim:GHCziTypes.ZMZN at46)
+      (eta1B1::at46 -> mt47 bt48) ->
+        base:ControlziMonad.mapM @ at46 @ mt47 @ bt48 zddMonada13Tm eta1B1
+        etaB2;
+  %rec
+  {base:ControlziMonad.mapAndUnzzipM1 :: %forall ba13NG ca13NH . (ghczmprim:GHCziTypes.ZMZN
+                                                                  (ghczmprim:GHCziTuple.Z2T
+                                                                   ba13NG
+                                                                   ca13NH))
+                                                                 ->
+                                                                 ghczmprim:GHCziPrim.Z2H
+                                                                 (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                                                 (ghczmprim:GHCziTypes.ZMZN
+                                                                  ca13NH) =
+     \ @ ba13NG
+       @ ca13NH
+       (ws143I::ghczmprim:GHCziTypes.ZMZN
+                (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) ->
+         %case (ghczmprim:GHCziPrim.Z2H
+                (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                (ghczmprim:GHCziTypes.ZMZN ca13NH)) ws143I
+         %of (wildilGH::ghczmprim:GHCziTypes.ZMZN
+                        (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+           {ghczmprim:GHCziTypes.ZMZN ->
+              ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziTypes.ZMZN ba13NG)
+              @ (ghczmprim:GHCziTypes.ZMZN ca13NH)
+              (ghczmprim:GHCziTypes.ZMZN @ ba13NG)
+              (ghczmprim:GHCziTypes.ZMZN @ ca13NH);
+            ghczmprim:GHCziTypes.ZC
+            (yilGL::ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)
+            (ysilGM::ghczmprim:GHCziTypes.ZMZN
+                     (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) ->
+              %case (ghczmprim:GHCziPrim.Z2H
+                     (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                     (ghczmprim:GHCziTypes.ZMZN ca13NH)) yilGL
+              %of (wild1i13Xg::ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)
+                {ghczmprim:GHCziTuple.Z2T (ai13Xi::ba13NG) (bi13Xj::ca13NH) ->
+                   %let ds1i13Xf :: ghczmprim:GHCziTuple.Z2T
+                                    (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                    (ghczmprim:GHCziTypes.ZMZN ca13NH) =
+                          %case (ghczmprim:GHCziTuple.Z2T
+                                 (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                 (ghczmprim:GHCziTypes.ZMZN
+                                  ca13NH)) (base:ControlziMonad.mapAndUnzzipM1 @ ba13NG @ ca13NH
+                                            ysilGM)
+                          %of (wws144q::ghczmprim:GHCziPrim.Z2H
+                                        (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                        (ghczmprim:GHCziTypes.ZMZN ca13NH))
+                            {ghczmprim:GHCziPrim.Z2H
+                             (ww1s144s::ghczmprim:GHCziTypes.ZMZN ba13NG)
+                             (ww2s144t::ghczmprim:GHCziTypes.ZMZN ca13NH) ->
+                               ghczmprim:GHCziTuple.Z2T @ (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                               @ (ghczmprim:GHCziTypes.ZMZN ca13NH) ww1s144s ww2s144t}
+                   %in ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                       @ (ghczmprim:GHCziTypes.ZMZN ca13NH)
+                       (ghczmprim:GHCziTypes.ZC @ ba13NG ai13Xi
+                        (%case (ghczmprim:GHCziTypes.ZMZN ba13NG) ds1i13Xf
+                         %of (wild2i13Xl::ghczmprim:GHCziTuple.Z2T
+                                          (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                          (ghczmprim:GHCziTypes.ZMZN ca13NH))
+                           {ghczmprim:GHCziTuple.Z2T
+                            (asi13Xn::ghczmprim:GHCziTypes.ZMZN ba13NG)
+                            (bsi13Xo::ghczmprim:GHCziTypes.ZMZN ca13NH) ->
+                              asi13Xn}))
+                       (ghczmprim:GHCziTypes.ZC @ ca13NH bi13Xj
+                        (%case (ghczmprim:GHCziTypes.ZMZN ca13NH) ds1i13Xf
+                         %of (wild2i13Xq::ghczmprim:GHCziTuple.Z2T
+                                          (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                                          (ghczmprim:GHCziTypes.ZMZN ca13NH))
+                           {ghczmprim:GHCziTuple.Z2T
+                            (asi13Xs::ghczmprim:GHCziTypes.ZMZN ba13NG)
+                            (bsi13Xt::ghczmprim:GHCziTypes.ZMZN ca13NH) ->
+                              bsi13Xt}))}}};
+  base:ControlziMonad.zdwmapAndUnzzipM :: %forall aa13NE (ma13NF::(*->*)) ba13NG ca13NH . (%forall a1ivqt b1ivqu . (ma13NF
+                                                                                                                    a1ivqt)
+                                                                                                                   ->
+                                                                                                                   (a1ivqt
+                                                                                                                    ->
+                                                                                                                    ma13NF
+                                                                                                                    b1ivqu)
+                                                                                                                   ->
+                                                                                                                   ma13NF
+                                                                                                                   b1ivqu)
+                                                                                          ->
+                                                                                          (%forall a1ivUf . a1ivUf
+                                                                                                            ->
+                                                                                                            ma13NF
+                                                                                                            a1ivUf)
+                                                                                          ->
+                                                                                          (aa13NE ->
+                                                                                           ma13NF
+                                                                                           (ghczmprim:GHCziTuple.Z2T
+                                                                                            ba13NG
+                                                                                            ca13NH))
+                                                                                          ->
+                                                                                          (ghczmprim:GHCziTypes.ZMZN
+                                                                                           aa13NE)
+                                                                                          ->
+                                                                                          ma13NF
+                                                                                          (ghczmprim:GHCziTuple.Z2T
+                                                                                           (ghczmprim:GHCziTypes.ZMZN
+                                                                                            ba13NG)
+                                                                                           (ghczmprim:GHCziTypes.ZMZN
+                                                                                            ca13NH)) =
+    \ @ aa13NE
+      @ (ma13NF::(*->*))
+      @ ba13NG
+      @ ca13NH
+      (wws143Q::%forall a1ivqt b1ivqu . (ma13NF a1ivqt) ->
+                                        (a1ivqt -> ma13NF b1ivqu) -> ma13NF b1ivqu)
+      (ww1s143S::%forall a1ivUf . a1ivUf -> ma13NF a1ivUf)
+      (ws143V::aa13NE -> ma13NF (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+      (w1s143W::ghczmprim:GHCziTypes.ZMZN aa13NE) ->
+        wws143Q
+        @ (ghczmprim:GHCziTypes.ZMZN
+           (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+        @ (ghczmprim:GHCziTuple.Z2T
+           (ghczmprim:GHCziTypes.ZMZN ba13NG)
+           (ghczmprim:GHCziTypes.ZMZN ca13NH))
+        (%let zzilGE :: ma13NF
+                        (ghczmprim:GHCziTypes.ZMZN
+                         (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) =
+                ww1s143S
+                @ (ghczmprim:GHCziTypes.ZMZN
+                   (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+                (ghczmprim:GHCziTypes.ZMZN
+                 @ (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+         %in %let %rec
+                  {goilGF :: (ghczmprim:GHCziTypes.ZMZN aa13NE) ->
+                             ma13NF
+                             (ghczmprim:GHCziTypes.ZMZN
+                              (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) =
+                     \ (dsilGG::ghczmprim:GHCziTypes.ZMZN aa13NE) ->
+                         %case (ma13NF
+                                (ghczmprim:GHCziTypes.ZMZN
+                                 (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))) dsilGG
+                         %of (wildilGH::ghczmprim:GHCziTypes.ZMZN aa13NE)
+                           {ghczmprim:GHCziTypes.ZMZN ->
+                              zzilGE;
+                            ghczmprim:GHCziTypes.ZC
+                            (yilGL::aa13NE) (ysilGM::ghczmprim:GHCziTypes.ZMZN aa13NE) ->
+                              %let ys1ilGU :: ma13NF
+                                              (ghczmprim:GHCziTypes.ZMZN
+                                               (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) =
+                                     goilGF ysilGM
+                              %in wws143Q @ (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)
+                                  @ (ghczmprim:GHCziTypes.ZMZN
+                                     (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+                                  (ws143V yilGL)
+                                  (\ (xa13Ot::ghczmprim:GHCziTuple.Z2T ba13NG ca13NH) ->
+                                       wws143Q
+                                       @ (ghczmprim:GHCziTypes.ZMZN
+                                          (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+                                       @ (ghczmprim:GHCziTypes.ZMZN
+                                          (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+                                       ys1ilGU
+                                       (\ (xsa13Ou::ghczmprim:GHCziTypes.ZMZN
+                                                    (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) ->
+                                            ww1s143S
+                                            @ (ghczmprim:GHCziTypes.ZMZN
+                                               (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+                                            (ghczmprim:GHCziTypes.ZC
+                                             @ (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH) xa13Ot
+                                             xsa13Ou)))}}
+             %in goilGF w1s143W)
+        (\ (xilEa::ghczmprim:GHCziTypes.ZMZN
+                   (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH)) ->
+             ww1s143S
+             @ (ghczmprim:GHCziTuple.Z2T
+                (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                (ghczmprim:GHCziTypes.ZMZN ca13NH))
+             (%case (ghczmprim:GHCziTuple.Z2T
+                     (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                     (ghczmprim:GHCziTypes.ZMZN
+                      ca13NH)) (base:ControlziMonad.mapAndUnzzipM1 @ ba13NG @ ca13NH
+                                xilEa)
+              %of (ww2s144q::ghczmprim:GHCziPrim.Z2H
+                             (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                             (ghczmprim:GHCziTypes.ZMZN ca13NH))
+                {ghczmprim:GHCziPrim.Z2H
+                 (ww3s144s::ghczmprim:GHCziTypes.ZMZN ba13NG)
+                 (ww4s144t::ghczmprim:GHCziTypes.ZMZN ca13NH) ->
+                   ghczmprim:GHCziTuple.Z2T @ (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                   @ (ghczmprim:GHCziTypes.ZMZN ca13NH) ww3s144s ww4s144t}));
+  base:ControlziMonad.mapAndUnzzipM :: %forall aa13NE (ma13NF::(*->*)) ba13NG ca13NH . (base:GHCziBase.Monad
+                                                                                        ma13NF)
+                                                                                       ->
+                                                                                       (aa13NE ->
+                                                                                        ma13NF
+                                                                                        (ghczmprim:GHCziTuple.Z2T
+                                                                                         ba13NG
+                                                                                         ca13NH))
+                                                                                       ->
+                                                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                                                        aa13NE)
+                                                                                       ->
+                                                                                       ma13NF
+                                                                                       (ghczmprim:GHCziTuple.Z2T
+                                                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                                                         ba13NG)
+                                                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                                                         ca13NH)) =
+    \ @ aa13NE
+      @ (ma13NF::(*->*))
+      @ ba13NG
+      @ ca13NH
+      (ws143O::base:GHCziBase.Monad ma13NF)
+      (w1s143V::aa13NE ->
+                ma13NF (ghczmprim:GHCziTuple.Z2T ba13NG ca13NH))
+      (w2s143W::ghczmprim:GHCziTypes.ZMZN aa13NE) ->
+        %case (ma13NF
+               (ghczmprim:GHCziTuple.Z2T
+                (ghczmprim:GHCziTypes.ZMZN ba13NG)
+                (ghczmprim:GHCziTypes.ZMZN ca13NH))) ws143O
+        %of (w3X145j::base:GHCziBase.Monad ma13NF)
+          {base:GHCziBase.DZCMonad
+           (wws143Q::%forall a1ivqt b1ivqu . (ma13NF a1ivqt) ->
+                                             (a1ivqt -> ma13NF b1ivqu) -> ma13NF b1ivqu)
+           (ww1s143R::%forall a1ivUd b1ivUe . (ma13NF a1ivUd) ->
+                                              (ma13NF b1ivUe) -> ma13NF b1ivUe)
+           (ww2s143S::%forall a1ivUf . a1ivUf -> ma13NF a1ivUf)
+           (ww3s143T::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13NF a1ivqx) ->
+             base:ControlziMonad.zdwmapAndUnzzipM @ aa13NE @ ma13NF @ ba13NG
+             @ ca13NH wws143Q ww2s143S w1s143V w2s143W};
+  base:ControlziMonad.zzipWithM :: %forall aa13NA ba13NB (ma13NC::(*->*)) ca13ND . (base:GHCziBase.Monad
+                                                                                    ma13NC)
+                                                                                   ->
+                                                                                   (aa13NA ->
+                                                                                    ba13NB ->
+                                                                                    ma13NC ca13ND)
+                                                                                   ->
+                                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                                    aa13NA)
+                                                                                   ->
+                                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                                    ba13NB)
+                                                                                   ->
+                                                                                   ma13NC
+                                                                                   (ghczmprim:GHCziTypes.ZMZN
+                                                                                    ca13ND) =
+    \ @ at2J
+      @ bt2K
+      @ (mt2L::(*->*))
+      @ ct2M
+      (zddMonada13TA::base:GHCziBase.Monad mt2L)
+      (fa13ON::at2J -> bt2K -> mt2L ct2M)
+      (xsa13OO::ghczmprim:GHCziTypes.ZMZN at2J)
+      (ysa13OP::ghczmprim:GHCziTypes.ZMZN bt2K) ->
+        %let lvls148s :: (ghczmprim:GHCziTypes.ZMZN ct2M) ->
+                         mt2L (ghczmprim:GHCziTypes.ZMZN ct2M) =
+               base:GHCziBase.return @ mt2L zddMonada13TA
+               @ (ghczmprim:GHCziTypes.ZMZN ct2M)
+        %in %let lvl1s148r :: (mt2L (ghczmprim:GHCziTypes.ZMZN ct2M)) ->
+                              ((ghczmprim:GHCziTypes.ZMZN ct2M) ->
+                               mt2L (ghczmprim:GHCziTypes.ZMZN ct2M))
+                              -> mt2L (ghczmprim:GHCziTypes.ZMZN ct2M) =
+                   base:GHCziBase.zgzgze @ mt2L zddMonada13TA
+                   @ (ghczmprim:GHCziTypes.ZMZN ct2M)
+                   @ (ghczmprim:GHCziTypes.ZMZN ct2M)
+            %in %let lvl2s148q :: (mt2L ct2M) ->
+                                  (ct2M -> mt2L (ghczmprim:GHCziTypes.ZMZN ct2M)) ->
+                                  mt2L (ghczmprim:GHCziTypes.ZMZN ct2M) =
+                       base:GHCziBase.zgzgze @ mt2L zddMonada13TA @ ct2M
+                       @ (ghczmprim:GHCziTypes.ZMZN ct2M)
+                %in base:GHCziList.foldr2 @ at2J @ bt2K
+                    @ (mt2L (ghczmprim:GHCziTypes.ZMZN ct2M))
+                    (\ (xi13Wu::at2J)
+                       (yi13Wv::bt2K)
+                       (ri13Ww::mt2L (ghczmprim:GHCziTypes.ZMZN ct2M)) ->
+                         lvl2s148q (fa13ON xi13Wu yi13Wv)
+                         (\ (x1a13Ot::ct2M) ->
+                              lvl1s148r ri13Ww
+                              (\ (xs1a13Ou::ghczmprim:GHCziTypes.ZMZN ct2M) ->
+                                   lvls148s (ghczmprim:GHCziTypes.ZC @ ct2M x1a13Ot xs1a13Ou))))
+                    (base:GHCziBase.return @ mt2L zddMonada13TA
+                     @ (ghczmprim:GHCziTypes.ZMZN ct2M)
+                     (ghczmprim:GHCziTypes.ZMZN @ ct2M))
+                    xsa13OO ysa13OP;
+  base:ControlziMonad.zdwreplicateM :: %forall (ma13No::(*->*)) aa13Np . (%forall a1ivqt bivqu . (ma13No
+                                                                                                  a1ivqt)
+                                                                                                 ->
+                                                                                                 (a1ivqt
+                                                                                                  ->
+                                                                                                  ma13No
+                                                                                                  bivqu)
+                                                                                                 ->
+                                                                                                 ma13No
+                                                                                                 bivqu)
+                                                                         ->
+                                                                         (%forall a1ivUf . a1ivUf ->
+                                                                                           ma13No
+                                                                                           a1ivUf)
+                                                                         ->
+                                                                         ghczmprim:GHCziPrim.Intzh
+                                                                         ->
+                                                                         (ma13No aa13Np) ->
+                                                                         ma13No
+                                                                         (ghczmprim:GHCziTypes.ZMZN
+                                                                          aa13Np) =
+    \ @ (ma13No::(*->*))
+      @ aa13Np
+      (wws1443::%forall a1ivqt bivqu . (ma13No a1ivqt) ->
+                                       (a1ivqt -> ma13No bivqu) -> ma13No bivqu)
+      (ww1s1445::%forall a1ivUf . a1ivUf -> ma13No a1ivUf)
+      (ww2s144a::ghczmprim:GHCziPrim.Intzh)
+      (ws144c::ma13No aa13Np) ->
+        %case (ma13No
+               (ghczmprim:GHCziTypes.ZMZN aa13Np)) (ghczmprim:GHCziPrim.zlzezh
+                                                    ww2s144a (0::ghczmprim:GHCziPrim.Intzh))
+        %of (wild1i13X7::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             %let ci13YJ :: (ma13No aa13Np) ->
+                            (ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np)) ->
+                            ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np) =
+                    \ (ma13Or::ma13No aa13Np)
+                      (mzqa13Os::ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np)) ->
+                        wws1443 @ aa13Np @ (ghczmprim:GHCziTypes.ZMZN aa13Np) ma13Or
+                        (\ (xa13Ot::aa13Np) ->
+                             wws1443 @ (ghczmprim:GHCziTypes.ZMZN aa13Np)
+                             @ (ghczmprim:GHCziTypes.ZMZN aa13Np) mzqa13Os
+                             (\ (xsa13Ou::ghczmprim:GHCziTypes.ZMZN aa13Np) ->
+                                  ww1s1445 @ (ghczmprim:GHCziTypes.ZMZN aa13Np)
+                                  (ghczmprim:GHCziTypes.ZC @ aa13Np xa13Ot xsa13Ou)))
+             %in %let lvls148t :: ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np) =
+                        ci13YJ ws144c
+                        (ww1s1445 @ (ghczmprim:GHCziTypes.ZMZN aa13Np)
+                         (ghczmprim:GHCziTypes.ZMZN @ aa13Np))
+                 %in %let %rec
+                          {xsiZZUq :: ghczmprim:GHCziPrim.Intzh ->
+                                      ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np) =
+                             \ (mi13YN::ghczmprim:GHCziPrim.Intzh) ->
+                                 %case (ma13No
+                                        (ghczmprim:GHCziTypes.ZMZN
+                                         aa13Np)) (ghczmprim:GHCziPrim.zlzezh mi13YN
+                                                   (1::ghczmprim:GHCziPrim.Intzh))
+                                 %of (wildi13YO::ghczmprim:GHCziTypes.Bool)
+                                   {ghczmprim:GHCziTypes.False ->
+                                      ci13YJ ws144c
+                                      (xsiZZUq
+                                       (ghczmprim:GHCziPrim.zmzh mi13YN
+                                        (1::ghczmprim:GHCziPrim.Intzh)));
+                                    ghczmprim:GHCziTypes.True ->
+                                      lvls148t}}
+                     %in xsiZZUq ww2s144a;
+           ghczmprim:GHCziTypes.True ->
+             ww1s1445 @ (ghczmprim:GHCziTypes.ZMZN aa13Np)
+             (ghczmprim:GHCziTypes.ZMZN @ aa13Np)};
+  base:ControlziMonad.replicateM :: %forall (ma13No::(*->*)) aa13Np . (base:GHCziBase.Monad
+                                                                       ma13No)
+                                                                      ->
+                                                                      ghczmprim:GHCziTypes.Int ->
+                                                                      (ma13No aa13Np) ->
+                                                                      ma13No
+                                                                      (ghczmprim:GHCziTypes.ZMZN
+                                                                       aa13Np) =
+    \ @ (ma13No::(*->*))
+      @ aa13Np
+      (ws1441::base:GHCziBase.Monad ma13No)
+      (w1s1448::ghczmprim:GHCziTypes.Int)
+      (w2s144c::ma13No aa13Np) ->
+        %case (ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np)) ws1441
+        %of (w3X145x::base:GHCziBase.Monad ma13No)
+          {base:GHCziBase.DZCMonad
+           (wws1443::%forall a1ivqt bivqu . (ma13No a1ivqt) ->
+                                            (a1ivqt -> ma13No bivqu) -> ma13No bivqu)
+           (ww1s1444::%forall a1ivUd bivUe . (ma13No a1ivUd) ->
+                                             (ma13No bivUe) -> ma13No bivUe)
+           (ww2s1445::%forall a1ivUf . a1ivUf -> ma13No a1ivUf)
+           (ww3s1446::%forall a1ivqx . (ghczmprim:GHCziTypes.ZMZN
+                                        ghczmprim:GHCziTypes.Char)
+                                       -> ma13No a1ivqx) ->
+             %case (ma13No (ghczmprim:GHCziTypes.ZMZN aa13Np)) w1s1448
+             %of (w4X145L::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ww4s144a::ghczmprim:GHCziPrim.Intzh) ->
+                  base:ControlziMonad.zdwreplicateM @ ma13No @ aa13Np wws1443
+                  ww2s1445 ww4s144a w2s144c}};
+  base:ControlziMonad.zezlzlzuzezlzl :: %forall aa13TO ba13TP . (aa13TO
+                                                                 ->
+                                                                 ghczmprim:GHCziTypes.ZMZN ba13TP)
+                                                                ->
+                                                                (ghczmprim:GHCziTypes.ZMZN aa13TO)
+                                                                ->
+                                                                ghczmprim:GHCziTypes.ZMZN ba13TP =
+    \ @ aa13TO
+      @ ba13TP
+      (fa13On::aa13TO -> ghczmprim:GHCziTypes.ZMZN ba13TP)
+      (xa13Oo::ghczmprim:GHCziTypes.ZMZN aa13TO) ->
+        base:GHCziBase.zdfMonadZMZNzuzdczgzgze @ aa13TO @ ba13TP xa13Oo
+        fa13On;
+  base:ControlziMonad.zezlzl :: %forall aa13Oi (ma13Oj::(*->*)) ba13Ok . (base:GHCziBase.Monad
+                                                                          ma13Oj)
+                                                                         ->
+                                                                         (aa13Oi -> ma13Oj ba13Ok)
+                                                                         ->
+                                                                         (ma13Oj aa13Oi) ->
+                                                                         ma13Oj ba13Ok =
+    \ @ at4X
+      @ (mt4Y::(*->*))
+      @ bt4ZZ
+      (zddMonada13TI::base:GHCziBase.Monad mt4Y)
+      (fa13On::at4X -> mt4Y bt4ZZ)
+      (xa13Oo::mt4Y at4X) ->
+        base:GHCziBase.zgzgze @ mt4Y zddMonada13TI @ at4X @ bt4ZZ xa13Oo
+        fa13On;
+  base:ControlziMonad.zdfMonadPlusZMZN :: base:ControlziMonad.MonadPlus
+                                          ghczmprim:GHCziTypes.ZMZN =
+    base:ControlziMonad.DZCMonadPlus @ ghczmprim:GHCziTypes.ZMZN
+    base:GHCziBase.zdfMonadZMZN ghczmprim:GHCziTypes.ZMZN
+    base:GHCziBase.zpzp;
+  base:ControlziMonad.zdfMonadPlusMaybezuzdcmplus :: %forall aa13MP . (base:DataziMaybe.Maybe
+                                                                       aa13MP)
+                                                                      ->
+                                                                      (base:DataziMaybe.Maybe
+                                                                       aa13MP)
+                                                                      ->
+                                                                      base:DataziMaybe.Maybe
+                                                                      aa13MP =
+    \ @ at9B
+      (dsd13VU::base:DataziMaybe.Maybe at9B)
+      (ysa13PM::base:DataziMaybe.Maybe at9B) ->
+        %case (base:DataziMaybe.Maybe at9B) dsd13VU
+        %of (wildX19::base:DataziMaybe.Maybe at9B)
+          {base:DataziMaybe.Nothing ->
+             ysa13PM;
+           base:DataziMaybe.Just (ipvs13XV::at9B) ->
+             wildX19};
+  base:ControlziMonad.zdfMonadPlusMaybe :: base:ControlziMonad.MonadPlus
+                                           base:DataziMaybe.Maybe =
+    base:ControlziMonad.DZCMonadPlus @ base:DataziMaybe.Maybe
+    base:DataziMaybe.zdfMonadMaybe base:DataziMaybe.Nothing
+    base:ControlziMonad.zdfMonadPlusMaybezuzdcmplus;
+  base:ControlziMonad.liftM :: %forall a1a13Nh ra13Ni (ma13Nj::(*->*)) . (base:GHCziBase.Monad
+                                                                          ma13Nj)
+                                                                         ->
+                                                                         (a1a13Nh -> ra13Ni) ->
+                                                                         (ma13Nj a1a13Nh) ->
+                                                                         ma13Nj ra13Ni =
+    \ @ a1t1I
+      @ rt1J
+      @ (mt1K::(*->*))
+      (zddMonada13QU::base:GHCziBase.Monad mt1K)
+      (fa13Pa::a1t1I -> rt1J)
+      (m1a13Pb::mt1K a1t1I) ->
+        %let lvls148u :: rt1J -> mt1K rt1J =
+               base:GHCziBase.return @ mt1K zddMonada13QU @ rt1J
+        %in base:GHCziBase.zgzgze @ mt1K zddMonada13QU @ a1t1I @ rt1J
+            m1a13Pb (\ (x1a13Pc::a1t1I) -> lvls148u (fa13Pa x1a13Pc));
+  base:ControlziMonad.guard :: %forall (ma13O7::(*->*)) . (base:ControlziMonad.MonadPlus
+                                                           ma13O7)
+                                                          ->
+                                                          ghczmprim:GHCziTypes.Bool ->
+                                                          ma13O7 ghczmprim:GHCziTuple.Z0T =
+    \ @ (mt4j::(*->*))
+      (zddMonadPlusa13Si::base:ControlziMonad.MonadPlus mt4j)
+      (etaB1::ghczmprim:GHCziTypes.Bool) ->
+        %case (mt4j ghczmprim:GHCziTuple.Z0T) etaB1
+        %of (wildX1e::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             base:ControlziMonad.mzzero @ mt4j zddMonadPlusa13Si
+             @ ghczmprim:GHCziTuple.Z0T;
+           ghczmprim:GHCziTypes.True ->
+             base:GHCziBase.return @ mt4j
+             (base:ControlziMonad.zdp1MonadPlus @ mt4j zddMonadPlusa13Si)
+             @ ghczmprim:GHCziTuple.Z0T ghczmprim:GHCziTuple.Z0T};

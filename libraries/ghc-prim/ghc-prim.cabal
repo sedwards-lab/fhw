@@ -1,0 +1,35 @@
+name:          ghc-prim
+version:        0.3.0.1
+license:        BSD3
+synopsis:       GHC primitives
+description:
+    GHC primitives.
+cabal-version:  >=1.6
+build-type: Simple
+
+Library {
+--    build-depends: rts
+    exposed-modules:
+        GHC.Classes
+        GHC.CString
+--        GHC.Debug
+        GHC.Magic
+--        GHC.PrimopWrappers
+        GHC.IntWord64
+        GHC.Tuple
+        GHC.Types
+-- Exposing GHC.Prim is necessary to make, e.g., integer-gmp link (since it
+-- looks for GHC.Prim), but it's an illusion that the Setup.hs file must
+-- take care of.  
+--        GHC.Prim
+
+    include-dirs: ../includes
+    includes: MachDeps.h
+
+    extensions: CPP, MagicHash, ForeignFunctionInterface, UnliftedFFITypes,
+                UnboxedTuples, EmptyDataDecls, NoImplicitPrelude
+    -- We need to set the package name to ghc-prim (without a version number)
+    -- as it's magic.
+    ghc-options: -package-name ghc-prim -fext-core -Wall
+                 -no-global-package-db -no-user-package-db
+}

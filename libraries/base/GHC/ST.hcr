@@ -1,0 +1,354 @@
+%module base:GHCziST
+  %data base:GHCziST.STret sajh1 aajh2 =
+    {base:GHCziST.STret (ghczmprim:GHCziPrim.Statezh sajh1) aajh2};
+  %data base:GHCziST.ST sajh5 aajh6 =
+    {base:GHCziST.ST ((ghczmprim:GHCziPrim.Statezh sajh5) ->
+                      ghczmprim:GHCziPrim.Z2H
+                      (ghczmprim:GHCziPrim.Statezh sajh5)
+                      aajh6)};
+  base:GHCziST.unsafeInterleaveST :: %forall sajhd aajhe . (base:GHCziST.ST
+                                                            sajhd
+                                                            aajhe)
+                                                           -> base:GHCziST.ST sajhd aajhe =
+    \ @ stH @ atI (dsdjja::base:GHCziST.ST stH atI) ->
+        %case (base:GHCziST.ST stH atI) dsdjja
+        %of (wildXl::base:GHCziST.ST stH atI)
+          {base:GHCziST.ST
+           (majhl::(ghczmprim:GHCziPrim.Statezh stH) ->
+                   ghczmprim:GHCziPrim.Z2H (ghczmprim:GHCziPrim.Statezh stH) atI) ->
+             base:GHCziST.ST @ stH @ atI
+             (\ (sajhm::ghczmprim:GHCziPrim.Statezh stH) ->
+                  ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziPrim.Statezh stH) @ atI
+                  sajhm
+                  (%case atI (majhl sajhm)
+                   %of (ds1djj7::ghczmprim:GHCziPrim.Z2H
+                                 (ghczmprim:GHCziPrim.Statezh stH)
+                                 atI)
+                     {ghczmprim:GHCziPrim.Z2H
+                      (ipvsjjJ::ghczmprim:GHCziPrim.Statezh stH) (ipv1sjjK::atI) ->
+                        ipv1sjjK}))};
+  base:GHCziST.liftST :: %forall sajhf aajhg . (base:GHCziST.ST
+                                                sajhf
+                                                aajhg)
+                                               ->
+                                               (ghczmprim:GHCziPrim.Statezh sajhf) ->
+                                               base:GHCziST.STret sajhf aajhg =
+    \ @ stO
+      @ atP
+      (dsdjje::base:GHCziST.ST stO atP)
+      (etaB1::ghczmprim:GHCziPrim.Statezh stO) ->
+        %case (base:GHCziST.STret stO atP) dsdjje
+        %of (wildXm::base:GHCziST.ST stO atP)
+          {base:GHCziST.ST
+           (majhh::(ghczmprim:GHCziPrim.Statezh stO) ->
+                   ghczmprim:GHCziPrim.Z2H (ghczmprim:GHCziPrim.Statezh stO) atP) ->
+             %case (base:GHCziST.STret stO atP) (majhh etaB1)
+             %of (ds1djjc::ghczmprim:GHCziPrim.Z2H
+                           (ghczmprim:GHCziPrim.Statezh stO)
+                           atP)
+               {ghczmprim:GHCziPrim.Z2H
+                (ipvsjjO::ghczmprim:GHCziPrim.Statezh stO) (ipv1sjjP::atP) ->
+                  base:GHCziST.STret @ stO @ atP ipvsjjO ipv1sjjP}};
+  base:GHCziST.fixST :: %forall aajhb sajhc . (aajhb ->
+                                               base:GHCziST.ST sajhc aajhb)
+                                              -> base:GHCziST.ST sajhc aajhb =
+    \ @ aajhb @ sajhc (wsjoj::aajhb -> base:GHCziST.ST sajhc aajhb) ->
+        base:GHCziST.ST @ sajhc @ aajhb
+        (\ (sajhq::ghczmprim:GHCziPrim.Statezh sajhc) ->
+             %let %rec
+                  {anssjlf :: base:GHCziST.STret sajhc aajhb =
+                     %case (base:GHCziST.STret sajhc aajhb) (wsjoj
+                                                             (%case aajhb anssjlf
+                                                              %of (wildXq::base:GHCziST.STret
+                                                                           sajhc
+                                                                           aajhb)
+                                                                {base:GHCziST.STret
+                                                                 (dsdjjl::ghczmprim:GHCziPrim.Statezh
+                                                                          sajhc)
+                                                                 (rXjis::aajhb) ->
+                                                                   rXjis}))
+                     %of (wildXm::base:GHCziST.ST sajhc aajhb)
+                       {base:GHCziST.ST
+                        (majhh::(ghczmprim:GHCziPrim.Statezh sajhc) ->
+                                ghczmprim:GHCziPrim.Z2H
+                                (ghczmprim:GHCziPrim.Statezh sajhc)
+                                aajhb) ->
+                          %case (base:GHCziST.STret sajhc aajhb) (majhh sajhq)
+                          %of (dsdjjc::ghczmprim:GHCziPrim.Z2H
+                                       (ghczmprim:GHCziPrim.Statezh sajhc)
+                                       aajhb)
+                            {ghczmprim:GHCziPrim.Z2H
+                             (ipvsjjO::ghczmprim:GHCziPrim.Statezh sajhc) (ipv1sjjP::aajhb) ->
+                               base:GHCziST.STret @ sajhc @ aajhb ipvsjjO ipv1sjjP}}}
+             %in %case (ghczmprim:GHCziPrim.Z2H
+                        (ghczmprim:GHCziPrim.Statezh sajhc)
+                        aajhb) anssjlf
+                 %of (wildXo::base:GHCziST.STret sajhc aajhb)
+                   {base:GHCziST.STret
+                    (szqajht::ghczmprim:GHCziPrim.Statezh sajhc) (xajhu::aajhb) ->
+                      ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziPrim.Statezh sajhc)
+                      @ aajhb szqajht xajhu});
+  base:GHCziST.zdfFunctorSTzuzdcfmap :: %forall sajhM aa6J ba6K . (aa6J
+                                                                   -> ba6K)
+                                                                  ->
+                                                                  (base:GHCziST.ST sajhM aa6J) ->
+                                                                  base:GHCziST.ST sajhM ba6K =
+    \ @ sajhM
+      @ at1l
+      @ bt1m
+      (fajhN::at1l -> bt1m)
+      (dsdjjC::base:GHCziST.ST sajhM at1l) ->
+        %case (base:GHCziST.ST sajhM bt1m) dsdjjC
+        %of (wildXq::base:GHCziST.ST sajhM at1l)
+          {base:GHCziST.ST
+           (majhO::(ghczmprim:GHCziPrim.Statezh sajhM) ->
+                   ghczmprim:GHCziPrim.Z2H
+                   (ghczmprim:GHCziPrim.Statezh sajhM)
+                   at1l) ->
+             base:GHCziST.ST @ sajhM @ bt1m
+             (\ (sajhP::ghczmprim:GHCziPrim.Statezh sajhM) ->
+                  %case (ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziPrim.Statezh sajhM)
+                         bt1m) (majhO sajhP)
+                  %of (ds1djjA::ghczmprim:GHCziPrim.Z2H
+                                (ghczmprim:GHCziPrim.Statezh sajhM)
+                                at1l)
+                    {ghczmprim:GHCziPrim.Z2H
+                     (ipvsjjV::ghczmprim:GHCziPrim.Statezh sajhM) (ipv1sjjW::at1l) ->
+                       ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziPrim.Statezh sajhM)
+                       @ bt1m ipvsjjV (fajhN ipv1sjjW)})};
+  base:GHCziST.zdfFunctorSTzuzdczlzd :: %forall sajhM aa6L ba6M . aa6L
+                                                                  ->
+                                                                  (base:GHCziST.ST sajhM ba6M) ->
+                                                                  base:GHCziST.ST sajhM aa6L =
+    \ @ sajhM
+      @ at2p
+      @ bt2q
+      (xa7P::at2p)
+      (etaB1::base:GHCziST.ST sajhM bt2q) ->
+        %case (base:GHCziST.ST sajhM at2p) etaB1
+        %of (wildXq::base:GHCziST.ST sajhM bt2q)
+          {base:GHCziST.ST
+           (majhO::(ghczmprim:GHCziPrim.Statezh sajhM) ->
+                   ghczmprim:GHCziPrim.Z2H
+                   (ghczmprim:GHCziPrim.Statezh sajhM)
+                   bt2q) ->
+             base:GHCziST.ST @ sajhM @ at2p
+             (\ (sajhP::ghczmprim:GHCziPrim.Statezh sajhM) ->
+                  %case (ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziPrim.Statezh sajhM)
+                         at2p) (majhO sajhP)
+                  %of (dsdjjA::ghczmprim:GHCziPrim.Z2H
+                               (ghczmprim:GHCziPrim.Statezh sajhM)
+                               bt2q)
+                    {ghczmprim:GHCziPrim.Z2H
+                     (ipvsjjV::ghczmprim:GHCziPrim.Statezh sajhM) (ipv1sjjW::bt2q) ->
+                       ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziPrim.Statezh sajhM)
+                       @ at2p ipvsjjV xa7P})};
+  base:GHCziST.zdfFunctorST :: %forall sajhM . base:GHCziBase.Functor
+                                               (base:GHCziST.ST sajhM) =
+    \ @ sajhM ->
+        base:GHCziBase.DZCFunctor @ (base:GHCziST.ST sajhM)
+        (base:GHCziST.zdfFunctorSTzuzdcfmap @ sajhM)
+        (base:GHCziST.zdfFunctorSTzuzdczlzd @ sajhM);
+  base:GHCziST.zdfMonadSTzuzdcreturn :: %forall sajhB aa6D . aa6D ->
+                                                             base:GHCziST.ST sajhB aa6D =
+    \ @ sajhB @ aa6D (etaB1::aa6D) ->
+        base:GHCziST.ST @ sajhB @ aa6D
+        (\ (sajhD::ghczmprim:GHCziPrim.Statezh sajhB) ->
+             ghczmprim:GHCziPrim.Z2H @ (ghczmprim:GHCziPrim.Statezh sajhB)
+             @ aa6D sajhD etaB1);
+  base:GHCziST.zdfMonadSTzuzdczgzgze :: %forall sajhB aa6zz ba6A . (base:GHCziST.ST
+                                                                    sajhB
+                                                                    aa6zz)
+                                                                   ->
+                                                                   (aa6zz ->
+                                                                    base:GHCziST.ST sajhB ba6A)
+                                                                   -> base:GHCziST.ST sajhB ba6A =
+    \ @ sajhB
+      @ aa6zz
+      @ ba6A
+      (etaB2::base:GHCziST.ST sajhB aa6zz)
+      (eta1B1::aa6zz -> base:GHCziST.ST sajhB ba6A) ->
+        %case (base:GHCziST.ST sajhB ba6A) etaB2
+        %of (wildXu::base:GHCziST.ST sajhB aa6zz)
+          {base:GHCziST.ST
+           (majhG::(ghczmprim:GHCziPrim.Statezh sajhB) ->
+                   ghczmprim:GHCziPrim.Z2H
+                   (ghczmprim:GHCziPrim.Statezh sajhB)
+                   aa6zz) ->
+             base:GHCziST.ST @ sajhB @ ba6A
+             (\ (sajhI::ghczmprim:GHCziPrim.Statezh sajhB) ->
+                  %case (ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziPrim.Statezh sajhB)
+                         ba6A) (majhG sajhI)
+                  %of (dsdjjv::ghczmprim:GHCziPrim.Z2H
+                               (ghczmprim:GHCziPrim.Statezh sajhB)
+                               aa6zz)
+                    {ghczmprim:GHCziPrim.Z2H
+                     (ipvsjk0::ghczmprim:GHCziPrim.Statezh sajhB) (ipv1sjk1::aa6zz) ->
+                       %case (ghczmprim:GHCziPrim.Z2H
+                              (ghczmprim:GHCziPrim.Statezh sajhB)
+                              ba6A) (eta1B1 ipv1sjk1)
+                       %of (wild1Xo::base:GHCziST.ST sajhB ba6A)
+                         {base:GHCziST.ST
+                          (k2ajhL::(ghczmprim:GHCziPrim.Statezh sajhB) ->
+                                   ghczmprim:GHCziPrim.Z2H
+                                   (ghczmprim:GHCziPrim.Statezh sajhB)
+                                   ba6A) ->
+                            k2ajhL ipvsjk0}})};
+  base:GHCziST.zdfMonadSTzuzdcfail :: %forall sajhB aa6E . (ghczmprim:GHCziTypes.ZMZN
+                                                            ghczmprim:GHCziTypes.Char)
+                                                           -> base:GHCziST.ST sajhB aa6E =
+    \ @ sajhB
+      @ at2E
+      (etaB1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziErr.error @ (base:GHCziST.ST sajhB at2E) etaB1;
+  base:GHCziST.zdfMonadSTzuzdczgzg :: %forall sajhB aa6B ba6C . (base:GHCziST.ST
+                                                                 sajhB
+                                                                 aa6B)
+                                                                ->
+                                                                (base:GHCziST.ST sajhB ba6C) ->
+                                                                base:GHCziST.ST sajhB ba6C =
+    \ @ sajhB
+      @ aa6B
+      @ ba6C
+      (etaB2::base:GHCziST.ST sajhB aa6B)
+      (eta1B1::base:GHCziST.ST sajhB ba6C) ->
+        %case (base:GHCziST.ST sajhB ba6C) etaB2
+        %of (wildXu::base:GHCziST.ST sajhB aa6B)
+          {base:GHCziST.ST
+           (majhG::(ghczmprim:GHCziPrim.Statezh sajhB) ->
+                   ghczmprim:GHCziPrim.Z2H
+                   (ghczmprim:GHCziPrim.Statezh sajhB)
+                   aa6B) ->
+             base:GHCziST.ST @ sajhB @ ba6C
+             (\ (sajhI::ghczmprim:GHCziPrim.Statezh sajhB) ->
+                  %case (ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziPrim.Statezh sajhB)
+                         ba6C) (majhG sajhI)
+                  %of (dsdjjv::ghczmprim:GHCziPrim.Z2H
+                               (ghczmprim:GHCziPrim.Statezh sajhB)
+                               aa6B)
+                    {ghczmprim:GHCziPrim.Z2H
+                     (ipvsjk6::ghczmprim:GHCziPrim.Statezh sajhB) (ipv1sjk7::aa6B) ->
+                       %case (ghczmprim:GHCziPrim.Z2H
+                              (ghczmprim:GHCziPrim.Statezh sajhB)
+                              ba6C) eta1B1
+                       %of (wild1Xd::base:GHCziST.ST sajhB ba6C)
+                         {base:GHCziST.ST
+                          (k2ajhL::(ghczmprim:GHCziPrim.Statezh sajhB) ->
+                                   ghczmprim:GHCziPrim.Z2H
+                                   (ghczmprim:GHCziPrim.Statezh sajhB)
+                                   ba6C) ->
+                            k2ajhL ipvsjk6}})};
+  base:GHCziST.zdfMonadST :: %forall sajhB . base:GHCziBase.Monad
+                                             (base:GHCziST.ST sajhB) =
+    \ @ sajhB ->
+        base:GHCziBase.DZCMonad @ (base:GHCziST.ST sajhB)
+        (base:GHCziST.zdfMonadSTzuzdczgzgze @ sajhB)
+        (base:GHCziST.zdfMonadSTzuzdczgzg @ sajhB)
+        (base:GHCziST.zdfMonadSTzuzdcreturn @ sajhB)
+        (base:GHCziST.zdfMonadSTzuzdcfail @ sajhB);
+  base:GHCziST.zdfShowST3 :: ghczmprim:GHCziTypes.ZMZN
+                             ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("<<ST action>>"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziST.zdfShowST2 :: (ghczmprim:GHCziTypes.ZMZN
+                              ghczmprim:GHCziTypes.Char)
+                             -> ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziST.zdfShowST3;
+  base:GHCziST.zdfShowSTzuzdcshowsPrec :: %forall sajhzz aajhA . ghczmprim:GHCziTypes.Int
+                                                                 ->
+                                                                 (base:GHCziST.ST sajhzz aajhA) ->
+                                                                 (ghczmprim:GHCziTypes.ZMZN
+                                                                  ghczmprim:GHCziTypes.Char)
+                                                                 ->
+                                                                 ghczmprim:GHCziTypes.ZMZN
+                                                                 ghczmprim:GHCziTypes.Char =
+    \ @ sajhzz
+      @ aajhA
+      (dsdjjr::ghczmprim:GHCziTypes.Int)
+      (ds1djjs::base:GHCziST.ST sajhzz aajhA) ->
+        base:GHCziST.zdfShowST2;
+  base:GHCziST.zdfShowST1 :: %forall sajhzz aajhA . (base:GHCziST.ST
+                                                     sajhzz
+                                                     aajhA)
+                                                    ->
+                                                    (ghczmprim:GHCziTypes.ZMZN
+                                                     ghczmprim:GHCziTypes.Char)
+                                                    ->
+                                                    ghczmprim:GHCziTypes.ZMZN
+                                                    ghczmprim:GHCziTypes.Char =
+    \ @ sajhzz @ aajhA (dsdjjs::base:GHCziST.ST sajhzz aajhA) ->
+        base:GHCziST.zdfShowST2;
+  base:GHCziST.zdfShowSTzuzdcshowList :: %forall sajhzz aajhA . (ghczmprim:GHCziTypes.ZMZN
+                                                                 (base:GHCziST.ST sajhzz aajhA))
+                                                                ->
+                                                                (ghczmprim:GHCziTypes.ZMZN
+                                                                 ghczmprim:GHCziTypes.Char)
+                                                                ->
+                                                                ghczmprim:GHCziTypes.ZMZN
+                                                                ghczmprim:GHCziTypes.Char =
+    \ @ sajhzz @ aajhA ->
+        base:GHCziShow.showListzuzu @ (base:GHCziST.ST sajhzz aajhA)
+        (base:GHCziST.zdfShowST1 @ sajhzz @ aajhA);
+  base:GHCziST.zdfShowSTzuzdcshow :: %forall sajhzz aajhA . (base:GHCziST.ST
+                                                             sajhzz
+                                                             aajhA)
+                                                            ->
+                                                            ghczmprim:GHCziTypes.ZMZN
+                                                            ghczmprim:GHCziTypes.Char =
+    \ @ sajhzz @ aajhA (xa59u::base:GHCziST.ST sajhzz aajhA) ->
+        base:GHCziST.zdfShowST3;
+  base:GHCziST.zdfShowST :: %forall sajhzz aajhA . base:GHCziShow.Show
+                                                   (base:GHCziST.ST sajhzz aajhA) =
+    \ @ sajhzz @ aajhA ->
+        base:GHCziShow.DZCShow @ (base:GHCziST.ST sajhzz aajhA)
+        (base:GHCziST.zdfShowSTzuzdcshowsPrec @ sajhzz @ aajhA)
+        (base:GHCziST.zdfShowSTzuzdcshow @ sajhzz @ aajhA)
+        (base:GHCziST.zdfShowSTzuzdcshowList @ sajhzz @ aajhA);
+  base:GHCziST.runSTRep :: %forall aajh7 . (%forall sajh8 . (ghczmprim:GHCziPrim.Statezh
+                                                             sajh8)
+                                                            ->
+                                                            ghczmprim:GHCziPrim.Z2H
+                                                            (ghczmprim:GHCziPrim.Statezh sajh8)
+                                                            aajh7)
+                                           -> aajh7 =
+    \ @ ats
+      (etaB1::%forall sajh8 . (ghczmprim:GHCziPrim.Statezh sajh8) ->
+                              ghczmprim:GHCziPrim.Z2H (ghczmprim:GHCziPrim.Statezh sajh8) ats) ->
+        %case ats (etaB1 @ ghczmprim:GHCziPrim.RealWorld
+                   ghczmprim:GHCziPrim.realWorldzh)
+        %of (dsdjj2::ghczmprim:GHCziPrim.Z2H
+                     (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                     ats)
+          {ghczmprim:GHCziPrim.Z2H
+           (ipvsjkm::ghczmprim:GHCziPrim.Statezh
+                     ghczmprim:GHCziPrim.RealWorld)
+           (ipv1sjkn::ats) ->
+             ipv1sjkn};
+  base:GHCziST.runST :: %forall aajh9 . (%forall sajha . base:GHCziST.ST
+                                                         sajha
+                                                         aajh9)
+                                        -> aajh9 =
+    \ @ atw (etaB1::%forall sajha . base:GHCziST.ST sajha atw) ->
+        %case atw (etaB1 @ ghczmprim:GHCziPrim.RealWorld)
+        %of (wildXD::base:GHCziST.ST ghczmprim:GHCziPrim.RealWorld atw)
+          {base:GHCziST.ST
+           (stzurepajhw::(ghczmprim:GHCziPrim.Statezh
+                          ghczmprim:GHCziPrim.RealWorld)
+                         ->
+                         ghczmprim:GHCziPrim.Z2H
+                         (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                         atw) ->
+             %case atw (stzurepajhw ghczmprim:GHCziPrim.realWorldzh)
+             %of (dsdjj2::ghczmprim:GHCziPrim.Z2H
+                          (ghczmprim:GHCziPrim.Statezh ghczmprim:GHCziPrim.RealWorld)
+                          atw)
+               {ghczmprim:GHCziPrim.Z2H
+                (ipvsjkq::ghczmprim:GHCziPrim.Statezh
+                          ghczmprim:GHCziPrim.RealWorld)
+                (ipv1sjkr::atw) ->
+                  ipv1sjkr}};

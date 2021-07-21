@@ -1,0 +1,1915 @@
+%module base:DataziBits
+  %data base:DataziBits.Bits aafg2 =
+    {base:DataziBits.DZCBits (ghczmprim:GHCziClasses.Eq aafg2)
+                             (aafg2 -> aafg2 -> aafg2)
+                             (aafg2 -> aafg2 -> aafg2)
+                             (aafg2 -> aafg2 -> aafg2)
+                             (aafg2 -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int)
+                             (aafg2 -> ghczmprim:GHCziTypes.Bool)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+                             (aafg2 -> ghczmprim:GHCziTypes.Int)};
+  base:DataziBits.zdp1Bits :: %forall aafg2 . (base:DataziBits.Bits
+                                               aafg2)
+                                              -> ghczmprim:GHCziClasses.Eq aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (ghczmprim:GHCziClasses.Eq aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB2};
+  base:DataziBits.zizazi :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> aafg2 -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> aafg2 -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB3};
+  base:DataziBits.zizbzi :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> aafg2 -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> aafg2 -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB4};
+  base:DataziBits.xor :: %forall aafg2 . (base:DataziBits.Bits aafg2)
+                                         -> aafg2 -> aafg2 -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> aafg2 -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB5};
+  base:DataziBits.complement :: %forall aafg2 . (base:DataziBits.Bits
+                                                 aafg2)
+                                                -> aafg2 -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB6};
+  base:DataziBits.shift :: %forall aafg2 . (base:DataziBits.Bits
+                                            aafg2)
+                                           -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB7};
+  base:DataziBits.rotate :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB8};
+  base:DataziBits.bit :: %forall aafg2 . (base:DataziBits.Bits aafg2)
+                                         -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplB9};
+  base:DataziBits.setBit :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBa};
+  base:DataziBits.clearBit :: %forall aafg2 . (base:DataziBits.Bits
+                                               aafg2)
+                                              -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBb};
+  base:DataziBits.complementBit :: %forall aafg2 . (base:DataziBits.Bits
+                                                    aafg2)
+                                                   -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBc};
+  base:DataziBits.testBit :: %forall aafg2 . (base:DataziBits.Bits
+                                              aafg2)
+                                             ->
+                                             aafg2 ->
+                                             ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 ->
+               ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBd};
+  base:DataziBits.bitSizze :: %forall aafg2 . (base:DataziBits.Bits
+                                               aafg2)
+                                              -> aafg2 -> ghczmprim:GHCziTypes.Int =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBe};
+  base:DataziBits.isSigned :: %forall aafg2 . (base:DataziBits.Bits
+                                               aafg2)
+                                              -> aafg2 -> ghczmprim:GHCziTypes.Bool =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Bool) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBf};
+  base:DataziBits.shiftL :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBg};
+  base:DataziBits.unsafeShiftL :: %forall aafg2 . (base:DataziBits.Bits
+                                                   aafg2)
+                                                  -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBh};
+  base:DataziBits.shiftR :: %forall aafg2 . (base:DataziBits.Bits
+                                             aafg2)
+                                            -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBi};
+  base:DataziBits.unsafeShiftR :: %forall aafg2 . (base:DataziBits.Bits
+                                                   aafg2)
+                                                  -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBj};
+  base:DataziBits.rotateL :: %forall aafg2 . (base:DataziBits.Bits
+                                              aafg2)
+                                             -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBk};
+  base:DataziBits.rotateR :: %forall aafg2 . (base:DataziBits.Bits
+                                              aafg2)
+                                             -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBl};
+  base:DataziBits.popCount :: %forall aafg2 . (base:DataziBits.Bits
+                                               aafg2)
+                                              -> aafg2 -> ghczmprim:GHCziTypes.Int =
+    \ @ aafg2 (tplB1::base:DataziBits.Bits aafg2) ->
+        %case (aafg2 -> ghczmprim:GHCziTypes.Int) tplB1
+        %of (tplX4::base:DataziBits.Bits aafg2)
+          {base:DataziBits.DZCBits
+           (tplB2::ghczmprim:GHCziClasses.Eq aafg2)
+           (tplB3::aafg2 -> aafg2 -> aafg2)
+           (tplB4::aafg2 -> aafg2 -> aafg2)
+           (tplB5::aafg2 -> aafg2 -> aafg2)
+           (tplB6::aafg2 -> aafg2)
+           (tplB7::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB8::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplB9::ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBa::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBb::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBc::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBd::aafg2 ->
+                   ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool)
+           (tplBe::aafg2 -> ghczmprim:GHCziTypes.Int)
+           (tplBf::aafg2 -> ghczmprim:GHCziTypes.Bool)
+           (tplBg::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBh::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBi::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBj::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBk::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBl::aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2)
+           (tplBm::aafg2 -> ghczmprim:GHCziTypes.Int) ->
+             tplBm};
+  base:DataziBits.zddmrotateL :: %forall aafg2 . (base:DataziBits.Bits
+                                                  aafg2)
+                                                 -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgl::aafg2)
+      (iafgm::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.rotate @ aafg2 zddBitsafizz xafgl iafgm;
+  base:DataziBits.zddmunsafeShiftR :: %forall aafg2 . (base:DataziBits.Bits
+                                                       aafg2)
+                                                      ->
+                                                      aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgj::aafg2)
+      (iafgk::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.shiftR @ aafg2 zddBitsafizz xafgj iafgk;
+  base:DataziBits.zddmunsafeShiftL :: %forall aafg2 . (base:DataziBits.Bits
+                                                       aafg2)
+                                                      ->
+                                                      aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgf::aafg2)
+      (iafgg::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.shiftL @ aafg2 zddBitsafizz xafgf iafgg;
+  base:DataziBits.zddmshiftL :: %forall aafg2 . (base:DataziBits.Bits
+                                                 aafg2)
+                                                -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgd::aafg2)
+      (iafge::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.shift @ aafg2 zddBitsafizz xafgd iafge;
+  base:DataziBits.zddmcomplementBit :: %forall aafg2 . (base:DataziBits.Bits
+                                                        aafg2)
+                                                       ->
+                                                       aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgb::aafg2)
+      (iafgc::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.xor @ aafg2 zddBitsafizz xafgb
+        (base:DataziBits.bit @ aafg2 zddBitsafizz iafgc);
+  base:DataziBits.zddmclearBit :: %forall aafg2 . (base:DataziBits.Bits
+                                                   aafg2)
+                                                  -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafg9::aafg2)
+      (iafga::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.zizazi @ aafg2 zddBitsafizz xafg9
+        (base:DataziBits.complement @ aafg2 zddBitsafizz
+         (base:DataziBits.bit @ aafg2 zddBitsafizz iafga));
+  base:DataziBits.zddmsetBit :: %forall aafg2 . (base:DataziBits.Bits
+                                                 aafg2)
+                                                -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafg7::aafg2)
+      (iafg8::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.zizbzi @ aafg2 zddBitsafizz xafg7
+        (base:DataziBits.bit @ aafg2 zddBitsafizz iafg8);
+  lvlrg4p :: integerzmgmp:GHCziIntegerziType.Integer =
+    (0::integerzmgmp:GHCziIntegerziType.Integer);
+  lvl1rg4q :: integerzmgmp:GHCziIntegerziType.Integer =
+    (1::integerzmgmp:GHCziIntegerziType.Integer);
+  base:DataziBits.zdfBitsInt1 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (64::ghczmprim:GHCziPrim.Intzh);
+  base:DataziBits.zdfBitsWord1 :: ghczmprim:GHCziTypes.Int =
+    base:DataziBits.zdfBitsInt1;
+  lvl2rg4r :: ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Data.Bits.bitSize(Integer)"::ghczmprim:GHCziPrim.Addrzh);
+  base:DataziBits.zdfBitsInteger2 :: ghczmprim:GHCziTypes.Int =
+    base:GHCziErr.error @ ghczmprim:GHCziTypes.Int lvl2rg4r;
+  base:DataziBits.zdfBitsInteger1 :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (0::ghczmprim:GHCziPrim.Intzh);
+  base:DataziBits.zdfBitsIntzuzdcpopCount :: ghczmprim:GHCziTypes.Int
+                                             -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfps::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfps
+        %of (wildX1m::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafhn::ghczmprim:GHCziPrim.Intzh) ->
+             ghczmprim:GHCziTypes.Izh
+             (ghczmprim:GHCziPrim.word2Intzh
+              (ghczmprim:GHCziPrim.popCntzh
+               (ghczmprim:GHCziPrim.int2Wordzh xzhafhn)))};
+  base:DataziBits.zdfBitsIntzuzdcunsafeShiftR :: ghczmprim:GHCziTypes.Int
+                                                 ->
+                                                 ghczmprim:GHCziTypes.Int ->
+                                                 ghczmprim:GHCziTypes.Int =
+    \ (dsdfpo::ghczmprim:GHCziTypes.Int)
+      (ds1dfpp::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfpo
+        %of (wildX1o::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafhg::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfpp
+             %of (wild1Xf::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhh::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.uncheckedIShiftRAzh xzhafhg izhafhh)}};
+  lvl3rg4s :: ghczmprim:GHCziTypes.Int =
+    ghczmprim:GHCziTypes.Izh (-1::ghczmprim:GHCziPrim.Intzh);
+  base:DataziBits.zdfBitsIntzuzdcshiftR :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (wsfMp::ghczmprim:GHCziTypes.Int)
+      (w1sfMt::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int wsfMp
+        %of (w2XfOo::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsfMr::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int w1sfMt
+             %of (w3XfOw::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (ww1sfMv::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh ww1sfMv
+                                                  (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wildXZZ::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.uncheckedIShiftRAzh wwsfMr ww1sfMv);
+                     ghczmprim:GHCziTypes.True ->
+                       %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zlzh wwsfMr
+                                                       (0::ghczmprim:GHCziPrim.Intzh))
+                       %of (wild1X7::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            base:DataziBits.zdfBitsInteger1;
+                          ghczmprim:GHCziTypes.True ->
+                            lvl3rg4s}}}};
+  base:DataziBits.zdfBitsIntzuzdcunsafeShiftL :: ghczmprim:GHCziTypes.Int
+                                                 ->
+                                                 ghczmprim:GHCziTypes.Int ->
+                                                 ghczmprim:GHCziTypes.Int =
+    \ (dsdfpg::ghczmprim:GHCziTypes.Int)
+      (ds1dfph::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfpg
+        %of (wildX1q::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafhc::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfph
+             %of (wild1Xh::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhd::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.uncheckedIShiftLzh xzhafhc izhafhd)}};
+  base:DataziBits.zdfBitsIntzuzdcshiftL :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfpc::ghczmprim:GHCziTypes.Int)
+      (ds1dfpd::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfpc
+        %of (wildX1r::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafha::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfpd
+             %of (wild1Xi::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                                  (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X10::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.uncheckedIShiftLzh xzhafha izhafhb);
+                     ghczmprim:GHCziTypes.True ->
+                       base:DataziBits.zdfBitsInteger1}}};
+  base:DataziBits.zdfBitsIntzuzdcisSigned :: ghczmprim:GHCziTypes.Int
+                                             -> ghczmprim:GHCziTypes.Bool =
+    \ (dsdfpb::ghczmprim:GHCziTypes.Int) -> ghczmprim:GHCziTypes.True;
+  base:DataziBits.zdfBitsIntzuzdcbitSizze :: ghczmprim:GHCziTypes.Int
+                                             -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfpa::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.zdfBitsInt1;
+  base:DataziBits.zdfBitsIntzuzdcrotate :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1u::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafhi::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xn::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhj::ghczmprim:GHCziPrim.Intzh) ->
+                  %let izqzhsfu0 :: ghczmprim:GHCziPrim.Intzh =
+                         ghczmprim:GHCziPrim.word2Intzh
+                         (ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh izhafhj)
+                          (63::ghczmprim:GHCziPrim.Wordzh))
+                  %in %let xzqzhsftZZ :: ghczmprim:GHCziPrim.Wordzh =
+                             ghczmprim:GHCziPrim.int2Wordzh xzhafhi
+                      %in ghczmprim:GHCziTypes.Izh
+                          (ghczmprim:GHCziPrim.word2Intzh
+                           (ghczmprim:GHCziPrim.orzh
+                            (ghczmprim:GHCziPrim.uncheckedShiftLzh xzqzhsftZZ izqzhsfu0)
+                            (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzqzhsftZZ
+                             (ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                              izqzhsfu0))))}};
+  base:DataziBits.zdfBitsIntzuzdcrotateL :: ghczmprim:GHCziTypes.Int
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    base:DataziBits.zdfBitsIntzuzdcrotate;
+  base:DataziBits.zdfBitsIntzuzdcrotateR :: ghczmprim:GHCziTypes.Int
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1u::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafhi::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xr::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (xa1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+                  %let xzqzhafhk :: ghczmprim:GHCziPrim.Wordzh =
+                         ghczmprim:GHCziPrim.int2Wordzh xzhafhi
+                  %in %let izqzhafhl :: ghczmprim:GHCziPrim.Intzh =
+                             ghczmprim:GHCziPrim.word2Intzh
+                             (ghczmprim:GHCziPrim.andzh
+                              (ghczmprim:GHCziPrim.int2Wordzh
+                               (ghczmprim:GHCziPrim.negateIntzh xa1lZZ))
+                              (63::ghczmprim:GHCziPrim.Wordzh))
+                      %in ghczmprim:GHCziTypes.Izh
+                          (ghczmprim:GHCziPrim.word2Intzh
+                           (ghczmprim:GHCziPrim.orzh
+                            (ghczmprim:GHCziPrim.uncheckedShiftLzh xzqzhafhk izqzhafhl)
+                            (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzqzhafhk
+                             (ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                              izqzhafhl))))}};
+  base:DataziBits.zdfBitsIntzuzdcshift :: ghczmprim:GHCziTypes.Int ->
+                                          ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1v::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh8::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xo::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafh9::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafh9
+                                                  (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2Xq::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       %let ba8s :: ghczmprim:GHCziPrim.Intzh =
+                              ghczmprim:GHCziPrim.negateIntzh izhafh9
+                       %in %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh ba8s
+                                                           (64::ghczmprim:GHCziPrim.Intzh))
+                           %of (wild3XZZ::ghczmprim:GHCziTypes.Bool)
+                             {ghczmprim:GHCziTypes.False ->
+                                ghczmprim:GHCziTypes.Izh
+                                (ghczmprim:GHCziPrim.uncheckedIShiftRAzh xzhafh8 ba8s);
+                              ghczmprim:GHCziTypes.True ->
+                                %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zlzh xzhafh8
+                                                                (0::ghczmprim:GHCziPrim.Intzh))
+                                %of (wild4X7::ghczmprim:GHCziTypes.Bool)
+                                  {ghczmprim:GHCziTypes.False ->
+                                     base:DataziBits.zdfBitsInteger1;
+                                   ghczmprim:GHCziTypes.True ->
+                                     lvl3rg4s}};
+                     ghczmprim:GHCziTypes.True ->
+                       %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafh9
+                                                       (64::ghczmprim:GHCziPrim.Intzh))
+                       %of (wild3X10::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            ghczmprim:GHCziTypes.Izh
+                            (ghczmprim:GHCziPrim.uncheckedIShiftLzh xzhafh8 izhafh9);
+                          ghczmprim:GHCziTypes.True ->
+                            base:DataziBits.zdfBitsInteger1}}}};
+  base:DataziBits.zdfBitsIntzuzdccomplement :: ghczmprim:GHCziTypes.Int
+                                               -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfoY::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfoY
+        %of (wildX1v::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh7::ghczmprim:GHCziPrim.Intzh) ->
+             ghczmprim:GHCziTypes.Izh
+             (ghczmprim:GHCziPrim.word2Intzh
+              (ghczmprim:GHCziPrim.xorzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh7)
+               (18446744073709551615::ghczmprim:GHCziPrim.Wordzh)))};
+  base:DataziBits.zdfBitsIntzuzdcxor :: ghczmprim:GHCziTypes.Int ->
+                                        ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfoU::ghczmprim:GHCziTypes.Int)
+      (ds1dfoV::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfoU
+        %of (wildX1x::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh5::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfoV
+             %of (wild1Xo::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (yzhafh6::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.word2Intzh
+                   (ghczmprim:GHCziPrim.xorzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh5)
+                    (ghczmprim:GHCziPrim.int2Wordzh yzhafh6)))}};
+  base:DataziBits.zdfBitsIntzuzdczizbzi :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfoQ::ghczmprim:GHCziTypes.Int)
+      (ds1dfoR::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfoQ
+        %of (wildX1y::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh3::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfoR
+             %of (wild1Xp::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (yzhafh4::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.word2Intzh
+                   (ghczmprim:GHCziPrim.orzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh3)
+                    (ghczmprim:GHCziPrim.int2Wordzh yzhafh4)))}};
+  base:DataziBits.zdfBitsIntzuzdczizazi :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfoM::ghczmprim:GHCziTypes.Int)
+      (ds1dfoN::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int dsdfoM
+        %of (wildX1zz::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh1::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int ds1dfoN
+             %of (wild1Xq::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (yzhafh2::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.word2Intzh
+                   (ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh1)
+                    (ghczmprim:GHCziPrim.int2Wordzh yzhafh2)))}};
+  base:DataziBits.zdfBitsWordzuzdcpopCount :: ghczmprim:GHCziTypes.Word
+                                              -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfoK::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Int dsdfoK
+        %of (wildX1zz::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafh0::ghczmprim:GHCziPrim.Wordzh) ->
+             ghczmprim:GHCziTypes.Izh
+             (ghczmprim:GHCziPrim.word2Intzh
+              (ghczmprim:GHCziPrim.popCntzh xzhafh0))};
+  base:DataziBits.zdfBitsWordzuzdcunsafeShiftR :: ghczmprim:GHCziTypes.Word
+                                                  ->
+                                                  ghczmprim:GHCziTypes.Int ->
+                                                  ghczmprim:GHCziTypes.Word =
+    \ (dsdfoG::ghczmprim:GHCziTypes.Word)
+      (ds1dfoH::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word dsdfoG
+        %of (wildX1B::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgU::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfoH
+             %of (wild1Xs::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgV::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzhafgU izhafgV)}};
+  lvl4rg4t :: ghczmprim:GHCziTypes.Word =
+    ghczmprim:GHCziTypes.Wzh (0::ghczmprim:GHCziPrim.Wordzh);
+  base:DataziBits.zdfBitsWordzuzdcshiftR :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfoC::ghczmprim:GHCziTypes.Word)
+      (ds1dfoD::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word dsdfoC
+        %of (wildX1C::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgS::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfoD
+             %of (wild1Xt::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgT::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgT
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X11::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzhafgS izhafgT);
+                     ghczmprim:GHCziTypes.True ->
+                       lvl4rg4t}}};
+  base:DataziBits.zdfBitsWordzuzdcunsafeShiftL :: ghczmprim:GHCziTypes.Word
+                                                  ->
+                                                  ghczmprim:GHCziTypes.Int ->
+                                                  ghczmprim:GHCziTypes.Word =
+    \ (dsdfoy::ghczmprim:GHCziTypes.Word)
+      (ds1dfozz::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word dsdfoy
+        %of (wildX1D::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgQ::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfozz
+             %of (wild1Xu::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgR::ghczmprim:GHCziPrim.Intzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.uncheckedShiftLzh xzhafgQ izhafgR)}};
+  base:DataziBits.zdfBitsWordzuzdcshiftL :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfou::ghczmprim:GHCziTypes.Word)
+      (ds1dfov::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word dsdfou
+        %of (wildX1E::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgO::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfov
+             %of (wild1Xv::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X12::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.uncheckedShiftLzh xzhafgO izhafgP);
+                     ghczmprim:GHCziTypes.True ->
+                       lvl4rg4t}}};
+  base:DataziBits.zdfBitsWordzuzdcisSigned :: ghczmprim:GHCziTypes.Word
+                                              -> ghczmprim:GHCziTypes.Bool =
+    \ (dsdfot::ghczmprim:GHCziTypes.Word) ->
+        ghczmprim:GHCziTypes.False;
+  base:DataziBits.zdfBitsWordzuzdcbitSizze :: ghczmprim:GHCziTypes.Word
+                                              -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfos::ghczmprim:GHCziTypes.Word) ->
+        base:DataziBits.zdfBitsInt1;
+  base:DataziBits.zdfBitsWordzuzdcrotate :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfom::ghczmprim:GHCziTypes.Word)
+      (ds1dfon::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word dsdfom
+        %of (wildX1H::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgW::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfon
+             %of (wild1Xy::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgX::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.word2Intzh
+                                                   (ghczmprim:GHCziPrim.andzh
+                                                    (ghczmprim:GHCziPrim.int2Wordzh izhafgX)
+                                                    (63::ghczmprim:GHCziPrim.Wordzh)))
+                  %of (wild2X1S::ghczmprim:GHCziPrim.Intzh)
+                    {%_ ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.orzh
+                        (ghczmprim:GHCziPrim.uncheckedShiftLzh xzhafgW wild2X1S)
+                        (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzhafgW
+                         (ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                          wild2X1S)));
+                     (0::ghczmprim:GHCziPrim.Intzh) ->
+                       wildX1H}}};
+  base:DataziBits.zdfBitsWordzuzdcrotateL :: ghczmprim:GHCziTypes.Word
+                                             ->
+                                             ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    base:DataziBits.zdfBitsWordzuzdcrotate;
+  base:DataziBits.zdfBitsWordzuzdcrotateR :: ghczmprim:GHCziTypes.Word
+                                             ->
+                                             ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB2
+        %of (wildX1H::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgW::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word eta1B1
+             %of (wild1Xr::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (xa1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.word2Intzh
+                                                   (ghczmprim:GHCziPrim.andzh
+                                                    (ghczmprim:GHCziPrim.int2Wordzh
+                                                     (ghczmprim:GHCziPrim.negateIntzh xa1lZZ))
+                                                    (63::ghczmprim:GHCziPrim.Wordzh)))
+                  %of (wild2X1S::ghczmprim:GHCziPrim.Intzh)
+                    {%_ ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.orzh
+                        (ghczmprim:GHCziPrim.uncheckedShiftLzh xzhafgW wild2X1S)
+                        (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzhafgW
+                         (ghczmprim:GHCziPrim.zmzh (64::ghczmprim:GHCziPrim.Intzh)
+                          wild2X1S)));
+                     (0::ghczmprim:GHCziPrim.Intzh) ->
+                       wildX1H}}};
+  base:DataziBits.zdfBitsWordzuzdcshift :: ghczmprim:GHCziTypes.Word
+                                           ->
+                                           ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB2
+        %of (wildX1I::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgM::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word eta1B1
+             %of (wild1XB::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgN::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgN
+                                                   (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2XD::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       %let ba8o :: ghczmprim:GHCziPrim.Intzh =
+                              ghczmprim:GHCziPrim.negateIntzh izhafgN
+                       %in %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh
+                                                            ba8o (64::ghczmprim:GHCziPrim.Intzh))
+                           %of (wild3X11::ghczmprim:GHCziTypes.Bool)
+                             {ghczmprim:GHCziTypes.False ->
+                                ghczmprim:GHCziTypes.Wzh
+                                (ghczmprim:GHCziPrim.uncheckedShiftRLzh xzhafgM ba8o);
+                              ghczmprim:GHCziTypes.True ->
+                                lvl4rg4t};
+                     ghczmprim:GHCziTypes.True ->
+                       %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgN
+                                                        (64::ghczmprim:GHCziPrim.Intzh))
+                       %of (wild3X12::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            ghczmprim:GHCziTypes.Wzh
+                            (ghczmprim:GHCziPrim.uncheckedShiftLzh xzhafgM izhafgN);
+                          ghczmprim:GHCziTypes.True ->
+                            lvl4rg4t}}}};
+  base:DataziBits.zdfBitsWordzuzdccomplement :: ghczmprim:GHCziTypes.Word
+                                                -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfoc::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsdfoc
+        %of (wildX1I::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgK::ghczmprim:GHCziPrim.Wordzh) ->
+             ghczmprim:GHCziTypes.Wzh
+             (ghczmprim:GHCziPrim.xorzh xzhafgK
+              (18446744073709551615::ghczmprim:GHCziPrim.Wordzh))};
+  base:DataziBits.zdfBitsWordzuzdcxor :: ghczmprim:GHCziTypes.Word ->
+                                         ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfo8::ghczmprim:GHCziTypes.Word)
+      (ds1dfo9::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsdfo8
+        %of (wildX1K::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgI::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfo9
+             %of (wild1XB::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzhafgJ::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.xorzh xzhafgI yzhafgJ)}};
+  base:DataziBits.zdfBitsWordzuzdczizbzi :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfo4::ghczmprim:GHCziTypes.Word)
+      (ds1dfo5::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsdfo4
+        %of (wildX1L::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgG::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfo5
+             %of (wild1XC::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzhafgH::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.orzh xzhafgG yzhafgH)}};
+  base:DataziBits.zdfBitsWordzuzdczizazi :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Word -> ghczmprim:GHCziTypes.Word =
+    \ (dsdfo0::ghczmprim:GHCziTypes.Word)
+      (ds1dfo1::ghczmprim:GHCziTypes.Word) ->
+        %case ghczmprim:GHCziTypes.Word dsdfo0
+        %of (wildX1M::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgE::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word ds1dfo1
+             %of (wild1XD::ghczmprim:GHCziTypes.Word)
+               {ghczmprim:GHCziTypes.Wzh (yzhafgF::ghczmprim:GHCziPrim.Wordzh) ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.andzh xzhafgE yzhafgF)}};
+  base:DataziBits.zdfBitsIntegerzuzdcisSigned :: integerzmgmp:GHCziIntegerziType.Integer
+                                                 -> ghczmprim:GHCziTypes.Bool =
+    \ (dsdfnZZ::integerzmgmp:GHCziIntegerziType.Integer) ->
+        ghczmprim:GHCziTypes.True;
+  base:DataziBits.zdfBitsIntegerzuzdcbitSizze :: integerzmgmp:GHCziIntegerziType.Integer
+                                                 -> ghczmprim:GHCziTypes.Int =
+    \ (dsdfnY::integerzmgmp:GHCziIntegerziType.Integer) ->
+        base:DataziBits.zdfBitsInteger2;
+  base:DataziBits.zdwzdcshift :: integerzmgmp:GHCziIntegerziType.Integer
+                                 ->
+                                 ghczmprim:GHCziPrim.Intzh ->
+                                 integerzmgmp:GHCziIntegerziType.Integer =
+    \ (wsfMD::integerzmgmp:GHCziIntegerziType.Integer)
+      (wwsfMG::ghczmprim:GHCziPrim.Intzh) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                       wwsfMG (0::ghczmprim:GHCziPrim.Intzh))
+        %of (wildX15::ghczmprim:GHCziTypes.Bool)
+          {ghczmprim:GHCziTypes.False ->
+             integerzmgmp:GHCziIntegerziType.shiftRInteger wsfMD
+             (ghczmprim:GHCziPrim.negateIntzh wwsfMG);
+           ghczmprim:GHCziTypes.True ->
+             integerzmgmp:GHCziIntegerziType.shiftLInteger wsfMD wwsfMG};
+  base:DataziBits.zdfBitsIntegerzuzdcshift :: integerzmgmp:GHCziIntegerziType.Integer
+                                              ->
+                                              ghczmprim:GHCziTypes.Int ->
+                                              integerzmgmp:GHCziIntegerziType.Integer =
+    \ (wsfMD::integerzmgmp:GHCziIntegerziType.Integer)
+      (w1sfME::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer w1sfME
+        %of (w2XfP8::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsfMG::ghczmprim:GHCziPrim.Intzh) ->
+             base:DataziBits.zdwzdcshift wsfMD wwsfMG};
+  base:DataziBits.zdfBitsIntegerzuzdcrotate :: integerzmgmp:GHCziIntegerziType.Integer
+                                               ->
+                                               ghczmprim:GHCziTypes.Int ->
+                                               integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdcshift;
+  base:DataziBits.zdfBitsIntegerzuzdcrotateL :: integerzmgmp:GHCziIntegerziType.Integer
+                                                ->
+                                                ghczmprim:GHCziTypes.Int ->
+                                                integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdcshift;
+  base:DataziBits.zdfBitsIntegerzuzdcrotateR :: integerzmgmp:GHCziIntegerziType.Integer
+                                                ->
+                                                ghczmprim:GHCziTypes.Int ->
+                                                integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer eta1B1
+        %of (wildXr::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+             %let izhafgB :: ghczmprim:GHCziPrim.Intzh =
+                    ghczmprim:GHCziPrim.negateIntzh xa1lZZ
+             %in %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                                izhafgB
+                                                                (0::ghczmprim:GHCziPrim.Intzh))
+                 %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      integerzmgmp:GHCziIntegerziType.shiftRInteger etaB2
+                      (ghczmprim:GHCziPrim.negateIntzh izhafgB);
+                    ghczmprim:GHCziTypes.True ->
+                      integerzmgmp:GHCziIntegerziType.shiftLInteger etaB2 izhafgB}};
+  base:DataziBits.zdfBitsIntegerzuzdcshiftL :: integerzmgmp:GHCziIntegerziType.Integer
+                                               ->
+                                               ghczmprim:GHCziTypes.Int ->
+                                               integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdcshift;
+  base:DataziBits.zdfBitsIntegerzuzdcunsafeShiftL :: integerzmgmp:GHCziIntegerziType.Integer
+                                                     ->
+                                                     ghczmprim:GHCziTypes.Int ->
+                                                     integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdcshiftL;
+  base:DataziBits.zdfBitsIntegerzuzdcshiftR :: integerzmgmp:GHCziIntegerziType.Integer
+                                               ->
+                                               ghczmprim:GHCziTypes.Int ->
+                                               integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer eta1B1
+        %of (wildXr::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xa1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+             %let izhafgB :: ghczmprim:GHCziPrim.Intzh =
+                    ghczmprim:GHCziPrim.negateIntzh xa1lZZ
+             %in %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                                izhafgB
+                                                                (0::ghczmprim:GHCziPrim.Intzh))
+                 %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+                   {ghczmprim:GHCziTypes.False ->
+                      integerzmgmp:GHCziIntegerziType.shiftRInteger etaB2
+                      (ghczmprim:GHCziPrim.negateIntzh izhafgB);
+                    ghczmprim:GHCziTypes.True ->
+                      integerzmgmp:GHCziIntegerziType.shiftLInteger etaB2 izhafgB}};
+  base:DataziBits.zdfBitsIntegerzuzdcunsafeShiftR :: integerzmgmp:GHCziIntegerziType.Integer
+                                                     ->
+                                                     ghczmprim:GHCziTypes.Int ->
+                                                     integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdcshiftR;
+  %rec
+  {base:DataziBits.zdwgo :: ghczmprim:GHCziPrim.Intzh ->
+                            integerzmgmp:GHCziIntegerziType.Integer ->
+                            ghczmprim:GHCziPrim.Intzh =
+     \ (wwsfMN::ghczmprim:GHCziPrim.Intzh)
+       (wsfMP::integerzmgmp:GHCziIntegerziType.Integer) ->
+         %case ghczmprim:GHCziPrim.Intzh (integerzmgmp:GHCziIntegerziType.eqInteger
+                                          wsfMP lvlrg4p)
+         %of (wildX22::ghczmprim:GHCziTypes.Bool)
+           {ghczmprim:GHCziTypes.False ->
+              base:DataziBits.zdwgo
+              (ghczmprim:GHCziPrim.zpzh wwsfMN (1::ghczmprim:GHCziPrim.Intzh))
+              (integerzmgmp:GHCziIntegerziType.andInteger wsfMP
+               (integerzmgmp:GHCziIntegerziType.minusInteger wsfMP lvl1rg4q));
+            ghczmprim:GHCziTypes.True ->
+              wwsfMN}};
+  base:DataziBits.zdfBitsIntegerzugo :: ghczmprim:GHCziTypes.Int ->
+                                        integerzmgmp:GHCziIntegerziType.Integer ->
+                                        ghczmprim:GHCziTypes.Int =
+    \ (wsfML::ghczmprim:GHCziTypes.Int)
+      (w1sfMP::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case ghczmprim:GHCziTypes.Int wsfML
+        %of (w2XfPn::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsfMN::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int (base:DataziBits.zdwgo wwsfMN
+                                             w1sfMP)
+             %of (ww1sfMS::ghczmprim:GHCziPrim.Intzh)
+               {%_ ->
+                  ghczmprim:GHCziTypes.Izh ww1sfMS}};
+  base:DataziBits.zdfBitsWordzuzdsbitDefault :: ghczmprim:GHCziTypes.Int
+                                                -> ghczmprim:GHCziTypes.Word =
+    \ (etaB1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB1
+        %of (wildXv::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                              (64::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X12::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.Wzh
+                  (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                   (1::ghczmprim:GHCziPrim.Wordzh) izhafgP);
+                ghczmprim:GHCziTypes.True ->
+                  lvl4rg4t}};
+  base:DataziBits.zdfBitsIntegerzuzdsbitDefault :: ghczmprim:GHCziTypes.Int
+                                                   -> integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer etaB1
+        %of (wXfMH::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (wwsfMG::ghczmprim:GHCziPrim.Intzh) ->
+             %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                            wwsfMG (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wildX15::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  integerzmgmp:GHCziIntegerziType.shiftRInteger lvl1rg4q
+                  (ghczmprim:GHCziPrim.negateIntzh wwsfMG);
+                ghczmprim:GHCziTypes.True ->
+                  integerzmgmp:GHCziIntegerziType.shiftLInteger lvl1rg4q wwsfMG}};
+  base:DataziBits.zdfBitsIntzuzdsbitDefault :: ghczmprim:GHCziTypes.Int
+                                               -> ghczmprim:GHCziTypes.Int =
+    \ (etaB1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB1
+        %of (wildXi::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                             (64::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X10::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  ghczmprim:GHCziTypes.Izh
+                  (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                   (1::ghczmprim:GHCziPrim.Intzh) izhafhb);
+                ghczmprim:GHCziTypes.True ->
+                  base:DataziBits.zdfBitsInteger1}};
+  base:DataziBits.zdfBitsIntegerzuzdspopCountDefault :: integerzmgmp:GHCziIntegerziType.Integer
+                                                        -> ghczmprim:GHCziTypes.Int =
+    \ (etaB1::integerzmgmp:GHCziIntegerziType.Integer) ->
+        %case ghczmprim:GHCziTypes.Int (base:DataziBits.zdwgo
+                                        (0::ghczmprim:GHCziPrim.Intzh) etaB1)
+        %of (wwsfMS::ghczmprim:GHCziPrim.Intzh)
+          {%_ ->
+             ghczmprim:GHCziTypes.Izh wwsfMS};
+  base:DataziBits.popCountDefault :: %forall aafgp . (base:DataziBits.Bits
+                                                      aafgp)
+                                                     ->
+                                                     (base:GHCziNum.Num aafgp) ->
+                                                     aafgp -> ghczmprim:GHCziTypes.Int =
+    \ @ aj
+      (zddBitsafhG::base:DataziBits.Bits aj)
+      (zddNumafhH::base:GHCziNum.Num aj)
+      (etaB1::aj) ->
+        %case ghczmprim:GHCziTypes.Int (base:DataziBits.zdp1Bits @ aj
+                                        zddBitsafhG)
+        %of (zddEqsftK::ghczmprim:GHCziClasses.Eq aj)
+          {ghczmprim:GHCziClasses.DZCEq
+           (wwsfMV::aj -> aj -> ghczmprim:GHCziTypes.Bool)
+           (ww1sfMW::aj -> aj -> ghczmprim:GHCziTypes.Bool) ->
+             %let lvl5sfvs :: aj =
+                    base:GHCziNum.fromInteger @ aj zddNumafhH lvl1rg4q
+             %in %let lvl6sfvt :: aj =
+                        base:GHCziNum.fromInteger @ aj zddNumafhH lvlrg4p
+                 %in %let lvl7sfX9 :: aj -> aj -> aj =
+                            base:GHCziNum.zm @ aj zddNumafhH
+                     %in %let lvl8sfX8 :: aj -> aj -> aj =
+                                base:DataziBits.zizazi @ aj zddBitsafhG
+                         %in %let %rec
+                                  {zdwgo1sfNc :: ghczmprim:GHCziPrim.Intzh ->
+                                                 aj -> ghczmprim:GHCziPrim.Intzh =
+                                     \ (ww2sfN2::ghczmprim:GHCziPrim.Intzh) (wsfN4::aj) ->
+                                         %case ghczmprim:GHCziPrim.Intzh (wwsfMV wsfN4 lvl6sfvt)
+                                         %of (wildX22::ghczmprim:GHCziTypes.Bool)
+                                           {ghczmprim:GHCziTypes.False ->
+                                              zdwgo1sfNc
+                                              (ghczmprim:GHCziPrim.zpzh ww2sfN2
+                                               (1::ghczmprim:GHCziPrim.Intzh))
+                                              (lvl8sfX8 wsfN4 (lvl7sfX9 wsfN4 lvl5sfvs));
+                                            ghczmprim:GHCziTypes.True ->
+                                              ww2sfN2}}
+                             %in %case ghczmprim:GHCziTypes.Int (zdwgo1sfNc
+                                                                 (0::ghczmprim:GHCziPrim.Intzh)
+                                                                 etaB1)
+                                 %of (ww2sfN7::ghczmprim:GHCziPrim.Intzh)
+                                   {%_ ->
+                                      ghczmprim:GHCziTypes.Izh ww2sfN7}};
+  base:DataziBits.bitDefault :: %forall aafgr . (base:DataziBits.Bits
+                                                 aafgr)
+                                                ->
+                                                (base:GHCziNum.Num aafgr) ->
+                                                ghczmprim:GHCziTypes.Int -> aafgr =
+    \ @ ar
+      (zddBitsafit::base:DataziBits.Bits ar)
+      (zddNumafiu::base:GHCziNum.Num ar)
+      (etaB1::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.shiftL @ ar zddBitsafit
+        (base:GHCziNum.fromInteger @ ar zddNumafiu lvl1rg4q) etaB1;
+  base:DataziBits.zdfBitsIntzuzdcbit :: ghczmprim:GHCziTypes.Int ->
+                                        ghczmprim:GHCziTypes.Int =
+    base:DataziBits.zdfBitsIntzuzdsbitDefault;
+  base:DataziBits.zdfBitsIntzuzdcsetBit :: ghczmprim:GHCziTypes.Int
+                                           -> ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1y::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh3::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xi::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                                  (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X10::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.orzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh3)
+                         (ghczmprim:GHCziPrim.int2Wordzh
+                          (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                           (1::ghczmprim:GHCziPrim.Intzh) izhafhb))));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.orzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh3)
+                         (0::ghczmprim:GHCziPrim.Wordzh)))}}};
+  base:DataziBits.zdfBitsIntzuzdcclearBit :: ghczmprim:GHCziTypes.Int
+                                             ->
+                                             ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1zz::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh1::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xi::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                                  (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X10::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh1)
+                         (ghczmprim:GHCziPrim.xorzh
+                          (ghczmprim:GHCziPrim.int2Wordzh
+                           (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                            (1::ghczmprim:GHCziPrim.Intzh) izhafhb))
+                          (18446744073709551615::ghczmprim:GHCziPrim.Wordzh))));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.andzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh1)
+                         (18446744073709551615::ghczmprim:GHCziPrim.Wordzh)))}}};
+  base:DataziBits.zdfBitsIntzuzdccomplementBit :: ghczmprim:GHCziTypes.Int
+                                                  ->
+                                                  ghczmprim:GHCziTypes.Int ->
+                                                  ghczmprim:GHCziTypes.Int =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Int etaB2
+        %of (wildX1x::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh5::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Int eta1B1
+             %of (wild1Xi::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Int (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                                  (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X10::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.xorzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh5)
+                         (ghczmprim:GHCziPrim.int2Wordzh
+                          (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                           (1::ghczmprim:GHCziPrim.Intzh) izhafhb))));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Izh
+                       (ghczmprim:GHCziPrim.word2Intzh
+                        (ghczmprim:GHCziPrim.xorzh (ghczmprim:GHCziPrim.int2Wordzh xzhafh5)
+                         (0::ghczmprim:GHCziPrim.Wordzh)))}}};
+  base:DataziBits.zdfBitsIntzuzdstestBitDefault :: ghczmprim:GHCziTypes.Int
+                                                   ->
+                                                   ghczmprim:GHCziTypes.Int ->
+                                                   ghczmprim:GHCziTypes.Bool =
+    \ (etaB2::ghczmprim:GHCziTypes.Int)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Bool etaB2
+        %of (wildX1zz::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (xzhafh1::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Bool eta1B1
+             %of (wild1Xi::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafhb::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.zgzezh izhafhb
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X10::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.word2Intzh
+                                                        (ghczmprim:GHCziPrim.andzh
+                                                         (ghczmprim:GHCziPrim.int2Wordzh xzhafh1)
+                                                         (ghczmprim:GHCziPrim.int2Wordzh
+                                                          (ghczmprim:GHCziPrim.uncheckedIShiftLzh
+                                                           (1::ghczmprim:GHCziPrim.Intzh)
+                                                           izhafhb))))
+                       %of (wild3X36::ghczmprim:GHCziPrim.Intzh)
+                         {%_ ->
+                            ghczmprim:GHCziTypes.True;
+                          (0::ghczmprim:GHCziPrim.Intzh) ->
+                            ghczmprim:GHCziTypes.False};
+                     ghczmprim:GHCziTypes.True ->
+                       %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.word2Intzh
+                                                        (ghczmprim:GHCziPrim.andzh
+                                                         (ghczmprim:GHCziPrim.int2Wordzh xzhafh1)
+                                                         (0::ghczmprim:GHCziPrim.Wordzh)))
+                       %of (wild3X36::ghczmprim:GHCziPrim.Intzh)
+                         {%_ ->
+                            ghczmprim:GHCziTypes.True;
+                          (0::ghczmprim:GHCziPrim.Intzh) ->
+                            ghczmprim:GHCziTypes.False}}}};
+  base:DataziBits.zdfBitsIntzuzdctestBit :: ghczmprim:GHCziTypes.Int
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool =
+    base:DataziBits.zdfBitsIntzuzdstestBitDefault;
+  base:DataziBits.zdfBitsInt :: base:DataziBits.Bits
+                                ghczmprim:GHCziTypes.Int =
+    base:DataziBits.DZCBits @ ghczmprim:GHCziTypes.Int
+    ghczmprim:GHCziClasses.zdfEqInt
+    base:DataziBits.zdfBitsIntzuzdczizazi
+    base:DataziBits.zdfBitsIntzuzdczizbzi
+    base:DataziBits.zdfBitsIntzuzdcxor
+    base:DataziBits.zdfBitsIntzuzdccomplement
+    base:DataziBits.zdfBitsIntzuzdcshift
+    base:DataziBits.zdfBitsIntzuzdcrotate
+    base:DataziBits.zdfBitsIntzuzdsbitDefault
+    base:DataziBits.zdfBitsIntzuzdcsetBit
+    base:DataziBits.zdfBitsIntzuzdcclearBit
+    base:DataziBits.zdfBitsIntzuzdccomplementBit
+    base:DataziBits.zdfBitsIntzuzdstestBitDefault
+    base:DataziBits.zdfBitsIntzuzdcbitSizze
+    base:DataziBits.zdfBitsIntzuzdcisSigned
+    base:DataziBits.zdfBitsIntzuzdcshiftL
+    base:DataziBits.zdfBitsIntzuzdcunsafeShiftL
+    base:DataziBits.zdfBitsIntzuzdcshiftR
+    base:DataziBits.zdfBitsIntzuzdcunsafeShiftR
+    base:DataziBits.zdfBitsIntzuzdcrotateL
+    base:DataziBits.zdfBitsIntzuzdcrotateR
+    base:DataziBits.zdfBitsIntzuzdcpopCount;
+  base:DataziBits.zdfBitsWordzuzdcbit :: ghczmprim:GHCziTypes.Int ->
+                                         ghczmprim:GHCziTypes.Word =
+    base:DataziBits.zdfBitsWordzuzdsbitDefault;
+  base:DataziBits.zdfBitsWordzuzdcsetBit :: ghczmprim:GHCziTypes.Word
+                                            ->
+                                            ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Word =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB2
+        %of (wildX1L::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgG::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word eta1B1
+             %of (wild1Xv::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X12::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.orzh xzhafgG
+                        (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                         (1::ghczmprim:GHCziPrim.Wordzh) izhafgP));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.orzh xzhafgG
+                        (0::ghczmprim:GHCziPrim.Wordzh))}}};
+  base:DataziBits.zdfBitsWordzuzdcclearBit :: ghczmprim:GHCziTypes.Word
+                                              ->
+                                              ghczmprim:GHCziTypes.Int ->
+                                              ghczmprim:GHCziTypes.Word =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB2
+        %of (wildX1M::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgE::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word eta1B1
+             %of (wild1Xv::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X12::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.andzh xzhafgE
+                        (ghczmprim:GHCziPrim.xorzh
+                         (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                          (1::ghczmprim:GHCziPrim.Wordzh) izhafgP)
+                         (18446744073709551615::ghczmprim:GHCziPrim.Wordzh)));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.andzh xzhafgE
+                        (18446744073709551615::ghczmprim:GHCziPrim.Wordzh))}}};
+  base:DataziBits.zdfBitsWordzuzdccomplementBit :: ghczmprim:GHCziTypes.Word
+                                                   ->
+                                                   ghczmprim:GHCziTypes.Int ->
+                                                   ghczmprim:GHCziTypes.Word =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Word etaB2
+        %of (wildX1K::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgI::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Word eta1B1
+             %of (wild1Xv::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Word (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X12::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.xorzh xzhafgI
+                        (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                         (1::ghczmprim:GHCziPrim.Wordzh) izhafgP));
+                     ghczmprim:GHCziTypes.True ->
+                       ghczmprim:GHCziTypes.Wzh
+                       (ghczmprim:GHCziPrim.xorzh xzhafgI
+                        (0::ghczmprim:GHCziPrim.Wordzh))}}};
+  base:DataziBits.zdfBitsWordzuzdstestBitDefault :: ghczmprim:GHCziTypes.Word
+                                                    ->
+                                                    ghczmprim:GHCziTypes.Int ->
+                                                    ghczmprim:GHCziTypes.Bool =
+    \ (etaB2::ghczmprim:GHCziTypes.Word)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Bool etaB2
+        %of (wildX1M::ghczmprim:GHCziTypes.Word)
+          {ghczmprim:GHCziTypes.Wzh (xzhafgE::ghczmprim:GHCziPrim.Wordzh) ->
+             %case ghczmprim:GHCziTypes.Bool eta1B1
+             %of (wild1Xv::ghczmprim:GHCziTypes.Int)
+               {ghczmprim:GHCziTypes.Izh (izhafgP::ghczmprim:GHCziPrim.Intzh) ->
+                  %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.zgzezh izhafgP
+                                                   (64::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X12::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.eqWordzh
+                                                        (ghczmprim:GHCziPrim.andzh xzhafgE
+                                                         (ghczmprim:GHCziPrim.uncheckedShiftLzh
+                                                          (1::ghczmprim:GHCziPrim.Wordzh) izhafgP))
+                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                       %of (wild3afxK::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            ghczmprim:GHCziTypes.True;
+                          ghczmprim:GHCziTypes.True ->
+                            ghczmprim:GHCziTypes.False};
+                     ghczmprim:GHCziTypes.True ->
+                       %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.eqWordzh
+                                                        (ghczmprim:GHCziPrim.andzh xzhafgE
+                                                         (0::ghczmprim:GHCziPrim.Wordzh))
+                                                        (0::ghczmprim:GHCziPrim.Wordzh))
+                       %of (wild3afxK::ghczmprim:GHCziTypes.Bool)
+                         {ghczmprim:GHCziTypes.False ->
+                            ghczmprim:GHCziTypes.True;
+                          ghczmprim:GHCziTypes.True ->
+                            ghczmprim:GHCziTypes.False}}}};
+  base:DataziBits.zdfBitsWordzuzdctestBit :: ghczmprim:GHCziTypes.Word
+                                             ->
+                                             ghczmprim:GHCziTypes.Int -> ghczmprim:GHCziTypes.Bool =
+    base:DataziBits.zdfBitsWordzuzdstestBitDefault;
+  base:DataziBits.zdfBitsWord :: base:DataziBits.Bits
+                                 ghczmprim:GHCziTypes.Word =
+    base:DataziBits.DZCBits @ ghczmprim:GHCziTypes.Word
+    ghczmprim:GHCziClasses.zdfEqWord
+    base:DataziBits.zdfBitsWordzuzdczizazi
+    base:DataziBits.zdfBitsWordzuzdczizbzi
+    base:DataziBits.zdfBitsWordzuzdcxor
+    base:DataziBits.zdfBitsWordzuzdccomplement
+    base:DataziBits.zdfBitsWordzuzdcshift
+    base:DataziBits.zdfBitsWordzuzdcrotate
+    base:DataziBits.zdfBitsWordzuzdsbitDefault
+    base:DataziBits.zdfBitsWordzuzdcsetBit
+    base:DataziBits.zdfBitsWordzuzdcclearBit
+    base:DataziBits.zdfBitsWordzuzdccomplementBit
+    base:DataziBits.zdfBitsWordzuzdstestBitDefault
+    base:DataziBits.zdfBitsWordzuzdcbitSizze
+    base:DataziBits.zdfBitsWordzuzdcisSigned
+    base:DataziBits.zdfBitsWordzuzdcshiftL
+    base:DataziBits.zdfBitsWordzuzdcunsafeShiftL
+    base:DataziBits.zdfBitsWordzuzdcshiftR
+    base:DataziBits.zdfBitsWordzuzdcunsafeShiftR
+    base:DataziBits.zdfBitsWordzuzdcrotateL
+    base:DataziBits.zdfBitsWordzuzdcrotateR
+    base:DataziBits.zdfBitsWordzuzdcpopCount;
+  base:DataziBits.zdfBitsIntegerzuzdcpopCount :: integerzmgmp:GHCziIntegerziType.Integer
+                                                 -> ghczmprim:GHCziTypes.Int =
+    base:DataziBits.zdfBitsIntegerzuzdspopCountDefault;
+  base:DataziBits.zdfBitsIntegerzuzdcbit :: ghczmprim:GHCziTypes.Int
+                                            -> integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.zdfBitsIntegerzuzdsbitDefault;
+  base:DataziBits.zdfBitsIntegerzuzdcsetBit :: integerzmgmp:GHCziIntegerziType.Integer
+                                               ->
+                                               ghczmprim:GHCziTypes.Int ->
+                                               integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer eta1B1
+        %of (wildX2a::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafgB::ghczmprim:GHCziPrim.Intzh) ->
+             %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                            izhafgB (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  integerzmgmp:GHCziIntegerziType.orInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.shiftRInteger lvl1rg4q
+                   (ghczmprim:GHCziPrim.negateIntzh izhafgB));
+                ghczmprim:GHCziTypes.True ->
+                  integerzmgmp:GHCziIntegerziType.orInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.shiftLInteger lvl1rg4q izhafgB)}};
+  base:DataziBits.zdfBitsIntegerzuzdcclearBit :: integerzmgmp:GHCziIntegerziType.Integer
+                                                 ->
+                                                 ghczmprim:GHCziTypes.Int ->
+                                                 integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer eta1B1
+        %of (wildX2a::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafgB::ghczmprim:GHCziPrim.Intzh) ->
+             %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                            izhafgB (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  integerzmgmp:GHCziIntegerziType.andInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.complementInteger
+                   (integerzmgmp:GHCziIntegerziType.shiftRInteger lvl1rg4q
+                    (ghczmprim:GHCziPrim.negateIntzh izhafgB)));
+                ghczmprim:GHCziTypes.True ->
+                  integerzmgmp:GHCziIntegerziType.andInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.complementInteger
+                   (integerzmgmp:GHCziIntegerziType.shiftLInteger lvl1rg4q
+                    izhafgB))}};
+  base:DataziBits.zdfBitsIntegerzuzdccomplementBit :: integerzmgmp:GHCziIntegerziType.Integer
+                                                      ->
+                                                      ghczmprim:GHCziTypes.Int ->
+                                                      integerzmgmp:GHCziIntegerziType.Integer =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case integerzmgmp:GHCziIntegerziType.Integer eta1B1
+        %of (wildX2a::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafgB::ghczmprim:GHCziPrim.Intzh) ->
+             %case integerzmgmp:GHCziIntegerziType.Integer (ghczmprim:GHCziPrim.zgzezh
+                                                            izhafgB (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  integerzmgmp:GHCziIntegerziType.xorInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.shiftRInteger lvl1rg4q
+                   (ghczmprim:GHCziPrim.negateIntzh izhafgB));
+                ghczmprim:GHCziTypes.True ->
+                  integerzmgmp:GHCziIntegerziType.xorInteger etaB2
+                  (integerzmgmp:GHCziIntegerziType.shiftLInteger lvl1rg4q izhafgB)}};
+  base:DataziBits.zdfBitsIntegerzuzdstestBitDefault :: integerzmgmp:GHCziIntegerziType.Integer
+                                                       ->
+                                                       ghczmprim:GHCziTypes.Int ->
+                                                       ghczmprim:GHCziTypes.Bool =
+    \ (etaB2::integerzmgmp:GHCziIntegerziType.Integer)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        %case ghczmprim:GHCziTypes.Bool eta1B1
+        %of (wildX2a::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (izhafgB::ghczmprim:GHCziPrim.Intzh) ->
+             %case ghczmprim:GHCziTypes.Bool (ghczmprim:GHCziPrim.zgzezh izhafgB
+                                              (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X15::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  integerzmgmp:GHCziIntegerziType.neqInteger
+                  (integerzmgmp:GHCziIntegerziType.andInteger etaB2
+                   (integerzmgmp:GHCziIntegerziType.shiftRInteger lvl1rg4q
+                    (ghczmprim:GHCziPrim.negateIntzh izhafgB)))
+                  lvlrg4p;
+                ghczmprim:GHCziTypes.True ->
+                  integerzmgmp:GHCziIntegerziType.neqInteger
+                  (integerzmgmp:GHCziIntegerziType.andInteger etaB2
+                   (integerzmgmp:GHCziIntegerziType.shiftLInteger lvl1rg4q izhafgB))
+                  lvlrg4p}};
+  base:DataziBits.zdfBitsIntegerzuzdctestBit :: integerzmgmp:GHCziIntegerziType.Integer
+                                                ->
+                                                ghczmprim:GHCziTypes.Int ->
+                                                ghczmprim:GHCziTypes.Bool =
+    base:DataziBits.zdfBitsIntegerzuzdstestBitDefault;
+  base:DataziBits.zdfBitsInteger :: base:DataziBits.Bits
+                                    integerzmgmp:GHCziIntegerziType.Integer =
+    base:DataziBits.DZCBits @ integerzmgmp:GHCziIntegerziType.Integer
+    integerzmgmp:GHCziIntegerziType.zdfEqInteger
+    integerzmgmp:GHCziIntegerziType.andInteger
+    integerzmgmp:GHCziIntegerziType.orInteger
+    integerzmgmp:GHCziIntegerziType.xorInteger
+    integerzmgmp:GHCziIntegerziType.complementInteger
+    base:DataziBits.zdfBitsIntegerzuzdcshift
+    base:DataziBits.zdfBitsIntegerzuzdcshift
+    base:DataziBits.zdfBitsIntegerzuzdsbitDefault
+    base:DataziBits.zdfBitsIntegerzuzdcsetBit
+    base:DataziBits.zdfBitsIntegerzuzdcclearBit
+    base:DataziBits.zdfBitsIntegerzuzdccomplementBit
+    base:DataziBits.zdfBitsIntegerzuzdstestBitDefault
+    base:DataziBits.zdfBitsIntegerzuzdcbitSizze
+    base:DataziBits.zdfBitsIntegerzuzdcisSigned
+    base:DataziBits.zdfBitsIntegerzuzdcshiftL
+    base:DataziBits.zdfBitsIntegerzuzdcunsafeShiftL
+    base:DataziBits.zdfBitsIntegerzuzdcshiftR
+    base:DataziBits.zdfBitsIntegerzuzdcunsafeShiftR
+    base:DataziBits.zdfBitsIntegerzuzdcrotateL
+    base:DataziBits.zdfBitsIntegerzuzdcrotateR
+    base:DataziBits.zdfBitsIntegerzuzdspopCountDefault;
+  base:DataziBits.testBitDefault :: %forall aafgq . (base:DataziBits.Bits
+                                                     aafgq)
+                                                    ->
+                                                    (base:GHCziNum.Num aafgq) ->
+                                                    aafgq ->
+                                                    ghczmprim:GHCziTypes.Int ->
+                                                    ghczmprim:GHCziTypes.Bool =
+    \ @ an
+      (zddBitsafil::base:DataziBits.Bits an)
+      (zddNumafim::base:GHCziNum.Num an)
+      (etaB2::an)
+      (eta1B1::ghczmprim:GHCziTypes.Int) ->
+        ghczmprim:GHCziClasses.zsze @ an
+        (base:DataziBits.zdp1Bits @ an zddBitsafil)
+        (base:DataziBits.zizazi @ an zddBitsafil etaB2
+         (base:DataziBits.bit @ an zddBitsafil eta1B1))
+        (base:GHCziNum.fromInteger @ an zddNumafim lvlrg4p);
+  base:DataziBits.zddmshiftR :: %forall aafg2 . (base:DataziBits.Bits
+                                                 aafg2)
+                                                -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgh::aafg2)
+      (iafgi::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.shift @ aafg2 zddBitsafizz xafgh
+        (%case ghczmprim:GHCziTypes.Int iafgi
+         %of (wildXr::ghczmprim:GHCziTypes.Int)
+           {ghczmprim:GHCziTypes.Izh (x1a1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+              ghczmprim:GHCziTypes.Izh
+              (ghczmprim:GHCziPrim.negateIntzh x1a1lZZ)});
+  base:DataziBits.zddmrotateR :: %forall aafg2 . (base:DataziBits.Bits
+                                                  aafg2)
+                                                 -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafgn::aafg2)
+      (iafgo::ghczmprim:GHCziTypes.Int) ->
+        base:DataziBits.rotate @ aafg2 zddBitsafizz xafgn
+        (%case ghczmprim:GHCziTypes.Int iafgo
+         %of (wildXr::ghczmprim:GHCziTypes.Int)
+           {ghczmprim:GHCziTypes.Izh (x1a1lZZ::ghczmprim:GHCziPrim.Intzh) ->
+              ghczmprim:GHCziTypes.Izh
+              (ghczmprim:GHCziPrim.negateIntzh x1a1lZZ)});
+  base:DataziBits.zddmshift :: %forall aafg2 . (base:DataziBits.Bits
+                                                aafg2)
+                                               -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafg3::aafg2)
+      (iafg4::ghczmprim:GHCziTypes.Int) ->
+        %case aafg2 iafg4 %of (wilda1oB::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (x1a1oD::ghczmprim:GHCziPrim.Intzh) ->
+             %case aafg2 (ghczmprim:GHCziPrim.zlzh x1a1oD
+                          (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X2a::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  %case aafg2 (ghczmprim:GHCziPrim.zgzh x1a1oD
+                               (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X2c::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       xafg3;
+                     ghczmprim:GHCziTypes.True ->
+                       base:DataziBits.shiftL @ aafg2 zddBitsafizz xafg3 wilda1oB};
+                ghczmprim:GHCziTypes.True ->
+                  base:DataziBits.shiftR @ aafg2 zddBitsafizz xafg3
+                  (ghczmprim:GHCziTypes.Izh
+                   (ghczmprim:GHCziPrim.negateIntzh x1a1oD))}};
+  base:DataziBits.zddmrotate :: %forall aafg2 . (base:DataziBits.Bits
+                                                 aafg2)
+                                                -> aafg2 -> ghczmprim:GHCziTypes.Int -> aafg2 =
+    \ @ aafg2
+      (zddBitsafizz::base:DataziBits.Bits aafg2)
+      (xafg5::aafg2)
+      (iafg6::ghczmprim:GHCziTypes.Int) ->
+        %case aafg2 iafg6 %of (wilda1oB::ghczmprim:GHCziTypes.Int)
+          {ghczmprim:GHCziTypes.Izh (x1a1oD::ghczmprim:GHCziPrim.Intzh) ->
+             %case aafg2 (ghczmprim:GHCziPrim.zlzh x1a1oD
+                          (0::ghczmprim:GHCziPrim.Intzh))
+             %of (wild1X2b::ghczmprim:GHCziTypes.Bool)
+               {ghczmprim:GHCziTypes.False ->
+                  %case aafg2 (ghczmprim:GHCziPrim.zgzh x1a1oD
+                               (0::ghczmprim:GHCziPrim.Intzh))
+                  %of (wild2X2d::ghczmprim:GHCziTypes.Bool)
+                    {ghczmprim:GHCziTypes.False ->
+                       xafg5;
+                     ghczmprim:GHCziTypes.True ->
+                       base:DataziBits.rotateL @ aafg2 zddBitsafizz xafg5 wilda1oB};
+                ghczmprim:GHCziTypes.True ->
+                  base:DataziBits.rotateR @ aafg2 zddBitsafizz xafg5
+                  (ghczmprim:GHCziTypes.Izh
+                   (ghczmprim:GHCziPrim.negateIntzh x1a1oD))}};

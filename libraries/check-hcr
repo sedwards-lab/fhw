@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Verify that every .hcr file generated can be parsed by our front-end
+
+FHW=..//dist/build/fhw/fhw
+
+# Note that this only works if there are no spaces in the filenames
+for file in `find . -name *.hcr`
+do
+   echo $file
+   $FHW -r $file > /dev/null
+done

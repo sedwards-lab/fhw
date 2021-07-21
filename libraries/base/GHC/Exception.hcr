@@ -1,0 +1,1051 @@
+%module base:GHCziException
+  %data base:GHCziException.ArithException =
+    {base:GHCziException.Overflow;
+     base:GHCziException.Underflow;
+     base:GHCziException.LossOfPrecision;
+     base:GHCziException.DivideByZZero;
+     base:GHCziException.Denormal;
+     base:GHCziException.RatioZZeroDenominator};
+  %data base:GHCziException.ErrorCall =
+    {base:GHCziException.ErrorCall (ghczmprim:GHCziTypes.ZMZN
+                                    ghczmprim:GHCziTypes.Char)};
+  %data base:GHCziException.Exception eajGd =
+    {base:GHCziException.DZCException (base:GHCziShow.Show eajGd)
+                                      (eajGd -> base:GHCziException.SomeException eajGd)
+                                      ((base:GHCziException.SomeException eajGd) ->
+                                       base:DataziMaybe.Maybe eajGd)};
+  %data base:GHCziException.SomeException eajGe =
+    {base:GHCziException.SomeException eajGe};
+  base:GHCziException.zdp1Exception :: %forall eajGd . (base:GHCziException.Exception
+                                                        eajGd)
+                                                       -> base:GHCziShow.Show eajGd =
+    \ @ eajGd (tplB1::base:GHCziException.Exception eajGd) ->
+        %case (base:GHCziShow.Show eajGd) tplB1
+        %of (tplX4::base:GHCziException.Exception eajGd)
+          {base:GHCziException.DZCException
+           (tplB2::base:GHCziShow.Show eajGd)
+           (tplB3::eajGd -> base:GHCziException.SomeException eajGd)
+           (tplB4::(base:GHCziException.SomeException eajGd) ->
+                   base:DataziMaybe.Maybe eajGd) ->
+             tplB2};
+  base:GHCziException.toException :: %forall eajGd . (base:GHCziException.Exception
+                                                      eajGd)
+                                                     ->
+                                                     eajGd ->
+                                                     base:GHCziException.SomeException eajGd =
+    \ @ eajGd (tplB1::base:GHCziException.Exception eajGd) ->
+        %case (eajGd -> base:GHCziException.SomeException eajGd) tplB1
+        %of (tplX4::base:GHCziException.Exception eajGd)
+          {base:GHCziException.DZCException
+           (tplB2::base:GHCziShow.Show eajGd)
+           (tplB3::eajGd -> base:GHCziException.SomeException eajGd)
+           (tplB4::(base:GHCziException.SomeException eajGd) ->
+                   base:DataziMaybe.Maybe eajGd) ->
+             tplB3};
+  base:GHCziException.fromException :: %forall eajGd . (base:GHCziException.Exception
+                                                        eajGd)
+                                                       ->
+                                                       (base:GHCziException.SomeException eajGd) ->
+                                                       base:DataziMaybe.Maybe eajGd =
+    \ @ eajGd (tplB1::base:GHCziException.Exception eajGd) ->
+        %case ((base:GHCziException.SomeException eajGd) ->
+               base:DataziMaybe.Maybe eajGd) tplB1
+        %of (tplX4::base:GHCziException.Exception eajGd)
+          {base:GHCziException.DZCException
+           (tplB2::base:GHCziShow.Show eajGd)
+           (tplB3::eajGd -> base:GHCziException.SomeException eajGd)
+           (tplB4::(base:GHCziException.SomeException eajGd) ->
+                   base:DataziMaybe.Maybe eajGd) ->
+             tplB4};
+  base:GHCziException.zddmfromException :: %forall eajGd . (base:GHCziException.Exception
+                                                            eajGd)
+                                                           ->
+                                                           (base:GHCziException.SomeException eajGd)
+                                                           -> base:DataziMaybe.Maybe eajGd =
+    \ @ eajGd
+      (zddExceptionajHs::base:GHCziException.Exception eajGd)
+      (dsdjJ2::base:GHCziException.SomeException eajGd) ->
+        %case (base:DataziMaybe.Maybe eajGd) dsdjJ2
+        %of (wildXC::base:GHCziException.SomeException eajGd)
+          {base:GHCziException.SomeException (ds1djJ3::eajGd) ->
+             base:DataziMaybe.Nothing @ eajGd};
+  base:GHCziException.zddmtoException :: %forall eajGd . (base:GHCziException.Exception
+                                                          eajGd)
+                                                         ->
+                                                         eajGd ->
+                                                         base:GHCziException.SomeException eajGd =
+    \ @ eajGd
+      (zddExceptionajHs::base:GHCziException.Exception eajGd)
+      (etaB1::eajGd) ->
+        base:GHCziException.SomeException @ eajGd etaB1;
+  base:GHCziException.throw2 :: %forall ex ay . ex ->
+                                                (ex -> base:GHCziException.SomeException ex) -> ay =
+    \ @ ex
+      @ ay
+      (wsjUf::ex)
+      (wwsjUj::ex -> base:GHCziException.SomeException ex) ->
+        ghczmprim:GHCziPrim.raisezh
+        @ (base:GHCziException.SomeException ex) @ ay (wwsjUj wsjUf);
+  base:GHCziException.throw1 :: %forall ex ay . ex ->
+                                                (base:GHCziException.Exception ex) -> ay =
+    \ @ ex
+      @ ay
+      (wsjUf::ex)
+      (w1sjUg::base:GHCziException.Exception ex) ->
+        %case ay w1sjUg %of (w2XjVa::base:GHCziException.Exception ex)
+          {base:GHCziException.DZCException
+           (wwsjUi::base:GHCziShow.Show ex)
+           (ww1sjUj::ex -> base:GHCziException.SomeException ex)
+           (ww2sjUk::(base:GHCziException.SomeException ex) ->
+                     base:DataziMaybe.Maybe ex) ->
+             base:GHCziException.throw2 @ ex @ ay wsjUf ww1sjUj};
+  base:GHCziException.throw :: %forall eajGf aajGg . (base:GHCziException.Exception
+                                                      eajGf)
+                                                     -> eajGf -> aajGg =
+    \ @ ex
+      @ ay
+      (zddExceptionajHo::base:GHCziException.Exception ex)
+      (eajGh::ex) ->
+        base:GHCziException.throw1 @ ex @ ay eajGh zddExceptionajHo;
+  base:GHCziException.zdfShowSomeExceptionzuzdcshowsPrec :: %forall eajGj . (base:GHCziShow.Show
+                                                                             eajGj)
+                                                                            ->
+                                                                            ghczmprim:GHCziTypes.Int
+                                                                            ->
+                                                                            (base:GHCziException.SomeException
+                                                                             eajGj)
+                                                                            ->
+                                                                            (ghczmprim:GHCziTypes.ZMZN
+                                                                             ghczmprim:GHCziTypes.Char)
+                                                                            ->
+                                                                            ghczmprim:GHCziTypes.ZMZN
+                                                                            ghczmprim:GHCziTypes.Char =
+    \ @ eajGj
+      (zddShowajIC::base:GHCziShow.Show eajGj)
+      (pajGk::ghczmprim:GHCziTypes.Int)
+      (dsdjJg::base:GHCziException.SomeException eajGj) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) dsdjJg
+        %of (wildXG::base:GHCziException.SomeException eajGj)
+          {base:GHCziException.SomeException (eajGl::eajGj) ->
+             base:GHCziShow.showsPrec @ eajGj zddShowajIC pajGk eajGl};
+  base:GHCziException.zdfShowSomeExceptionzuzdcshowList :: %forall eajGj . (base:GHCziShow.Show
+                                                                            eajGj)
+                                                                           ->
+                                                                           (ghczmprim:GHCziTypes.ZMZN
+                                                                            (base:GHCziException.SomeException
+                                                                             eajGj))
+                                                                           ->
+                                                                           (ghczmprim:GHCziTypes.ZMZN
+                                                                            ghczmprim:GHCziTypes.Char)
+                                                                           ->
+                                                                           ghczmprim:GHCziTypes.ZMZN
+                                                                           ghczmprim:GHCziTypes.Char =
+    \ @ eajGj
+      (zddShowajIC::base:GHCziShow.Show eajGj)
+      (etaB2::ghczmprim:GHCziTypes.ZMZN
+              (base:GHCziException.SomeException eajGj))
+      (eta1B1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        %let lvlsjXd :: ghczmprim:GHCziTypes.Int ->
+                        eajGj ->
+                        (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                        ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+               base:GHCziShow.showsPrec @ eajGj zddShowajIC
+        %in base:GHCziShow.showListzuzu
+            @ (base:GHCziException.SomeException eajGj)
+            (\ (dsdjJg::base:GHCziException.SomeException eajGj) ->
+                 %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                        ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) dsdjJg
+                 %of (wildXG::base:GHCziException.SomeException eajGj)
+                   {base:GHCziException.SomeException (eajGl::eajGj) ->
+                      lvlsjXd base:GHCziShow.shows26 eajGl})
+            etaB2 eta1B1;
+  base:GHCziException.zdfShowSomeExceptionzuzdcshow :: %forall eajGj . (base:GHCziShow.Show
+                                                                        eajGj)
+                                                                       ->
+                                                                       (base:GHCziException.SomeException
+                                                                        eajGj)
+                                                                       ->
+                                                                       ghczmprim:GHCziTypes.ZMZN
+                                                                       ghczmprim:GHCziTypes.Char =
+    \ @ eajGj
+      (zddShowajIC::base:GHCziShow.Show eajGj)
+      (xa59u::base:GHCziException.SomeException eajGj) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) xa59u
+        %of (wildXG::base:GHCziException.SomeException eajGj)
+          {base:GHCziException.SomeException (eajGl::eajGj) ->
+             base:GHCziShow.showsPrec @ eajGj zddShowajIC base:GHCziShow.shows26
+             eajGl (ghczmprim:GHCziTypes.ZMZN @ ghczmprim:GHCziTypes.Char)};
+  base:GHCziException.zdfShowSomeException :: %forall eajGj . (base:GHCziShow.Show
+                                                               eajGj)
+                                                              ->
+                                                              base:GHCziShow.Show
+                                                              (base:GHCziException.SomeException
+                                                               eajGj) =
+    \ @ eajGj (zddShowajIC::base:GHCziShow.Show eajGj) ->
+        base:GHCziShow.DZCShow @ (base:GHCziException.SomeException eajGj)
+        (base:GHCziException.zdfShowSomeExceptionzuzdcshowsPrec @ eajGj
+         zddShowajIC)
+        (base:GHCziException.zdfShowSomeExceptionzuzdcshow @ eajGj
+         zddShowajIC)
+        (base:GHCziException.zdfShowSomeExceptionzuzdcshowList @ eajGj
+         zddShowajIC);
+  base:GHCziException.zdfShowErrorCallzuzdcshowsPrec :: ghczmprim:GHCziTypes.Int
+                                                        ->
+                                                        base:GHCziException.ErrorCall ->
+                                                        (ghczmprim:GHCziTypes.ZMZN
+                                                         ghczmprim:GHCziTypes.Char)
+                                                        ->
+                                                        ghczmprim:GHCziTypes.ZMZN
+                                                        ghczmprim:GHCziTypes.Char =
+    \ (dsdjJd::ghczmprim:GHCziTypes.Int)
+      (ds1djJe::base:GHCziException.ErrorCall)
+      (etaB1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ds1djJe
+        %of (wildXI::base:GHCziException.ErrorCall)
+          {base:GHCziException.ErrorCall
+           (errajGi::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+             base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char errajGi etaB1};
+  base:GHCziException.zdfShowErrorCall1 :: base:GHCziException.ErrorCall
+                                           ->
+                                           (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+                                           ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char =
+    \ (dsdjJe::base:GHCziException.ErrorCall)
+      (etaB1::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) dsdjJe
+        %of (wildXI::base:GHCziException.ErrorCall)
+          {base:GHCziException.ErrorCall
+           (errajGi::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+             base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char errajGi etaB1};
+  base:GHCziException.zdfShowErrorCallzuzdcshowList :: (ghczmprim:GHCziTypes.ZMZN
+                                                        base:GHCziException.ErrorCall)
+                                                       ->
+                                                       (ghczmprim:GHCziTypes.ZMZN
+                                                        ghczmprim:GHCziTypes.Char)
+                                                       ->
+                                                       ghczmprim:GHCziTypes.ZMZN
+                                                       ghczmprim:GHCziTypes.Char =
+    \ (lsa59v::ghczmprim:GHCziTypes.ZMZN base:GHCziException.ErrorCall)
+      (sa59w::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziShow.showListzuzu @ base:GHCziException.ErrorCall
+        base:GHCziException.zdfShowErrorCall1 lsa59v sa59w;
+  base:GHCziException.zdfShowErrorCallzuzdcshow :: base:GHCziException.ErrorCall
+                                                   ->
+                                                   ghczmprim:GHCziTypes.ZMZN
+                                                   ghczmprim:GHCziTypes.Char =
+    \ (xa59u::base:GHCziException.ErrorCall) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) xa59u
+        %of (wildXI::base:GHCziException.ErrorCall)
+          {base:GHCziException.ErrorCall
+           (errajGi::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+             errajGi};
+  base:GHCziException.zdfShowErrorCall :: base:GHCziShow.Show
+                                          base:GHCziException.ErrorCall =
+    base:GHCziShow.DZCShow @ base:GHCziException.ErrorCall
+    base:GHCziException.zdfShowErrorCallzuzdcshowsPrec
+    base:GHCziException.zdfShowErrorCallzuzdcshow
+    base:GHCziException.zdfShowErrorCallzuzdcshowList;
+  base:GHCziException.zdfExceptionErrorCallzuzdcfromException :: (base:GHCziException.SomeException
+                                                                  base:GHCziException.ErrorCall)
+                                                                 ->
+                                                                 base:DataziMaybe.Maybe
+                                                                 base:GHCziException.ErrorCall =
+    \ (dsdjJ2::base:GHCziException.SomeException
+               base:GHCziException.ErrorCall) ->
+        %case (base:DataziMaybe.Maybe base:GHCziException.ErrorCall) dsdjJ2
+        %of (wildXC::base:GHCziException.SomeException
+                     base:GHCziException.ErrorCall)
+          {base:GHCziException.SomeException
+           (ds1djJ3::base:GHCziException.ErrorCall) ->
+             base:DataziMaybe.Nothing @ base:GHCziException.ErrorCall};
+  base:GHCziException.zdfExceptionErrorCallzuzdctoException :: base:GHCziException.ErrorCall
+                                                               ->
+                                                               base:GHCziException.SomeException
+                                                               base:GHCziException.ErrorCall =
+    base:GHCziException.SomeException @ base:GHCziException.ErrorCall;
+  base:GHCziException.zdfExceptionErrorCall :: base:GHCziException.Exception
+                                               base:GHCziException.ErrorCall =
+    base:GHCziException.DZCException @ base:GHCziException.ErrorCall
+    base:GHCziException.zdfShowErrorCall
+    (base:GHCziException.SomeException @ base:GHCziException.ErrorCall)
+    base:GHCziException.zdfExceptionErrorCallzuzdcfromException;
+  base:GHCziException.zdfShowArithException13 :: ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("arithmetic overflow"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException12 :: (ghczmprim:GHCziTypes.ZMZN
+                                                  ghczmprim:GHCziTypes.Char)
+                                                 ->
+                                                 ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException13;
+  base:GHCziException.zdfShowArithException11 :: ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("arithmetic underflow"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException10 :: (ghczmprim:GHCziTypes.ZMZN
+                                                  ghczmprim:GHCziTypes.Char)
+                                                 ->
+                                                 ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException11;
+  base:GHCziException.zdfShowArithException9 :: ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("loss of precision"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException8 :: (ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException9;
+  base:GHCziException.zdfShowArithException7 :: ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("divide by zero"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException6 :: (ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException7;
+  base:GHCziException.zdfShowArithException5 :: ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("denormal"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException4 :: (ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException5;
+  base:GHCziException.zdfShowArithException3 :: ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    ghczmprim:GHCziCString.unpackCStringzh
+    ("Ratio has zero denominator"::ghczmprim:GHCziPrim.Addrzh);
+  base:GHCziException.zdfShowArithException2 :: (ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    base:GHCziBase.zpzp @ ghczmprim:GHCziTypes.Char
+    base:GHCziException.zdfShowArithException3;
+  base:GHCziException.zdfShowArithExceptionzuzdcshowsPrec :: ghczmprim:GHCziTypes.Int
+                                                             ->
+                                                             base:GHCziException.ArithException ->
+                                                             (ghczmprim:GHCziTypes.ZMZN
+                                                              ghczmprim:GHCziTypes.Char)
+                                                             ->
+                                                             ghczmprim:GHCziTypes.ZMZN
+                                                             ghczmprim:GHCziTypes.Char =
+    \ (dsdjJ5::ghczmprim:GHCziTypes.Int)
+      (ds1djJ6::base:GHCziException.ArithException) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ds1djJ6
+        %of (wildXP::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             base:GHCziException.zdfShowArithException12;
+           base:GHCziException.Underflow ->
+             base:GHCziException.zdfShowArithException10;
+           base:GHCziException.LossOfPrecision ->
+             base:GHCziException.zdfShowArithException8;
+           base:GHCziException.DivideByZZero ->
+             base:GHCziException.zdfShowArithException6;
+           base:GHCziException.Denormal ->
+             base:GHCziException.zdfShowArithException4;
+           base:GHCziException.RatioZZeroDenominator ->
+             base:GHCziException.zdfShowArithException2};
+  base:GHCziException.zdfShowArithException1 :: base:GHCziException.ArithException
+                                                ->
+                                                (ghczmprim:GHCziTypes.ZMZN
+                                                 ghczmprim:GHCziTypes.Char)
+                                                ->
+                                                ghczmprim:GHCziTypes.ZMZN
+                                                ghczmprim:GHCziTypes.Char =
+    \ (dsdjJ6::base:GHCziException.ArithException) ->
+        %case ((ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+               ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) dsdjJ6
+        %of (wildXP::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             base:GHCziException.zdfShowArithException12;
+           base:GHCziException.Underflow ->
+             base:GHCziException.zdfShowArithException10;
+           base:GHCziException.LossOfPrecision ->
+             base:GHCziException.zdfShowArithException8;
+           base:GHCziException.DivideByZZero ->
+             base:GHCziException.zdfShowArithException6;
+           base:GHCziException.Denormal ->
+             base:GHCziException.zdfShowArithException4;
+           base:GHCziException.RatioZZeroDenominator ->
+             base:GHCziException.zdfShowArithException2};
+  base:GHCziException.zdfShowArithExceptionzuzdcshowList :: (ghczmprim:GHCziTypes.ZMZN
+                                                             base:GHCziException.ArithException)
+                                                            ->
+                                                            (ghczmprim:GHCziTypes.ZMZN
+                                                             ghczmprim:GHCziTypes.Char)
+                                                            ->
+                                                            ghczmprim:GHCziTypes.ZMZN
+                                                            ghczmprim:GHCziTypes.Char =
+    \ (lsa59v::ghczmprim:GHCziTypes.ZMZN
+               base:GHCziException.ArithException)
+      (sa59w::ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) ->
+        base:GHCziShow.showListzuzu @ base:GHCziException.ArithException
+        base:GHCziException.zdfShowArithException1 lsa59v sa59w;
+  base:GHCziException.zdfShowArithExceptionzuzdcshow :: base:GHCziException.ArithException
+                                                        ->
+                                                        ghczmprim:GHCziTypes.ZMZN
+                                                        ghczmprim:GHCziTypes.Char =
+    \ (xa59u::base:GHCziException.ArithException) ->
+        %case (ghczmprim:GHCziTypes.ZMZN ghczmprim:GHCziTypes.Char) xa59u
+        %of (wildXP::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             base:GHCziException.zdfShowArithException13;
+           base:GHCziException.Underflow ->
+             base:GHCziException.zdfShowArithException11;
+           base:GHCziException.LossOfPrecision ->
+             base:GHCziException.zdfShowArithException9;
+           base:GHCziException.DivideByZZero ->
+             base:GHCziException.zdfShowArithException7;
+           base:GHCziException.Denormal ->
+             base:GHCziException.zdfShowArithException5;
+           base:GHCziException.RatioZZeroDenominator ->
+             base:GHCziException.zdfShowArithException3};
+  base:GHCziException.zdfShowArithException :: base:GHCziShow.Show
+                                               base:GHCziException.ArithException =
+    base:GHCziShow.DZCShow @ base:GHCziException.ArithException
+    base:GHCziException.zdfShowArithExceptionzuzdcshowsPrec
+    base:GHCziException.zdfShowArithExceptionzuzdcshow
+    base:GHCziException.zdfShowArithExceptionzuzdcshowList;
+  base:GHCziException.zdfExceptionArithExceptionzuzdcfromException :: (base:GHCziException.SomeException
+                                                                       base:GHCziException.ArithException)
+                                                                      ->
+                                                                      base:DataziMaybe.Maybe
+                                                                      base:GHCziException.ArithException =
+    \ (dsdjJ2::base:GHCziException.SomeException
+               base:GHCziException.ArithException) ->
+        %case (base:DataziMaybe.Maybe
+               base:GHCziException.ArithException) dsdjJ2
+        %of (wildXC::base:GHCziException.SomeException
+                     base:GHCziException.ArithException)
+          {base:GHCziException.SomeException
+           (ds1djJ3::base:GHCziException.ArithException) ->
+             base:DataziMaybe.Nothing @ base:GHCziException.ArithException};
+  base:GHCziException.zdfExceptionArithExceptionzuzdctoException :: base:GHCziException.ArithException
+                                                                    ->
+                                                                    base:GHCziException.SomeException
+                                                                    base:GHCziException.ArithException =
+    base:GHCziException.SomeException
+    @ base:GHCziException.ArithException;
+  base:GHCziException.zdfExceptionArithException :: base:GHCziException.Exception
+                                                    base:GHCziException.ArithException =
+    base:GHCziException.DZCException
+    @ base:GHCziException.ArithException
+    base:GHCziException.zdfShowArithException
+    (base:GHCziException.SomeException
+     @ base:GHCziException.ArithException)
+    base:GHCziException.zdfExceptionArithExceptionzuzdcfromException;
+  base:GHCziException.zdfOrdArithExceptionzuzdczlze :: base:GHCziException.ArithException
+                                                       ->
+                                                       base:GHCziException.ArithException ->
+                                                       ghczmprim:GHCziTypes.Bool =
+    \ (aajHb::base:GHCziException.ArithException)
+      (bajHc::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajHb
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajHc
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True}};
+  base:GHCziException.zdfOrdArithExceptionzuzdczg :: base:GHCziException.ArithException
+                                                     ->
+                                                     base:GHCziException.ArithException ->
+                                                     ghczmprim:GHCziTypes.Bool =
+    \ (aajHj::base:GHCziException.ArithException)
+      (bajHk::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajHj
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajHk
+             %of (wild1X2c::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False}};
+  base:GHCziException.zdfOrdArithExceptionzuzdczgze :: base:GHCziException.ArithException
+                                                       ->
+                                                       base:GHCziException.ArithException ->
+                                                       ghczmprim:GHCziTypes.Bool =
+    \ (aajHf::base:GHCziException.ArithException)
+      (bajHg::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajHf
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajHg
+             %of (wild1X2d::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True}};
+  base:GHCziException.zdfOrdArithExceptionzuzdczl :: base:GHCziException.ArithException
+                                                     ->
+                                                     base:GHCziException.ArithException ->
+                                                     ghczmprim:GHCziTypes.Bool =
+    \ (aajH7::base:GHCziException.ArithException)
+      (bajH8::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajH7
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajH8
+             %of (wild1X2e::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False}};
+  base:GHCziException.zdfOrdArithExceptionzuzdccompare :: base:GHCziException.ArithException
+                                                          ->
+                                                          base:GHCziException.ArithException ->
+                                                          ghczmprim:GHCziTypes.Ordering =
+    \ (aajH3::base:GHCziException.ArithException)
+      (bajH4::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Ordering aajH3
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.EQ;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.LT};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.GT;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.EQ;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.LT};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.GT;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.EQ;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.LT};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.GT;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.EQ;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.LT;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.LT};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.GT;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.EQ;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.LT};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Ordering bajH4
+             %of (wild1X27::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.GT;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.EQ}};
+  base:GHCziException.zdfEqArithExceptionzuzdczeze :: base:GHCziException.ArithException
+                                                      ->
+                                                      base:GHCziException.ArithException ->
+                                                      ghczmprim:GHCziTypes.Bool =
+    \ (aajGX::base:GHCziException.ArithException)
+      (bajGY::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajGX
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajGY
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True}};
+  base:GHCziException.zdfEqArithExceptionzuzdczsze :: base:GHCziException.ArithException
+                                                      ->
+                                                      base:GHCziException.ArithException ->
+                                                      ghczmprim:GHCziTypes.Bool =
+    \ (aajH1::base:GHCziException.ArithException)
+      (bajH2::base:GHCziException.ArithException) ->
+        %case ghczmprim:GHCziTypes.Bool aajH1
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  ghczmprim:GHCziTypes.False;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.True};
+           base:GHCziException.Underflow ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Underflow ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.LossOfPrecision ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.LossOfPrecision ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.DivideByZZero ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.DivideByZZero ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.Denormal ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.Denormal ->
+                  ghczmprim:GHCziTypes.False};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case ghczmprim:GHCziTypes.Bool bajH2
+             %of (wild1X2g::base:GHCziException.ArithException)
+               {%_ ->
+                  ghczmprim:GHCziTypes.True;
+                base:GHCziException.RatioZZeroDenominator ->
+                  ghczmprim:GHCziTypes.False}};
+  base:GHCziException.zdfEqArithException :: ghczmprim:GHCziClasses.Eq
+                                             base:GHCziException.ArithException =
+    ghczmprim:GHCziClasses.DZCEq @ base:GHCziException.ArithException
+    base:GHCziException.zdfEqArithExceptionzuzdczeze
+    base:GHCziException.zdfEqArithExceptionzuzdczsze;
+  base:GHCziException.zdfOrdArithExceptionzuzdcmin :: base:GHCziException.ArithException
+                                                      ->
+                                                      base:GHCziException.ArithException ->
+                                                      base:GHCziException.ArithException =
+    \ (xa2kw::base:GHCziException.ArithException)
+      (ya2kx::base:GHCziException.ArithException) ->
+        %case base:GHCziException.ArithException xa2kw
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             %case base:GHCziException.ArithException ya2kx
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.Overflow};
+           base:GHCziException.Underflow ->
+             %case base:GHCziException.ArithException ya2kx
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {base:GHCziException.Overflow ->
+                  base:GHCziException.Overflow;
+                base:GHCziException.Underflow ->
+                  base:GHCziException.Underflow;
+                base:GHCziException.LossOfPrecision ->
+                  base:GHCziException.Underflow;
+                base:GHCziException.DivideByZZero ->
+                  base:GHCziException.Underflow;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.Underflow;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.Underflow};
+           base:GHCziException.LossOfPrecision ->
+             %case base:GHCziException.ArithException ya2kx
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  wild1X2b;
+                base:GHCziException.LossOfPrecision ->
+                  base:GHCziException.LossOfPrecision;
+                base:GHCziException.DivideByZZero ->
+                  base:GHCziException.LossOfPrecision;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.LossOfPrecision;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.LossOfPrecision};
+           base:GHCziException.DivideByZZero ->
+             %case base:GHCziException.ArithException ya2kx
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  wild1X2b;
+                base:GHCziException.DivideByZZero ->
+                  base:GHCziException.DivideByZZero;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.DivideByZZero;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.DivideByZZero};
+           base:GHCziException.Denormal ->
+             %case base:GHCziException.ArithException ya2kx
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  wild1X2b;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.Denormal;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.Denormal};
+           base:GHCziException.RatioZZeroDenominator ->
+             ya2kx};
+  base:GHCziException.zdfOrdArithExceptionzuzdcmax :: base:GHCziException.ArithException
+                                                      ->
+                                                      base:GHCziException.ArithException ->
+                                                      base:GHCziException.ArithException =
+    \ (xa2kG::base:GHCziException.ArithException)
+      (ya2kH::base:GHCziException.ArithException) ->
+        %case base:GHCziException.ArithException xa2kG
+        %of (wildXzz::base:GHCziException.ArithException)
+          {base:GHCziException.Overflow ->
+             ya2kH;
+           base:GHCziException.Underflow ->
+             %case base:GHCziException.ArithException ya2kH
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.Underflow;
+                base:GHCziException.LossOfPrecision ->
+                  base:GHCziException.LossOfPrecision;
+                base:GHCziException.DivideByZZero ->
+                  base:GHCziException.DivideByZZero;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.Denormal;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.RatioZZeroDenominator};
+           base:GHCziException.LossOfPrecision ->
+             %case base:GHCziException.ArithException ya2kH
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.LossOfPrecision;
+                base:GHCziException.DivideByZZero ->
+                  base:GHCziException.DivideByZZero;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.Denormal;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.RatioZZeroDenominator};
+           base:GHCziException.DivideByZZero ->
+             %case base:GHCziException.ArithException ya2kH
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.DivideByZZero;
+                base:GHCziException.Denormal ->
+                  base:GHCziException.Denormal;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.RatioZZeroDenominator};
+           base:GHCziException.Denormal ->
+             %case base:GHCziException.ArithException ya2kH
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.Denormal;
+                base:GHCziException.RatioZZeroDenominator ->
+                  base:GHCziException.RatioZZeroDenominator};
+           base:GHCziException.RatioZZeroDenominator ->
+             %case base:GHCziException.ArithException ya2kH
+             %of (wild1X2b::base:GHCziException.ArithException)
+               {%_ ->
+                  base:GHCziException.RatioZZeroDenominator}};
+  base:GHCziException.zdfOrdArithException :: ghczmprim:GHCziClasses.Ord
+                                              base:GHCziException.ArithException =
+    ghczmprim:GHCziClasses.DZCOrd @ base:GHCziException.ArithException
+    base:GHCziException.zdfEqArithException
+    base:GHCziException.zdfOrdArithExceptionzuzdccompare
+    base:GHCziException.zdfOrdArithExceptionzuzdczl
+    base:GHCziException.zdfOrdArithExceptionzuzdczgze
+    base:GHCziException.zdfOrdArithExceptionzuzdczg
+    base:GHCziException.zdfOrdArithExceptionzuzdczlze
+    base:GHCziException.zdfOrdArithExceptionzuzdcmax
+    base:GHCziException.zdfOrdArithExceptionzuzdcmin;
