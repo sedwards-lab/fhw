@@ -1,0 +1,17 @@
+name: "fhw workflow"
+on:
+  # Trigger the workflow on push,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@master"
+      - name: "TODO to Issue"
+        uses: "Tiltedprogrammer/todo-to-issue-action/@v4.0.7.2"
+        id: "todo"
+        with:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
