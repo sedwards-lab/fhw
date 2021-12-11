@@ -199,10 +199,12 @@ case $output in
                   --add-go --partition --mono --uniquify"
         ;;
     dataflow)
-        fhwflags="$fhwflags --partition --dataflow --tagmemops --rmrec --lift-function 
+        fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function 
                   --lift-memops
                   --remove-lit-pat --lift-expressions 
-                  --add-go --mono --uniquify --defunc --buffer-functions --mem-insert"
+                  --add-go --mono --uniquify --defunc --buffer-functions 
+				  --mem-insert"
+				#   --merge-memops"
         ;;
     mem-dataflow)
         fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function
@@ -213,10 +215,15 @@ case $output in
 		fhwflags="$fhwflags -h"
 	;;
     extcore)
-	fhwflags="$fhwflags -r --partition --tagmemops --rmrec --lift-function 
-                  --lift-memops
-                  --remove-lit-pat --lift-expressions 
-                  --add-go --mono --uniquify --defunc --buffer-functions --mem-insert"
+	# fhwflags="$fhwflags -r --tagmemops --rmrec --lift-function 
+    #               --lift-memops
+    #               --remove-lit-pat --lift-expressions 
+    #               --add-go --mono --uniquify --defunc --buffer-functions --mem-insert "
+	# ;;
+	# fhwflags="$fhwflags -r --rmrec --lift-function --lift-expressions 
+    #               --mono --uniquify --defunc"
+	# ;;
+	fhwflags="$fhwflags -r"
 	;;
     simplified)
 	fhwflags="$fhwflags -r --simplified"
@@ -231,7 +238,7 @@ esac
 # Process External Core (.hcr) files
 if [ ${dot} -eq 1 ]; then
 	for hcrfile in $hcrfiles; do
-		RunVerb $FHWC $fhwflags $hcrfile ">" "${hcrfile}.df" || exit $?
+		RunVerb $FHWC $fhwflags $hcrfile ">" "${hcrfile}.df" " 2>" "${hcrfile}.df.log" || exit $?
 	done
 	for file in $linkedfiles; do
 		echo "${file}.df"

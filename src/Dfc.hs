@@ -29,12 +29,17 @@ import Dfc.Semantics.Check
 import Dfc.Pass.Buffer.SBuffer(addBuffers)
 import Dfc.DumpDot (dumpDot)
 
+import Dfc.Verilog.Testbench
+import qualified Dfc.Verilog.SystemVerilog as V
+import Text.PrettyPrint
+import Data.List
+
 -- | Custom errors for the command-line program
 -- 
 --   To return an new error, define it here and throw it from the IO monad
 data DfcError = ParseError String
                 deriving (Show, Typeable)
-                         
+
 instance Exception DfcError
 
 
@@ -47,10 +52,10 @@ main = do
   --     newDf = addBuffers df
   -- print newDf
   -- print "Hello"
-  not_main
-  
-not_main :: IO ()
-not_main = (do
+  notMain
+
+notMain :: IO ()
+notMain = (do
   args <- getArgs
   (sourceFilename, flags') <- getFlags args
   let flags = case flags' of
@@ -58,7 +63,7 @@ not_main = (do
         _ -> flags'
 
       -- Shorthand for testing a flag
-      ifFlag f = when (toConstr f `elem` map toConstr flags) 
+      ifFlag f = when (toConstr f `elem` map toConstr flags)
       -- Shorthand conditional run of a pass
       runPass f p m = if toConstr f `elem` map toConstr flags then p m else m
       -- Get string associated with flag
@@ -99,12 +104,47 @@ not_main = (do
   let moduleName = case givenModuleName of "" -> "main"
                                            s -> s
 
+  let verilogResult = verilog moduleName processedMod
+
+  let (packageResult, verilogResult') = createPackage verilogResult (moduleName ++ "_package")
   -- Generate System Verilog
-  ifFlag Verilog $ print $ SV.SourceText $ verilog moduleName processedMod
-  
+  ifFlag Verilog $ mapM_ (\(x, filename) -> writeFile filename (show . SV.SourceText $ x)) $ 
+                          zip [packageResult, V.Import [V.Package (moduleName ++ "_package")] : verilogResult']
+                              [moduleName ++ "_package.sv", moduleName ++ ".sv"]
+  ifFlag Verilog $ writeFile (moduleName ++ "_testbench.sv") . createTestbenchRoutine . show $ SV.SourceText (createTestbench verilogResult' moduleName (moduleName ++ "_package"))
+
   ) `catch` ( \e -> do
                  hPrint stderr (e :: DfcError)
                  exitFailure )
+
+
+testbenchRoutine = "  always begin \n\
+                   \     clk = 1'b1; \n\
+                   \     #8; \n\
+                   \     clk = 1'b0; \n\
+                   \     #8; \n\
+                   \  end \n\
+                   \\n\
+                   \  always begin \n\
+                   \    reset = 1'b1; \n\
+                   \    #16; \n\
+                   \    reset = 1'b0; \n\
+                   \    sourceGo_d = 1'd1; \n\
+                   \    wait(sourceGo_r == 1); \n\
+                   \    #16; \n\
+                   \    sourceGo_d = 1'd0; \n\
+                   \    wait(1 == 2); //wait till the end \n\
+                   \  end \n\
+                   \  always_comb begin \n\
+                   \    if (finish == 1'b1) \n\
+                   \         $finish; \n\
+                   \  end \n\
+                   \endmodule"
+
+createTestbenchRoutine :: String -> String
+createTestbenchRoutine vd = let
+    vs = init . lines $ vd
+    in intercalate "\n" (["`timescale 1ns/1ns"] ++ vs ++ [testbenchRoutine])
 
 -- | Read and parse the given textual dfc file.  Throw ParseError on failure.
 parseDfc :: FilePath -> IO Dataflow
@@ -127,7 +167,7 @@ data Flag = Verilog
           | Buffer (Maybe String)
           | RandBuf String
             deriving (Eq,Typeable,Data,Show)
-                   
+
 -- | Command-line flag details for the getOpt library
 --
 -- Define new command-line flags here and in the Flag type above
@@ -139,21 +179,21 @@ options =
     , Option "i" [] (NoArg DumpSourceDfc) "Generate a .df file for re-compilation"
     , Option [] ["modulename"] (ReqArg ModuleName "<name>")
                  "Name of top SystemVerilog module"
-    , Option [] ["buffer"] (OptArg Buffer "all|=fanin|=<number>") 
+    , Option [] ["buffer"] (OptArg Buffer "all|=fanin|=<number>")
                  "Insert (potentially infinite) buffers"
-    , Option [] ["randbuf"] (ReqArg RandBuf "<number>") 
+    , Option [] ["randbuf"] (ReqArg RandBuf "<number>")
                  "Insert <number> buffers on random channels"
     ]
- 
+
 -- | Process command-line flags using the getOpt library
 getFlags :: [String] -> IO (String, [Flag])
-getFlags args = 
+getFlags args =
     case getOpt Permute options args of
        (flags, [file], []) -> return (file, flags)
-       (_, _, errs) -> cmdlnFail $ Just (concat errs) 
+       (_, _, errs) -> cmdlnFail $ Just (concat errs)
     where
     cmdlnFail :: Maybe String -> IO a
-    cmdlnFail msg = do 
+    cmdlnFail msg = do
         case msg of
             Just s -> putStr $ "error: " ++ s
             _ -> return ()

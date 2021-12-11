@@ -37,7 +37,7 @@ import qualified Data.Map.Lazy as Map
 import Control.Monad.State
 import Control.Applicative
 
---import Debug.Trace
+import Debug.Trace
 
 data NodeEnv = NodeEnv { toTrans     :: [Vdef]
                        , nodeEnv     :: Map.Map Var Node
@@ -50,12 +50,12 @@ data NodeEnv = NodeEnv { toTrans     :: [Vdef]
                        , paramsMap   :: Map.Map Var [Var]
                        , compilerInfo :: Analysis }
 type NodeState = State NodeEnv
-type Channel = Maybe String 
+type Channel = Maybe String
 
 -- | Insert a node into our environment, 
 -- keyed with a variable name.
 putNode :: Var -> Node -> NodeState ()
-putNode dOut node = do 
+putNode dOut node = do
   s <- get
   let newMap = Map.insert dOut node $ nodeEnv s
   put $ s {nodeEnv = newMap}
@@ -63,7 +63,7 @@ putNode dOut node = do
 -- | Map a function name to its lambda bindings, as these are 
 -- the names used for the function's MergeChoice and Mux nodes
 addParams :: Var -> [Var] -> NodeState ()
-addParams name params = do 
+addParams name params = do
   s <- get
   let newMap = Map.insert name params $ paramsMap s
   put $ s {paramsMap = newMap}
@@ -78,7 +78,7 @@ setScope :: Var -> NodeEnv -> NodeEnv
 setScope funcName env = env { curFunc = funcName }
 
 toDataflow :: String -> Bool -> Analysis -> Module -> (Dataflow, Analysis)
-toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) = 
+toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
   case verify dataflow of
     Left err -> error $ preoptError err
     Right _ -> case verify optDataflow of
@@ -89,12 +89,12 @@ toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
     preoptError e = "Pre-optimization error: " ++ e ++ show dataflow
     postoptError e = "Post-optimization error: " ++ e ++ show optDataflow
     dataflow    = Dataflow newTdefs mainNodes
-    optDataflow = Dataflow newOptTdefs $ 
+    optDataflow = Dataflow newOptTdefs $
                            sort   --Purely for human-readability
                            optNodes
 
     (optNodes, finalAnalysis) = optimize mainNodes modifiedAnalysis
-    
+
     newOptTdefs = choiceDefs optNodes ++ baseTdefs --choice Tydefs after optimization
     newTdefs    = choiceDefs mainNodes ++ baseTdefs --original choice Tydefs
     baseTdefs = baseTdefs'' ++ map actualPntr pntrDefs
@@ -140,11 +140,11 @@ toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
     choiceDefs = map mkChoiceDef . getChoices
       where
         mkChoiceDef chTy = let mbchNum = (readMaybe $ tail chTy) :: Maybe Int
-                               chNum = fromMaybe chErr mbchNum 
+                               chNum = fromMaybe chErr mbchNum
                                chErr = error "Problem in choiceDefs"
                            in Tydef chTy $
                               map (flip Codef []) $
-                              mkNameSet chNum ((++('_':show chNum)) . ('C':)) 
+                              mkNameSet chNum ((++('_':show chNum)) . ('C':))
     --choice types known to MergeChoices
     getChoices = nub . mapMaybe getChoiceType
       where
@@ -159,16 +159,16 @@ toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
         not (hasTupDef dcon defs) = Tydef dcon [Codef dcon tys] : defs
       | otherwise = defs
       where
-        hasTupDef dc = any ((==dc) . getTydefName) 
+        hasTupDef dc = any ((==dc) . getTydefName)
         getTydefName (Tydef n _) = n
-        tys = map (Tycon . T.unpack) $ T.splitOn (T.pack "___") 
+        tys = map (Tycon . T.unpack) $ T.splitOn (T.pack "___")
               $ T.pack $ drop (length strictPrefix) dcon
     getTupDefs _ defs = defs
 
     --Convert type definitions from Core style to Dataflow style
     tTdefs (Data (_,tc) _ cdefs) = Tydef tc (map tCdefs cdefs)
     tCdefs (Constr (_,dc) _ tys) = Codef dc (map tTy tys)
-    
+
     mainNodes   = map snd $ Map.toList $ nodeEnv mainNodeMap
     modifiedAnalysis = compilerInfo mainNodeMap
     mainNodeMap = execState (genMain mainFunc) initEnv
@@ -180,10 +180,10 @@ toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
                           , bufferFuncs = bufferFuncsOption
                           , inLet = False
                           , mutRecFuncs = makeClusters
-                          , paramsMap = Map.empty 
+                          , paramsMap = Map.empty
                           , compilerInfo = analysis }
-    mainFunc    = fromMaybe mainError $ 
-                  find ((=="main") . vdefName) vds 
+    mainFunc    = fromMaybe mainError $
+                  find ((=="main") . vdefName) vds
     mainError   = error "No main function defined"
 
     -- If strictness is requested, generated an unused prefix for the Tuple
@@ -204,19 +204,19 @@ toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
       in multi ++ recFuncs
 
     -- Check if a function is tail-recursive
-    isRec vdes [name] 
+    isRec vdes [name]
       | '#' == last name = False --Prim functions aren't defined
       | otherwise = (==TailRecursive) $ exprRecursiveness name $ getExp
-                    $ fromMaybe (funcErr name) 
+                    $ fromMaybe (funcErr name)
                     $ find ((==name) . vdefName) vdes
     isRec _ _ = error "isRec"
     funcErr n = error $ "No top-level function found with name " ++ n
     getExp (Vdef _ _ ex) = ex
- 
+
 
 -- | Build a graph mapping each function to its call sites
 makeCallGraph :: Vdef -> Map.Map Var [Var] -> Map.Map Var [Var]
-makeCallGraph (Vdef (_,name) _ ex) = descend ex 
+makeCallGraph (Vdef (_,name) _ ex) = descend ex
   where
    descend e m = case e of
     Lam _ e1        -> descend e1 m
@@ -233,7 +233,7 @@ makeCallGraph (Vdef (_,name) _ ex) = descend ex
     Adefault e   -> descend e m
 
    goVdef (Vdef _ _ e) = descend e
-  
+
 
 -- | Generate the nodes that execute the program
 genMain :: Vdef -> NodeState ()
@@ -249,15 +249,15 @@ genMain (Vdef _ ty ex) = do putNode sourceVar source
 -- | Translate an expression into a collection of nodes,
 -- returning the name of the expression's 
 -- output channel.
-tExpr :: Exp -> NodeState Channel 
+tExpr :: Exp -> NodeState Channel
 tExpr (Let vdefs ex) = do s <- get
                           let wasInLet = inLet s
                           put (s { inLet = True })
-                          mapM_ tLocal vdefs 
+                          mapM_ tLocal vdefs
                           s' <- get
                           put (s' {inLet = wasInLet})
                           tExpr ex
-tExpr ex = case call of 
+tExpr ex = case call of
   Var  (_,"+#") _  -> Just <$> addPrimFunc (Add 32) args
   Var  (_,"-#") _  -> Just <$> addPrimFunc (Sub 32) args
   Var  (_,"*#") _  -> Just <$> addPrimFunc (Mul 32) args
@@ -276,20 +276,20 @@ tExpr ex = case call of
   Var  (_,"!#") _  -> Just <$> addPrimFunc Not args
   Var  (_,"int2Word#") _ -> Just <$> addPrimFunc (Cast 32 32) args
   Var  (_,"word2Int#") _ -> Just <$> addPrimFunc (Cast 32 32) args
-  Var  (_,name) _  -> if not $ null args 
-                      then addFuncCall name args 
+  Var  (_,name) _  -> if not $ null args
+                      then addFuncCall name args
                       else Just <$> getNextOChannel call
   Dcon (_,name) _ -> if not (null args)
                       then Just <$> addDcon name args
                       else error "No arguments for dcon"
   Case scrut _ ty alts -> translateCase scrut alts ty
-  _                    -> errorM "Unexpected expression" 
+  e                    -> errorM ("Unexpected expression" ++ show e)
   where
     (call,args,_) = collectArgs ex
 
 -- | Translate a local variable definition 
 tLocal :: Vdef -> NodeState ()
-tLocal (Vdef (_,name) ty ex) = do 
+tLocal (Vdef (_,name) ty ex) = do
   result <- if tTy ty == Tycon "Go"
               then return "sourceGo" --special-case main's Go definition
               else err <$> tExpr ex
@@ -316,10 +316,10 @@ addFuncCall name args = do
   thisFunc <- gets curFunc
   case funcDef of
     --Constant expression
-    Just (Vdef _ _ (Lam _ (Lit (Literal (Lint num) _)))) -> 
-      fmap Just $ addIConst (head inputs) $ fromInteger num                     
+    Just (Vdef _ _ (Lam _ (Lit (Literal (Lint num) _)))) ->
+      fmap Just $ addIConst (head inputs) $ fromInteger num
     --First time encountering a function
-    Just (Vdef _ ty (Lam (param1:params) ex)) -> do 
+    Just (Vdef _ ty (Lam (param1:params) ex)) -> do
       let (retTy,_) = collectArgTypes ty
           allParams = param1:params
       maybeMem <- addMemop shouldBuffer name ty (head inputs)
@@ -337,7 +337,7 @@ addFuncCall name args = do
           let --Are we calling a member of a cluster?
               clustCall = any (elem name) clusters
               -- check if we're externally calling a cluster
-              newClustCall = any (\clust -> name `elem` clust && 
+              newClustCall = any (\clust -> name `elem` clust &&
                                    thisFunc `notElem` clust) clusters
           --Generate nodes that siphon arguments from calls into
           --this function's subnetwork, returning the final input channels
@@ -358,12 +358,12 @@ addFuncCall name args = do
           put (s' {inLet = wasInLet})
           --Return result, potentially after generating output and unlocking
           --subnetworks.
-          if clustCall && not newClustCall 
+          if clustCall && not newClustCall
             then return result
             else do outChan <- if not newClustCall
                                then return $ err result
                                else outputAndUnlock name finalInputs retTy result
-                    Just <$> addDemuxBuffered (not newClustCall) outChan 
+                    Just <$> addDemuxBuffered (not newClustCall) outChan
                              mergeSel name oneChoiceDcon (tTy retTy)
     --Adding calls to an existing function
     Nothing -> anotherCall shouldBuffer inputs name
@@ -391,7 +391,7 @@ addFuncCall name args = do
         --Calling a different clustered function
         then do (funcIns, mergeSel) <- makeStrictLayer
                 lockedIns <- makeLockLayer funcIns
-                finalIns <- makePipelineLayer lockedIns 
+                finalIns <- makePipelineLayer lockedIns
                 return (finalIns, mergeSel)
         else if not (any (elem name) clusters)
              --Calling a non-clustered function 
@@ -401,7 +401,7 @@ addFuncCall name args = do
                      --We already hooked up a mergeChoice's select channel to a
                      --demux, all outside of the cluster, so we don't have a new
                      --select channel to return. 
-                     return (finalIns, "") 
+                     return (finalIns, "")
       where
         makeStrictLayer = do
           --Generate a tuple dcon to wait for all inputs
@@ -453,7 +453,7 @@ addFuncCall name args = do
            -- Generate MergeChoice and Muxes that feed recursive 
            -- calls and calls from the "go-muxes" into the 
            -- function body.
-           makeMergeAndMux (extDout:extMuxes)= do 
+           makeMergeAndMux (extDout:extMuxes)= do
              (mergeOut,mSel) <- addMergeChoice extDout (head lockBinds)
              addFork mSel mSel oneChoiceTy
              mOuts <- zipWithM (addFuncMux mSel) extMuxes (tail lockBinds)
@@ -492,7 +492,7 @@ addFuncCall name args = do
         --Modify a name in our writeSites or readSites list for profiling 
         --(instead of the call's name, we're using the input channel name
         --to the node) 
-        updateAccess = do 
+        updateAccess = do
           s <- get
           let analysis = compilerInfo s
               calls = (if isWrite then writeSites else readSites) analysis
@@ -500,7 +500,7 @@ addFuncCall name args = do
                 Nothing -> calls
                 Just num -> let tempList = delete (n, num) calls
                             in (arg, num) : tempList
-          put (s { compilerInfo = if isWrite 
+          put (s { compilerInfo = if isWrite
                     then analysis { writeSites = newCalls }
                     else analysis { readSites = newCalls } })
 
@@ -509,14 +509,14 @@ addFuncCall name args = do
 -- callers) and the unlocking subnetwork to allow another caller to use 
 -- the cluster. This functin returns the channel that will feed into the demux.
 outputAndUnlock :: Var -> [Var] -> Ty -> Channel -> NodeState String
-outputAndUnlock name funcIns retTy result = do 
+outputAndUnlock name funcIns retTy result = do
   let addUnlockChannel (outputSrc,outTy) = do
         unlock <- getNextOChannel outputSrc
         putNode goConstName (Node [unlock] (ToGo outTy) [goConstName])
         putNode initBufiName (Node [goConstName] (RBuf $ Tycon "Go") [initBufiName])
         putNode initBufName (Node [initBufiName] (InitBuf "Go") [initBufName])
-        putNode unlockForkName (Node [initBufName] 
-                                     (Fork (length funcIns) (Tycon "Go")) 
+        putNode unlockForkName (Node [initBufName]
+                                     (Fork (length funcIns) (Tycon "Go"))
                                      forkOuts)
         zipWithM_ addSelChan goMuxNames forkOuts
         where
@@ -531,11 +531,11 @@ outputAndUnlock name funcIns retTy result = do
           addSelChan muxName selChan = do
             node <- findNode muxName
             case node of
-              Just (Node ins op outs) -> 
+              Just (Node ins op outs) ->
                 putNode muxName (Node (selChan:ins) op outs)
               _ -> error "Missing an expected lock mux"
       forkIn = fromMaybe (error "Expect a result from a recursive function")
-                         result 
+                         result
       forkOut = forkIn ++ "_fork"
   addFork forkIn forkOut (tTy retTy)           --fork for function output
   addUnlockChannel (varWrap forkOut, tTy retTy)--use output to drive lock-muxes
@@ -565,7 +565,7 @@ addStrictNodeAndCase name inputVars params = do
                               Int' _ -> "Int#"
                               Tycon tt -> tt
     getParamTys _ = error "getParamTys"
-    
+
 
 -- | Pass new input channels to either a merge/mux layer (tail-recursive call)
 -- or into a new tuple dcon for strictness (non-recursive call to an unclustered
@@ -575,13 +575,13 @@ anotherCall shouldBuffer inputVars func = do
   clusters <- gets mutRecFuncs
   thisFunc <- gets curFunc
   -- check if we're making an internal cluster call
-  let internalCall = any (\clust -> func `elem` clust && 
+  let internalCall = any (\clust -> func `elem` clust &&
                           thisFunc `elem` clust) clusters
   if internalCall
     then do --No strictness for tail-recursive calls in a cluster
       (param1:params) <- gets (paramErr . Map.lookup func . paramsMap)
-      argMerge <- findNode (if null params then "" else head params ++ "_data")  
-      let nodeNames = (param1 ++ "_goMux_data") : 
+      argMerge <- findNode (if null params then "" else head params ++ "_data")
+      let nodeNames = (param1 ++ "_goMux_data") :
                       if isNothing argMerge
                           then map (++("_goMux_mux")) params
                           else map (++("_goMux_data")) params
@@ -589,7 +589,7 @@ anotherCall shouldBuffer inputVars func = do
       returnRes
     else do --Need to add new tuple Dcon node and feed it into existing merge
       funcArbiter <- findNode (func ++ "_data")
-      case funcArbiter of 
+      case funcArbiter of
         Just (Node ins (MergeChoice _ (Tycon tupdcon)) _) -> do
           --Add new tuple node for strictness
           let strictNodeName = func ++ tupdcon ++ (show $ length ins + 1)
@@ -601,7 +601,7 @@ anotherCall shouldBuffer inputVars func = do
         _ -> error "Unexpected node in anotherCall"
   where
     funcVar = Var (Nothing,func) UndefinedTy
-    paramErr = fromMaybe (error $ "No params" ++ show func) 
+    paramErr = fromMaybe (error $ "No params" ++ show func)
     returnRes = do
       funcDemux <- findNode func
       case funcDemux of
@@ -619,7 +619,7 @@ addDcon name args = do inputs <- mapM getNextOChannel args
 
 -- | Add a node for one of our primitive functions
 addPrimFunc :: Func -> [Exp] -> NodeState String
-addPrimFunc op args = do 
+addPrimFunc op args = do
   inputs <- mapM getNextOChannel args
   let outName = concat inputs ++ "_" ++ filter (not . isSpace) (show op)
       node    = Node inputs (Func op) [outName]
@@ -651,7 +651,7 @@ addBuffer input ty = do putNode outName node
   where
     node = Node [input] (Buffer (tTy ty)) [outName]
     outName = input ++ "_rwb"
-    
+
 -- | Add a single output Demux to our network; we add
 -- more outputs as needed, or optimize the single-port demux
 -- away.  Add a buffer to the output if requested.
@@ -666,7 +666,7 @@ addDemuxBuffered shouldBuffer dIn choice outName dcon ty =
       let outName' = outName ++ "_1"
           outName'' = outName ++ "_resbuf"
           demux = Node [choice,dIn] (Demux ty [dcon]) [outName']
-      putNode outName demux          
+      putNode outName demux
       if shouldBuffer
         then do
           putNode outName'' $ Node [outName'] (Buffer ty) [outName'']
@@ -688,10 +688,10 @@ addIConst goIn num = do putNode outName iconst
 -- away.
 addFork :: Var -> Var -> Type -> NodeState ()
 addFork inName outName ty = putNode outName fork
-  where fork = Node [inName] 
+  where fork = Node [inName]
                     (Fork 0 ty) --We haven't assigned fork's output yet
                     [outName ++ "_1"]
- 
+
 -- | Create a MergeChoice node for a function's first parameter. Initially,
 -- we only model a single call site.
 addMergeChoice :: Var -> Bind -> NodeState (String,String)
@@ -714,7 +714,7 @@ addMerge _ _ = error "Merge"
 
 -- | Create a mux for a function's ith parameter, where i > 1.
 addFuncMux :: Var -> Var -> Bind -> NodeState String
-addFuncMux choiceForkVar inputVar (Vb (outVar,ty)) = do 
+addFuncMux choiceForkVar inputVar (Vb (outVar,ty)) = do
   choice <- getNextOChannel $ varWrap choiceForkVar
   let mux = Node [choice,inputVar]
                  (Mux (tTy ty) [oneChoiceDcon]) -- initially only one choice
@@ -727,20 +727,20 @@ addFuncMux _ _ _ = error "addFuncMux"
 
 -- | Create a mux for the result of a case statement
 addMux :: Var -> [Var] -> Var -> [Dcon] -> Type -> NodeState String
-addMux choiceVar inputVars outVar choices ty = 
+addMux choiceVar inputVars outVar choices ty =
   do putNode outName mux
      return outName
-  where mux = Node (choiceVar:inputVars) 
-                   (Mux ty choices) 
+  where mux = Node (choiceVar:inputVars)
+                   (Mux ty choices)
                    [outName]
         outName = outVar ++ "_mux"
 
 addFullMerge :: [Var] -> Var -> Type -> NodeState String
-addFullMerge inputVars outVar ty = 
+addFullMerge inputVars outVar ty =
   do putNode outName merge
      return outName
   where merge = Node inputVars
-                     (Merge (length inputVars)ty) 
+                     (Merge (length inputVars)ty)
                      [outName]
         outName = outVar ++ "_merge"
 
@@ -765,7 +765,7 @@ addGoMuxes funcName argTypes inputs = do zipWithM_ putNode nodeNames muxes
 -- alternatives, and route outputs depending on whether we're in a mutually
 -- recursive cluster or not.
 translateCase :: Exp -> [Alt] -> Ty -> NodeState Channel
-translateCase scrut alts ty = do 
+translateCase scrut alts ty = do
   isInLet <- gets inLet
   -- Only generate demux and destructs if some data constructor
   -- being matched has non-Go type fields.
@@ -812,17 +812,17 @@ translateCase scrut alts ty = do
     -- True if an alternative has a non-Go field
     hasField (Acon _ _ vbinds _) = let isGoTy (Tcon (_,"Go")) = True
                                        isGoTy _ = False
-                                   in any (not . isGoTy . snd) vbinds 
+                                   in any (not . isGoTy . snd) vbinds
     hasField _ = False
 
     usesField (Acon _ _ vbinds ex) = let freeVars = map snd $ cfv ex
                                      in any (`elem` freeVars) (map fst vbinds)
     usesField _ = False
 
-    
+
     -- Only need to generate destructs for patterns
     -- with non-Go fields.
-    addDestructs inputPref alt 
+    addDestructs inputPref alt
       | not (hasField alt) || not (usesField alt) = return ()
       | otherwise = case alt of
        (Acon (_,dc) _ vbinds ex) ->
@@ -838,13 +838,13 @@ translateCase scrut alts ty = do
     createForks input (outName,t) = addFork input outName (tTy t)
 
     -- If a choice led to a result, put it in a Just
-    moveJusts Nothing  _      = Nothing 
-    moveJusts (Just _) choice = Just choice 
+    moveJusts Nothing  _      = Nothing
+    moveJusts (Just _) choice = Just choice
 
     --Collect all free variable bindings in an alternative and add 
     --the alternative's pattern to each variable's list
     getFreeVars :: Alt -> Map.Map (Var,Ty) [Dcon] -> Map.Map (Var,Ty) [Dcon]
-    getFreeVars (Acon (_,dcon) _ vbinds ex) varMap = 
+    getFreeVars (Acon (_,dcon) _ vbinds ex) varMap =
       let freeVars = foldr delete (map swap $ cfv ex) vbinds
           swap (a,b) = (b,a)
           dconCollect d dcons = d ++ dcons
@@ -880,7 +880,7 @@ translateAlt freeVarMap demuxMap (Acon (_,dcon) _ _ ex) = do
 
     -- Add new output to demux and fork it
     addOutAndFork :: Maybe Node -> Var -> NodeState String
-    addOutAndFork (Just (Node ins op@(Demux t _) outs)) name = 
+    addOutAndFork (Just (Node ins op@(Demux t _) outs)) name =
       let newVar = head ins ++ dcon
           newOuts = outs ++ [newVar]
           newNode = Node ins op newOuts
@@ -898,7 +898,7 @@ usedFieldIndices :: [Vbind] -> Exp -> [Int]
 usedFieldIndices vbinds ex = keepUsed vbinds [0..(length vbinds - 1)]
   where
     vpatMap = Map.fromList $ zip (map fst vbinds) (repeat False)
-    newMap  = unusedPatterns ex vpatMap 
+    newMap  = unusedPatterns ex vpatMap
 
     unusedPatterns e m = case e of
      App e1 e2        -> let m' = f e1 m in f e2 m'
@@ -910,12 +910,12 @@ usedFieldIndices vbinds ex = keepUsed vbinds [0..(length vbinds - 1)]
      _                -> m
      where
       f = unusedPatterns
-      vdefHelp (Vdef _ _ e') = f e' 
-      altHelp  (Acon _ _ _ e') m' = f e' m' 
-      altHelp  (Alit _ e')     m' = f e' m' 
-      altHelp  (Adefault e')   m' = f e' m' 
+      vdefHelp (Vdef _ _ e') = f e'
+      altHelp  (Acon _ _ _ e') m' = f e' m'
+      altHelp  (Alit _ e')     m' = f e' m'
+      altHelp  (Adefault e')   m' = f e' m'
 
-    keepUsed ((name,_):vbs) (index:indices) = 
+    keepUsed ((name,_):vbs) (index:indices) =
       if Map.findWithDefault (error "Vbind not in map") name newMap
         then index : recurse
         else recurse
@@ -929,11 +929,11 @@ usedFieldIndices vbinds ex = keepUsed vbinds [0..(length vbinds - 1)]
 setNextIChannel :: Var -> Var -> NodeState ()
 setNextIChannel mergeName inputVar  = do
   funcArb <- findNode mergeName
-  case funcArb of 
+  case funcArb of
     --Need to modify both MergeChoice type and, if it forks its choice
     --output, the type of the Fork destination and the type of the Demux
     --the fork feeds
-    Just (Node ins (MergeChoice (Tycon chTy) t) outs) -> 
+    Just (Node ins (MergeChoice (Tycon chTy) t) outs) ->
       let mboldCount = (readMaybe $ tail chTy) :: Maybe Int
           oldCount = fromMaybe countErr mboldCount
           countErr = error $ "Problem in setNextIChannel:" ++ show chTy
@@ -944,10 +944,10 @@ setNextIChannel mergeName inputVar  = do
                    Just (Node ins' (Fork n _) outs') ->
                     putNode choice $ Node ins' (Fork n newChTy) outs'
                    _ -> return ()
-            putNode mergeName $ 
+            putNode mergeName $
              Node (ins ++ [inputVar]) (MergeChoice newChTy t) outs
-    Just (Node ins (Merge n t) outs) -> 
-      putNode mergeName $ 
+    Just (Node ins (Merge n t) outs) ->
+      putNode mergeName $
       Node (ins ++ [inputVar]) (Merge (n+1) t) outs
     Just (Node ins (Mux ty dcons) outs) -> do
       let newCount = length dcons + 1
@@ -959,20 +959,20 @@ setNextIChannel mergeName inputVar  = do
 -- | Shorthand for getNextOChannelBuffered False
 getNextOChannel :: Exp -> NodeState String
 getNextOChannel = getNextOChannelBuffered False
-        
+
 -- | Add a new output channel to a variable expression's fork node 
 -- or a function's demux node; return the name of the new channel.
 -- Add a buffer on the channel if requested
 getNextOChannelBuffered :: Bool -> Exp -> NodeState String
-getNextOChannelBuffered shouldBuffer (Var (_,name) _) = do 
-  node <- findNode name 
-  case node of 
+getNextOChannelBuffered shouldBuffer (Var (_,name) _) = do
+  node <- findNode name
+  case node of
     Just (Node ins nodeOp outs) ->
       let (n,newOp, ty) = case nodeOp of
                           Fork count t  -> (count       ,Fork (count+1) t, t)
                           Demux t dcons -> (length dcons,Demux t (build dcons), t)
                           _             -> error "Unexpected op"
-          build = renameChoiceDcs (n + 1) 
+          build = renameChoiceDcs (n + 1)
           newOut    = init (init (head outs)) ++ "_" ++ show (n+1)
           newOuts   = if n == 0 then outs else outs ++ [newOut]
           modNode   = Node ins newOp newOuts
@@ -983,8 +983,8 @@ getNextOChannelBuffered shouldBuffer (Var (_,name) _) = do
                 putNode newOut' $ Node [newOut] (Buffer ty) [newOut']
                 return newOut'
               else return newOut
-    Nothing -> errorM $ "Node " ++ show name ++ " couldn't be found" 
-getNextOChannelBuffered _ e = error $ "Non-variable sub-expression as argument " 
+    Nothing -> errorM $ "Node " ++ show name ++ " couldn't be found"
+getNextOChannelBuffered _ e = error $ "Non-variable sub-expression as argument "
                               ++ show e
 
 -- | Given a new maximum choice count and the current set of choice dcons,
@@ -1025,8 +1025,8 @@ oneChoiceDcon = "C1_1"
 --printing out state for debugging purposes.
 errorM :: String -> NodeState a
 errorM str = do s <- get
-                error $ str ++ "\nState: " ++ 
-                        intercalate "\n" (map show $ sort 
+                error $ str ++ "\nState: " ++
+                        intercalate "\n" (map show $ sort
                         $ map snd $ Map.toList $ nodeEnv s)
 -- | Optimizing away unnecessary nodes, and maintaining the name of each
 --   write node's input in our Analysis structure
@@ -1044,7 +1044,7 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   getDest   = getIt getInputs
   getSource = getIt getOutputs
   getIt :: (Node -> [String]) -> String -> [Node] -> Node
-  getIt f name ns = fromMaybe (error ("Couldn't find node with channel " ++ 
+  getIt f name ns = fromMaybe (error ("Couldn't find node with channel " ++
                                       name ++ " in nodelist " ++ showNodes ns))
                               (find (elem name . f) ns)
 
@@ -1056,18 +1056,18 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   opt nList = case filter toRemove nList of
                [] -> return nList
                (n:_) -> let newList = delete n nList in case n of
-                  Node [input] (MergeChoice _ _) [choiceOut,dOut] -> 
+                  Node [input] (MergeChoice _ _) [choiceOut,dOut] ->
                     let dest = getDest dOut newList
                         choiceDest = getDest choiceOut newList
                     in do newDestList1 <- channelMod input dOut dest (delete n newList)
-                          newDestList2 <- deleteChoiceDest newDestList1 choiceDest 
-                          opt newDestList2 
+                          newDestList2 <- deleteChoiceDest newDestList1 choiceDest
+                          opt newDestList2
                   Node [choiceIn,dIn] (Demux _ _) [output] ->
                     let dest = getDest output newList
                     in do newList' <- deleteChoiceSource choiceIn (delete n newList)
                           newList'' <-channelMod dIn output dest newList'
                           opt newList''
-                  Node [input] _ [output] -> 
+                  Node [input] _ [output] ->
                     let dest = getDest output newList
                     in do newList' <- channelMod input output dest (delete n newList)
                           opt newList'
@@ -1076,13 +1076,13 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   -- | Remove muxes/forks/demuxs that dealt with a choice signal from a 
   -- single-input mergeChoice node
   deleteChoiceDest :: [Node] -> Node -> State [(Var, Int)] [Node]
-  deleteChoiceDest nMap n = let newMap = delete n nMap 
-                                go dIn dOut = channelMod dIn dOut 
-                                                (getDest dOut newMap) newMap 
+  deleteChoiceDest nMap n = let newMap = delete n nMap
+                                go dIn dOut = channelMod dIn dOut
+                                                (getDest dOut newMap) newMap
                             in case n of
     Node _ (Fork _ _) outs -> let forkDests = map (`getDest` nMap) outs
-                              in foldM deleteChoiceDest newMap forkDests 
-    Node [_,dIn] (Mux _ _)   [dOut] -> go dIn dOut 
+                              in foldM deleteChoiceDest newMap forkDests
+    Node [_,dIn] (Mux _ _)   [dOut] -> go dIn dOut
     Node [_,dIn] (Demux _ _) [dOut] -> go dIn dOut
     _ -> error $ "Unexpected destination in choiceDel: " ++ show n
 
@@ -1090,7 +1090,7 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   --   and the node n that takes dOut as an input, replace dOut with dIn in n's
   --   input channel list. Replace the old version of n in our list with this 
   --   modified version.
-  channelMod dIn dOut n@(Node ins op outs) nList = 
+  channelMod dIn dOut n@(Node ins op outs) nList =
     let (pre,_:post) = span (/=dOut) ins
         newIns = pre ++ [dIn] ++ post
         newDest = Node newIns op outs
@@ -1104,11 +1104,11 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
 
   -- | Given the choice input to a deleted demux, update the producer of that
   --   choice to maintain a valid network.
-  deleteChoiceSource choiceIn newMap = 
+  deleteChoiceSource choiceIn newMap =
    let choiceSource = getSource choiceIn newMap
    in case choiceSource of
        -- A single-output fork; delete the fork and recurse on its input
-       Node [inp] (Fork _ _) [_] -> deleteChoiceSource inp (delete choiceSource newMap) 
+       Node [inp] (Fork _ _) [_] -> deleteChoiceSource inp (delete choiceSource newMap)
        -- A multi-output fork; remove the output corresponding to choiceIn
        Node is (Fork num t) forkOuts ->
          let newForkOuts = filter (/= choiceIn) forkOuts
@@ -1117,20 +1117,21 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
        -- A single-input mergeChoice; delete it as we would in opt, but no need to
        -- delete its choiceOutput destination (as that's the demux that was already
        -- deleted)
-       Node [dIn] (MergeChoice _ _) [_,dOut] -> 
+       Node [dIn] (MergeChoice _ _) [_,dOut] ->
          let dest = getDest dOut newMap
          in  channelMod dIn dOut dest (delete choiceSource newMap)
        _ -> error $ show choiceSource ++ "Unexpected choice source in fullDeDeleter"
- 
+
 
 -- | Check that all analysis information has been properly maintained:
 --
 --   1. Ensure that a write channel has input "n" iff "n" is a unique member of
 --      the writeSites field
 verifyA :: Analysis -> Dataflow -> Analysis
-verifyA a (Dataflow _ nodes) = if checkWrites
-                                then a
-                                else error "Issue with writeSites after dataflow translation"
+verifyA a (Dataflow _ nodes) = a
+  -- if checkWrites
+  --                               then a
+  --                               else error "Issue with writeSites after dataflow translation"
   where
     isWrite (Node _ (Func (Write _ _)) _) = True
     isWrite _ = False

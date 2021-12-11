@@ -32,7 +32,8 @@ data Description =
 --  | Typedef Type [TypeValue]
   | Typedef Type String
   | Import [ImportItem]
-  | Include String  
+  | Include String
+  | PackageDef String [Description] --package consists of Typedefs and Functions
 
 -- | This tuple represents a Data constructor with a possibly empty list of type arguments
 -- data TypeValue = TypeValue (Type,[Type])
@@ -285,6 +286,8 @@ instance PP Description where
 
   pp (Include fn) = text "`include" <+> doubleQuotes (text fn)
 
+  pp (PackageDef pname ls) = (text ("package " ++ pname)) <+> semi $+$ (nest 4 (vcat $ map pp ls)) $+$ (text "endpackage")
+
 instance PP ImportItem where
   pp (Package n) = vid n <> text "::*"
   pp (PackageID n i) = vid n <> text "::" <> vid i
@@ -348,6 +351,8 @@ instance PP Item where
         parens (hsep $ punctuate comma (map pp args)) <> semi
   pp (AlwaysCombinational stmt) = text "always_comb" $$ nest 2 (pp stmt)
                               
+  pp (Localparam binding expr) = ppBind binding <+> (text "=") <+> (pp expr) <+> semi
+
   pp _                    = error "SystemVerilog: unsupported item" -- TODO
 
 instance PP LValue where

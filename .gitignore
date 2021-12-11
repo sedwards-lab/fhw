@@ -6,3 +6,83 @@ examples/**/*.sv
 examples/**/*.hi
 examples/**/*.o
 !examples/sample-test.sv
+.bat
+.log
+## log files
+*.log
+*.jou
+*.rpt
+*.vdi
+
+## bitstream
+*.bit
+*.bin
+*.mcs
+*.svf
+*.image
+
+## netlist
+*.edf
+*.edif
+*.vn
+*.vm
+
+## SDF
+*.sdf
+
+## sim dump
+*.vcd
+*.saif
+*.tcf
+*.wdb
+
+## others
+unisims
+
+## C-files
+*.elf
+*.a
+*.sa
+*.so
+*.lib
+
+## dirs
+vivado.cache/
+vivado.hw/
+vivado.ip_user_files/
+vivado.runs/
+vivado.sim/
+
+###### for Xilinx Vivado|ISE
+.Xil/
+.cache/
+fsm_encoding.os
+tab_*/
+webtalk.*
+vivado_pid*.str
+hs_err_pid*
+xelab.*
+xsim.*
+xvlog.*
+*.cache
+*.sim
+*.runs
+*.hw
+*.backup.*
+*.debug
+
+## checkpoint files
+*.dcp
+
+.xpr
+**/examples/List/
+**/examples/QTree/
+**/examples/Simple/
+**/examples/QTreeTest/
+**/examples/QTreeBenchmarks/**
+!/examples/QTreeBenchmarks/run_test.py
+!/examples/QTreeBenchmarks/test_gen.py
+!/examples/QTreeBenchmarks/test.tcl
+
+Playground.hs
+Demo.hs

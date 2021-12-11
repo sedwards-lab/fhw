@@ -49,6 +49,8 @@ import Fhw.Pass.Defunctionalization.LambdaLift ( lambdaLift )
 import Fhw.Pass.DuplicateTypes.DuplicateTypes ( duplicateTypes ) 
 import Fhw.ProfileParser.Parser ( parseProfile )
 import Fhw.ProfileParser.ProfileInfo
+import Fhw.Pass.Compress.Compress
+import Fhw.Pass.Dataflow.CompressChoice(compressChoice)
 -- | Custom errors for the command-line program
 -- 
 --   To return an new error, define it here and throw it from the IO monad
@@ -117,6 +119,9 @@ main = (do
   let (processedMod, analysisResults) =
           (\(m, a) -> (m, verifyAnalysis a m)) $
           runAnalyzePass PartitionMem (partitionMem profile) $
+          -- (\(m, a) -> (annotateTypes m, a)) $
+          -- runPass LiftFunction liftFunction $
+          -- runPass LambdaLift lambdaLift$
           runPass LiftConstants liftConstants $
           runAnalyzePass LiftMemops liftMemops $
           runPass LiftExpressions liftExpressions $
@@ -125,8 +130,15 @@ main = (do
           runPass Addgo addGo $
           runPass LitPat removeLitPat $
           runPass Streamify streamify $
+          -- runPass LiftFunction liftFunction $
+          -- runPass LambdaLift lambdaLift$
+          -- (\(m, a) -> (annotateTypes m, a)) $
+          -- (\(m, a) -> (compress m, a)) $
+          -- (\(m, a) -> (annotateTypes m, a)) $
+          -- runPass LiftExpressions liftExpressions $
           runAnalyzePass Monomorphise monomorphise $
           runAnalyzePass TagMemoryOps tagMemoryOps $
+          runPass LiftExpressions liftExpressions $
           runPass RemoveRecursion removeRecursion $
           runPass PackTypes{} (pack packFactor (PackDebug `elem` flags)
                                                (AllInline `elem` flags)) $
@@ -139,7 +151,8 @@ main = (do
           runAnalyzePass Monomorphise monomorphise $
           (topMod, emptyAna)
       --Dataflow representation
-      (dFlow,finalAnalysis) = 
+      (dFlow,finalAnalysis) =
+                  (\(m,a) -> (compressChoice m, a)) $
                   runPass MemoryInsert memoryInsert $
                   runPass MergeMemOps mergeMemOps $
                   toDataflow dflowArg bufferFuncsOption analysisResults processedMod

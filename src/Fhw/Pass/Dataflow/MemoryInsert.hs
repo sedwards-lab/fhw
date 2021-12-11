@@ -26,7 +26,8 @@ import Fhw.Core.Core (Tcon,Dcon)
 
 import Data.Maybe
 import Data.List
---import Debug.Trace
+import Text.Read (choice)
+import Debug.Trace
 
 -- | Information required to generate a memory network
 data MemInfo = MemInfo { memNodes :: [Node] -- Abstract r/w to a given memory
@@ -37,9 +38,11 @@ data MemInfo = MemInfo { memNodes :: [Node] -- Abstract r/w to a given memory
 -- number of brams. This isn't for simulation, but just so we can get
 -- area usage and fmax of our circuits.
 ptrTy :: Type
-ptrTy = Tycon "Word8#"
+-- ptrTy = Tycon "Word8#"
+ptrTy = Tycon "Word16#"
 ptrSize :: Int
-ptrSize = 8
+-- ptrSize = 8
+ptrSize = 16
 
 memoryInsert :: Dataflow -> Dataflow
 memoryInsert (Dataflow tdefs nodes) 
@@ -337,9 +340,11 @@ mkInterfaces nodes readIn writeIn readOut writeOut = (readNodes, writeNodes)
         go n ioPairs interfaceNodes = 
           let (encodableSet,restPairs) = splitAt 64 ioPairs 
               (inputs, outputs) = unzip encodableSet
-              choiceTy = Tycon $ 'C' : show choiceNum
+              -- choiceTy = Tycon $ 'C' : trace ("show choiceNum" ++ show choiceNum) (show choiceNum)
+              choiceTy = Tycon $ 'C' :  (show choiceNum)
               choiceNum = length inputs
-              choices = mkChoiceDcs choiceNum 
+              -- choices = mkChoiceDcs (trace ("choiceNum" ++ show choiceNum) choiceNum) 
+              choices = mkChoiceDcs choiceNum
               mkName s = s ++ show n
               newNodes = Node inputs (MergeChoice choiceTy tyIn) 
                                      [mkName mergeSel, mkName mergeOut] :
