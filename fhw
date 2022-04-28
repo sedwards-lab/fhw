@@ -62,6 +62,13 @@ Other options:
     exit 1
 }
 
+Clean(){
+	if [ ${keep} -eq 0 ]; then
+		RunVerb rm -f ${generatedfiles}
+	fi
+	exit
+}
+
 verbose=0
 hsfiles=
 hcrfiles=
@@ -147,7 +154,7 @@ done
 for hsfile in $hsfiles; do	
     srcdir=`dirname "$hsfile"`
     basename=`basename "$hsfile" | sed 's/[.]l\?hs$//'`
-    RunVerb $GHC -fext-core -c -O${ghcopt} -fforce-recomp -Wall \
+    RunVerb $GHC -fext-core -c -O${ghcopt} -fno-do-eta-reduction -fforce-recomp -Wall \
 	-outputdir . \
 	-no-global-package-db \
 	-no-user-package-db \
@@ -202,14 +209,16 @@ case $output in
         fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function 
                   --lift-memops
                   --remove-lit-pat --lift-expressions 
-                  --add-go --mono --uniquify --defunc --buffer-functions 
-				  --mem-insert"
+                  --add-go --mono --uniquify --defunc --buffer-functions
+			      --mem-insert
+				  --lambda-lift"
 				#   --merge-memops"
         ;;
     mem-dataflow)
-        fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function
-                  --mem-insert --remove-lit-pat --lift-expressions 
-                  --add-go --mono --uniquify"
+        fhwflags="$fhwflags --dataflow --tagmemops --rmrec --lift-function 
+                  --lift-memops
+                  --remove-lit-pat --lift-expressions 
+                  --add-go --mono --uniquify --lambda-lift --defunc --buffer-functions"
         ;;
     haskell)
 		fhwflags="$fhwflags -h"
@@ -220,10 +229,10 @@ case $output in
     #               --remove-lit-pat --lift-expressions 
     #               --add-go --mono --uniquify --defunc --buffer-functions --mem-insert "
 	# ;;
-	# fhwflags="$fhwflags -r --rmrec --lift-function --lift-expressions 
-    #               --mono --uniquify --defunc"
-	# ;;
-	fhwflags="$fhwflags -r"
+	fhwflags="$fhwflags -r --tagmemops --rmrec --lift-function 
+                  --lift-memops
+                  --remove-lit-pat --lift-expressions 
+                  --add-go --mono --uniquify --defunc --buffer-functions --lambda-lift"
 	;;
     simplified)
 	fhwflags="$fhwflags -r --simplified"
@@ -238,20 +247,17 @@ esac
 # Process External Core (.hcr) files
 if [ ${dot} -eq 1 ]; then
 	for hcrfile in $hcrfiles; do
-		RunVerb $FHWC $fhwflags $hcrfile ">" "${hcrfile}.df" " 2>" "${hcrfile}.df.log" || exit $?
+		RunVerb $FHWC $fhwflags $hcrfile ">" "${hcrfile}.df" " 2>" "${hcrfile}.df.log" || Clean $?
 	done
 	for file in $linkedfiles; do
 		echo "${file}.df"
-		RunVerb perl -i -pe "'BEGIN{undef $/;} s/^\s*{[\S\s]*}\n?//g'" "${file}.df" || exit $?
+		RunVerb perl -i -pe "'BEGIN{undef $/;} s/^\s*{[\S\s]*}\n?//g'" "${file}.df" || Clean $?
 	done
 else
 	for hcrfile in $hcrfiles; do
-		RunVerb $FHWC $fhwflags $hcrfile || exit $?
+		RunVerb $FHWC $fhwflags $hcrfile || Clean $?
 	done
 
 fi
 
-
-if [ ${keep} -eq 0 ]; then
-    RunVerb rm -f ${generatedfiles}
-fi
+Clean

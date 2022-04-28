@@ -74,15 +74,25 @@ xvlog.*
 ## checkpoint files
 *.dcp
 
-.xpr
-**/examples/List/
+**/project_1/**
+*.xpr
+**/examples/Tree/
+**/examples/List/**
+**/examples/QTreeTest_2/
 **/examples/QTree/
 **/examples/Simple/
 **/examples/QTreeTest/
-**/examples/QTreeBenchmarks/**
+**/examples/QTreeBenchmarks/*
 !/examples/QTreeBenchmarks/run_test.py
 !/examples/QTreeBenchmarks/test_gen.py
 !/examples/QTreeBenchmarks/test.tcl
+
+!/examples/QTreeBenchmarks/diploma/
+!/examples/QTreeBenchmarks/diploma/**/*.sv
+/examples/QTreeBenchmarks/diploma/verilog-bool-inlined
+/examples/QTreeBenchmarks/diploma/verilog-bool-not-inlined
+/examples/QTreeBenchmarks/diploma/verilog-int-no-nnz
+/examples/QTreeBenchmarks/diploma/test
 
 Playground.hs
 Demo.hs

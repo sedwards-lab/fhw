@@ -1,0 +1,2161 @@
+tests:
+- nnz: 6208
+  time: 3051728 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1865
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1119
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 12418
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 22231
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 8943
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8700
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4350
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2729
+  test_matrices:
+  - test_1.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 6208
+  time: 3292416 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3730
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2238
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 12418
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6209
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 22231
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 8943
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8700
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4350
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2729
+  test_matrices:
+  - test_1.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 13168
+  time: 6209648 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 5595
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3357
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 26338
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13169
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13169
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13169
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 43119
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 15911
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 22620
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 11310
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2729
+  test_matrices:
+  - test_1.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 9688
+  time: 4259392 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 19378
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 9689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 9689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 9689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 32675
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 12427
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 15660
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7830
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2729
+  test_matrices:
+  - test_1.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 5232
+  time: 2585072 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1455
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 873
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18972
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7851
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6550
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3275
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2613
+  test_matrices:
+  - test_2.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 5232
+  time: 2771328 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2910
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1746
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18972
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7851
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6550
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3275
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2613
+  test_matrices:
+  - test_2.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 10472
+  time: 4972272 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 4365
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2619
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 20946
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 10473
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 10473
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 10473
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 34700
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 13099
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 17030
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 8515
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2613
+  test_matrices:
+  - test_2.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 7852
+  time: 3488416 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 15706
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 7853
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 7853
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 7853
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 26836
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10475
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 11790
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5895
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 2613
+  test_matrices:
+  - test_2.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 2608
+  time: 1290272 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 475
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 285
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 5218
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 9820
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4395
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2070
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1035
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1781
+  test_matrices:
+  - test_3.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 2608
+  time: 1350640 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 950
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 570
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 5218
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2609
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 9820
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4395
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2070
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1035
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1781
+  test_matrices:
+  - test_3.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 4264
+  time: 2047968 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1425
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 855
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 8530
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 4265
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 4265
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 4265
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 14796
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 6059
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5382
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2691
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1781
+  test_matrices:
+  - test_3.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 3436
+  time: 1575184 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6874
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3437
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3437
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3437
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12308
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5227
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3726
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1863
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1781
+  test_matrices:
+  - test_3.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 6748
+  time: 3520464 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3050
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1830
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 13498
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25162
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 11051
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6130
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3065
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 4297
+  test_matrices:
+  - test_4.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 6748
+  time: 3862256 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 6100
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3660
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 13498
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6749
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25162
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 11051
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6130
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3065
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 4297
+  test_matrices:
+  - test_4.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 11652
+  time: 6088352 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 9150
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 5490
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 23306
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 11653
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 11653
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 11653
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 39882
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 15963
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 15938
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7969
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 4297
+  test_matrices:
+  - test_4.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 9200
+  time: 4199600 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 18402
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 9201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 9201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 9201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 32522
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 13507
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 11034
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5517
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 4297
+  test_matrices:
+  - test_4.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 1020
+  time: 548240 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 384
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2042
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3705
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1535
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1280
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 509
+  test_matrices:
+  - test_5.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 1020
+  time: 619920 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 768
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2042
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3705
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1535
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1280
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 509
+  test_matrices:
+  - test_5.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 2044
+  time: 1085584 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1920
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1152
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6785
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2567
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3328
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1664
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 509
+  test_matrices:
+  - test_5.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 1532
+  time: 689936 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3066
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1533
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1533
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1533
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5245
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2051
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2304
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1152
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 509
+  test_matrices:
+  - test_5.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 13272
+  time: 6591888 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3585
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2151
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 26546
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 48339
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 20207
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 15860
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7930
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 13858
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 6929
+  test_matrices:
+  - test_6.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 13272
+  time: 7049024 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 7170
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 4302
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 26546
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13273
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 48339
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 20207
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 15860
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7930
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 13858
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 6929
+  test_matrices:
+  - test_6.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 6988
+  time: 3458512 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1895
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1137
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 13978
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25402
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10571
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8530
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4265
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 7154
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 3577
+  test_matrices:
+  - test_7.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 6988
+  time: 3701088 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3790
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2274
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 13978
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6989
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25402
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10571
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8530
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4265
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 7154
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 3577
+  test_matrices:
+  - test_7.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 11524
+  time: 6031552 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 6300
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3780
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 23050
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 42325
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18015
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 12600
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 6300
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 12970
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 6485
+  test_matrices:
+  - test_8.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 11524
+  time: 6737152 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 12600
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 7560
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 23050
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 11525
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 42325
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18015
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 12600
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 6300
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 12970
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 6485
+  test_matrices:
+  - test_8.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 24392
+  time: 11913536 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 8330
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 4998
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 48786
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 86291
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 33743
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 37620
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 18810
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18690
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9345
+  test_matrices:
+  - test_9.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 24392
+  time: 12980640 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 16660
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 9996
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 48786
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 24393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 86291
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 33743
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 37620
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 18810
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18690
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9345
+  test_matrices:
+  - test_9.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 2044
+  time: 1097104 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 768
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7417
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3071
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2560
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2042
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1021
+  test_matrices:
+  - test_10.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 2044
+  time: 1240464 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2560
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1536
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7417
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3071
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2560
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2042
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1021
+  test_matrices:
+  - test_10.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 2732
+  time: 1553280 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1865
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1119
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 5466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10934
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5467
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5458
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2729
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_1.mtx
+  test_masks: null
+- nnz: 2616
+  time: 1443168 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1455
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 873
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 5234
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2617
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2617
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2617
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10470
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5235
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5226
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2613
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_2.mtx
+  test_masks: null
+- nnz: 1784
+  time: 917920 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 475
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 285
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3570
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1785
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1785
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1785
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7142
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3571
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3562
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1781
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_3.mtx
+  test_masks: null
+- nnz: 4300
+  time: 2407024 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3050
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1830
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 8602
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 4301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 4301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 4301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 17206
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 8603
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8594
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4297
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_4.mtx
+  test_masks: null
+- nnz: 512
+  time: 318672 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 384
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1026
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 2054
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1027
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1018
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_5.mtx
+  test_masks: null
+- nnz: 6932
+  time: 3785728 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3585
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2151
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 13866
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6933
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6933
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6933
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 27734
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 13867
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 13858
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 6929
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_6.mtx
+  test_masks: null
+- nnz: 3580
+  time: 1962208 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1895
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1137
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7162
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3581
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3581
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3581
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 14326
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7163
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7154
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3577
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_7.mtx
+  test_masks: null
+- nnz: 6488
+  time: 3821072 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 6300
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3780
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 12978
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 6489
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 6489
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 6489
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25958
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 12979
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 12970
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 6485
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_8.mtx
+  test_masks: null
+- nnz: 9348
+  time: 5555376 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 8330
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 4998
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 18698
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 9349
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 9349
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 9349
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 37398
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18699
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 18690
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 9345
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_9.mtx
+  test_masks: null
+- nnz: 1024
+  time: 636112 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 768
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2050
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4102
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2051
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2042
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_10.mtx
+  test_masks: null
+- nnz: 8
+  time: 6192 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 6
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 18
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 9
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 9
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 9
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 38
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 19
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 16
+  time: 10592 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 15
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 9
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 34
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 70
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 35
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 26
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 12
+  time: 7120 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 26
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 54
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 27
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 18
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 9
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 1896
+  time: 1036832 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 975
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 585
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3794
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1897
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1897
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1897
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7590
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3795
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3786
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1893
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_18.mtx
+  test_masks: null
+- nnz: 1164
+  time: 650656 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 715
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 429
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2330
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1165
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1165
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1165
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4662
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2331
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2322
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1161
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_19.mtx
+  test_masks: null
+- nnz: 256
+  time: 159952 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 320
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 192
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 514
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 257
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 257
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 257
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 1030
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 515
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 506
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 253
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_20.mtx
+  test_masks: null
+- nnz: 1100
+  time: 581072 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 420
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 252
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2202
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1101
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1101
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1101
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4406
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2203
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2194
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1097
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_21.mtx
+  test_masks: null
+- nnz: 880
+  time: 494256 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 630
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 378
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1762
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 881
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 881
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 881
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3526
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1763
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1754
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 877
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_22.mtx
+  test_masks: null
+- nnz: 1032
+  time: 569136 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 550
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 330
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2066
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1033
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1033
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1033
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4134
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2067
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2058
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1029
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_11.mtx
+  - test_23.mtx
+  test_masks: null
+- nnz: 5460
+  time: 2841744 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3730
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2238
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10922
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5461
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5461
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5461
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 19119
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 8195
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10916
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_1.mtx
+  test_masks: null
+- nnz: 5228
+  time: 2632656 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2910
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1746
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10458
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5229
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5229
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5229
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18307
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7847
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10452
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_2.mtx
+  test_masks: null
+- nnz: 3564
+  time: 1662032 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 950
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 570
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7130
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3565
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3565
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3565
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12483
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5351
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7124
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_3.mtx
+  test_masks: null
+- nnz: 8596
+  time: 4398704 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 6100
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3660
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 17194
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 8597
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 8597
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 8597
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 30095
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 12899
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 17188
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_4.mtx
+  test_masks: null
+- nnz: 1020
+  time: 585648 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1280
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 768
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2042
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3579
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1535
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2036
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_5.mtx
+  test_masks: null
+- nnz: 13860
+  time: 6903440 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 7170
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 4302
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 27722
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13861
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13861
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13861
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 48519
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 20795
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 27716
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 13858
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_6.mtx
+  test_masks: null
+- nnz: 7156
+  time: 3578192 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 3790
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2274
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 14314
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 7157
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 7157
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 7157
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25055
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10739
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 14308
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7154
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_7.mtx
+  test_masks: null
+- nnz: 12972
+  time: 7016752 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 12600
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 7560
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 25946
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 12973
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 12973
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 12973
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 45411
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 19463
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 25940
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 12970
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_8.mtx
+  test_masks: null
+- nnz: 18692
+  time: 10210800 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 16660
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 9996
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 37386
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 18693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 18693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 18693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 65431
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 28043
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 37380
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 18690
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_9.mtx
+  test_masks: null
+- nnz: 2044
+  time: 1171376 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2560
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1536
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2045
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7163
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3071
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4084
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2042
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_10.mtx
+  test_masks: null
+- nnz: 12
+  time: 7952 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 6
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 26
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 13
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 51
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 23
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 20
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 28
+  time: 17104 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 30
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 18
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 58
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 29
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 29
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 29
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 107
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 47
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 52
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 20
+  time: 10544 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 42
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 21
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 21
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 21
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 79
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 35
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 36
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 3788
+  time: 1889104 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1950
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1170
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7578
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3789
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3789
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3789
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 13267
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5687
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7572
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_18.mtx
+  test_masks: null
+- nnz: 2324
+  time: 1187024 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1430
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 858
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4650
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2325
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2325
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2325
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8143
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3491
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4644
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_19.mtx
+  test_masks: null
+- nnz: 508
+  time: 292784 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 384
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1018
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 1787
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 767
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1012
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_20.mtx
+  test_masks: null
+- nnz: 2196
+  time: 1054 us
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 840
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 504
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4394
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7695
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3299
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4388
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_21.mtx
+  test_masks: null
+- nnz: 1756
+  time: 901488 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1260
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 756
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3514
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1757
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1757
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1757
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6155
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2639
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3508
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_22.mtx
+  test_masks: null
+- nnz: 2060
+  time: 1036656 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1100
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 660
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4122
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2061
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2061
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2061
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7219
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3095
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4116
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 5
+  test_matrices:
+  - test_12.mtx
+  - test_23.mtx
+  test_masks: null
+- nnz: 8196
+  time: 4134048 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 5595
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 3357
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 16394
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 8197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 8197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 8197
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 27336
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10939
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 16374
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 8187
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_1.mtx
+  test_masks: null
+- nnz: 7848
+  time: 3825984 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 4365
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 2619
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 15698
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 7849
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 7849
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 7849
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 26176
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10475
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 15678
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 7839
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_2.mtx
+  test_masks: null
+- nnz: 5352
+  time: 2409984 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1425
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 855
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10706
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5353
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5353
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5353
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 17856
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7147
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10686
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5343
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_3.mtx
+  test_masks: null
+- nnz: 12900
+  time: 6394224 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 9150
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 5490
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 25802
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 12901
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 12901
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 12901
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 43016
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 17211
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 25782
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 12891
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_4.mtx
+  test_masks: null
+- nnz: 1536
+  time: 856464 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1920
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1152
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3074
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1537
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1537
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1537
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5136
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2059
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3054
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1527
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_5.mtx
+  test_masks: null
+- nnz: 24
+  time: 14112 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 15
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 9
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 50
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 96
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 43
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 30
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 15
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 24
+  time: 15792 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 30
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 18
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 50
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 25
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 96
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 43
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 30
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 15
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 36
+  time: 17808 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 74
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 37
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 37
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 37
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 136
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 59
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 54
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 27
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 5688
+  time: 2745216 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2925
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1755
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 11378
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5689
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18976
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7595
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 11358
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5679
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_18.mtx
+  test_masks: null
+- nnz: 3492
+  time: 1727232 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2145
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1287
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6986
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 11656
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4667
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6966
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3483
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_19.mtx
+  test_masks: null
+- nnz: 768
+  time: 429456 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 960
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 576
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1538
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 769
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 769
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 769
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 2576
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1035
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1518
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 759
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_20.mtx
+  test_masks: null
+- nnz: 3300
+  time: 1530768 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1260
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 756
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6602
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3301
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 11016
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4411
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6582
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3291
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_21.mtx
+  test_masks: null
+- nnz: 2640
+  time: 1312560 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1890
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1134
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 5282
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2641
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2641
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2641
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8816
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3531
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5262
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2631
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_22.mtx
+  test_masks: null
+- nnz: 3096
+  time: 1508016 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1650
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 990
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6194
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3097
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3097
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3097
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10336
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4139
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 6174
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3087
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 13
+  test_matrices:
+  - test_13.mtx
+  - test_23.mtx
+  test_masks: null
+- nnz: 5464
+  time: 2473648 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10930
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5465
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5465
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5465
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 19135
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 8203
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10916
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5458
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_1.mtx
+  test_masks: null
+- nnz: 5232
+  time: 2345904 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5233
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18323
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7855
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 10452
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5226
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_2.mtx
+  test_masks: null
+- nnz: 3568
+  time: 1569712 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7138
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3569
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3569
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3569
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12499
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5359
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7124
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3562
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_3.mtx
+  test_masks: null
+- nnz: 8600
+  time: 3795504 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 17202
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 8601
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 8601
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 8601
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 30111
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 12907
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 17188
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 8594
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_4.mtx
+  test_masks: null
+- nnz: 1024
+  time: 460592 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2050
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1025
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3595
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1543
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2036
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1018
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_5.mtx
+  test_masks: null
+- nnz: 16
+  time: 8880 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 34
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 67
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 31
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 20
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 16
+  time: 9008 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 34
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 17
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 67
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 31
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 20
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 10
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 32
+  time: 16048 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 66
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 33
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 33
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 33
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 123
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 55
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 52
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 26
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 3792
+  time: 1697584 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7586
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3793
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3793
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3793
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 13283
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5695
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7572
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_18.mtx
+  test_masks: null
+- nnz: 2328
+  time: 1047088 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4658
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2329
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2329
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2329
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8159
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3499
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4644
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_19.mtx
+  test_masks: null
+- nnz: 512
+  time: 231216 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1026
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 513
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 1803
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 775
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1012
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_20.mtx
+  test_masks: null
+- nnz: 2200
+  time: 972592 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4402
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2201
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7711
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3307
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4388
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_21.mtx
+  test_masks: null
+- nnz: 1760
+  time: 778416 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3522
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1761
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1761
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1761
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6171
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2647
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3508
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_22.mtx
+  test_masks: null
+- nnz: 2064
+  time: 929456 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4130
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2065
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2065
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2065
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7235
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3103
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4116
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 18
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 9
+  test_matrices:
+  - test_14.mtx
+  - test_23.mtx
+  test_masks: null
+- nnz: 3692
+  time: 1834896 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 975
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 585
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7386
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 13427
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5591
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4500
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2250
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1893
+  test_matrices:
+  - test_18.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 3692
+  time: 1960416 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1950
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1170
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7386
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3693
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 13427
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5591
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4500
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2250
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1893
+  test_matrices:
+  - test_18.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 7292
+  time: 3470192 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2925
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1755
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 14586
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 7293
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 7293
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 7293
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 24235
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 9199
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 11700
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 5850
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1893
+  test_matrices:
+  - test_18.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 5492
+  time: 2459936 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 10986
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 5493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 5493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 5493
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18831
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7395
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8100
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4050
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 3786
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1893
+  test_matrices:
+  - test_18.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 2396
+  time: 1197872 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 715
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 429
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4794
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8666
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3563
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1545
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1161
+  test_matrices:
+  - test_19.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 2396
+  time: 1288576 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1430
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 858
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4794
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2397
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8666
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3563
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3090
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1545
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1161
+  test_matrices:
+  - test_19.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 4868
+  time: 2330016 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 2145
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1287
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 9738
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 4869
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 4869
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 4869
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 16090
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 6043
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 8034
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 4017
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1161
+  test_matrices:
+  - test_19.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 3632
+  time: 1622528 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 7266
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3633
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3633
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3633
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12378
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4803
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5562
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2781
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2322
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1161
+  test_matrices:
+  - test_19.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 508
+  time: 273808 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 320
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 192
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1018
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 1849
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 767
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 640
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 320
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 253
+  test_matrices:
+  - test_20.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 508
+  time: 309648 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 640
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 384
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1018
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 509
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 1849
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 767
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 640
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 320
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 253
+  test_matrices:
+  - test_20.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 1020
+  time: 542864 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 960
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 576
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2042
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1021
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3393
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1287
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1664
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 832
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 253
+  test_matrices:
+  - test_20.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 764
+  time: 344848 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 1530
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 765
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 765
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 765
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 2621
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 1027
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1152
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 576
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 506
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 253
+  test_matrices:
+  - test_20.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 1732
+  time: 868944 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 420
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 252
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6460
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2835
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1590
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 795
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1097
+  test_matrices:
+  - test_21.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 1732
+  time: 920784 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 840
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 504
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3466
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1733
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6460
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2835
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1590
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 795
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1097
+  test_matrices:
+  - test_21.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 3004
+  time: 1461936 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1260
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 756
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6010
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3005
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3005
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3005
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10284
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4115
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 4134
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2067
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1097
+  test_matrices:
+  - test_21.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 2368
+  time: 1082192 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4738
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2369
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2369
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2369
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8372
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3475
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2862
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1431
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2194
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1097
+  test_matrices:
+  - test_21.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 1384
+  time: 719504 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 630
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 378
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2770
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5164
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2267
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1270
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 635
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 877
+  test_matrices:
+  - test_22.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 1384
+  time: 790128 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1260
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 756
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 2770
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1385
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5164
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2267
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 1270
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 635
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 877
+  test_matrices:
+  - test_22.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 2400
+  time: 1251952 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1890
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 1134
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4802
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8220
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3291
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 3302
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1651
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 877
+  test_matrices:
+  - test_22.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 1892
+  time: 860976 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 3786
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 1893
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 1893
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 1893
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6692
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2779
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2286
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1143
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 1754
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 877
+  test_matrices:
+  - test_22.mtx
+  - test_14.mtx
+  test_masks: null
+- nnz: 2152
+  time: 1049968 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 550
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 330
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4306
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7774
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3187
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2810
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1405
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1029
+  test_matrices:
+  - test_23.mtx
+  - test_11.mtx
+  test_masks: null
+- nnz: 2152
+  time: 1122512 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1100
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 660
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 4306
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 2153
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7774
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3187
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 2810
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 1405
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1029
+  test_matrices:
+  - test_23.mtx
+  - test_12.mtx
+  test_masks: null
+- nnz: 4400
+  time: 2059968 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 1650
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 990
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 8802
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 4401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 4401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 4401
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 14526
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5443
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 7306
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 3653
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1029
+  test_matrices:
+  - test_23.mtx
+  - test_13.mtx
+  test_masks: null
+- nnz: 3276
+  time: 1444512 ns
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_read: 0
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_Nat_write: 0
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_read : 6554
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmain_map'_Bool_Nat_write : 3277
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_read: 3277
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Nat_write: 3277
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 11150
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4315
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_read : 5058
+  /mMapKron_testbench/DUT/DUT/\profiling_MemIn_CTmap''_map''_Bool_Bool_Bool_write : 2529
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_read: 2058
+  /mMapKron_testbench/DUT/DUT/profiling_MemIn_CTkron_kron_Bool_Bool_Bool_write: 1029
+  test_matrices:
+  - test_23.mtx
+  - test_14.mtx
+  test_masks: null

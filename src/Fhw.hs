@@ -51,6 +51,7 @@ import Fhw.ProfileParser.Parser ( parseProfile )
 import Fhw.ProfileParser.ProfileInfo
 import Fhw.Pass.Compress.Compress
 import Fhw.Pass.Dataflow.CompressChoice(compressChoice)
+import Fhw.Pass.Unused.Unused (removeUnused)
 -- | Custom errors for the command-line program
 -- 
 --   To return an new error, define it here and throw it from the IO monad
@@ -118,6 +119,8 @@ main = (do
   -- Run the whole pipeline
   let (processedMod, analysisResults) =
           (\(m, a) -> (m, verifyAnalysis a m)) $
+          -- (\(m, a) -> (removeUnused m, a)) $
+          -- runPass UniquifyNames uniquifyNames $
           runAnalyzePass PartitionMem (partitionMem profile) $
           -- (\(m, a) -> (annotateTypes m, a)) $
           -- runPass LiftFunction liftFunction $
@@ -144,6 +147,7 @@ main = (do
                                                (AllInline `elem` flags)) $
           runPass DuplicateTys duplicateTypes $
           runPass LiftFunction liftFunction $
+          (\(m, a) -> (annotateTypes m, a)) $
           runPass Defunc defunctionalization $
           runPass LambdaLift lambdaLift $
           runPass UniquifyNames uniquifyNames $

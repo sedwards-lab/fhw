@@ -6,11 +6,11 @@ import os
 import shutil
 
 test_tcl = os.path.join(os.getcwd(), "test.tcl")
-result_csv = os.path.join(os.getcwd(), "result_MapKron.csv")
+result_csv = os.path.join(os.getcwd(), "result_MAddAddAdd2.csv")
 
-base_path = os.getcwd()
+base_path = os.path.join(os.getcwd(), "VPT")
 
-test_path = os.path.join(base_path,"MapKron")
+test_path = os.path.join(base_path,"MAddAddAdd2")
 
 
 os.chdir(os.path.join(test_path))
@@ -37,7 +37,8 @@ def clear_folder(folder_path):
         else:
             shutil.rmtree(file_object_path)
 
-tmp_path = "{}/tmp".format(base_path)
+tmp_path = "{}/tmp".format(test_path)
+
 if (os.path.exists(tmp_path)): shutil.rmtree(tmp_path)
 
 for path, module in test_config.items():
@@ -47,7 +48,7 @@ for path, module in test_config.items():
     shutil.copytree(os.path.join(os.getcwd(), os.path.dirname(path)), tmp_path, symlinks=False,dirs_exist_ok=True)
     os.chdir(tmp_path)
     # os.chdir(os.path.join(os.getcwd(), os.path.dirname(path)))
-    print(os.system("C:/Xilinx/Vivado/2020.2/bin/vivado.bat -quiet -mode batch -source {} -tclargs {} {} {} {} {} {} {}> {}/sim.log 2>&1".format(test_tcl,result_csv,*module,path,base_path)))
+    print(os.system("C:/Xilinx/Vivado/2020.2/bin/vivado.bat -quiet -mode batch -source {} -tclargs {} {} {} {} {} {} {}> {}/sim.log 2>&1".format(test_tcl,result_csv,*module,path, test_path)))
     # shutil.rmtree(tmp_path)
     clear_folder(tmp_path)
     os.chdir(test_path)

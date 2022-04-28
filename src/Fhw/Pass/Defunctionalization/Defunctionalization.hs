@@ -18,7 +18,7 @@ import Control.Monad.State as C
 import Data.Traversable as T
 import qualified Data.List as List
 import qualified Data.Map as Map
---import Debug.Trace
+-- import Debug.Trace
 
 
 type DtMap = Map.Map Ty (Tdef, Vdef)

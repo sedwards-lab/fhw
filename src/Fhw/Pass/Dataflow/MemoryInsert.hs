@@ -19,6 +19,8 @@ following invariants:
 
 -}
 
+
+{-# LANGUAGE OverloadedStrings #-}
 module Fhw.Pass.Dataflow.MemoryInsert ( memoryInsert ) where
 
 import Fhw.Pass.Dataflow.NodeTypes
@@ -28,6 +30,8 @@ import Data.Maybe
 import Data.List
 import Text.Read (choice)
 import Debug.Trace
+
+import qualified Data.Text as T
 
 -- | Information required to generate a memory network
 data MemInfo = MemInfo { memNodes :: [Node] -- Abstract r/w to a given memory
@@ -45,10 +49,10 @@ ptrSize :: Int
 ptrSize = 16
 
 memoryInsert :: Dataflow -> Dataflow
-memoryInsert (Dataflow tdefs nodes) 
+memoryInsert d@(Dataflow tdefs nodes)
   | null pntrTys = Dataflow tdefs nodes --No pointers => no memory operations
   | otherwise    = case verify $ Dataflow newTdefs newNodes of
-                    Left err -> error $ "Problem with memop insertion: " ++ err
+                    Left err -> error $ "Problem with memop insertion: " ++ err ++ (show (Dataflow newTdefs newNodes))
                     Right _ -> Dataflow newTdefs newNodes
   where
     newTdefs = newChoiceTys  ++           --new Choice types
@@ -62,11 +66,11 @@ memoryInsert (Dataflow tdefs nodes)
 
     newChoiceTys = mkChoiceTdef merges tdefs
     merges = filter isMergeChoice $ concat memNetworks
-    
+
     (memTys, memNetworks) = unzip memTups
     -- Construct a memory network for the appropriate types
-    (finalFork,memTups) = mapAccumL mkMemNetwork goForkNode
-                        $ map initMemInfo memNodeSets 
+    (finalFork,memTups) = mapAccumL (`mkMemNetwork` pntrSrcToDT) goForkNode
+                        $ map initMemInfo memNodeSets
     -- Each memory we build will correspond to one set in this list
     memNodeSets = map (findMemNodes nodes) pntrTys
     -- A source-driven fork carrying Go tokens
@@ -75,6 +79,13 @@ memoryInsert (Dataflow tdefs nodes)
 
     (pntrDefs, oldTdefs) = partition ((`elem` pntrTys) . getTyCon) tdefs
     pntrTys              = findMemTys nodes
+
+    -- zip each with corresponding data type
+    pntrSrcs = findSources nodes
+    -- a bit dirty hack
+    pntrSrcsDTs = [maybe (error $ "data type for " ++ ptr ++ " not found") getTyCon (find (\x -> T.pack (getTyCon x) == T.replace "Pointer_" "" (T.pack ptr)) tdefs) | ptr <- pntrSrcs
+                  ]
+    pntrSrcToDT = zip pntrSrcs pntrSrcsDTs
 
     -- Convert an abstract pointer type to a numeric representation.
     actualPntr (Tydef tc [Codef dc _]) = Tydef tc [Codef dc [ptrTy]]
@@ -89,7 +100,7 @@ memoryInsert (Dataflow tdefs nodes)
 -- | If we've added any MergeChoices with a new choice type, generate
 -- definitions for those type
 mkChoiceTdef :: [Node] -> [Tydef] -> [Tydef]
-mkChoiceTdef [] _ = [] 
+mkChoiceTdef [] _ = []
 mkChoiceTdef mergeChoices tdefs = map mkTy undefChTys
   where
     mkTy chTy = let chNum = tail chTy
@@ -110,6 +121,14 @@ findMemTys = nub . mapMaybe getTys
     getTys (Node _ (Func (Write _ (Tycon ptr))) _) = Just ptr
     getTys _                                       = Nothing
 
+-- | Collect all source nodes with ptrs
+
+findSources :: [Node] -> [Tcon]
+findSources = nub . mapMaybe getSrc
+  where
+    getSrc (Node _ (Source (Tycon ptr)) _) = Just ptr
+    getSrc _ = Nothing
+
 -- | Find all Read and Write nodes that operate on a given pointer type
 findMemNodes :: [Node] -> Tcon -> [Node]
 findMemNodes nodes pntrTy = filter usesPntr nodes
@@ -127,7 +146,7 @@ getGoFork nodes = case fromMaybe destErr sourceDest of
                     node@(Node _ (Fork _ _) _) -> (node, Nothing)
                     node -> insertFork node
   where
-    insertFork oldNode@(Node ins op outs) = 
+    insertFork oldNode@(Node ins op outs) =
       let goOut = head sources
           newFork = Node [goOut] (Fork 1 (Tycon "Go")) ["goFork"]
           replaceIn _   [] = []
@@ -147,8 +166,8 @@ getGoFork nodes = case fromMaybe destErr sourceDest of
 -- | Given a Go-producing fork node and information specific to 
 -- a given memory, construct a memory network for reading and writing that type.
 -- Return an updated fork node, any new types we define, and the memory network.
-mkMemNetwork :: Node -> MemInfo -> (Node,([Tydef],[Node]))
-mkMemNetwork fork info = if null nodeSet
+mkMemNetwork :: Node -> [(Tcon, Tcon)] -> MemInfo -> (Node,([Tydef],[Node]))
+mkMemNetwork fork srcToDTs info = if null nodeSet
                           then error "No nodes provided for mkMemNetwork"
                           else (newFork,(memTyDefs,heapDefs))
   where
@@ -156,9 +175,11 @@ mkMemNetwork fork info = if null nodeSet
     --interface types for memory
     memTyDefs = mkMemTys valTcon
     --nodes for heap pointer
-    (newFork, heapFork, heapPtrDefs) = mkPtrDefs fork info
+    (newFork, heapFork, dummyWrites, heapPtrDefs) = mkPtrDefs fork srcToDTs info
     --nodes for memory interface (and memory itself)
-    memOpDefs = mkMemOpDefs heapFork info
+
+    info' = MemInfo {memNodes = nodeSet ++ dummyWrites, initAddr = initAddr info}
+    memOpDefs = mkMemOpDefs heapFork info'
 
     valTcon   = getObjTy $ head nodeSet
     nodeSet   = memNodes info
@@ -173,23 +194,24 @@ mkMemTys tc = [memIn,memOut]
                                    ,Codef ("WriteIn_"   ++ tc) [ptrTy,ty]]
     memOut = Tydef ("MemOut_" ++ tc) [Codef ("ReadOut_" ++ tc) [ty]
                                      ,Codef ("ACK_"     ++ tc) []]
-                                     
+
 
 -- | Generate nodes implementing a memory's heap pointer,
 -- updating a Go-generating fork node in the process.
-mkPtrDefs :: Node -> MemInfo -> (Node,Node,[Node])
-mkPtrDefs (Node inp (Fork n ty) outputs) info = (goFork, heapFork, newNodes)
+mkPtrDefs :: Node -> [(Tcon, Tcon)] -> MemInfo -> (Node,Node,[Node],[Node])
+mkPtrDefs (Node inp (Fork n ty) outputs) srcToDTs info = (goFork, heapFork, dummyWrites, newNodes)
   where
-    forkOut1 = init (head outputs) ++ "_" ++ show (n+1)
-    forkOut2 = init (head outputs) ++ "_" ++ show (n+2)
-    initOut   = "initHP_"  ++ memTy  
-    incrOut   = "incrHP_"  ++ memTy  
-    incrMOut  = "incrHP_merge"  ++ memTy  
-    addOut    = "addHP_"   ++ memTy  
-    hpForkOut = "forkHP1_" ++ memTy  
-    mergeOut  = "mergeHP_" ++ memTy  
+    forkOut1 = if memElem then "go_1_dummy_write_" ++ (memTy) else  init (head outputs) ++ "_" ++ show (n+1)
+    forkOut2 = if memElem then "go_2_dummy_write_" ++ (memTy) else init (head outputs) ++ "_" ++ show (n+2)
+    
+    initOut   = "initHP_"  ++ memTy
+    incrOut   = "incrHP_"  ++ memTy
+    incrMOut  = "incrHP_merge"  ++ memTy
+    addOut    = "addHP_"   ++ memTy
+    hpForkOut = "forkHP1_" ++ memTy
+    mergeOut  = "mergeHP_" ++ memTy
 
-    newNodes = [initNode,incrNode,incrMerge,goFork2,addNode,merge,incrMergeBuf,mergeBuf]
+    newNodes = [initNode,incrNode,incrMerge,goFork2,addNode,merge,incrMergeBuf,mergeBuf] ++ (trace ("hp : " ++ show heapFork) nodesForSrcs) ++ dummyWritesInOuts 
     initNode = Node  [forkOut1] (IConst (initAddr info) addrSize) [initOut]
     incrMerge = Node [forkOut2,incrOut ++ "2"] (Merge 2 goTy)    [incrMOut]
     incrMergeBuf = Node [incrMOut]       (Buffer goTy)         [incrMOut ++ "_buf"]
@@ -198,41 +220,73 @@ mkPtrDefs (Node inp (Fork n ty) outputs) info = (goFork, heapFork, newNodes)
     addNode  = Node [incrOut, hpForkOut] (Func $ Add addrSize) [addOut]
     merge    = Node [initOut, addOut]    (Merge 2 ptrTy)       [mergeOut]
     mergeBuf = Node [mergeOut]           (Buffer ptrTy)        [mergeOut ++ "_buf"]
-    heapFork = Node [mergeOut ++ "_buf"] (Fork 1 ptrTy)        [hpForkOut]
-    goFork   = Node inp (Fork (n+2) ty) (outputs ++ [forkOut1,forkOut2])
+    heapFork = if memElem
+                then Node [mergeOut ++ "_buf"] (Fork 2 ptrTy)        [hpForkOut, memPtrSinkIn]
+                else Node [mergeOut ++ "_buf"] (Fork 1 ptrTy)        [hpForkOut]
+
+    memPtrSinkIn = hpForkOut ++ "_snk"
+    memSource = "\\" ++ memTy ++ "_src"
+
+    memPtrSink = Node [memPtrSinkIn] (Sink ptrTy) []
+    memSourceNode = Node [] (Source goTy) [memSource]
+    memSourceNodeFork = Node [memSource] (Fork 2 goTy) [forkOut1, forkOut2]
+
+    memElem = memTy `elem` map snd srcToDTs
+
+    nodesForSrcs = if memElem
+                   then [memPtrSink, memSourceNode, memSourceNodeFork]
+                   else []
+
+    -- fork's out for mem_ptr
+    goFork   = if memElem
+               then Node inp (Fork n ty) outputs
+               else Node inp (Fork (n+2) ty) (outputs ++ [forkOut1,forkOut2])
+
+    -- dummy channels for writing from outside
+    (dummyWritesInOuts,dummyWrites) = if memElem
+                 then ([Node [] (Source (Tycon memTy)) ["dummy_write_" ++ memTy], 
+                        Node ["dummy_write_" ++ memTy ++ "_sink"] (Sink (Tycon ptrTy')) []],
+                        [Node ["dummy_write_" ++ memTy] (Func $ Write (Tycon memTy) (Tycon ptrTy')) ["dummy_write_" ++ memTy ++ "_sink"]
+                       ] 
+                        )
+                       
+                       
+                 else ([],[])
 
     goTy = Tycon "Go"
     -- Data object type name (to store in memory)
     memTy = getObjTy $ head $ memNodes info
+
+    ptrTy' = maybe (error "ptrTy not found: " ++ memTy ++ " in " ++ show srcToDTs) fst (find (\x -> snd x == memTy) srcToDTs)
     -- Heap pointer size (subject to change)
-    addrSize = ptrSize 
+    addrSize = ptrSize
     --Currently incrementing heap pointer by logical increments 
-    increment = 1      
-mkPtrDefs _ _ = error "Non-fork node presented to mkHeapDefs"
+    increment = 1
+mkPtrDefs _ _ _ = error "Non-fork node presented to mkHeapDefs"
 
 -- | Given a fork for a heap pointer and all abstract read/write nodes
 -- for a specific type, generate an explicit memory subnetwork
 mkMemOpDefs :: Node -> MemInfo -> [Node]
-mkMemOpDefs (Node inp (Fork n ty) outputs) info = 
+mkMemOpDefs (Node inp (Fork n ty) outputs) info =
   newHeapFork :                   --modified heap pointer fork
   allMemNodes ++                  --explicit memory node and interface
-  (if any isRead nodeSet 
-    then readIOnodes ++ readNodes 
+  (if any isRead nodeSet
+    then readIOnodes ++ readNodes
     else []) ++                   --read-related nodes
   writeIOnodes ++ writeNodes      --write-related nodes
   where
     -- Potential merge and demux nodes for routing memops and results
-    (readIOnodes,writeIOnodes) = mkInterfaces nodeSet readIn writeIn 
+    (readIOnodes,writeIOnodes) = mkInterfaces nodeSet readIn writeIn
                                                       readOut writeOut
 
     -- Read-specific nodes and names
     readNodes  = [readDestr1,readDcon,readDestr2]
     readDestr1 = Node [readInToNetwork] (Destruct (objPtrTy, [0])) [readPtrChan]
-    readDcon   = Node [readPtrChan] (Func (Dcons readinDcon))  [readDconChan] 
+    readDcon   = Node [readPtrChan] (Func (Dcons readinDcon))  [readDconChan]
     readDestr2 = Node [memReadChan] (Destruct (readoutDcon, [0])) $
                             getExtOutputs isRead readOut readIOnodes
-    readInToNetwork = if null readIOnodes 
-                      then head $ getInputs $ head $ filter isRead nodeSet 
+    readInToNetwork = if null readIOnodes
+                      then head $ getInputs $ head $ filter isRead nodeSet
                       else readIn
     readPtrChan  = name "destructReadIn_"
     readDconChan = name "dconReadIn_"
@@ -240,22 +294,22 @@ mkMemOpDefs (Node inp (Fork n ty) outputs) info =
     readoutDcon  = name "ReadOut_"
 
     -- Write-specific nodes and names
-    writeNodes = [writeDcon,ptrDcon,demuxWriteOut] 
-    writeDcon = Node [hpFork1, writeInToNetwork] 
+    writeNodes = [writeDcon,ptrDcon,demuxWriteOut]
+    writeDcon = Node [hpFork1, writeInToNetwork]
                                (Func (Dcons writeinDcon)) [writeDconChan]
     ptrDcon   = Node [hpFork2] (Func (Dcons objPtrTy)) [ptrDconChan]
-    demuxWriteOut = Node [memWriteChan,ptrDconChan] 
+    demuxWriteOut = Node [memWriteChan,ptrDconChan]
                          (Demux (Tycon objPtrTy) [name "ACK_"])
                          (getExtOutputs isWrite writeOut writeIOnodes)
     hpFork1 = init (head outputs) ++ show (n+1)
     hpFork2 = init (head outputs) ++ show (n+2)
-    writeInToNetwork = if null writeIOnodes 
-                       then head $ getInputs $ head $ filter isWrite nodeSet 
+    writeInToNetwork = if null writeIOnodes
+                       then head $ getInputs $ head $ filter isWrite nodeSet
                        else writeIn
 
-    writeinDcon   = name "WriteIn_" 
-    writeDconChan = name "dconWriteIn_" 
-    ptrDconChan   = name "dconPtr_" 
+    writeinDcon   = name "WriteIn_"
+    writeDconChan = name "dconWriteIn_"
+    ptrDconChan   = name "dconPtr_"
 
 
     -- New heap pointer fork
@@ -278,18 +332,18 @@ mkMemOpDefs (Node inp (Fork n ty) outputs) info =
                       [memReadChan,memWriteChan]
     memInTy      = Tycon (name "MemIn_" )
     memOutTy     = Tycon (name "MemOut_")
-    memInChan    = name "memMergeIn_" 
-    memOutChan   = name "memOut_" 
-    memInSel     = name "memMergeChoice_" 
-    memReadChan  = name "memReadOut_" 
-    memWriteChan = name "memWriteOut_" 
+    memInChan    = name "memMergeIn_"
+    memOutChan   = name "memOut_"
+    memInSel     = name "memMergeChoice_"
+    memReadChan  = name "memReadOut_"
+    memWriteChan = name "memWriteOut_"
 
     -- Channels that feed first nodes internal to memory network
     readIn  = name "readMerge_data_"
     writeIn = name "writeMerge_data_"
     -- Channel names to feed into final demuxes, if needed
-    readOut  = name "destructReadOut_" 
-    writeOut = name "demuxWriteResult_" 
+    readOut  = name "destructReadOut_"
+    writeOut = name "demuxWriteResult_"
 
     -- Data object type name (to store in memory)
     memTy = getObjTy $ head nodeSet
@@ -303,7 +357,7 @@ mkMemOpDefs (Node inp (Fork n ty) outputs) info =
     nodeSet = memNodes info
     name = (++ memTy)
 
-mkMemOpDefs _ _ = error "Non-fork node presented to mkMemOpDefs"    
+mkMemOpDefs _ _ = error "Non-fork node presented to mkMemOpDefs"
 
 -- | If we have multiple readers or writers, generate mergeChoice and demux 
 -- nodes to route arguments/results to/from multiple call sites
@@ -319,7 +373,7 @@ mkInterfaces nodes readIn writeIn readOut writeOut = (readNodes, writeNodes)
     --of 64, distribute these clusters among MergeChoice/Demux pairs, then
     --recurse on these new node pairs (as they will then need to be merged
     --and demuxed)
-    mkNodes f prefix tyIn tyOut = 
+    mkNodes f prefix tyIn tyOut =
       if length allInputs <= 1
         then []
         else go (0::Integer) (zip allInputs allOutputs) []
@@ -328,17 +382,17 @@ mkInterfaces nodes readIn writeIn readOut writeOut = (readNodes, writeNodes)
         --The final two nodes get channel names corresponding to what the
         --internal memory network expects.
         go _ [] [Node mIns (MergeChoice t1 t2) _,
-                 Node _ (Demux t3 t4) dOuts] = 
+                 Node _ (Demux t3 t4) dOuts] =
                   [Node mIns (MergeChoice t1 t2) [mergeSel,mergeOut]
                   ,Node [mergeSel,demuxIn] (Demux t3 t4) dOuts]
         go n [] interfaceNodes = let newIns = mapMaybe getMergeOuts interfaceNodes
                                      newOuts = mapMaybe getDemuxIns interfaceNodes
                                  in if length newIns <= 1
                                       then go n [] interfaceNodes
-                                      else interfaceNodes ++ 
+                                      else interfaceNodes ++
                                            go (n+1) (zip newIns newOuts) []
-        go n ioPairs interfaceNodes = 
-          let (encodableSet,restPairs) = splitAt 64 ioPairs 
+        go n ioPairs interfaceNodes =
+          let (encodableSet,restPairs) = splitAt 64 ioPairs
               (inputs, outputs) = unzip encodableSet
               -- choiceTy = Tycon $ 'C' : trace ("show choiceNum" ++ show choiceNum) (show choiceNum)
               choiceTy = Tycon $ 'C' :  (show choiceNum)
@@ -346,9 +400,9 @@ mkInterfaces nodes readIn writeIn readOut writeOut = (readNodes, writeNodes)
               -- choices = mkChoiceDcs (trace ("choiceNum" ++ show choiceNum) choiceNum) 
               choices = mkChoiceDcs choiceNum
               mkName s = s ++ show n
-              newNodes = Node inputs (MergeChoice choiceTy tyIn) 
+              newNodes = Node inputs (MergeChoice choiceTy tyIn)
                                      [mkName mergeSel, mkName mergeOut] :
-                         Node [mkName mergeSel,mkName demuxIn] 
+                         Node [mkName mergeSel,mkName demuxIn]
                               (Demux tyOut choices) outputs : interfaceNodes
           in go (n+1) restPairs newNodes
         mergeOut = if prefix == "read" then readIn else writeIn

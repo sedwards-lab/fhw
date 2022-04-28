@@ -39,6 +39,9 @@ module Dfc.Verilog.AlgebraicTypes
     , unknownVal
     , invalidExpr
     , memoryTypes
+    , logEncodingBits
+    , findTCEncoding
+    , tconName
     )
 where
 
@@ -55,7 +58,7 @@ import Data.Maybe ( fromMaybe )
 data TypeEncodingInfo =
   TypeEncodingInfo { tconInfo :: [(Tcon, TconEncoding)]
                    , dconInfo :: [(Dcon, DconEncoding)]
-                   }
+                   } deriving (Show)
 
 -- | Encoding information for a type constructor
 data TconEncoding =
@@ -63,20 +66,20 @@ data TconEncoding =
                  , tagBits :: Int        -- ^ Number of bits for the tag
                  , totalBits :: Int      -- ^ Number of bits for a whole object
                  , dconEncs :: [DconEncoding] -- ^ Associated data constructors
-                 }
+                 } deriving (Show)
 
 -- | Encoding information for a data constructor
 data DconEncoding =
     DconEncoding { dconOf :: Dcon -- ^ Name of the data constructor
                  , tagValue :: Integer -- ^ Tag value for this data constructor
                  , fieldEncodings :: [FieldEncoding] -- ^ Encoding of each field
-                 }
+                 } deriving (Show)
 
 -- | Encoding information for a single field of a data constructor
 data FieldEncoding = FieldEncoding { fieldType :: Tcon   -- ^ Type of field
                                    , fieldBit :: Int   -- ^ First bit of field
                                    , fieldWidth :: Int -- ^ Number of bits
-                                   }
+                                   } deriving (Show)
 
 -- | Build up encoding information for a list of types in any order
 encodeTypes :: [Tdef] -> TypeEncodingInfo
@@ -279,7 +282,7 @@ unknownVal tei tc = V.Unknown $ totalBits $ findTCEncoding tei tc
 
 -- | Return a SystemVerilog expression for an invalid word for the given type
 invalidExpr :: TypeEncodingInfo -> Tcon -> V.Expr
-invalidExpr tei tcon = if bits > 0 then V.Concat [ V.Unknown bits, V.Sized 1 0 ]
+invalidExpr tei tcon = if bits > 0 then V.Concat [ V.Sized bits 0, V.Sized 1 0 ]
                        else V.Sized 1 0
    where
     bits = totalBitsOf tei tcon

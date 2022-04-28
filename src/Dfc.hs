@@ -104,47 +104,47 @@ notMain = (do
   let moduleName = case givenModuleName of "" -> "main"
                                            s -> s
 
-  let verilogResult = verilog moduleName processedMod
-
-  let (packageResult, verilogResult') = createPackage verilogResult (moduleName ++ "_package")
+  let (mainModule,package, wrapper) = verilog moduleName processedMod
   -- Generate System Verilog
-  ifFlag Verilog $ mapM_ (\(x, filename) -> writeFile filename (show . SV.SourceText $ x)) $ 
-                          zip [packageResult, V.Import [V.Package (moduleName ++ "_package")] : verilogResult']
-                              [moduleName ++ "_package.sv", moduleName ++ ".sv"]
-  ifFlag Verilog $ writeFile (moduleName ++ "_testbench.sv") . createTestbenchRoutine . show $ SV.SourceText (createTestbench verilogResult' moduleName (moduleName ++ "_package"))
+
+  ifFlag Verilog $ mapM_ (\(x, filename) -> writeFile filename (timescale ++ (render . pp . SV.SourceText $ x))) $ 
+                          zip [package, mainModule, wrapper]
+                              [moduleName ++ "_package.sv", moduleName ++ ".sv", moduleName ++ "_wrapper.sv" ]
+  -- ifFlag Verilog $ writeFile (moduleName ++ "_testbench.sv") . createTestbenchRoutine . show $ SV.SourceText (createTestbench verilogResult' moduleName (moduleName ++ "_package"))
 
   ) `catch` ( \e -> do
                  hPrint stderr (e :: DfcError)
                  exitFailure )
 
+timescale = "`timescale 1ns/1ns\n"
 
-testbenchRoutine = "  always begin \n\
-                   \     clk = 1'b1; \n\
-                   \     #8; \n\
-                   \     clk = 1'b0; \n\
-                   \     #8; \n\
-                   \  end \n\
-                   \\n\
-                   \  always begin \n\
-                   \    reset = 1'b1; \n\
-                   \    #16; \n\
-                   \    reset = 1'b0; \n\
-                   \    sourceGo_d = 1'd1; \n\
-                   \    wait(sourceGo_r == 1); \n\
-                   \    #16; \n\
-                   \    sourceGo_d = 1'd0; \n\
-                   \    wait(1 == 2); //wait till the end \n\
-                   \  end \n\
-                   \  always_comb begin \n\
-                   \    if (finish == 1'b1) \n\
-                   \         $finish; \n\
-                   \  end \n\
-                   \endmodule"
+-- testbenchRoutine = "  always begin \n\
+--                    \     clk = 1'b1; \n\
+--                    \     #8; \n\
+--                    \     clk = 1'b0; \n\
+--                    \     #8; \n\
+--                    \  end \n\
+--                    \\n\
+--                    \  always begin \n\
+--                    \    reset = 1'b1; \n\
+--                    \    #16; \n\
+--                    \    reset = 1'b0; \n\
+--                    \    sourceGo_d = 1'd1; \n\
+--                    \    wait(sourceGo_r == 1); \n\
+--                    \    #16; \n\
+--                    \    sourceGo_d = 1'd0; \n\
+--                    \    wait(1 == 2); //wait till the end \n\
+--                    \  end \n\
+--                    \  always_comb begin \n\
+--                    \    if (finish == 1'b1) \n\
+--                    \         $finish; \n\
+--                    \  end \n\
+--                    \endmodule"
 
-createTestbenchRoutine :: String -> String
-createTestbenchRoutine vd = let
-    vs = init . lines $ vd
-    in intercalate "\n" (["`timescale 1ns/1ns"] ++ vs ++ [testbenchRoutine])
+-- createTestbenchRoutine :: String -> String
+-- createTestbenchRoutine vd = let
+--     vs = init . lines $ vd
+--     in intercalate "\n" (["`timescale 1ns/1ns"] ++ vs ++ [testbenchRoutine])
 
 -- | Read and parse the given textual dfc file.  Throw ParseError on failure.
 parseDfc :: FilePath -> IO Dataflow

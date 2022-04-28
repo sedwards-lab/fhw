@@ -4,6 +4,7 @@ Description : Generate synthesizable SystemVerilog from semantically-checked
 dataflow
 
 -}
+{-# LANGUAGE CPP #-}
 
 module Dfc.Verilog.VerilogGen (verilog) where
 
@@ -12,17 +13,38 @@ import Dfc.AST -- Largely for types
 import Dfc.SAST -- SAST
 import Dfc.Verilog.AlgebraicTypes
 
-import Data.Maybe ( mapMaybe )
-import Data.List ( intercalate )
+import Data.Maybe ( mapMaybe, fromJust, fromMaybe)
+import Data.List ( intercalate, find, isSuffixOf, isPrefixOf, sortBy, intersperse)
 import Data.Bits ( shift )
 import Data.Char ( isAlpha, isAlphaNum, ord )
 import Text.Printf ( printf )
+import Dfc.Verilog.Testbench
+
+import Debug.Trace
+
+import Text.PrettyPrint (render)
+import qualified Data.Text as T
+
+
+import qualified Data.Map as Map
+import Control.Applicative
+
+
+data ClusteredTys =  ClusteredTys {recursiveTys :: Map.Map Tcon [Channel],
+                                   mainGo :: Maybe (Tcon, Channel),
+                                   pointerTys :: Map.Map Tcon [Channel],
+                                   plainTys :: Map.Map Tcon [Channel]} deriving (Show)
 
 -- | Translate a semantically-checked AST into a SystemVerilog module
-verilog :: String -> SDataflow -> [V.Description]
-verilog moduleName (SDataflow tdefs _ nodes') =
-    typeDefs tei ++
-    [V.Module { V.name = moduleName
+verilog :: String -> SDataflow -> ([V.Description], [V.Description], [V.Description]) -- main, package, wrapper
+verilog moduleName s@(SDataflow tdefs _ nodes') = trace ("ctIns " ++ show ctIn) $ (mainModule', package, wrapperModuleCode' ) where
+
+   wrapperModuleCode' = [V.Import [V.Package (moduleName ++ "_package")], wrapperModuleCode {V.items = intersperse V.Blankline $ V.items wrapperModuleCode}]
+
+   (package, mainModule') = let (p,m) = createPackage (typeDefs tei ++ [mainModule]) (moduleName ++ "_package")
+                                  in (p, V.Import [V.Package (moduleName ++ "_package")] : m)
+
+   mainModule = V.Module { V.name = moduleName
               , V.ports = V.clkPort : V.resetPort :
                           concatMap inputPort sources ++
                           concatMap inputPort readResults ++
@@ -30,7 +52,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
                           concatMap tapPort taps ++
                           concatMap outputPort sinks ++
                           concatMap outputPort readRequests ++
-                          concatMap outputPort writeRequests 
+                          concatMap outputPort writeRequests
               , V.items =  testbenchPorts "INPUTS" sources
                            : testbenchPorts "TAPS" taps
                            : testbenchPorts "OUTPUTS" sinks
@@ -38,8 +60,19 @@ verilog moduleName (SDataflow tdefs _ nodes') =
                            : dictPorts "READS" reads_ops
                            : dictPorts "WRITES" writes
                            : concatMap channelDecl channels ++
-                          concat nodeCode }]
- where
+                          concat nodeCode }
+
+   ctIn = groupBy sources
+   ctOut = groupBy sinks
+
+   mainGo = "sourceGo"
+
+   -- prefixed with "Pointer_"
+  --  pointerTys = undefined
+
+   -- like trees, only passed to fill up the memory
+  --  recursiveTys = undefined
+
    nodes = uniquifyWildcards nodes'
    tei = encodeTypes tdefs
    sources = mapMaybe sourceInst nodes
@@ -52,6 +85,357 @@ verilog moduleName (SDataflow tdefs _ nodes') =
    channels = concatMap inputChannels nodes
 
    nodeCode = map (\n -> V.Blankline : V.Comment (show n) : synthesize n) nodes
+
+   testInstance = V.ModInstance moduleName "DUT" [V.LValue . V.Var $ vname | vname <- mportsNames $ V.ports mainModule]
+
+   wrapperModuleCode = generateResultOutput . generateRecursiveInput . generatePlainInput . generateDataInput $ wrapperModule
+
+   wrapperModule = V.Module {V.name = moduleName ++ "_wrapper",
+                             V.ports = [(V.Input ("clk", V.Boolean)), (V.Input ("aresetn", V.Boolean))],
+                             V.items = [testInstance] ++ dataTransfered ++ testVdefs ++ reset ++ [reseted]}
+
+   testVdefs = mapMaybe (\x -> case x of
+                            (V.Input ("clk", _ )) -> Nothing
+                            (V.Input (varN, varT)) -> Just $ V.Reg (varN, varT)
+                            (V.Output (varN, varT)) -> Just $ V.Reg (varN, varT)) (V.ports mainModule)
+
+   mportsNames = map (\x -> case x of V.Input (varN, _) -> varN
+                                      V.Output (varN, _) -> varN)
+
+   dataTransfered = [V.Reg ("data_transfered",V.Boolean),
+                     V.Assign (V.Var "data_transfered") $ case Map.toList $ recursiveTys ctIn of
+                                                            [] -> V.String "reseted"
+                                                            x ->  foldr1 (\a b -> V.BinOp a (V.LogAnd) b) (map (\(a,b) -> V.String ("data_" ++ a ++ "_transfered")) x)
+                    ]
+
+   reset = [V.Assign (V.Var "reset") (V.UnaryOp (V.BitNot) (V.String ("aresetn")))]
+   reseted = V.Reg ("reseted", V.Boolean)
+
+   generateResultOutput :: V.Description -> V.Description
+   generateResultOutput mod@(V.Module {}) = let
+     resultSink@(t,chans) = fromMaybe (error $ "Sink for result not found in: " ++ show ctOut)
+                    (find (\(k,v) -> any (\ch -> not ("_sink" `isSuffixOf` ch)) v) (Map.toList $ pointerTys ctOut) 
+                    <|> find (\(k,v) -> any (\ch -> not ("_snk" `isSuffixOf` ch)) v) (Map.toList $ plainTys ctOut)) -- it cant be from recursive Tys
+     resultSinkChan = fromMaybe (error $ "Sink channel not found for: " ++ show chans) $ find (\ch -> not ("_sink" `isSuffixOf` ch) && not ("_snk" `isSuffixOf` ch)) chans 
+     ready = V.Assign (V.Var (resultSinkChan ++ "_rout")) (V.String "result_ready")
+     totalBits = totalBitsOf tei t
+     data' = V.AlwaysSequential (
+       (V.ifThenElse 
+       (V.BinOp (V.String "aresetn") V.Equal (V.Sized 1 0))
+       (V.NonBlocking (V.Var "result_data") (V.Sized totalBits 0))
+       (V.ifThen
+        (V.BinOp (V.BitE (V.String $ resultSinkChan ++ "_dout") 0) V.Equal (V.Sized 1 1))
+        (V.NonBlocking (V.Var "result_data") (V.String (resultSinkChan ++ "_dout")))
+       )
+       )
+      )
+     resultReady = (V.Input ("result_ready", V.Boolean))
+     resultData =  (V.Output ("result_data", V.Named $ tconName t)) in
+       mod {V.ports = V.ports mod ++ [resultReady, resultData], V.items = V.items mod ++ [ready, data'] }
+
+   generateRecursiveInput :: V.Description -> V.Description
+   generateRecursiveInput mod@(V.Module {}) = foldr ((generateRecursiveInputHelper 0) . (\(k,v) -> (k, sortBy (\a b -> compare
+                                                                                                                            (last (T.splitOn (T.pack "_") (T.pack a)))
+                                                                                                                            (last (T.splitOn (T.pack "_") (T.pack b))) ) v))) (mod) (Map.toList $ pointerTys ctIn) where
+          generateRecursiveInputHelper i (tcon, []) mod = mod
+          generateRecursiveInputHelper i (tcon, ch:chans) mod = let
+            done = V.Reg (ch ++ "_done", V.Boolean)
+            t = T.unpack $ last (T.splitOn (T.pack "Pointer_") (T.pack tcon))
+            body = V.AlwaysSequential (
+                V.ifThenElse
+                  (V.BinOp (V.BinOp (V.String ("data_transfered")) V.Equal (V.Sized 1 1))
+                                                                                    V.LogAnd (V.BinOp
+                                                                                      (V.BinOp (V.String $ ch ++ "_r") V.Equal (V.Sized 1 0))
+                                                                                      V.LogAnd
+                                                                                      (V.BinOp (V.String $ ch ++ "_done") V.Equal (V.Sized 1 0))
+                                                                                      ))
+                  (V.NonBlocking (V.Var $ ch ++ "_d") (V.BitE (V.String $ "inputs_" ++ t) i))
+                  (V.ifThenElse
+                    (V.BinOp (V.BinOp (V.String ("data_transfered")) V.Equal (V.Sized 1 1))
+                                                                                    V.LogAnd
+                             (V.BinOp (V.String $ ch ++ "_r") V.Equal (V.Sized 1 1))
+                    )
+                    (V.SeqBlock [] [
+                      V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                      V.NonBlocking (V.Var (ch ++ "_done")) (V.Sized 1 1)
+                    ])
+                    (V.ifThenElse
+                      (V.BinOp (V.String $ ch ++ "_done") V.Equal (V.Sized 1 1))
+                      (V.SeqBlock [] [
+                        V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                        V.NonBlocking (V.Var (ch ++ "_done")) (V.Sized 1 1)
+                      ])
+                      (V.SeqBlock [] [
+                        V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                        V.NonBlocking (V.Var (ch ++ "_done")) (V.Sized 1 0)
+                      ])
+
+                    )
+
+                  )
+             )
+            in
+              generateRecursiveInputHelper (i + 1) (tcon, chans) (mod {V.items = V.items mod ++ [done, body] })
+
+
+
+
+   generatePlainInput :: V.Description -> V.Description
+   generatePlainInput mod@(V.Module {}) = foldr generatePlainInputHelper (mod) (Map.toList $ plainTys ctIn) where
+
+          generatePlainInputHelper (tcon, []) mod = mod
+          generatePlainInputHelper (tcon, ch:chans) mod = if "_src" `isSuffixOf` ch
+                                                          then generatePlainInputHelper (tcon, chans) mod
+                                                          else let
+                                                            done = V.Reg (ch ++ "_done",V.Boolean)
+                                                            body = V.AlwaysSequential (
+                                                              V.ifThenElse (V.BinOp (V.String "aresetn") (V.Equal) (V.Sized 1 0))
+                                                                           (V.SeqBlock [] [
+                                                                             V.NonBlocking (V.Var (ch ++ "_done")) (V.Sized 1 0),
+                                                                             if tcon == "Go" then V.NonBlocking (V.Var (ch ++ "_d")) (V.Sized 1 0)
+                                                                             else V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0)
+                                                                           ])
+                                                                           (V.ifThenElse
+                                                                            (V.BinOp (V.BinOp (V.String ("data_transfered")) V.Equal (V.Sized 1 1))
+                                                                                    V.LogAnd (V.BinOp
+                                                                                      (V.BinOp (V.String $ ch ++ "_r") V.Equal (V.Sized 1 0))
+                                                                                      V.LogAnd
+                                                                                      (V.BinOp (V.String $ ch ++ "_done") V.Equal (V.Sized 1 0))
+                                                                                      )
+                                                                            )
+                                                                            (if tcon == "Go" then V.NonBlocking (V.Var (ch ++ "_d")) (V.Sized 1 1)
+                                                                             else V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 1))
+                                                                            (V.ifThenElse
+                                                                              (V.BinOp (V.BinOp (V.String $ "data_transfered") (V.Equal) (V.Sized 1 1))
+                                                                                  V.LogAnd
+                                                                                      (V.BinOp (V.String $ ch ++ "_r") V.Equal (V.Sized 1 1)))
+                                                                              (V.SeqBlock [] [
+                                                                                  if tcon == "Go" then V.NonBlocking (V.Var (ch ++ "_d")) (V.Sized 1 0)
+                                                                                  else V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                                                                                  V.NonBlocking (V.Var $ ch ++ "_done") (V.Sized 1 1)
+                                                                              ])
+                                                                              (V.ifThenElse
+                                                                                (V.BinOp (V.String $ ch ++ "_done") V.Equal (V.Sized 1 1))
+                                                                                (V.SeqBlock [] [
+                                                                                  if tcon == "Go" then V.NonBlocking (V.Var (ch ++ "_d")) (V.Sized 1 0)
+                                                                                  else V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                                                                                  V.NonBlocking (V.Var $ ch ++ "_done") (V.Sized 1 1)
+                                                                                ])
+                                                                                (V.SeqBlock [] [
+                                                                                  if tcon == "Go" then V.NonBlocking (V.Var (ch ++ "_d")) (V.Sized 1 0)
+                                                                                  else V.NonBlocking (V.Bit (ch ++ "_d") 0) (V.Sized 1 0),
+                                                                                  V.NonBlocking (V.Var $ ch ++ "_done") (V.Sized 1 0)
+                                                                                ])
+                                                                              )
+
+                                                                            )
+
+                                                                           )
+                                                                           )
+                                                                            in generatePlainInputHelper (tcon, chans) (mod {V.items = V.items mod ++ [done, body] })
+
+   -- each recursive types is passed via type-specific memory writes, the number of arguments is the number of corresponding pointer-types inputs
+   generateDataInput :: V.Description -> V.Description
+   generateDataInput mod@(V.Module {}) = foldr generateDataInputHelper (mod) (Map.toList $ recursiveTys ctIn) where
+
+
+          generateDataInputHelper (tcon, [channel]) mod =
+              let
+                  -- only trees are supported atm
+                  isTree = (\x@(Tdef tcon' variants) -> all ((==) True . isTreeVariant) variants) inputTdef
+                  isTreeVariant x@(Variant dcon tcons) = all (\y -> (not ("Pointer_" `isPrefixOf` y)) || (y == "Pointer_" ++ tcon)) tcons
+                  inputTdef = fromJust $ find (\x -> case x of
+                                            Tdef t' _ -> t' == tcon
+                                            _ -> False) tdefs
+                  inputDcons = (\x@(Tdef _ variants) -> variants) inputTdef
+
+                  newPorts = [V.Input ("i_" ++ tcon ++ "_tdata", V.Named (tconName tcon)),
+                              V.Input ("i_" ++ tcon ++ "_tlast", V.Boolean),
+                              V.Input ("i_" ++ tcon ++ "_tvalid", V.Boolean),
+                              V.Output ("i_" ++ tcon ++ "_tready", V.Boolean)]
+
+                  goMap = case Map.lookup "Go" (plainTys ctIn) of
+                    Just x -> x
+                    Nothing -> error "Go input not found"
+                  goSource = case find (\x -> ("\\" ++ tcon) `isPrefixOf` x) goMap of
+                    Just x -> x
+                    Nothing -> error $ "Source for " ++ tcon ++ "not found"
+                  done = V.Reg (goSource ++ "_done", V.Boolean)
+
+                  forkOut'@(_, channels) = case find (\x@(ty, channels) -> case (find (\x -> (tcon ++ "_snk") `isSuffixOf` x) channels) of
+                                                              Just _ -> True
+                                                              Nothing -> False) (Map.toList $ plainTys ctOut) of
+                                            Just x -> x
+                                            Nothing -> error $ "Sink channel for " ++ tcon ++ "not found"
+                  forkOutChannel = case find (\x -> (tcon ++ "_snk") `isSuffixOf` x) channels of
+                                          Just x -> x
+                                          Nothing -> error $ "forkOutChannel for " ++ tcon ++ " not found"
+
+                  inputs = fromJust $ Map.lookup ("Pointer_" ++ tcon) (pointerTys ctIn)
+                  inputsSize = toInteger $ length inputs
+                  encodingSize = toInteger $ (logEncodingBits . fromInteger $ inputsSize) + 1
+
+                  isRecursive x = "Pointer_" `isPrefixOf` x
+                  tagBitsNumber = tagBitsOf tei tcon
+                  totalBits = totalBitsOf tei tcon
+
+                  caseItemForDcon valid cont dcon@(Variant d tcons) = let tagValue@(V.Literal v) = tagVal tei d
+                                                                          expr =  V.String ("i_" ++ tcon ++ "_tdata") in
+                                                           if any isRecursive tcons then
+                                                             let slices = fieldExprs tei d expr
+                                                                 createArg (a, n) (t, s) = if isRecursive t
+                                                                   then
+                                                                    (a ++ [dconExpr tei t [V.Sized 1 0, V.LValue (V.Element ("stack_" ++ tcon) (V.BinOp (V.String $ "stack_" ++ tcon ++ "_ptr") (V.Minus) (V.Literal n)))]], n + 1)
+                                                                   else (a ++ [fromMaybe (error "Nothing unexpected") s],n)
+                                                                 (args, n') = foldl createArg ([],2) (zip tcons slices) in -- 2 because first pointer is at stack_ptr - 2
+                                                             V.CaseItem
+                                                                  (V.Sized tagBitsNumber v)
+                                                                  (V.SeqBlock [] (V.NonBlocking (V.Var (channel ++ "_d")) (dconExpr tei d ((V.Sized 1 valid) : args)) : cont (n' - 2)))
+                                                           else V.CaseItem
+                                                                      (V.Sized tagBitsNumber v)
+                                                                      (V.NonBlocking (V.Var (channel ++ "_d")) (V.Concat [V.SliceE expr totalBits 1, V.Sized 1 valid]))
+
+                  caseExprValidReady = V.Case (tagExpr tei (V.String ("i_" ++ tcon ++ "_tdata")) (tcon)) (map (caseItemForDcon 0 contValidReady) inputDcons)
+                  caseExprValidNotReady = V.Case (tagExpr tei (V.String ("i_" ++ tcon ++ "_tdata")) (tcon)) (map (caseItemForDcon 1 (const [])) inputDcons)
+
+                  contValidReady offset = [V.NonBlocking
+                                                 (V.Var $ "stack_" ++ tcon ++ "_ptr")
+                                                 (V.BinOp (V.String $ "stack_" ++ tcon ++ "_ptr") (V.Minus) (V.Literal (offset))),
+                                           V.NonBlocking
+                                                 (V.Element ("stack_" ++ tcon) (V.BinOp (V.String $ "stack_" ++ tcon ++ "_ptr") (V.Minus) (V.Literal $ offset + 1)))
+                                                 (V.LValue $ V.Element ("stack_" ++ tcon) (V.BinOp (V.String $ "stack_" ++ tcon ++ "_ptr") (V.Minus) (V.Literal $ 1)))
+                                          ]
+
+
+
+                  items = [V.AlwaysSequential (
+                      V.ifThenElse
+                          (V.BinOp (V.String "aresetn") V.Equal (V.Sized 1 0))
+                          (V.SeqBlock [] [V.NonBlocking (V.Var (channel ++ "_sink_rout")) (V.Sized 1 1),
+                                          V.NonBlocking (V.Var (goSource ++ "_d")) (V.Sized 1 0),
+                                          V.NonBlocking (V.Var (goSource ++ "_done")) (V.Sized 1 0),
+                                          V.NonBlocking (V.Var (forkOutChannel ++ "_rout")) (V.Sized 1 1)])
+                          (V.ifThenElse
+                            (V.BinOp (V.String "reseted") V.Equal (V.Sized 1 1))
+                            (V.ifThenElse
+                              (V.BinOp (V.BinOp (V.String (goSource ++ "_done")) V.Equal (V.Sized 1 0))
+                                          V.LogAnd
+                                       (V.BinOp (V.String (goSource ++ "_r")) V.Equal (V.Sized 1 0)))
+
+                              (V.NonBlocking (V.Var (goSource ++ "_d")) (V.Sized 1 1))
+                              (V.ifThenElse
+
+                                (V.BinOp (V.BinOp (V.String (goSource ++ "_r")) V.Equal (V.Sized 1 1))
+                                          V.LogAnd
+                                       (V.BinOp (V.String (goSource ++ "_done")) V.Equal (V.Sized 1 0)))
+
+                                (V.SeqBlock [] [
+                                          V.NonBlocking (V.Var (goSource ++ "_done")) (V.Sized 1 1),
+                                          V.NonBlocking (V.Var (goSource ++ "_d")) (V.Sized 1 0)])
+                                (V.NonBlocking (V.Var (goSource ++ "_d")) (V.Sized 1 0))
+
+                              )
+                            )
+                            (V.Null)
+                          )),
+                          V.Assign (V.Var ("i_" ++ tcon ++ "_tready")) (V.String (channel ++ "_r")),
+                          V.Reg ("data_" ++ tcon ++ "_transfered", V.Boolean),
+                          V.Reg ("stack_" ++ tcon, V.Array (V.Named $ "Pointer_" ++ tcon ++"_t") 256),
+                          V.Reg ("inputs_" ++ tcon, V.Array (V.Named $ "Pointer_" ++ tcon ++"_t") inputsSize),
+
+                          V.Reg ("inputs_" ++ tcon ++ "_ptr", V.Unsigned (fromInteger encodingSize + 1)),
+                          V.Reg ("stack_" ++ tcon ++ "_ptr", V.Unsigned 8),
+
+                          V.AlwaysSequential (
+                            V.ifThenElse
+                              (V.BinOp (V.String "aresetn") V.Equal (V.Sized 1 0))
+                              (V.SeqBlock [] [V.NonBlocking (V.Var ("data_" ++ tcon ++ "_transfered")) (V.Sized 1 0),
+                                          V.NonBlocking (V.Bit (channel ++ "_d") 0) (V.Sized 1 0),
+                                          V.NonBlocking (V.Var ("stack_" ++ tcon ++ "_ptr")) (V.Sized 8 0),
+                                          V.NonBlocking (V.Var ("inputs_" ++ tcon ++ "_ptr")) (V.Sized (fromInteger encodingSize + 1) 0)])
+                              (V.ifThenElse
+                                (V.BinOp (V.String $ "data_" ++ tcon ++ "_transfered") V.Equal (V.Sized 1 1))
+                                (V.NonBlocking (V.Bit (channel ++ "_d") 0) (V.Sized 1 0))
+                                (V.ifThenElse
+                                  (V.BinOp (V.String (goSource ++ "_done")) V.Equal (V.Sized 1 1))
+                                  (V.ifThen
+                                    (V.BinOp (V.BitE (V.String $ forkOutChannel ++ "_dout") 0) V.Equal (V.Sized 1 1))
+                                    (V.SeqBlock [] [
+                                      V.NonBlocking (V.Element ("stack_" ++ tcon) (V.String $ "stack_" ++ tcon ++ "_ptr")) (V.String $ forkOutChannel ++ "_dout"),
+                                      V.NonBlocking (V.Var ("stack_" ++ tcon ++ "_ptr")) (V.BinOp (V.String $ ("stack_" ++ tcon ++ "_ptr")) V.Plus (V.Sized 8 1))
+                                    ])
+                                  )
+                                  (V.ifThenElse
+                                    (V.BinOp (V.BinOp (V.String ("i_" ++ tcon ++ "_tvalid")) (V.Equal) (V.Sized 1 1))
+                                              (V.LogAnd)
+                                             (V.BinOp (V.String ("i_" ++ tcon ++ "_tready")) (V.Equal) (V.Sized 1 1)))
+                                    (V.SeqBlock [] [V.ifThen
+                                      (V.BinOp (V.String ("i_" ++ tcon ++ "_tlast")) (V.Equal) (V.Sized 1 1))
+                                      (V.SeqBlock [] [
+                                        V.ifThen
+                                        (V.BinOp (V.String ("inputs_" ++ tcon ++ "_ptr")) (V.Equal) (V.Sized (fromInteger encodingSize + 1) (inputsSize - 1)))
+                                        (V.NonBlocking (V.Var ("data_" ++ tcon ++ "_transfered")) (V.Sized 1 1)),
+                                        V.NonBlocking (V.Var ("inputs_" ++ tcon ++ "_ptr")) (V.BinOp (V.String $ ("inputs_" ++ tcon ++ "_ptr")) (V.Plus) (V.Sized (fromInteger encodingSize) 1)),
+                                        V.NonBlocking (V.Element ("inputs_" ++ tcon) (V.String $ "inputs_" ++ tcon ++ "_ptr")) (V.LValue $ V.Element ("stack_" ++ tcon) (V.BinOp (V.String ("stack_" ++ tcon ++ "_ptr")) (V.Minus) (V.Sized 8 1)) )
+                                        ]
+                                      ),
+                                      caseExprValidReady
+                                    ]
+                                  )
+                                  (V.ifThenElse
+                                    (V.BinOp (V.BinOp (V.String ("i_" ++ tcon ++ "_tvalid")) (V.Equal) (V.Sized 1 1))
+                                              (V.LogAnd)
+                                             (V.BinOp (V.String ("i_" ++ tcon ++ "_tready")) (V.Equal) (V.Sized 1 0)))
+                                    (caseExprValidNotReady)
+                                    (V.Null)
+                                  )
+                              )
+                          )
+                           )
+                          ),
+                          V.AlwaysSequential (
+                            V.ifThenElse
+                            (V.BinOp (V.String "aresetn") (V.Equal) (V.Sized 1 0))
+                            (V.NonBlocking (V.Var "reseted") (V.Sized 1 1))
+                            (V.Null)
+                          )
+
+                          ]
+                   in
+                    -- trace (concatMap (render . V.pp . fromJust) $ fieldExprs tei ((dconsOf tei tcon) !! 0) (V.String "blah")) $ mod {V.items = items ++ V.items mod, V.ports = newPorts ++ V.ports mod}
+                    trace ("isTree: " ++ show (totalBitsOf tei tcon)) $ mod {V.items = V.items mod ++ (done : items), V.ports = V.ports mod ++ newPorts}
+          generateDataInputHelper (tcon, channels) _ = error $ "Only one input should be per each recursive type, but: " ++ tcon ++ " " ++ show channels ++ " found"
+
+
+
+   isPointer :: Tcon -> Bool
+   isPointer t = "Pointer_" `isPrefixOf` t
+
+   isRecursive :: Tcon -> Bool
+   isRecursive t = 
+                let tdef = find (\tdef -> case tdef of
+                                    Tdef tcon variants -> (tcon == t)
+                                    _ -> False) tdefs
+                    isRec = case tdef of 
+                                Just t'@(Tdef tcon variants) -> any (\x@(Variant dcon tcons) -> case find (\x -> x == ("Pointer_" ++ t)) tcons
+                                              of Nothing -> False
+                                                 _ -> True) variants
+                                _ -> False in
+                 isRec
+
+   groupBy :: [(Channel, Tcon)] -> ClusteredTys
+   groupBy snodes = foldr helper (ClusteredTys{recursiveTys=Map.empty, mainGo = Nothing, pointerTys=Map.empty, plainTys=Map.empty}) snodes where
+
+      helper snode (grouper) = case snode of
+                            (chan, ty) -> if isPointer ty then case Map.lookup ty (pointerTys grouper) of
+                                                                    Just xs -> grouper {pointerTys = Map.insert ty (chan : xs) $ pointerTys grouper}
+                                                                    Nothing -> grouper {pointerTys = Map.insert ty [chan] $ pointerTys grouper}
+                                          else if (isRecursive ty) then case Map.lookup ty (recursiveTys grouper) of
+                                                                    Just xs -> grouper {recursiveTys = Map.insert ty (chan : xs) $ recursiveTys grouper}
+                                                                    Nothing -> grouper {recursiveTys = Map.insert ty [chan] $ recursiveTys grouper}
+                                                else case Map.lookup ty (plainTys grouper) of
+                                                                    Just xs -> grouper {plainTys = Map.insert ty (chan : xs) $ plainTys grouper}
+                                                                    Nothing -> grouper {plainTys = Map.insert ty [chan] $ plainTys grouper}
 
    -- Extract the name and type of a source
    sourceInst :: SNode -> Maybe (Channel, Tcon)
@@ -70,13 +454,13 @@ verilog moduleName (SDataflow tdefs _ nodes') =
 
    -- Extract the name and type of a read requst and result
    readSourceInst :: SNode -> Maybe ((Channel, Tcon), (Channel, Tcon))
-   readSourceInst (SNode "read" _ [Bind c1 t1] [Bind c2 t2]) = 
+   readSourceInst (SNode "read" _ [Bind c1 t1] [Bind c2 t2]) =
                       Just ((c1, t1), (c2,t2))
    readSourceInst _ = Nothing
-   
+
    -- Extract the name and type of a read requst and result
    writeSourceInst :: SNode -> Maybe ((Channel, Tcon), (Channel, Tcon))
-   writeSourceInst (SNode "write" _ [Bind c1 t1] [Bind c2 t2]) = 
+   writeSourceInst (SNode "write" _ [Bind c1 t1] [Bind c2 t2]) =
                       Just ((c1, t1), (c2,t2))
    writeSourceInst _ = Nothing
 
@@ -108,11 +492,11 @@ verilog moduleName (SDataflow tdefs _ nodes') =
    -- Generate a Type dictionary to be printed as a comment in our Verilator
    -- testbench.
    typeDict :: V.Item
-   typeDict = V.Comment $ "TYPE_START\n" ++ typeLines ++ 
+   typeDict = V.Comment $ "TYPE_START\n" ++ typeLines ++
                           (if null typeLines then "" else "\n") ++ "TYPE_END"
     where
       typeLines = intercalate "\n" $ mapMaybe getTypesInfo (tconInfo tei)
-      getTypesInfo (tc,_) = 
+      getTypesInfo (tc,_) =
         let ptrSize = ptrWidth tei tc
         in fmap (mkTypeLine tc)  ptrSize
       mkTypeLine tc pSize = unwords [verilatify tc,
@@ -146,7 +530,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
    dictPorts io ports = V.Comment $ io ++ "=" ++
                         intercalate ";" (map getInfo ports) ++ ""
     where
-      getInfo (c1, c2, ty) = "(" ++ verilatify c1 ++ "," ++ verilatify c2 ++ "," 
+      getInfo (c1, c2, ty) = "(" ++ verilatify c1 ++ "," ++ verilatify c2 ++ ","
                               ++ verilatify ty ++ ")"
 
    inputChannels :: SNode -> [Chan]
@@ -196,7 +580,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
    synthesize (SNode "tap" [_] [Bind c _] []) =
        [V.Assign (V.LConcat [ V.Var (c ++ "_rout")
                             , V.Var (c ++ "_dout") ])
-            (V.Concat [ readye c, datae c ])]     
+            (V.Concat [ readye c, datae c ])]
 
    -- A big_add node adds any number of inputs of the same size into a single output in
    -- a single cycle. This can be used as an alternative to the merge node for collecting
@@ -209,10 +593,10 @@ verilog moduleName (SDataflow tdefs _ nodes') =
        datapathAssign = V.Assign (V.Var $ datac out )
                                  (V.Concat [V.Sized 16 0, result, andValids ])
        readyAssign = V.Assign (V.LConcat $ map (V.Var . ready) inNames)
-                              (V.Repeat (length inNames) 
+                              (V.Repeat (length inNames)
                                 [V.BinOp (readye out) V.LogAnd (valide out)])
        andValids = foldr1 vand $ map valide inNames
-       result    = foldr makeOp (V.SliceE (datae $ head inNames) valueBits 1) 
+       result    = foldr makeOp (V.SliceE (datae $ head inNames) valueBits 1)
                                 (tail inNames)
        makeOp name = V.BinOp (V.SliceE (datae name) valueBits 1) V.Plus
 
@@ -249,7 +633,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
                                         "lteq" -> V.LessEqual
                                         "gteq" -> V.GreaterEqual
                                         _ -> error $ "unrecognized op_" ++ opname
-   
+
    -- Buffer on the datapath; combinational ready path
    -- The "output buffer" of the MEMOCODE 2015 paper
    -- SIGNATURE dbuf a : a > a ;
@@ -269,7 +653,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
                      [Bind input typ] [Bind output _]) =
      dbuf input output $ V.Concat [ V.Sized (totalBitsOf tei typ) (toInteger i)
                                   , V.Sized 1 1]
-       
+
    -- Buffer on the ready path + spill buffer
    -- The "input buffer" of the MEMOCODE 2015 paper
    -- SIGNATURE rbuf a : a > a ;
@@ -284,12 +668,12 @@ verilog moduleName (SDataflow tdefs _ nodes') =
                 V.Conditional bufValid (V.LValue bufData) (datae input)
            -- Empty the buffer when the output is ready
            -- Fill the buffer when it's empty and the output isn't ready
-         , V.AlwaysSequential $ 
+         , V.AlwaysSequential $
                 V.ifThenElse
-                 (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1)) 
-                    
+                 (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+
                     (V.NonBlocking bufData $ invalidExpr tei typ)
-                    
+
                     (V.IfElse
                     [ ( readye output `vand` bufValid
                     , V.NonBlocking bufData $ invalidExpr tei typ)
@@ -301,7 +685,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
          buf = input ++ "_buf"
          bufData = V.Var buf
          bufValid = V.LValue $ V.Bit buf 0
-         
+
    -- Latency-insensitive relay station: output buffer followed by input
    -- SIGNATURE buf a : a > a ;
    synthesize (SNode "buf" [t1] [Bind input typ] [Bind output t2]) =
@@ -330,7 +714,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
    synthesize (SNode "mux" _ [Bind select _, Group [Bind input _]]
                      [Bind output dType]) =
       synthesizeGate select input output dType
-                         
+
    synthesize (SNode "mux" _ [Bind select sType , Group inputBinds]
                                   [Bind output dType]) =
      [ V.Reg (muxed, V.Unsigned $ toInteger $ (dataBits + 1))
@@ -339,10 +723,10 @@ verilog moduleName (SDataflow tdefs _ nodes') =
      , V.AlwaysCombinational $ V.Case (V.SliceE (datae select) selectBits 1) $
                             zipWith selection inputs [0..] ++
                               [V.Default $ assignSelected $
-                                V.Concat [ V.Unknown numInputs
+                                V.Concat [ V.Sized numInputs 0
                                          , invalidExpr tei dType]]
       -- AND the data's valid bit with select's valid
-     , V.Assign (V.Var $ datac output) $ 
+     , V.Assign (V.Var $ datac output) $
                 if dataBits > 0 then
                     V.Concat [ V.LValue $ V.Slice muxed dataBits 1
                              , bothValid ]
@@ -351,11 +735,11 @@ verilog moduleName (SDataflow tdefs _ nodes') =
      , V.Assign (V.Var $ ready select) $ valide output `vand` readye output
        -- Send ready to the input if the select is ready
      , V.Assign (V.LConcat $ reverse $ map (V.Var . ready) inputs) $
-                V.Conditional (readye select) 
+                V.Conditional (readye select)
                      (V.LValue $ V.Var onehot)
                      (V.Sized numInputs 0)
      ]
-        where    
+        where
           inputs = chanNames inputBinds
           numInputs = length inputs
           muxed = output ++ "_mux"
@@ -372,7 +756,7 @@ verilog moduleName (SDataflow tdefs _ nodes') =
               V.CaseItem (V.Sized selectBits index) $ assignSelected $
                V.Concat [ V.Sized numInputs (1 `shift` fromInteger index)
                         , datae inp ]
-                      
+
    -- N-output demultiplexer
    -- SIGNATURE demux s d : s d > d^(variants s) ;
    -- The d input is routed to the output whose variant matches the
@@ -396,10 +780,10 @@ verilog moduleName (SDataflow tdefs _ nodes') =
           V.ifThenElse (valide select `vand` valide input)
                (V.Case (V.SliceE (datae select) tagBits 1) $
                  map selected [0..(numOutputs - 1)] ++
-                   [V.Default $ assignOneHot (V.Unknown numOutputs)])
+                   [V.Default $ assignOneHot (V.Sized numOutputs 0)])
                (assignOneHot (V.Sized numOutputs 0))
       ] ++
-      zipWith (\out n -> V.Assign (V.Var $ datac out) 
+      zipWith (\out n -> V.Assign (V.Var $ datac out)
                            (let onehotbit = V.LValue $ V.Bit onehot n in
                             if dataBits >= 1 then
                               V.Concat [V.SliceE (datae input) dataBits 1
@@ -509,7 +893,7 @@ valids and the read pathway: reports a cycle.
        , datapath
        , readypath ]
      where
-       inputs = chanNames inputBinds       
+       inputs = chanNames inputBinds
        numInputs = length inputs
 
        none = V.Sized numInputs 0
@@ -540,12 +924,12 @@ valids and the read pathway: reports a cycle.
                   V.Blocking (V.Bit selected_name index) (V.Sized 1 1))
 
        -- Next value of select: clear if output ready, otherwise hold selected
-       selectUpdate = V.AlwaysSequential $ 
-                V.ifThenElse 
-                    (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1)) 
-                        
+       selectUpdate = V.AlwaysSequential $
+                V.ifThenElse
+                    (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+
                         (V.NonBlocking select none)
-                        
+
                         (V.NonBlocking select $
                             V.Conditional (readye output) none (V.LValue selected))
 
@@ -595,7 +979,7 @@ valids and the read pathway: reports a cycle.
       nodeName:_ = inputs
       numInputs = length inputs
       noneSelected = V.Sized numInputs 0
-      
+
       (priorityEncoder, select_d) =
           combAssign (nodeName ++ "_select_d", V.Unsigned $ toInteger numInputs) $
                      V.Conditional (V.UnaryOp V.ReductionOr select_q) select_q $
@@ -641,7 +1025,7 @@ valids and the read pathway: reports a cycle.
               V.Conditional (V.BitE select_d index `vand`
                               vnot (V.BitE emit_q 1))
                    (dconExpr tei dcon [V.Sized 1 1])
-                   $ emitSelect t (index + 1)                 
+                   $ emitSelect t (index + 1)
 
 --  TODO: Also need a base case: single input that turns into a kind of fork
 --    node.  Selector is effectively a "go" signal.
@@ -672,7 +1056,7 @@ valids and the read pathway: reports a cycle.
    synthesize (SNode "destruct" [_, SDconArg dc]
                       [Bind input _] [Group outputBinds]) =
      synthesizeMultiOutputs input (V.Var $ ready input) (valide input) $
-         zip (fieldExprs tei dc (datae input)) (chanNames outputBinds) 
+         zip (fieldExprs tei dc (datae input)) (chanNames outputBinds)
 
    -- Transform an input token to a "Go" token (i.e., just pass valid)
    -- SIGNATURE togo a : a > Go ;
@@ -713,11 +1097,11 @@ valids and the read pathway: reports a cycle.
                   tagExpr tei (datae input) iType `vand` valide input
        , V.AlwaysSequential $
 
-            -- V.ifThenElse (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
-            --     (V.SeqBlock [] [V.NonBlocking (V.Var writeEnableq) (V.Sized 1 0),
-            --                     V.NonBlocking (V.Var validq) (V.Sized 1 0)])
-        (V.ifThenElse (readye input)
-          
+            V.ifThenElse (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+                (V.SeqBlock [] [V.NonBlocking (V.Var writeEnableq) (V.Sized 1 0),
+                                V.NonBlocking (V.Var validq) (V.Sized 1 0)])
+        -- (V.ifThenElse (readye input)
+
         (V.SeqBlock []
            [ V.NonBlocking (V.Var writeEnableq) (vexpr writeEnable)
            , V.NonBlocking (V.Var validq) $ valide input
@@ -727,20 +1111,42 @@ valids and the read pathway: reports a cycle.
              ])
              (V.NonBlocking (V.Var q) $ V.LValue $ V.Element mem (vexpr address))
            ])
-           
-           ((V.SeqBlock [] [V.NonBlocking (V.Var writeEnableq) (V.Sized 1 0),
-                                V.NonBlocking (V.Var validq) (V.Sized 1 0)]))
-           
-           )
+
+          --  ((V.SeqBlock [] [V.NonBlocking (V.Var writeEnableq) (V.Sized 1 0),
+                                -- V.NonBlocking (V.Var validq) (V.Sized 1 0)]))
+
+          --  )
       -- TODO: A little delicate: assumes the bit structure of the output type
        , V.Assign (V.Var $ datac output) $
                   V.Concat [vexpr q, vexpr writeEnableq, vexpr validq]
        , V.Assign (V.Var $ ready input) $
                   vnot (vexpr validq) `vor` readye output
-       ]
+      ]
+
+#if PROFILE
+       ++
+      -- for profiling purposes to evaluate how much memory continuations consume
+       [V.Reg (prof_read, V.Unsigned 32),
+        V.Reg (prof_write, V.Unsigned 32),
+        V.AlwaysSequential $
+
+            V.ifThenElse (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+                (V.SeqBlock [] [V.NonBlocking (V.Var prof_write) (V.Literal 0),
+                                V.NonBlocking (V.Var prof_read) (V.Literal 0)])
+                (V.ifThenElse (V.BinOp (V.String writeEnable) (V.Equal) (V.Sized 1 1))
+                  (V.NonBlocking (V.Var prof_write) (V.BinOp (V.String prof_write) (V.Plus) (V.Literal 1)))
+                  (V.ifThen (V.BinOp (V.String validq) (V.Equal) (V.Sized 1 1))
+                      (V.NonBlocking (V.Var prof_read) (V.BinOp (V.String prof_read) (V.Plus) (V.Literal 1)))
+
+                  )               
+                )
+                ]
+#endif       
      where
+       prof_read = "profiling_" ++ iType ++ "_read"
+       prof_write = "profiling_" ++ iType ++ "_write"
        mem = input ++ "_mem"
-       address = input ++ "_address"  
+       address = input ++ "_address"
        din = input ++ "_din"
        q = output ++ "_q"
        validq = output ++ "_valid"
@@ -749,7 +1155,7 @@ valids and the read pathway: reports a cycle.
        (addressBits, dataType, addrExpr, dataExpr) =
            memoryTypes tei iType (datae input)
        memWords = 1 `shift` addressBits
-                   
+
    synthesize (SNode n _ _ _) = error $ "unsupported node type \"" ++ n ++ "\""
 
 
@@ -821,20 +1227,20 @@ valids and the read pathway: reports a cycle.
                    V.BinOp (V.LValue emitted) V.BitOr
                         (V.BinOp outputvalids V.BitAnd outputreadys)
       outputvalids = V.Concat $ reverse $ map (valide . snd) outputs
-      outputreadys = V.Concat $ reverse $ map (readye . snd) outputs 
+      outputreadys = V.Concat $ reverse $ map (readye . snd) outputs
 
       readyAssign = V.Assign readySignal $
                     V.UnaryOp V.ReductionAnd $ V.LValue done
-      emittedAssign = V.AlwaysSequential $ 
-                        V.ifThenElse 
-                            (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1)) 
-                         
+      emittedAssign = V.AlwaysSequential $
+                        V.ifThenElse
+                            (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+
                             (V.NonBlocking emitted resetEmitted)
-                         
+
                             (V.NonBlocking emitted $
                                 V.Conditional (V.LValue readySignal)
                                         resetEmitted (V.LValue done))
-                                                   
+
       assignOutput (expr, channel) index =
           V.Assign (V.Var $ datac channel) $
             case expr of
@@ -862,24 +1268,24 @@ valids and the read pathway: reports a cycle.
    dbuf :: Channel -> Channel -> V.Expr -> [V.Item]
    dbuf input output initExpr =
          -- Clear the buffer
-       [ 
+       [
         --    V.Initial bufData initExpr
          -- Input ready = buffer empty or output ready
          V.Assign (V.Var $ ready input) $  vnot (valide output) `vor`
                   readye output
          -- Load buffer when input ready
-       , V.AlwaysSequential $ 
-                        V.ifThenElse 
-                            (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1)) 
-                                
+       , V.AlwaysSequential $
+                        V.ifThenElse
+                            (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
+
                                 (V.NonBlocking bufData initExpr)
-                                
+
                                 (V.ifThen (readye input) $
                                     V.NonBlocking bufData (datae input))
        ]
       where
        bufData = V.Var $ datac output
-                      
+
 
    -- A two-input, one-output node that uses a Verilog binary operator
    -- on a given number of data bits
@@ -972,10 +1378,10 @@ seqAssign bind@(v, _) initexpr expr = ([ V.Reg bind
                                     --    , V.Initial (V.Var v) initexpr
                                        , V.AlwaysSequential $
                                             V.ifThenElse
-                                                (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1)) 
+                                                (V.BinOp (V.String V.resetName) V.Equal (V.Sized 1 1))
 
                                                     (V.NonBlocking (V.Var v) initexpr)
-                                                    
+
                                                     (V.NonBlocking (V.Var v) expr)]
                                       , V.LValue $ V.Var v)
 
@@ -995,4 +1401,4 @@ uniquifyWildcards nodes = fst $ foldr renameNode ([], 0) nodes
         renameOutput (Bind "_" tc) (cs, i) =
             (Bind ("_" ++ show i) tc : cs, i+1)
         renameOutput b (cs, i) = (b:cs, i)
-        
+

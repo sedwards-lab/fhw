@@ -17,6 +17,11 @@ category:            Language
 build-type:          Simple
 cabal-version:       >=1.8
 
+flag Profile {
+  Description: Enable profiling registers
+  Default:     False
+  }
+
 executable fhw
   main-is:             Fhw.hs
   other-modules:       Fhw.CoreParser.Parser, Fhw.ProfileParser.Parser
@@ -30,10 +35,15 @@ executable dfc
   main-is:             Dfc.hs
   other-modules:       Dfc.Parser.Parser, Dfc.Parser.Lex
   build-depends:       base ==4.6.*, filepath ==1.3.*, pretty ==1.1.*, array, mtl,
-                       containers, random, random-shuffle
+                       containers, random, random-shuffle, text
   GHC-options:         -Wall -rtsopts -main-is Dfc
   hs-source-dirs:      src
+  extensions: CPP
   build-tools:         happy
+
+  if flag(Profile) {
+    GHC-Options: -DPROFILE
+  }
 
 -- The library is mostly so "cabal haddock" does something useful
 

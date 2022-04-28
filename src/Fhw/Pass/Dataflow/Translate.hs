@@ -38,6 +38,7 @@ import Control.Monad.State
 import Control.Applicative
 
 import Debug.Trace
+import Data.Foldable (foldrM)
 
 data NodeEnv = NodeEnv { toTrans     :: [Vdef]
                        , nodeEnv     :: Map.Map Var Node
@@ -79,14 +80,19 @@ setScope funcName env = env { curFunc = funcName }
 
 toDataflow :: String -> Bool -> Analysis -> Module -> (Dataflow, Analysis)
 toDataflow strictStr bufferFuncsOption analysis (Module _ tdefs vdefs) =
+  
+  -- check fails atm if the scrutinee is unused
+  
   case verify dataflow of
     Left err -> error $ preoptError err
-    Right _ -> case verify optDataflow of
+    Right _ -> 
+      case verify optDataflow of
                 Left err -> error $ postoptError err
-                Right _ -> (optDataflow, verifyA finalAnalysis optDataflow)
+                Right _ -> 
+                  (optDataflow, verifyA finalAnalysis optDataflow)
   where
     vds = preprocess vdefs tdefs --remove default alternatives and cases scrutinizing integers
-    preoptError e = "Pre-optimization error: " ++ e ++ show dataflow
+    preoptError e = "Pre-optimization error: " ++ e ++ show mainNodes
     postoptError e = "Post-optimization error: " ++ e ++ show optDataflow
     dataflow    = Dataflow newTdefs mainNodes
     optDataflow = Dataflow newOptTdefs $
@@ -235,15 +241,44 @@ makeCallGraph (Vdef (_,name) _ ex) = descend ex
    goVdef (Vdef _ _ e) = descend e
 
 
+renameMain :: Exp -> Map.Map Var Var -> Exp
+renameMain ex renameMap = trace ("Renamed") (case ex of
+  Var (mname, name) ty -> let newName = Map.findWithDefault name name renameMap in
+                          Var (mname, newName) ty
+  App e1 e2 -> let newE1 = renameMain e1 renameMap
+                   newE2 = renameMain e2 renameMap in
+                     App newE1 newE2
+  Lam binds ex' -> Lam binds (renameMain ex' renameMap)
+  Let vdefs ex' -> Let (map (\x@(Vdef name ty ex'') -> Vdef name ty (renameMain ex'' renameMap)) vdefs) (renameMain ex' renameMap)
+  Case ex' vbind ty alts -> let newAlts = map (\a -> case a of
+                                                (Acon dcon tbinds vbinds ex'') -> Acon dcon tbinds vbinds (renameMain ex'' renameMap)
+                                                (Alit lit ex'') -> Alit lit (renameMain ex'' renameMap)
+                                                (Adefault ex'') -> Adefault (renameMain ex'' renameMap)) alts in
+                            Case (renameMain ex' renameMap) vbind ty newAlts
+  Appt ex' ty -> error "Unexpected type app"
+  x -> x)
 -- | Generate the nodes that execute the program
 genMain :: Vdef -> NodeState ()
-genMain (Vdef _ ty ex) = do putNode sourceVar source
-                            result <- tExpr ex
-                            putNode "sink" $ sink result
+genMain (Vdef _ ty ex) = trace ("GenMain") 
+                        (do putNode sourceVar source
+                            result <- case ex of
+                              (Lam binds ex') -> do 
+                                renameMap <- foldrM (\(num, x@(Vb (name, ty'))) acc -> do
+                                  let newName = name ++ "_" ++ (show num)
+                                  putNode (name ++ "_main") (Node [] (Source (tTy ty')) [newName])
+                                  addFork newName newName (tTy ty')
+                                  return $ Map.insert name newName acc
+
+                                  ) (Map.empty) (zip [0 .. ] binds)
+                                let newEx = trace ("Renaming") renameMain ex' renameMap 
+                                tExpr (newEx)
+                              _ -> tExpr ex
+                            trace ("Done") putNode "sink" $ sink result)
   where
     --Each program has a single source generating a Go token
     source = Node [] (Source (Tycon "Go")) ["sourceGo"]
-    sink r = Node [err r] (Sink (tTy ty)) []
+    sink r = Node [err r] (Sink (tTy resTy)) []
+    types@(resTy, _) = collectArgTypes ty
     err = fromMaybe $ error "Need final result"
 
 -- | Translate an expression into a collection of nodes,
@@ -301,7 +336,7 @@ tLocal (Vdef (_,name) ty ex) = do
 tTy :: Ty -> Type
 tTy (Tcon (_,"Int#")) = Int' 32 --Representing Int# as 32-bits
 tTy (Tcon (_,tcon)) = Tycon tcon
-tTy t = error $ "Unexpected type: " ++ show t
+tTy t = error $ "Unexpected type: " ++ show t ++ " in tTy"
 
 -- | Handle a new call to a function, generating the function
 -- or multi-call infrastructure if they don't exist. Return
@@ -1038,6 +1073,13 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   toRemove (Node [_] (Merge _ _      ) _  ) = True
   toRemove (Node _   (Demux _ [dc]) _  )    = dc == oneChoiceDcon
   toRemove (Node [_] (MergeChoice _ _) _  ) = True
+
+  -- remove buffers that come for additional arguments
+  toRemove (Node [input] (Buffer (Tycon "Go")) _) = False
+  toRemove (Node [input] (Buffer _) _) = case getSource input nodes of
+                                                (Node _ (Source _) _) -> True
+                                                _ -> False
+
   toRemove _ = False
 
   --Find the destination or source for a channel
@@ -1047,6 +1089,9 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
   getIt f name ns = fromMaybe (error ("Couldn't find node with channel " ++
                                       name ++ " in nodelist " ++ showNodes ns))
                               (find (elem name . f) ns)
+
+  getItMaybe :: (Node -> [String]) -> String -> [Node] -> Maybe Node
+  getItMaybe f name ns = (find (elem name . f) ns)
 
   --For debugging and error messages
   showNodes = intercalate "\n" . map show
@@ -1068,9 +1113,11 @@ optimize nodes analysis = let (finalNodes, newSites) = runState (opt nodes) (wri
                           newList'' <-channelMod dIn output dest newList'
                           opt newList''
                   Node [input] _ [output] ->
-                    let dest = getDest output newList
-                    in do newList' <- channelMod input output dest (delete n newList)
-                          opt newList'
+                    let dest = getDest output newList in
+                    do 
+                      newList' <- channelMod input output dest (delete n newList)
+                      opt newList'
+                                   
                   _ -> error "Unexpected node to remove"
 
   -- | Remove muxes/forks/demuxs that dealt with a choice signal from a 

@@ -49,7 +49,7 @@ import Data.Monoid (Any(..))
 import qualified Data.Map.Lazy as M
 import Control.Monad.State.Lazy
 
---import Debug.Trace
+import Debug.Trace
 
 data Env = Env {  constDcons :: [Exp] -- Set of constant data constructors
                ,  constDefs :: [Vdef] -- Set of literal constant functions
@@ -61,13 +61,13 @@ data Env = Env {  constDcons :: [Exp] -- Set of constant data constructors
                } deriving Show
 
 addGo :: Module -> Module
-addGo m@(Module mname tdefs vdefs) = if null (constDcons finalState) && 
+addGo m@(Module mname tdefs vdefs) = if null (constDcons finalState) &&
                                         null (constDefs finalState)
                                      then m
                                      else Module mname tdefs' vdefs'
     where
       tdefs' = myBool : goDef : newTdefs
-      myBool = Data (Nothing,"MyBool") [] 
+      myBool = Data (Nothing,"MyBool") []
                [Constr (Nothing,"MyFalse") [] [goType]
                ,Constr (Nothing,"MyTrue")  [] [goType]]
       goType = Tcon (Nothing, tdefName goDef)
@@ -80,13 +80,13 @@ addGo m@(Module mname tdefs vdefs) = if null (constDcons finalState) &&
                       else goTdef (go ++ "_")
 
       --Insert Go arguments and replace constants with functions
-      (moddedVdefs,finalState) = runState (statefulFunc inlinedDefs) initState 
+      (moddedVdefs,finalState) = runState (statefulFunc inlinedDefs) initState
       --Inline all simple constant definitions 
-      inlinedDefs = map (mapVdef (inline constMap)) $ 
+      inlinedDefs = map (mapVdef (inline constMap)) $
                     filter ((`M.notMember` constMap) . vdefName) vdefs
         where
           constMap = let initMap = foldr getConstDefs M.empty vdefs
-                         inlineExps m' = mapExpr (inline m') 
+                         inlineExps m' = mapExpr (inline m')
                          createMap curMap = let newMap = M.map (inlineExps curMap) curMap
                                             in if newMap == curMap
                                                then newMap
@@ -94,10 +94,10 @@ addGo m@(Module mname tdefs vdefs) = if null (constDcons finalState) &&
                      in createMap initMap
           getConstDefs :: Vdef -> M.Map Var Exp -> M.Map Var Exp
           getConstDefs (Vdef (_,name) _ e)  = case call of
-            (Dcon _ _) -> if and (zipWith (||) areVars areLits) 
-                          then M.insert name e  
+            (Dcon _ _) -> if and (zipWith (||) areVars areLits)
+                          then M.insert name e
                           else id
-            (Lit _) -> M.insert name e 
+            (Lit _) -> M.insert name e
             _ -> id
             where
               (call, args, _) = collectArgs e
@@ -116,26 +116,29 @@ addGo m@(Module mname tdefs vdefs) = if null (constDcons finalState) &&
       (initState,newTdefs) = mapAccumL modTypes firstState tdefs
       firstState = Env { constDcons = []
                        , constDefs  = []
-                       , goTy = goType 
+                       , goTy = goType
                        , nextBoolId = 1
                        , nextConstId = 1
                        , boolFuncs = [mkBoolConvert 0 goType]
                        , goFuncs = []}
-                
+
       vdefs' = newMain : boolFuncs finalState ++ constDefs finalState ++ modded
       newMain = case mainFunc of
+          -- If main is a lambda, this let Go binding should be inside
                  [Vdef n t e] -> let goDcon = Dcon (Nothing,"Go") goType
                                      vdef   = Vdef (Nothing,"go") goType goDcon
-                                 in Vdef n t $ Let [vdef] e
+                                 in case e of
+                                   (Lam binds e') -> Vdef n t $ Lam binds (Let [vdef] e')
+                                   _ ->  Vdef n t $ Let [vdef] e
                  _ -> error "Unexpected main function problem"
       (mainFunc,modded) = partition ((=="main").vdefName) moddedVdefs
 
 -- | Add Go fields to constant data constructors, collect the constants, and 
 -- replace any Bool fields with MyBool
 modTypes :: Env -> Tdef -> (Env,Tdef)
-modTypes env (Data name tys cdefs) = 
+modTypes env (Data name tys cdefs) =
   let (newEnv,newCdefs) = mapAccumL helper env cdefs
-      newTy             = tArrow (goTy env) (Tcon name) 
+      newTy             = tArrow (goTy env) (Tcon name)
       helper en (Constr n t []) = let dcon = Dcon n newTy
                                       prev = constDcons en
                                   in (en { constDcons = dcon : prev }
@@ -147,7 +150,7 @@ modTypes env (Data name tys cdefs) =
 -- needed because a number of primitive functions return Booleans, so
 -- adding a Go field to the Bool type would break these.
 mkBoolConvert :: Int -> Ty -> Vdef
-mkBoolConvert n goType = Vdef (Nothing,"boolConvert_" ++ show n) 
+mkBoolConvert n goType = Vdef (Nothing,"boolConvert_" ++ show n)
                             (tArrows [goType,boolTy,myBoolTy])
                             expr
   where
@@ -155,7 +158,7 @@ mkBoolConvert n goType = Vdef (Nothing,"boolConvert_" ++ show n)
     boolTy   = Tcon (boolQ, "Bool")
     dcTy     = tArrow goType myBoolTy
     expr = Lam [Vb ("go",goType),Vb ("bool",boolTy)] $
-           Case (Var (Nothing,"bool") boolTy) ("b",boolTy) myBoolTy 
+           Case (Var (Nothing,"bool") boolTy) ("b",boolTy) myBoolTy
                 [Acon (boolQ,"False") [] [] (makeEx "MyFalse")
                 ,Acon (boolQ,"True")  [] [] (makeEx "MyTrue")]
     makeEx dc = App (Dcon (Nothing,dc) dcTy) (Var (Nothing,"go") goType)
@@ -176,8 +179,8 @@ statefulFunc vdefs = addingArgs =<< mapM addGos vdefs
 -- | Perform first pass over expressions, and add Go-valued
 -- parameters to any modified definitions.
 addGos :: Vdef -> State Env Vdef
-addGos (Vdef name ty ex) = do 
-  newExp <- walkExp ex 
+addGos (Vdef name ty ex) = do
+  newExp <- walkExp ex
   if newExp == ex
     then return $ Vdef name ty ex
     else updateVdef (Vdef name ty newExp) =<< gets goTy
@@ -196,21 +199,21 @@ walkExp (Lam bs  e) = let newBs = map updateVbTy bs
                           updateVbTy (Tb b) = Tb b
                           updateVbTy (Vb (v,t)) = Vb (v, mkBoolTy t)
                       in fmap (Lam newBs) (walkExp e)
-walkExp (Let vds e) = do newVdefs <- mapM addLetGos vds 
+walkExp (Let vds e) = do newVdefs <- mapM addLetGos vds
                          newExpr  <- walkExp e
                          return $ Let newVdefs newExpr
   where
     --If this local definition needs a go argument, it will be provided
     --by the global definition carrying this one
     addLetGos :: Vdef -> State Env Vdef
-    addLetGos (Vdef name ty ex) = do 
-      newExp <- walkExp ex 
+    addLetGos (Vdef name ty ex) = do
+      newExp <- walkExp ex
       return $ Vdef name ty newExp
 walkExp (Case scrut vb _ alts) =
   do newAlts  <- mapM walkExpalt alts
      let newTy = getRetTy (head newAlts)
          newVb = let getDc (Acon (_,dc) _ _ _) = dc
-                     getDc _ = "" 
+                     getDc _ = ""
                  in if map getDc newAlts /= map getDc alts
                     then (fst vb, Tcon (Nothing, "MyBool"))
                     else vb
@@ -222,7 +225,7 @@ walkExp (Case scrut vb _ alts) =
     walkExpalt (Acon dc tbs [] e) = do
       constExps <- gets (map dconName . constDcons)
       gTy       <- gets goTy
-      let newVbs = [("_", gTy) | snd dc `elem` ["True","False"] 
+      let newVbs = [("_", gTy) | snd dc `elem` ["True","False"]
                                  || dc `elem` constExps]
           newScrut (_,"True")  = (Nothing,"MyTrue")
           newScrut (_,"False") = (Nothing,"MyFalse")
@@ -249,7 +252,7 @@ walkExp e = let (call,args,tyArgs) = collectArgs e
                       newCall = updateVarTy call
                       funcExp = mkFuncApp newCall tyArgs newArgs
                   case newCall of
-                    Lit (Literal (Lint int) _) -> 
+                    Lit (Literal (Lint int) _) ->
                       let litName = (Nothing,"const_"++show int++"_"++show constId)
                       in mkLit litName newCall retTy
                     Lit (Literal (Lchar char) _) -> do
@@ -260,18 +263,18 @@ walkExp e = let (call,args,tyArgs) = collectArgs e
                       modify (\s -> s { constDefs = litDef : constDefs s
                                       , nextConstId = constId + 1 })
                       return $ mkFuncApp (Var litName newTy) [] [goArg]
-                    Var n _ -> 
+                    Var n _ ->
                       if isPrimPrim n && getTcon retTy == primBool
                       --apply Bool-to-MyBool function
                       then do let newBoolFunc = mkBoolConvert boolId goType
-                              modify (\s -> s { nextBoolId = boolId + 1, 
+                              modify (\s -> s { nextBoolId = boolId + 1,
                                                 boolFuncs = newBoolFunc : boolFuncs s })
                               return $ mkFuncApp (makeVar newBoolFunc) [] [goArg,funcExp]
                       else return funcExp
-                    Dcon name _ -> return $ 
+                    Dcon name _ -> return $
                       let newTy = tArrow goType retTy
                           newBoolTy = tArrow goType myBoolTy
-                          newDc = mkDcon (snd name) 
+                          newDc = mkDcon (snd name)
                           mkDcon "False" = Dcon (Nothing,"MyFalse") newBoolTy
                           mkDcon "True"  = Dcon (Nothing,"MyTrue") newBoolTy
                           mkDcon _       = Dcon name newTy
@@ -286,7 +289,7 @@ walkExp e = let (call,args,tyArgs) = collectArgs e
         updateVarTy (Var v t) = Var v $ mkBoolTy t
         updateVarTy e' = e'
         makeVar (Vdef n ty _) = Var n ty
-        mkLit litName newCall retTy = do 
+        mkLit litName newCall retTy = do
           goType <- gets goTy
           constId <- gets nextConstId
           let goArg = Var (Nothing,"go") goType
@@ -313,8 +316,8 @@ insertGoArgs (Vdef n t ex) = do
 -- | Add "go" argument to any calls to functions that build constant
 -- values.
 goArgExp :: Exp -> State Env Exp
-goArgExp (Let vds e) = 
-  do newVdefs <- mapM insertLetGoArgs vds 
+goArgExp (Let vds e) =
+  do newVdefs <- mapM insertLetGoArgs vds
      newExpr  <- goArgExp e
      return $ Let newVdefs newExpr
   where
@@ -351,13 +354,13 @@ goArgExp e = let (call,args,tyArgs) = collectArgs e
 -- | Add a go parameter to a variable definition, update its
 -- type, and add the name to our state.
 updateVdef :: Vdef -> Ty -> State Env Vdef
-updateVdef vdef@(Vdef n@(_,"main") t ex) _ 
+updateVdef vdef@(Vdef n@(_,"main") t ex) _
   | "Bool" == snd (getTcon $ fst $ collectArgTypes t) =
      return $ Vdef n (Tcon (Nothing,"MyBool")) ex
   | otherwise = return vdef
-updateVdef (Vdef n ty ex) goType 
-  | not $ getAny $ mapExprMonoid hasGo ex = 
-      let newTy = tArrows $ map mkBoolTy (argTys ++ [retTy]) 
+updateVdef (Vdef n ty ex) goType
+  | not $ getAny $ mapExprMonoid hasGo ex =
+      let newTy = tArrows $ map mkBoolTy (argTys ++ [retTy])
       in return $ Vdef n newTy ex
   | otherwise = do modify (\s -> s { goFuncs = addNew n $ goFuncs s })
                    let newTy = tArrows $ map mkBoolTy (goType : argTys ++ [retTy])
@@ -380,8 +383,8 @@ mkBoolTy ty = let (retTy, argTys) = collectArgTypes ty
               in tArrows $ map mkBools (argTys ++ [retTy])
 
 addNew :: Eq a => a -> [a] -> [a]
-addNew newVal vals = if newVal `elem` vals 
-                     then vals 
+addNew newVal vals = if newVal `elem` vals
+                     then vals
                      else newVal : vals
 
 -- | Type constructor for my new boolean type

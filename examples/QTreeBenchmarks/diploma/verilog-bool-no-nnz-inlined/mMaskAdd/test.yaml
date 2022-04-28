@@ -1,0 +1,3449 @@
+matrices_map:
+  data/diploma/matrix-market/64x64/GD99_b/GD99_b.mtx:
+    matrix_market_size: 127
+    qtree_size: 877
+    verilog_path: test_19.mtx
+  data/diploma/matrix-market/64x64/bfwa62/bfwa62.mtx:
+    matrix_market_size: 450
+    qtree_size: 1893
+    verilog_path: test_15.mtx
+  data/diploma/matrix-market/128x128/Journals/Journals.mtx:
+    matrix_market_size: 6096
+    qtree_size: 10253
+    verilog_path: test_2.mtx
+  data/diploma/matrix-market/64x64/diag_64x64/diag_64x64.mtx:
+    matrix_market_size: 64
+    qtree_size: 253
+    verilog_path: test_17.mtx
+  data/diploma/matrix-market/256x256/diagonal_256x256/diagonal_256x256.mtx:
+    matrix_market_size: 256
+    qtree_size: 1021
+    verilog_path: test_11.mtx
+  data/diploma/matrix-market/512x512/diagonal_512x512/diagonal_512x512.mtx:
+    matrix_market_size: 512
+    qtree_size: 2045
+    verilog_path: test_14.mtx
+  data/diploma/matrix-market/64x64/will57/will57.mtx:
+    matrix_market_size: 281
+    qtree_size: 1029
+    verilog_path: test_20.mtx
+  data/diploma/matrix-market/128x128/diagonal_128x128/diagonal_128x128.mtx:
+    matrix_market_size: 128
+    qtree_size: 509
+    verilog_path: test_6.mtx
+  data/diploma/matrix-market/64x64/can_61/can_61.mtx:
+    matrix_market_size: 309
+    qtree_size: 1161
+    verilog_path: test_16.mtx
+  data/diploma/matrix-market/256x256/can_256/can_256.mtx:
+    matrix_market_size: 1586
+    qtree_size: 6929
+    verilog_path: test_7.mtx
+  data/diploma/matrix-market/256x256/n3c5-b4/n3c5-b4.mtx:
+    matrix_market_size: 1260
+    qtree_size: 6485
+    verilog_path: test_9.mtx
+  data/diploma/matrix-market/128x128/robot/robot.mtx:
+    matrix_market_size: 870
+    qtree_size: 2729
+    verilog_path: test_1.mtx
+  data/diploma/matrix-market/256x256/dwt_245/dwt_245.mtx:
+    matrix_market_size: 853
+    qtree_size: 3577
+    verilog_path: test_8.mtx
+  data/diploma/matrix-market/64x64/dolphins/dolphins.mtx:
+    matrix_market_size: 159
+    qtree_size: 1097
+    verilog_path: test_18.mtx
+  data/diploma/matrix-market/128x128/football/football.mtx:
+    matrix_market_size: 613
+    qtree_size: 4297
+    verilog_path: test_5.mtx
+  data/diploma/matrix-market/128x128/gent113/gent113.mtx:
+    matrix_market_size: 655
+    qtree_size: 2613
+    verilog_path: test_3.mtx
+  data/diploma/matrix-market/512x512/dwb512/dwb512.mtx:
+    matrix_market_size: 2500
+    qtree_size: 9621
+    verilog_path: test_13.mtx
+  data/diploma/matrix-market/512x512/dwt_503/dwt_503.mtx:
+    matrix_market_size: 3265
+    qtree_size: 12273
+    verilog_path: test_12.mtx
+  data/diploma/matrix-market/256x256/steam1/steam1.mtx:
+    matrix_market_size: 3762
+    qtree_size: 9345
+    verilog_path: test_10.mtx
+  data/diploma/matrix-market/128x128/GD98_b/GD98_b.mtx:
+    matrix_market_size: 207
+    qtree_size: 1781
+    verilog_path: test_4.mtx
+test_name: mMaskAdd
+test_entries:
+- nnz: 428
+  time: 3.43 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 409
+  time: 4.21 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 418
+  time: 6.56 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 406
+  time: 3.49 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 428
+  time: 3.42 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 112
+  time: 10.94 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 155
+  time: 3.31 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 112
+  time: 3.98 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 409
+  time: 3.25 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 112
+  time: 2.90 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 58
+  time: 3.43 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 87
+  time: 3.57 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 418
+  time: 5.30 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 155
+  time: 3.41 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 58
+  time: 5.81 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 132
+  time: 9.04 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 406
+  time: 4.41 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 112
+  time: 3.52 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 87
+  time: 3.27 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 132
+  time: 3.57 ms
+  test_masks:
+  - test_1.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 667
+  time: 25.67 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 491
+  time: 24.60 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 838
+  time: 23.06 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 450
+  time: 26.49 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 667
+  time: 24.02 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 430
+  time: 29.91 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 791
+  time: 24.34 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 378
+  time: 35.51 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 491
+  time: 27.24 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 430
+  time: 47.94 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 555
+  time: 26.84 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 213
+  time: 22.53 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 838
+  time: 38.39 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 791
+  time: 22.09 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 555
+  time: 30.50 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 596
+  time: 38.81 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 450
+  time: 24.13 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 378
+  time: 26.06 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 213
+  time: 47.70 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 596
+  time: 34.73 ms
+  test_masks:
+  - test_2.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 366
+  time: 2.65 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 114
+  time: 2.64 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 136
+  time: 2.61 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 122
+  time: 4.39 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 366
+  time: 2.82 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 350
+  time: 2.52 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 352
+  time: 2.95 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 344
+  time: 5.95 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 114
+  time: 2.79 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 350
+  time: 2.79 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 42
+  time: 2.86 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 99
+  time: 2.86 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 136
+  time: 3.18 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 352
+  time: 7.58 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 42
+  time: 5.82 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 123
+  time: 2.69 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 122
+  time: 2.46 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 344
+  time: 7.20 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 99
+  time: 2.71 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 123
+  time: 2.69 ms
+  test_masks:
+  - test_3.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 92
+  time: 2.86 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 16
+  time: 1.05 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 13
+  time: 2.96 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 967.40 us
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 92
+  time: 1.42 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 95
+  time: 1.17 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 847.00 us
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 89
+  time: 6.61 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 16
+  time: 8.34 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 95
+  time: 3.54 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 16
+  time: 824.30 us
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 9
+  time: 767.00 us
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 13
+  time: 1.20 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 1.87 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 16
+  time: 4.63 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 1.39 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 1.16 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 89
+  time: 1.56 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 9
+  time: 1.10 ms
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 765.20 us
+  test_masks:
+  - test_4.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 484
+  time: 2.81 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 83
+  time: 2.40 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 58
+  time: 9.02 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 52
+  time: 2.88 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 484
+  time: 2.78 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 480
+  time: 2.28 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 473
+  time: 4.19 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 472
+  time: 4.19 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 83
+  time: 2.16 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 480
+  time: 2.60 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 40
+  time: 2.39 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 33
+  time: 2.53 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 58
+  time: 2.58 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 473
+  time: 2.57 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 40
+  time: 2.54 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 2.34 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 52
+  time: 3.37 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 472
+  time: 2.93 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 33
+  time: 2.50 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 7
+  time: 2.59 ms
+  test_masks:
+  - test_5.mtx
+  test_matrices:
+  - test_6.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 1.05 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 97
+  time: 637.70 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 80
+  time: 894.60 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 80
+  time: 739.80 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_1.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 1.36 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 631.40 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 1.10 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 755.00 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_2.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 97
+  time: 690.50 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 1.36 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 684.60 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 719.90 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_3.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 80
+  time: 2.41 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 924.60 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 700.80 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 0
+  time: 610.50 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_4.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 80
+  time: 699.40 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_1.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 124
+  time: 1.21 ms
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 90
+  time: 964.70 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 0
+  time: 564.30 us
+  test_masks:
+  - test_6.mtx
+  test_matrices:
+  - test_5.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+  - 128x128
+- nnz: 391
+  time: 6.71 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 403
+  time: 7.51 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 379
+  time: 5.78 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 391
+  time: 6.45 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 373
+  time: 6.81 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 281
+  time: 7.53 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 403
+  time: 6.33 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 373
+  time: 8.38 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 364
+  time: 9.03 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 379
+  time: 8.79 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 281
+  time: 12.02 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 364
+  time: 7.65 ms
+  test_masks:
+  - test_7.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 372
+  time: 3.42 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 455
+  time: 4.13 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 368
+  time: 3.68 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 372
+  time: 4.01 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 406
+  time: 3.51 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 251
+  time: 3.65 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 455
+  time: 3.60 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 406
+  time: 4.30 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 405
+  time: 3.64 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 368
+  time: 3.17 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 251
+  time: 3.93 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 405
+  time: 3.84 ms
+  test_masks:
+  - test_8.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 29
+  time: 5.06 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 99
+  time: 5.13 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 25
+  time: 4.81 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 29
+  time: 4.89 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 80
+  time: 5.40 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 6
+  time: 4.47 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 99
+  time: 5.07 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 80
+  time: 5.09 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 74
+  time: 4.72 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 25
+  time: 4.72 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 6
+  time: 4.56 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 74
+  time: 4.78 ms
+  test_masks:
+  - test_9.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 435
+  time: 35.78 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 422
+  time: 14.73 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 348
+  time: 14.67 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 435
+  time: 14.93 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 474
+  time: 21.96 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 400
+  time: 14.55 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 422
+  time: 16.97 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 474
+  time: 14.67 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 314
+  time: 14.75 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 348
+  time: 15.64 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 400
+  time: 35.29 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 314
+  time: 17.06 ms
+  test_masks:
+  - test_10.mtx
+  test_matrices:
+  - test_11.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 2.15 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 11.13 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 1.32 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_7.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 1.37 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 245
+  time: 1.23 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 245
+  time: 1.51 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_8.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 1.54 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 245
+  time: 1.22 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 240
+  time: 1.56 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_9.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 256
+  time: 1.25 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_7.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 245
+  time: 1.17 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 240
+  time: 1.93 ms
+  test_masks:
+  - test_11.mtx
+  test_matrices:
+  - test_10.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+  - 256x256
+- nnz: 944
+  time: 13.72 ms
+  test_masks:
+  - test_12.mtx
+  test_matrices:
+  - test_13.mtx
+  - test_14.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 944
+  time: 16.60 ms
+  test_masks:
+  - test_12.mtx
+  test_matrices:
+  - test_14.mtx
+  - test_13.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 953
+  time: 10.17 ms
+  test_masks:
+  - test_13.mtx
+  test_matrices:
+  - test_12.mtx
+  - test_14.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 953
+  time: 10.03 ms
+  test_masks:
+  - test_13.mtx
+  test_matrices:
+  - test_14.mtx
+  - test_12.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 512
+  time: 2.09 ms
+  test_masks:
+  - test_14.mtx
+  test_matrices:
+  - test_12.mtx
+  - test_13.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 512
+  time: 2.39 ms
+  test_masks:
+  - test_14.mtx
+  test_matrices:
+  - test_13.mtx
+  - test_12.mtx
+  sizes:
+  - 512x512
+  - 512x512
+  - 512x512
+- nnz: 119
+  time: 2.44 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 2.07 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 2.05 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 155
+  time: 2.07 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 119
+  time: 1.73 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 78
+  time: 2.29 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 86
+  time: 1.90 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 107
+  time: 1.65 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 1.84 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 78
+  time: 1.99 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 38
+  time: 1.96 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 115
+  time: 1.76 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 1.71 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 86
+  time: 2.45 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 38
+  time: 1.72 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 120
+  time: 1.76 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 155
+  time: 1.99 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 107
+  time: 1.82 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 115
+  time: 1.58 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 120
+  time: 1.54 ms
+  test_masks:
+  - test_15.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 118
+  time: 1.39 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 1.49 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 134
+  time: 1.49 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 142
+  time: 1.22 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 118
+  time: 1.52 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 77
+  time: 1.41 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 86
+  time: 1.56 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 93
+  time: 1.18 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 133
+  time: 1.38 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 77
+  time: 1.10 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 38
+  time: 1.18 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 102
+  time: 1.42 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 134
+  time: 1.24 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 86
+  time: 1.16 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 38
+  time: 1.16 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 105
+  time: 1.50 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 142
+  time: 1.29 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 93
+  time: 1.18 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 102
+  time: 1.32 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 105
+  time: 1.49 ms
+  test_masks:
+  - test_16.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 120.10 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 505.70 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 63
+  time: 115.20 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 534.70 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 142.10 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 61
+  time: 118.00 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 118.80 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 61
+  time: 119.10 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 482.80 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 61
+  time: 562.90 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 2
+  time: 502.90 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 57
+  time: 578.90 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 63
+  time: 123.20 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 137.90 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 2
+  time: 118.40 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 59
+  time: 502.30 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 62
+  time: 122.00 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 61
+  time: 114.70 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 57
+  time: 131.80 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 59
+  time: 119.00 us
+  test_masks:
+  - test_17.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 31
+  time: 667.10 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 16
+  time: 937.40 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 624.90 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 602.80 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 31
+  time: 954.70 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 16
+  time: 657.00 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 25
+  time: 683.10 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 630.10 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 16
+  time: 1.59 ms
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 16
+  time: 670.20 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 13
+  time: 643.30 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 13
+  time: 714.70 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 682.70 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 25
+  time: 723.00 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 13
+  time: 2.25 ms
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 22
+  time: 1.06 ms
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 705.50 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 1.11 ms
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 13
+  time: 685.10 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 22
+  time: 841.40 us
+  test_masks:
+  - test_18.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 41
+  time: 621.40 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 592.70 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 35
+  time: 611.90 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 45
+  time: 766.20 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 41
+  time: 590.80 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 27
+  time: 606.40 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 35
+  time: 606.50 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 43
+  time: 597.80 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 26
+  time: 557.50 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 27
+  time: 597.30 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 15
+  time: 715.00 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 29
+  time: 678.50 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 35
+  time: 671.20 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 35
+  time: 684.00 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 15
+  time: 270.70 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 36
+  time: 681.30 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 45
+  time: 560.90 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 43
+  time: 540.50 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 29
+  time: 577.40 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 36
+  time: 531.60 us
+  test_masks:
+  - test_19.mtx
+  test_matrices:
+  - test_20.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 126
+  time: 1.78 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 102
+  time: 1.55 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 112
+  time: 1.18 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 122
+  time: 1.42 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_15.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 126
+  time: 1.24 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 89
+  time: 1.56 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 99
+  time: 1.17 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 106
+  time: 1.19 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_16.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 102
+  time: 1.25 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 89
+  time: 1.16 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 70
+  time: 1.05 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 84
+  time: 1.11 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_17.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 112
+  time: 1.17 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 99
+  time: 1.20 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 70
+  time: 1.06 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 36
+  time: 1.05 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_18.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 122
+  time: 1.15 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_15.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 106
+  time: 1.16 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 84
+  time: 1.05 ms
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
+- nnz: 36
+  time: 990.60 us
+  test_masks:
+  - test_20.mtx
+  test_matrices:
+  - test_19.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+  - 64x64
