@@ -2178,20 +2178,6 @@ TYPE_END */
                                    memOut_CT$wmAdd_Bool_we,
                                    memOut_CT$wmAdd_Bool_valid};
   assign memMergeIn_CT$wmAdd_Bool_dbuf_r = ((! memOut_CT$wmAdd_Bool_valid) || memOut_CT$wmAdd_Bool_r);
-  logic [31:0] profiling_MemIn_CT$wmAdd_Bool_read;
-  logic [31:0] profiling_MemIn_CT$wmAdd_Bool_write;
-  always_ff @(posedge clk)
-    if ((reset == 1'd1))
-      begin
-        profiling_MemIn_CT$wmAdd_Bool_write <= 0;
-        profiling_MemIn_CT$wmAdd_Bool_read <= 0;
-      end
-    else
-      if ((memMergeIn_CT$wmAdd_Bool_dbuf_we == 1'd1))
-        profiling_MemIn_CT$wmAdd_Bool_write <= (profiling_MemIn_CT$wmAdd_Bool_write + 1);
-      else
-        if ((memOut_CT$wmAdd_Bool_valid == 1'd1))
-          profiling_MemIn_CT$wmAdd_Bool_read <= (profiling_MemIn_CT$wmAdd_Bool_read + 1);
   
   /* demux (Ty C2,
        Ty MemOut_CT$wmAdd_Bool) : (memMergeChoice_CT$wmAdd_Bool,C2) (memOut_CT$wmAdd_Bool_dbuf,MemOut_CT$wmAdd_Bool) > [(memReadOut_CT$wmAdd_Bool,MemOut_CT$wmAdd_Bool),
@@ -2656,20 +2642,6 @@ TYPE_END */
                                 memOut_QTree_Bool_we,
                                 memOut_QTree_Bool_valid};
   assign memMergeIn_QTree_Bool_dbuf_r = ((! memOut_QTree_Bool_valid) || memOut_QTree_Bool_r);
-  logic [31:0] profiling_MemIn_QTree_Bool_read;
-  logic [31:0] profiling_MemIn_QTree_Bool_write;
-  always_ff @(posedge clk)
-    if ((reset == 1'd1))
-      begin
-        profiling_MemIn_QTree_Bool_write <= 0;
-        profiling_MemIn_QTree_Bool_read <= 0;
-      end
-    else
-      if ((memMergeIn_QTree_Bool_dbuf_we == 1'd1))
-        profiling_MemIn_QTree_Bool_write <= (profiling_MemIn_QTree_Bool_write + 1);
-      else
-        if ((memOut_QTree_Bool_valid == 1'd1))
-          profiling_MemIn_QTree_Bool_read <= (profiling_MemIn_QTree_Bool_read + 1);
   
   /* demux (Ty C2,
        Ty MemOut_QTree_Bool) : (memMergeChoice_QTree_Bool,C2) (memOut_QTree_Bool_dbuf,MemOut_QTree_Bool) > [(memReadOut_QTree_Bool,MemOut_QTree_Bool),
@@ -3154,20 +3126,6 @@ TYPE_END */
                                     memWriteOut_QTree_Nat_we,
                                     memWriteOut_QTree_Nat_valid};
   assign dconWriteIn_QTree_Nat_r = ((! memWriteOut_QTree_Nat_valid) || memWriteOut_QTree_Nat_r);
-  logic [31:0] profiling_MemIn_QTree_Nat_read;
-  logic [31:0] profiling_MemIn_QTree_Nat_write;
-  always_ff @(posedge clk)
-    if ((reset == 1'd1))
-      begin
-        profiling_MemIn_QTree_Nat_write <= 0;
-        profiling_MemIn_QTree_Nat_read <= 0;
-      end
-    else
-      if ((dconWriteIn_QTree_Nat_we == 1'd1))
-        profiling_MemIn_QTree_Nat_write <= (profiling_MemIn_QTree_Nat_write + 1);
-      else
-        if ((memWriteOut_QTree_Nat_valid == 1'd1))
-          profiling_MemIn_QTree_Nat_read <= (profiling_MemIn_QTree_Nat_read + 1);
   
   /* mergectrl (Ty C5,Ty QTree_Nat) : [(lizzieLet14_1_argbuf,QTree_Nat),
                                   (lizzieLet15_1_argbuf,QTree_Nat),
@@ -3524,20 +3482,6 @@ TYPE_END */
                                             \memOut_CTmain_map'_Bool_Nat_we ,
                                             \memOut_CTmain_map'_Bool_Nat_valid };
   assign \memMergeIn_CTmain_map'_Bool_Nat_dbuf_r  = ((! \memOut_CTmain_map'_Bool_Nat_valid ) || \memOut_CTmain_map'_Bool_Nat_r );
-  logic [31:0] \profiling_MemIn_CTmain_map'_Bool_Nat_read ;
-  logic [31:0] \profiling_MemIn_CTmain_map'_Bool_Nat_write ;
-  always_ff @(posedge clk)
-    if ((reset == 1'd1))
-      begin
-        \profiling_MemIn_CTmain_map'_Bool_Nat_write  <= 0;
-        \profiling_MemIn_CTmain_map'_Bool_Nat_read  <= 0;
-      end
-    else
-      if ((\memMergeIn_CTmain_map'_Bool_Nat_dbuf_we  == 1'd1))
-        \profiling_MemIn_CTmain_map'_Bool_Nat_write  <= (\profiling_MemIn_CTmain_map'_Bool_Nat_write  + 1);
-      else
-        if ((\memOut_CTmain_map'_Bool_Nat_valid  == 1'd1))
-          \profiling_MemIn_CTmain_map'_Bool_Nat_read  <= (\profiling_MemIn_CTmain_map'_Bool_Nat_read  + 1);
   
   /* demux (Ty C2,
        Ty MemOut_CTmain_map'_Bool_Nat) : (memMergeChoice_CTmain_map'_Bool_Nat,C2) (memOut_CTmain_map'_Bool_Nat_dbuf,MemOut_CTmain_map'_Bool_Nat) > [(memReadOut_CTmain_map'_Bool_Nat,MemOut_CTmain_map'_Bool_Nat),
@@ -3956,20 +3900,6 @@ TYPE_END */
                          memOut_Nat_we,
                          memOut_Nat_valid};
   assign memMergeIn_Nat_dbuf_r = ((! memOut_Nat_valid) || memOut_Nat_r);
-  logic [31:0] profiling_MemIn_Nat_read;
-  logic [31:0] profiling_MemIn_Nat_write;
-  always_ff @(posedge clk)
-    if ((reset == 1'd1))
-      begin
-        profiling_MemIn_Nat_write <= 0;
-        profiling_MemIn_Nat_read <= 0;
-      end
-    else
-      if ((memMergeIn_Nat_dbuf_we == 1'd1))
-        profiling_MemIn_Nat_write <= (profiling_MemIn_Nat_write + 1);
-      else
-        if ((memOut_Nat_valid == 1'd1))
-          profiling_MemIn_Nat_read <= (profiling_MemIn_Nat_read + 1);
   
   /* demux (Ty C2,
        Ty MemOut_Nat) : (memMergeChoice_Nat,C2) (memOut_Nat_dbuf,MemOut_Nat) > [(memReadOut_Nat,MemOut_Nat),
