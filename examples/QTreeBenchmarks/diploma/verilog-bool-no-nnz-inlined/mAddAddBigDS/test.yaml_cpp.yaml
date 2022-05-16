@@ -1,0 +1,81 @@
+matrices_map:
+  data/diploma/matrix-market/262144x262144/ks2010/ks2010.mtx:
+    matrix_market_size: 560899
+    qtree_size: 8034837
+    verilog_path: test_2.mtx
+  data/diploma/matrix-market/262144x262144/tn2010/tn2010.mtx:
+    matrix_market_size: 596983
+    qtree_size: 9119533
+    verilog_path: test_3.mtx
+  data/diploma/matrix-market/262144x262144/az2010/az2010.mtx:
+    matrix_market_size: 598047
+    qtree_size: 11132933
+    verilog_path: test_1.mtx
+test_name: mAddAdd
+test_entries:
+  - nnz: 1751170
+    time: 8.24655e+06 ns
+    test_masks: ~
+    test_matrices:
+      - test_1.mtx
+      - test_2.mtx
+      - test_3.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144
+  - nnz: 1751170
+    time: 8.6581e+06 ns
+    test_masks: ~
+    test_matrices:
+      - test_1.mtx
+      - test_3.mtx
+      - test_2.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144
+  - nnz: 1751170
+    time: 1.69878e+07 ns
+    test_masks: ~
+    test_matrices:
+      - test_2.mtx
+      - test_1.mtx
+      - test_3.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144
+  - nnz: 1751170
+    time: 8.42473e+06 ns
+    test_masks: ~
+    test_matrices:
+      - test_2.mtx
+      - test_3.mtx
+      - test_1.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144
+  - nnz: 1751170
+    time: 8.65666e+06 ns
+    test_masks: ~
+    test_matrices:
+      - test_3.mtx
+      - test_1.mtx
+      - test_2.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144
+  - nnz: 1751170
+    time: 8.48269e+06 ns
+    test_masks: ~
+    test_matrices:
+      - test_3.mtx
+      - test_2.mtx
+      - test_1.mtx
+    sizes:
+      - 262144x262144
+      - 262144x262144
+      - 262144x262144

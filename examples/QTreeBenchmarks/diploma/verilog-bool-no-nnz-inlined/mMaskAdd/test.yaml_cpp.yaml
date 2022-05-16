@@ -1,0 +1,3449 @@
+matrices_map:
+  data/diploma/matrix-market/64x64/GD99_b/GD99_b.mtx:
+    matrix_market_size: 127
+    qtree_size: 877
+    verilog_path: test_19.mtx
+  data/diploma/matrix-market/64x64/bfwa62/bfwa62.mtx:
+    matrix_market_size: 450
+    qtree_size: 1893
+    verilog_path: test_15.mtx
+  data/diploma/matrix-market/128x128/Journals/Journals.mtx:
+    matrix_market_size: 6096
+    qtree_size: 10253
+    verilog_path: test_2.mtx
+  data/diploma/matrix-market/64x64/diag_64x64/diag_64x64.mtx:
+    matrix_market_size: 64
+    qtree_size: 253
+    verilog_path: test_17.mtx
+  data/diploma/matrix-market/256x256/diagonal_256x256/diagonal_256x256.mtx:
+    matrix_market_size: 256
+    qtree_size: 1021
+    verilog_path: test_11.mtx
+  data/diploma/matrix-market/512x512/diagonal_512x512/diagonal_512x512.mtx:
+    matrix_market_size: 512
+    qtree_size: 2045
+    verilog_path: test_14.mtx
+  data/diploma/matrix-market/64x64/will57/will57.mtx:
+    matrix_market_size: 281
+    qtree_size: 1029
+    verilog_path: test_20.mtx
+  data/diploma/matrix-market/128x128/diagonal_128x128/diagonal_128x128.mtx:
+    matrix_market_size: 128
+    qtree_size: 509
+    verilog_path: test_6.mtx
+  data/diploma/matrix-market/64x64/can_61/can_61.mtx:
+    matrix_market_size: 309
+    qtree_size: 1161
+    verilog_path: test_16.mtx
+  data/diploma/matrix-market/256x256/can_256/can_256.mtx:
+    matrix_market_size: 1586
+    qtree_size: 6929
+    verilog_path: test_7.mtx
+  data/diploma/matrix-market/256x256/n3c5-b4/n3c5-b4.mtx:
+    matrix_market_size: 1260
+    qtree_size: 6485
+    verilog_path: test_9.mtx
+  data/diploma/matrix-market/128x128/robot/robot.mtx:
+    matrix_market_size: 870
+    qtree_size: 2729
+    verilog_path: test_1.mtx
+  data/diploma/matrix-market/256x256/dwt_245/dwt_245.mtx:
+    matrix_market_size: 853
+    qtree_size: 3577
+    verilog_path: test_8.mtx
+  data/diploma/matrix-market/64x64/dolphins/dolphins.mtx:
+    matrix_market_size: 159
+    qtree_size: 1097
+    verilog_path: test_18.mtx
+  data/diploma/matrix-market/128x128/football/football.mtx:
+    matrix_market_size: 613
+    qtree_size: 4297
+    verilog_path: test_5.mtx
+  data/diploma/matrix-market/128x128/gent113/gent113.mtx:
+    matrix_market_size: 655
+    qtree_size: 2613
+    verilog_path: test_3.mtx
+  data/diploma/matrix-market/512x512/dwb512/dwb512.mtx:
+    matrix_market_size: 2500
+    qtree_size: 9621
+    verilog_path: test_13.mtx
+  data/diploma/matrix-market/512x512/dwt_503/dwt_503.mtx:
+    matrix_market_size: 3265
+    qtree_size: 12273
+    verilog_path: test_12.mtx
+  data/diploma/matrix-market/256x256/steam1/steam1.mtx:
+    matrix_market_size: 3762
+    qtree_size: 9345
+    verilog_path: test_10.mtx
+  data/diploma/matrix-market/128x128/GD98_b/GD98_b.mtx:
+    matrix_market_size: 207
+    qtree_size: 1781
+    verilog_path: test_4.mtx
+test_name: mMaskAdd
+test_entries:
+  - nnz: 428
+    time: 388040 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 409
+    time: 52510 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 418
+    time: 66360 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 406
+    time: 41550 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 428
+    time: 53460 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 112
+    time: 27690 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 155
+    time: 34980 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 112
+    time: 58030 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 409
+    time: 44090 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 112
+    time: 28380 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 58
+    time: 30890 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 87
+    time: 33530 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 418
+    time: 49070 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 155
+    time: 53970 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 58
+    time: 28930 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 132
+    time: 26400 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 406
+    time: 62190 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 112
+    time: 35990 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 87
+    time: 29790 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 132
+    time: 34820 ns
+    test_masks:
+      - test_1.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 667
+    time: 140540 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 491
+    time: 140010 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 838
+    time: 137120 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 450
+    time: 85130 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 667
+    time: 138920 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 430
+    time: 98430 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 791
+    time: 145300 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 378
+    time: 80790 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 491
+    time: 92020 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 430
+    time: 103830 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 555
+    time: 105460 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 213
+    time: 65980 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 838
+    time: 135310 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 791
+    time: 144960 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 555
+    time: 134860 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 596
+    time: 148360 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 450
+    time: 86750 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 378
+    time: 85890 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 213
+    time: 74390 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 596
+    time: 102840 ns
+    test_masks:
+      - test_2.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 366
+    time: 64660 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 114
+    time: 27080 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 136
+    time: 30710 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 122
+    time: 35470 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 366
+    time: 42650 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 350
+    time: 58070 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 352
+    time: 70360 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 344
+    time: 39430 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 114
+    time: 25100 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 350
+    time: 46620 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 42
+    time: 22560 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 99
+    time: 20490 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 136
+    time: 34620 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 352
+    time: 46250 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 42
+    time: 23810 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 123
+    time: 23190 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 122
+    time: 24830 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 344
+    time: 35730 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 99
+    time: 20280 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 123
+    time: 26700 ns
+    test_masks:
+      - test_3.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 92
+    time: 22570 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 16
+    time: 20990 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 13
+    time: 16110 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 15300 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 92
+    time: 33160 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 95
+    time: 23480 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 22020 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 89
+    time: 18880 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 16
+    time: 15700 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 95
+    time: 22400 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 16
+    time: 16020 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 9
+    time: 14030 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 13
+    time: 29060 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 21940 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 16
+    time: 15390 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 16850 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 14410 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 89
+    time: 27550 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 9
+    time: 17740 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 14820 ns
+    test_masks:
+      - test_4.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 484
+    time: 75670 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 83
+    time: 29190 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 58
+    time: 36440 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 52
+    time: 35350 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 484
+    time: 86420 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 480
+    time: 102050 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 473
+    time: 61220 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 472
+    time: 55040 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 83
+    time: 61880 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 480
+    time: 75770 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 40
+    time: 43690 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 33
+    time: 22880 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 58
+    time: 27950 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 473
+    time: 57910 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 40
+    time: 36740 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 21890 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_6.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 52
+    time: 30900 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 472
+    time: 58830 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 33
+    time: 21700 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 7
+    time: 17040 ns
+    test_masks:
+      - test_5.mtx
+    test_matrices:
+      - test_6.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 29740 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 97
+    time: 35100 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 80
+    time: 21490 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 80
+    time: 17940 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_1.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 20010 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 23400 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 22370 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 29460 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_2.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 97
+    time: 28230 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 22800 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 27800 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 18790 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_3.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 80
+    time: 35590 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 30440 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 25550 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 0
+    time: 11930 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_4.mtx
+      - test_5.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 80
+    time: 19360 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_1.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 124
+    time: 44140 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_2.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 90
+    time: 19620 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_3.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 0
+    time: 8410 ns
+    test_masks:
+      - test_6.mtx
+    test_matrices:
+      - test_5.mtx
+      - test_4.mtx
+    sizes:
+      - 128x128
+      - 128x128
+      - 128x128
+  - nnz: 391
+    time: 57260 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 403
+    time: 119090 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 379
+    time: 55210 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 391
+    time: 49480 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 373
+    time: 64200 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 281
+    time: 41240 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 403
+    time: 73050 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 373
+    time: 91100 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 364
+    time: 61130 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 379
+    time: 44590 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 281
+    time: 67330 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 364
+    time: 60350 ns
+    test_masks:
+      - test_7.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 372
+    time: 45730 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 455
+    time: 65000 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 368
+    time: 39510 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 372
+    time: 62580 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 406
+    time: 51890 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 251
+    time: 41180 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 455
+    time: 62490 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 406
+    time: 58870 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 405
+    time: 44460 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 368
+    time: 42690 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 251
+    time: 48440 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 405
+    time: 42690 ns
+    test_masks:
+      - test_8.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 29
+    time: 29920 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 99
+    time: 45070 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 25
+    time: 24390 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 29
+    time: 32120 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 80
+    time: 40900 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 6
+    time: 25890 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 99
+    time: 54850 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 80
+    time: 39290 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 74
+    time: 42720 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 25
+    time: 41230 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 6
+    time: 46310 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 74
+    time: 38660 ns
+    test_masks:
+      - test_9.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 429
+    time: 101380 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 381
+    time: 86500 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 342
+    time: 89400 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 429
+    time: 92070 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 439
+    time: 81110 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 400
+    time: 69380 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 381
+    time: 88910 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 439
+    time: 89740 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 279
+    time: 77900 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_11.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 342
+    time: 70150 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 400
+    time: 67450 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 279
+    time: 63490 ns
+    test_masks:
+      - test_10.mtx
+    test_matrices:
+      - test_11.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 21020 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 28440 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 25930 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_7.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 17510 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 245
+    time: 32050 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 245
+    time: 33170 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_8.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 17140 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 245
+    time: 28570 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 240
+    time: 36700 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_9.mtx
+      - test_10.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 256
+    time: 28000 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_7.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 245
+    time: 34870 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_8.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 240
+    time: 39770 ns
+    test_masks:
+      - test_11.mtx
+    test_matrices:
+      - test_10.mtx
+      - test_9.mtx
+    sizes:
+      - 256x256
+      - 256x256
+      - 256x256
+  - nnz: 944
+    time: 67300 ns
+    test_masks:
+      - test_12.mtx
+    test_matrices:
+      - test_13.mtx
+      - test_14.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 944
+    time: 63790 ns
+    test_masks:
+      - test_12.mtx
+    test_matrices:
+      - test_14.mtx
+      - test_13.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 953
+    time: 70900 ns
+    test_masks:
+      - test_13.mtx
+    test_matrices:
+      - test_12.mtx
+      - test_14.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 953
+    time: 70370 ns
+    test_masks:
+      - test_13.mtx
+    test_matrices:
+      - test_14.mtx
+      - test_12.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 512
+    time: 29620 ns
+    test_masks:
+      - test_14.mtx
+    test_matrices:
+      - test_12.mtx
+      - test_13.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 512
+    time: 29950 ns
+    test_masks:
+      - test_14.mtx
+    test_matrices:
+      - test_13.mtx
+      - test_12.mtx
+    sizes:
+      - 512x512
+      - 512x512
+      - 512x512
+  - nnz: 119
+    time: 36310 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 25990 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 38590 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 155
+    time: 27780 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 119
+    time: 22600 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 78
+    time: 20950 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 86
+    time: 17780 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 107
+    time: 18560 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 23770 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 78
+    time: 19570 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 38
+    time: 17420 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 115
+    time: 22120 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 23860 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 86
+    time: 34570 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 38
+    time: 24560 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 120
+    time: 30980 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 155
+    time: 30730 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 107
+    time: 27370 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 115
+    time: 30520 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 120
+    time: 23120 ns
+    test_masks:
+      - test_15.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 118
+    time: 18830 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 23230 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 134
+    time: 21340 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 142
+    time: 20810 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 118
+    time: 18150 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 77
+    time: 17040 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 86
+    time: 15030 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 93
+    time: 17530 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 133
+    time: 28050 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 77
+    time: 27930 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 38
+    time: 19510 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 102
+    time: 21550 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 134
+    time: 28000 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 86
+    time: 26960 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 38
+    time: 20820 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 105
+    time: 27750 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 142
+    time: 30290 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 93
+    time: 24430 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 102
+    time: 29670 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 105
+    time: 22900 ns
+    test_masks:
+      - test_16.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 17080 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 13530 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 63
+    time: 14780 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 14950 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 30210 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 61
+    time: 27660 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 16600 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 61
+    time: 25700 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 15790 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 61
+    time: 14960 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 2
+    time: 15930 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 57
+    time: 20320 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 63
+    time: 13930 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 17510 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 2
+    time: 17130 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 59
+    time: 13560 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 62
+    time: 13380 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 61
+    time: 13260 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 57
+    time: 16430 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 59
+    time: 16810 ns
+    test_masks:
+      - test_17.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 31
+    time: 42090 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 16
+    time: 24930 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 20720 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 18010 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 31
+    time: 19660 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 16
+    time: 19510 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 25
+    time: 14110 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 17210 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 16
+    time: 13310 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 16
+    time: 12660 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 13
+    time: 13880 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 13
+    time: 11930 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 17190 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 25
+    time: 13710 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 13
+    time: 11880 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 22
+    time: 14700 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 14060 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 17700 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 13
+    time: 16470 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 22
+    time: 15930 ns
+    test_masks:
+      - test_18.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 41
+    time: 22590 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 14510 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 35
+    time: 20560 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 45
+    time: 18460 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 41
+    time: 15970 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 27
+    time: 13190 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 35
+    time: 15420 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 43
+    time: 17120 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 26
+    time: 23660 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 27
+    time: 13360 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 15
+    time: 14740 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 29
+    time: 14420 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 35
+    time: 16350 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 35
+    time: 14140 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 15
+    time: 12250 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 36
+    time: 15290 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_20.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 45
+    time: 20850 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 43
+    time: 27630 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 29
+    time: 21830 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 36
+    time: 23650 ns
+    test_masks:
+      - test_19.mtx
+    test_matrices:
+      - test_20.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 126
+    time: 27270 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 102
+    time: 21100 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 112
+    time: 26160 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 122
+    time: 18530 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_15.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 126
+    time: 23370 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 89
+    time: 18560 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 99
+    time: 19140 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 106
+    time: 17770 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_16.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 102
+    time: 17860 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 89
+    time: 17060 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 70
+    time: 17510 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 84
+    time: 15200 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_17.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 112
+    time: 19740 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 99
+    time: 26850 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 70
+    time: 23640 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 36
+    time: 19800 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_18.mtx
+      - test_19.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 122
+    time: 25080 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_15.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 106
+    time: 27910 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_16.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 84
+    time: 33370 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_17.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64
+  - nnz: 36
+    time: 18590 ns
+    test_masks:
+      - test_20.mtx
+    test_matrices:
+      - test_19.mtx
+      - test_18.mtx
+    sizes:
+      - 64x64
+      - 64x64
+      - 64x64

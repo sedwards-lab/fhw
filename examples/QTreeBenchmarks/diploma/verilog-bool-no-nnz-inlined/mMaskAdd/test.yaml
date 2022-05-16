@@ -82,7 +82,7 @@ matrices_map:
 test_name: mMaskAdd
 test_entries:
 - nnz: 428
-  time: 3.43 ms
+  time: 4.13 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -93,7 +93,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 409
-  time: 4.21 ms
+  time: 2.91 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -104,7 +104,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 418
-  time: 6.56 ms
+  time: 4.16 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -115,7 +115,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 406
-  time: 3.49 ms
+  time: 3.04 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -126,7 +126,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 428
-  time: 3.42 ms
+  time: 7.14 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -137,7 +137,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 112
-  time: 10.94 ms
+  time: 1.83 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -148,7 +148,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 155
-  time: 3.31 ms
+  time: 2.63 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -159,7 +159,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 112
-  time: 3.98 ms
+  time: 1.77 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -170,7 +170,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 409
-  time: 3.25 ms
+  time: 3.19 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -181,7 +181,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 112
-  time: 2.90 ms
+  time: 1.80 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -192,7 +192,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 58
-  time: 3.43 ms
+  time: 29.23 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -203,7 +203,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 87
-  time: 3.57 ms
+  time: 1.03 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -214,7 +214,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 418
-  time: 5.30 ms
+  time: 4.56 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -225,7 +225,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 155
-  time: 3.41 ms
+  time: 3.33 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -236,7 +236,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 58
-  time: 5.81 ms
+  time: 2.30 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -247,7 +247,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 132
-  time: 9.04 ms
+  time: 2.16 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -258,7 +258,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 406
-  time: 4.41 ms
+  time: 219.04 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -269,7 +269,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 112
-  time: 3.52 ms
+  time: 2.06 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -280,7 +280,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 87
-  time: 3.27 ms
+  time: 1.53 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -291,7 +291,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 132
-  time: 3.57 ms
+  time: 2.33 us
   test_masks:
   - test_1.mtx
   test_matrices:
@@ -302,7 +302,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 667
-  time: 25.67 ms
+  time: 4.33 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -313,7 +313,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 491
-  time: 24.60 ms
+  time: 3.42 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -324,7 +324,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 838
-  time: 23.06 ms
+  time: 7.10 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -335,7 +335,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 450
-  time: 26.49 ms
+  time: 2.88 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -346,7 +346,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 667
-  time: 24.02 ms
+  time: 4.26 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -357,7 +357,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 430
-  time: 29.91 ms
+  time: 3.45 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -368,7 +368,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 791
-  time: 24.34 ms
+  time: 8.00 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -379,7 +379,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 378
-  time: 35.51 ms
+  time: 2.91 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -390,7 +390,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 491
-  time: 27.24 ms
+  time: 3.18 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -401,7 +401,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 430
-  time: 47.94 ms
+  time: 3.71 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -412,7 +412,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 555
-  time: 26.84 ms
+  time: 6.14 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -423,7 +423,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 213
-  time: 22.53 ms
+  time: 1.86 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -434,7 +434,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 838
-  time: 38.39 ms
+  time: 7.65 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -445,7 +445,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 791
-  time: 22.09 ms
+  time: 122.36 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -456,7 +456,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 555
-  time: 30.50 ms
+  time: 8.02 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -467,7 +467,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 596
-  time: 38.81 ms
+  time: 5.22 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -478,7 +478,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 450
-  time: 24.13 ms
+  time: 3.37 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -489,7 +489,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 378
-  time: 26.06 ms
+  time: 3.26 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -500,7 +500,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 213
-  time: 47.70 ms
+  time: 123.01 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -511,7 +511,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 596
-  time: 34.73 ms
+  time: 7.29 us
   test_masks:
   - test_2.mtx
   test_matrices:
@@ -522,7 +522,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 366
-  time: 2.65 ms
+  time: 4.33 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -533,7 +533,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 114
-  time: 2.64 ms
+  time: 2.49 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -544,7 +544,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 136
-  time: 2.61 ms
+  time: 4.92 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -555,7 +555,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 122
-  time: 4.39 ms
+  time: 1.92 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -566,7 +566,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 366
-  time: 2.82 ms
+  time: 4.18 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -577,7 +577,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 350
-  time: 2.52 ms
+  time: 4.10 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -588,7 +588,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 352
-  time: 2.95 ms
+  time: 4.97 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -599,7 +599,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 344
-  time: 5.95 ms
+  time: 3.11 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -610,7 +610,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 114
-  time: 2.79 ms
+  time: 2.22 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -621,7 +621,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 350
-  time: 2.79 ms
+  time: 4.77 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -632,7 +632,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 42
-  time: 2.86 ms
+  time: 2.52 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -643,7 +643,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 99
-  time: 2.86 ms
+  time: 1.49 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -654,7 +654,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 136
-  time: 3.18 ms
+  time: 8.77 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -665,7 +665,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 352
-  time: 7.58 ms
+  time: 4.73 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -676,7 +676,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 42
-  time: 5.82 ms
+  time: 36.24 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -687,7 +687,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 123
-  time: 2.69 ms
+  time: 2.25 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -698,7 +698,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 122
-  time: 2.46 ms
+  time: 2.28 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -709,7 +709,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 344
-  time: 7.20 ms
+  time: 4.85 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -720,7 +720,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 99
-  time: 2.71 ms
+  time: 30.22 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -731,7 +731,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 123
-  time: 2.69 ms
+  time: 1.98 us
   test_masks:
   - test_3.mtx
   test_matrices:
@@ -742,7 +742,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 92
-  time: 2.86 ms
+  time: 2.33 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -753,7 +753,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 16
-  time: 1.05 ms
+  time: 1.40 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -764,7 +764,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 13
-  time: 2.96 ms
+  time: 1.89 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -775,7 +775,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 967.40 us
+  time: 820 ns
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -786,7 +786,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 92
-  time: 1.42 ms
+  time: 2.50 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -797,7 +797,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 95
-  time: 1.17 ms
+  time: 2.40 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -808,7 +808,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 847.00 us
+  time: 33.47 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -819,7 +819,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 89
-  time: 6.61 ms
+  time: 1.64 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -830,7 +830,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 16
-  time: 8.34 ms
+  time: 1.34 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -841,7 +841,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 95
-  time: 3.54 ms
+  time: 2.49 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -852,7 +852,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 16
-  time: 824.30 us
+  time: 1.54 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -863,7 +863,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 9
-  time: 767.00 us
+  time: 800 ns
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -874,7 +874,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 13
-  time: 1.20 ms
+  time: 1.59 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -885,7 +885,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 1.87 ms
+  time: 3.05 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -896,7 +896,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 16
-  time: 4.63 ms
+  time: 1.71 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -907,7 +907,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 1.39 ms
+  time: 1.03 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -918,7 +918,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 1.16 ms
+  time: 740 ns
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -929,7 +929,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 89
-  time: 1.56 ms
+  time: 1.66 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -940,7 +940,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 9
-  time: 1.10 ms
+  time: 790 ns
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -951,7 +951,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 765.20 us
+  time: 1.03 us
   test_masks:
   - test_4.mtx
   test_matrices:
@@ -962,7 +962,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 484
-  time: 2.81 ms
+  time: 7.05 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -973,7 +973,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 83
-  time: 2.40 ms
+  time: 3.23 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -984,7 +984,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 58
-  time: 9.02 ms
+  time: 2.47 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -995,7 +995,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 52
-  time: 2.88 ms
+  time: 2.09 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1006,7 +1006,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 484
-  time: 2.78 ms
+  time: 8.36 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1017,7 +1017,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 480
-  time: 2.28 ms
+  time: 7.34 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1028,7 +1028,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 473
-  time: 4.19 ms
+  time: 6.73 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1039,7 +1039,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 472
-  time: 4.19 ms
+  time: 5.64 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1050,7 +1050,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 83
-  time: 2.16 ms
+  time: 2.97 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1061,7 +1061,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 480
-  time: 2.60 ms
+  time: 7.41 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1072,7 +1072,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 40
-  time: 2.39 ms
+  time: 2.22 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1083,7 +1083,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 33
-  time: 2.53 ms
+  time: 1.74 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1094,7 +1094,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 58
-  time: 2.58 ms
+  time: 2.34 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1105,7 +1105,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 473
-  time: 2.57 ms
+  time: 8.76 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1116,7 +1116,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 40
-  time: 2.54 ms
+  time: 2.31 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1127,7 +1127,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 2.34 ms
+  time: 1.22 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1138,7 +1138,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 52
-  time: 3.37 ms
+  time: 2.95 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1149,7 +1149,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 472
-  time: 2.93 ms
+  time: 49.72 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1160,7 +1160,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 33
-  time: 2.50 ms
+  time: 1.89 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1171,7 +1171,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 7
-  time: 2.59 ms
+  time: 1.16 us
   test_masks:
   - test_5.mtx
   test_matrices:
@@ -1182,7 +1182,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 1.05 ms
+  time: 1.52 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1193,7 +1193,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 97
-  time: 637.70 us
+  time: 1.13 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1204,7 +1204,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 80
-  time: 894.60 us
+  time: 640 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1215,7 +1215,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 80
-  time: 739.80 us
+  time: 1.20 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1226,7 +1226,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 1.36 ms
+  time: 1.61 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1237,7 +1237,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 631.40 us
+  time: 1.40 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1248,7 +1248,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 1.10 ms
+  time: 880 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1259,7 +1259,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 755.00 us
+  time: 1.20 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1270,7 +1270,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 97
-  time: 690.50 us
+  time: 1.17 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1281,7 +1281,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 1.36 ms
+  time: 1.49 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1292,7 +1292,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 684.60 us
+  time: 650 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1303,7 +1303,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 719.90 us
+  time: 950 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1314,7 +1314,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 80
-  time: 2.41 ms
+  time: 46.85 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1325,7 +1325,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 924.60 us
+  time: 900 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1336,7 +1336,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 700.80 us
+  time: 620 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1347,7 +1347,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 0
-  time: 610.50 us
+  time: 590 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1358,7 +1358,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 80
-  time: 699.40 us
+  time: 1.06 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1369,7 +1369,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 124
-  time: 1.21 ms
+  time: 1.35 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1380,7 +1380,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 90
-  time: 964.70 us
+  time: 1.23 us
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1391,7 +1391,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 0
-  time: 564.30 us
+  time: 610 ns
   test_masks:
   - test_6.mtx
   test_matrices:
@@ -1402,7 +1402,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 391
-  time: 6.71 ms
+  time: 4.76 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1413,7 +1413,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 403
-  time: 7.51 ms
+  time: 5.25 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1424,7 +1424,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 379
-  time: 5.78 ms
+  time: 3.52 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1435,7 +1435,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 391
-  time: 6.45 ms
+  time: 3.74 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1446,7 +1446,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 373
-  time: 6.81 ms
+  time: 3.70 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1457,7 +1457,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 281
-  time: 7.53 ms
+  time: 2.40 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1468,7 +1468,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 403
-  time: 6.33 ms
+  time: 5.31 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1479,7 +1479,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 373
-  time: 8.38 ms
+  time: 36.40 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1490,7 +1490,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 364
-  time: 9.03 ms
+  time: 41.15 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1501,7 +1501,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 379
-  time: 8.79 ms
+  time: 4.10 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1512,7 +1512,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 281
-  time: 12.02 ms
+  time: 2.01 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1523,7 +1523,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 364
-  time: 7.65 ms
+  time: 3.41 us
   test_masks:
   - test_7.mtx
   test_matrices:
@@ -1534,7 +1534,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 372
-  time: 3.42 ms
+  time: 3.13 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1545,7 +1545,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 455
-  time: 4.13 ms
+  time: 31.12 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1556,7 +1556,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 368
-  time: 3.68 ms
+  time: 30.96 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1567,7 +1567,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 372
-  time: 4.01 ms
+  time: 29.09 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1578,7 +1578,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 406
-  time: 3.51 ms
+  time: 3.07 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1589,7 +1589,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 251
-  time: 3.65 ms
+  time: 1.58 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1600,7 +1600,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 455
-  time: 3.60 ms
+  time: 4.84 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1611,7 +1611,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 406
-  time: 4.30 ms
+  time: 2.76 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1622,7 +1622,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 405
-  time: 3.64 ms
+  time: 4.01 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1633,7 +1633,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 368
-  time: 3.17 ms
+  time: 4.06 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1644,7 +1644,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 251
-  time: 3.93 ms
+  time: 1.97 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1655,7 +1655,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 405
-  time: 3.84 ms
+  time: 3.21 us
   test_masks:
   - test_8.mtx
   test_matrices:
@@ -1666,7 +1666,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 29
-  time: 5.06 ms
+  time: 1.66 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1677,7 +1677,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 99
-  time: 5.13 ms
+  time: 2.90 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1688,7 +1688,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 25
-  time: 4.81 ms
+  time: 1.37 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1699,7 +1699,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 29
-  time: 4.89 ms
+  time: 1.49 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1710,7 +1710,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 80
-  time: 5.40 ms
+  time: 2.27 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1721,7 +1721,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 6
-  time: 4.47 ms
+  time: 600 ns
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1732,7 +1732,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 99
-  time: 5.07 ms
+  time: 3.32 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1743,7 +1743,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 80
-  time: 5.09 ms
+  time: 2.51 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1754,7 +1754,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 74
-  time: 4.72 ms
+  time: 2.07 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1765,7 +1765,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 25
-  time: 4.72 ms
+  time: 1.38 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1776,7 +1776,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 6
-  time: 4.56 ms
+  time: 770 ns
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1787,7 +1787,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 74
-  time: 4.78 ms
+  time: 2.02 us
   test_masks:
   - test_9.mtx
   test_matrices:
@@ -1798,7 +1798,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 435
-  time: 35.78 ms
+  time: 5.38 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1809,7 +1809,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 422
-  time: 14.73 ms
+  time: 34.55 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1820,7 +1820,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 348
-  time: 14.67 ms
+  time: 33.09 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1831,7 +1831,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 435
-  time: 14.93 ms
+  time: 29.81 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1842,7 +1842,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 474
-  time: 21.96 ms
+  time: 4.69 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1853,7 +1853,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 400
-  time: 14.55 ms
+  time: 4.39 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1864,7 +1864,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 422
-  time: 16.97 ms
+  time: 5.60 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1875,7 +1875,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 474
-  time: 14.67 ms
+  time: 4.58 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1886,7 +1886,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 314
-  time: 14.75 ms
+  time: 3.13 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1897,7 +1897,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 348
-  time: 15.64 ms
+  time: 4.47 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1908,7 +1908,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 400
-  time: 35.29 ms
+  time: 33.29 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1919,7 +1919,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 314
-  time: 17.06 ms
+  time: 401.23 us
   test_masks:
   - test_10.mtx
   test_matrices:
@@ -1930,7 +1930,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 2.15 ms
+  time: 29.49 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1941,7 +1941,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 11.13 ms
+  time: 2.12 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1952,7 +1952,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 1.32 ms
+  time: 3.12 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1963,7 +1963,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 1.37 ms
+  time: 2.62 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1974,7 +1974,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 245
-  time: 1.23 ms
+  time: 1.45 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1985,7 +1985,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 245
-  time: 1.51 ms
+  time: 2.92 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -1996,7 +1996,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 1.54 ms
+  time: 1.56 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2007,7 +2007,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 245
-  time: 1.22 ms
+  time: 1.44 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2018,7 +2018,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 240
-  time: 1.56 ms
+  time: 1.46 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2029,7 +2029,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 256
-  time: 1.25 ms
+  time: 2.51 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2040,7 +2040,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 245
-  time: 1.17 ms
+  time: 2.37 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2051,7 +2051,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 240
-  time: 1.93 ms
+  time: 1.36 us
   test_masks:
   - test_11.mtx
   test_matrices:
@@ -2062,7 +2062,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 944
-  time: 13.72 ms
+  time: 38.41 us
   test_masks:
   - test_12.mtx
   test_matrices:
@@ -2073,7 +2073,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 944
-  time: 16.60 ms
+  time: 7.21 us
   test_masks:
   - test_12.mtx
   test_matrices:
@@ -2084,7 +2084,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 953
-  time: 10.17 ms
+  time: 41.90 us
   test_masks:
   - test_13.mtx
   test_matrices:
@@ -2095,7 +2095,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 953
-  time: 10.03 ms
+  time: 8.89 us
   test_masks:
   - test_13.mtx
   test_matrices:
@@ -2106,7 +2106,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 512
-  time: 2.09 ms
+  time: 5.25 us
   test_masks:
   - test_14.mtx
   test_matrices:
@@ -2117,7 +2117,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 512
-  time: 2.39 ms
+  time: 5.20 us
   test_masks:
   - test_14.mtx
   test_matrices:
@@ -2128,7 +2128,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 119
-  time: 2.44 ms
+  time: 1.70 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2139,7 +2139,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 2.07 ms
+  time: 2.11 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2150,7 +2150,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 2.05 ms
+  time: 1.97 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2161,7 +2161,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 155
-  time: 2.07 ms
+  time: 2.31 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2172,7 +2172,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 119
-  time: 1.73 ms
+  time: 1.54 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2183,7 +2183,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 78
-  time: 2.29 ms
+  time: 1.39 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2194,7 +2194,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 86
-  time: 1.90 ms
+  time: 1.11 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2205,7 +2205,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 107
-  time: 1.65 ms
+  time: 1.52 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2216,7 +2216,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 1.84 ms
+  time: 3.09 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2227,7 +2227,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 78
-  time: 1.99 ms
+  time: 1.13 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2238,7 +2238,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 38
-  time: 1.96 ms
+  time: 1.59 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2249,7 +2249,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 115
-  time: 1.76 ms
+  time: 26.21 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2260,7 +2260,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 1.71 ms
+  time: 2.04 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2271,7 +2271,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 86
-  time: 2.45 ms
+  time: 1.11 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2282,7 +2282,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 38
-  time: 1.72 ms
+  time: 23.65 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2293,7 +2293,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 120
-  time: 1.76 ms
+  time: 2.31 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2304,7 +2304,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 155
-  time: 1.99 ms
+  time: 2.48 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2315,7 +2315,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 107
-  time: 1.82 ms
+  time: 1.43 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2326,7 +2326,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 115
-  time: 1.58 ms
+  time: 1.84 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2337,7 +2337,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 120
-  time: 1.54 ms
+  time: 1.84 us
   test_masks:
   - test_15.mtx
   test_matrices:
@@ -2348,7 +2348,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 118
-  time: 1.39 ms
+  time: 1.51 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2359,7 +2359,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 1.49 ms
+  time: 1.94 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2370,7 +2370,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 134
-  time: 1.49 ms
+  time: 2.03 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2381,7 +2381,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 142
-  time: 1.22 ms
+  time: 1.96 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2392,7 +2392,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 118
-  time: 1.52 ms
+  time: 1.46 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2403,7 +2403,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 77
-  time: 1.41 ms
+  time: 1.05 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2414,7 +2414,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 86
-  time: 1.56 ms
+  time: 1.07 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2425,7 +2425,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 93
-  time: 1.18 ms
+  time: 1.12 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2436,7 +2436,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 133
-  time: 1.38 ms
+  time: 2.05 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2447,7 +2447,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 77
-  time: 1.10 ms
+  time: 1.09 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2458,7 +2458,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 38
-  time: 1.18 ms
+  time: 1.59 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2469,7 +2469,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 102
-  time: 1.42 ms
+  time: 1.53 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2480,7 +2480,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 134
-  time: 1.24 ms
+  time: 1.92 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2491,7 +2491,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 86
-  time: 1.16 ms
+  time: 1.06 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2502,7 +2502,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 38
-  time: 1.16 ms
+  time: 1.59 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2513,7 +2513,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 105
-  time: 1.50 ms
+  time: 1.65 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2524,7 +2524,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 142
-  time: 1.29 ms
+  time: 1.96 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2535,7 +2535,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 93
-  time: 1.18 ms
+  time: 1.09 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2546,7 +2546,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 102
-  time: 1.32 ms
+  time: 1.59 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2557,7 +2557,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 105
-  time: 1.49 ms
+  time: 25.67 us
   test_masks:
   - test_16.mtx
   test_matrices:
@@ -2568,7 +2568,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 120.10 us
+  time: 740 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2579,7 +2579,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 505.70 us
+  time: 1.51 us
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2590,7 +2590,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 63
-  time: 115.20 us
+  time: 770 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2601,7 +2601,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 534.70 us
+  time: 1.57 us
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2612,7 +2612,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 142.10 us
+  time: 25.13 us
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2623,7 +2623,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 61
-  time: 118.00 us
+  time: 620 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2634,7 +2634,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 118.80 us
+  time: 700 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2645,7 +2645,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 61
-  time: 119.10 us
+  time: 790 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2656,7 +2656,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 482.80 us
+  time: 590 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2667,7 +2667,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 61
-  time: 562.90 us
+  time: 580 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2678,7 +2678,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 2
-  time: 502.90 us
+  time: 510 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2689,7 +2689,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 57
-  time: 578.90 us
+  time: 690 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2700,7 +2700,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 63
-  time: 123.20 us
+  time: 800 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2711,7 +2711,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 137.90 us
+  time: 720 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2722,7 +2722,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 2
-  time: 118.40 us
+  time: 520 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2733,7 +2733,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 59
-  time: 502.30 us
+  time: 31.64 us
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2744,7 +2744,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 62
-  time: 122.00 us
+  time: 830 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2755,7 +2755,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 61
-  time: 114.70 us
+  time: 880 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2766,7 +2766,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 57
-  time: 131.80 us
+  time: 870 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2777,7 +2777,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 59
-  time: 119.00 us
+  time: 800 ns
   test_masks:
   - test_17.mtx
   test_matrices:
@@ -2788,7 +2788,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 31
-  time: 667.10 us
+  time: 1.78 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2799,7 +2799,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 16
-  time: 937.40 us
+  time: 1.02 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2810,7 +2810,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 624.90 us
+  time: 1.42 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2821,7 +2821,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 602.80 us
+  time: 1.33 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2832,7 +2832,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 31
-  time: 954.70 us
+  time: 1.63 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2843,7 +2843,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 16
-  time: 657.00 us
+  time: 980 ns
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2854,7 +2854,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 25
-  time: 683.10 us
+  time: 1.56 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2865,7 +2865,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 630.10 us
+  time: 1.36 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2876,7 +2876,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 16
-  time: 1.59 ms
+  time: 970 ns
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2887,7 +2887,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 16
-  time: 670.20 us
+  time: 1.18 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2898,7 +2898,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 13
-  time: 643.30 us
+  time: 1.02 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2909,7 +2909,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 13
-  time: 714.70 us
+  time: 960 ns
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2920,7 +2920,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 682.70 us
+  time: 2.62 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2931,7 +2931,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 25
-  time: 723.00 us
+  time: 1.87 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2942,7 +2942,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 13
-  time: 2.25 ms
+  time: 890 ns
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2953,7 +2953,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 22
-  time: 1.06 ms
+  time: 1.55 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2964,7 +2964,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 705.50 us
+  time: 1.73 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2975,7 +2975,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 1.11 ms
+  time: 1.62 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2986,7 +2986,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 13
-  time: 685.10 us
+  time: 1.11 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -2997,7 +2997,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 22
-  time: 841.40 us
+  time: 1.47 us
   test_masks:
   - test_18.mtx
   test_matrices:
@@ -3008,7 +3008,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 41
-  time: 621.40 us
+  time: 2.21 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3019,7 +3019,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 592.70 us
+  time: 1.51 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3030,7 +3030,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 35
-  time: 611.90 us
+  time: 2.63 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3041,7 +3041,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 45
-  time: 766.20 us
+  time: 2.33 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3052,7 +3052,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 41
-  time: 590.80 us
+  time: 1.94 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3063,7 +3063,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 27
-  time: 606.40 us
+  time: 1.17 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3074,7 +3074,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 35
-  time: 606.50 us
+  time: 26.65 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3085,7 +3085,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 43
-  time: 597.80 us
+  time: 1.80 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3096,7 +3096,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 26
-  time: 557.50 us
+  time: 1.23 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3107,7 +3107,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 27
-  time: 597.30 us
+  time: 1.20 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3118,7 +3118,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 15
-  time: 715.00 us
+  time: 1.04 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3129,7 +3129,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 29
-  time: 678.50 us
+  time: 1.35 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3140,7 +3140,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 35
-  time: 671.20 us
+  time: 1.67 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3151,7 +3151,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 35
-  time: 684.00 us
+  time: 1.81 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3162,7 +3162,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 15
-  time: 270.70 us
+  time: 1.03 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3173,7 +3173,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 36
-  time: 681.30 us
+  time: 1.59 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3184,7 +3184,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 45
-  time: 560.90 us
+  time: 1.62 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3195,7 +3195,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 43
-  time: 540.50 us
+  time: 2.75 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3206,7 +3206,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 29
-  time: 577.40 us
+  time: 20.98 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3217,7 +3217,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 36
-  time: 531.60 us
+  time: 1.76 us
   test_masks:
   - test_19.mtx
   test_matrices:
@@ -3228,7 +3228,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 126
-  time: 1.78 ms
+  time: 2.03 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3239,7 +3239,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 102
-  time: 1.55 ms
+  time: 1.37 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3250,7 +3250,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 112
-  time: 1.18 ms
+  time: 1.64 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3261,7 +3261,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 122
-  time: 1.42 ms
+  time: 1.99 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3272,7 +3272,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 126
-  time: 1.24 ms
+  time: 1.94 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3283,7 +3283,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 89
-  time: 1.56 ms
+  time: 1.48 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3294,7 +3294,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 99
-  time: 1.17 ms
+  time: 1.56 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3305,7 +3305,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 106
-  time: 1.19 ms
+  time: 1.53 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3316,7 +3316,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 102
-  time: 1.25 ms
+  time: 1.94 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3327,7 +3327,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 89
-  time: 1.16 ms
+  time: 1.08 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3338,7 +3338,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 70
-  time: 1.05 ms
+  time: 900 ns
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3349,7 +3349,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 84
-  time: 1.11 ms
+  time: 900 ns
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3360,7 +3360,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 112
-  time: 1.17 ms
+  time: 24.23 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3371,7 +3371,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 99
-  time: 1.20 ms
+  time: 1.35 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3382,7 +3382,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 70
-  time: 1.06 ms
+  time: 830 ns
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3393,7 +3393,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 36
-  time: 1.05 ms
+  time: 1.26 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3404,7 +3404,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 122
-  time: 1.15 ms
+  time: 1.80 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3415,7 +3415,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 106
-  time: 1.16 ms
+  time: 1.36 us
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3426,7 +3426,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 84
-  time: 1.05 ms
+  time: 900 ns
   test_masks:
   - test_20.mtx
   test_matrices:
@@ -3437,7 +3437,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 36
-  time: 990.60 us
+  time: 1.22 us
   test_masks:
   - test_20.mtx
   test_matrices:

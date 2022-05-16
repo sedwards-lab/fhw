@@ -82,7 +82,7 @@ matrices_map:
 test_name: mAddAdd
 test_entries:
 - nnz: 6849
-  time: 18.70 us
+  time: 13.20 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -93,7 +93,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6675
-  time: 18.00 us
+  time: 16.88 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -104,7 +104,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6689
-  time: 18.70 us
+  time: 45.90 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -115,7 +115,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6564
-  time: 19.60 us
+  time: 10.20 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -126,7 +126,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1611
-  time: 15.10 us
+  time: 6.46 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -137,7 +137,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1950
-  time: 20.30 us
+  time: 9.13 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -148,7 +148,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1451
-  time: 13.20 us
+  time: 23.10 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -159,7 +159,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1625
-  time: 15.00 us
+  time: 6.89 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -170,7 +170,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1118
-  time: 22.50 us
+  time: 3.55 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -181,7 +181,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1479
-  time: 12.00 us
+  time: 7.11 us
   test_masks: null
   test_matrices:
   - test_1.mtx
@@ -192,7 +192,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6519
-  time: 18.50 us
+  time: 10.46 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -203,7 +203,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6540
-  time: 19.00 us
+  time: 38.02 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -214,7 +214,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6411
-  time: 18.30 us
+  time: 27.70 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -225,7 +225,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6354
-  time: 18.20 us
+  time: 12.42 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -236,7 +236,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6218
-  time: 19.30 us
+  time: 27.05 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -247,7 +247,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 6241
-  time: 19.50 us
+  time: 10.31 us
   test_masks: null
   test_matrices:
   - test_2.mtx
@@ -258,7 +258,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1426
-  time: 14.90 us
+  time: 6.75 us
   test_masks: null
   test_matrices:
   - test_3.mtx
@@ -269,7 +269,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 891
-  time: 14.50 us
+  time: 4.38 us
   test_masks: null
   test_matrices:
   - test_3.mtx
@@ -280,7 +280,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 1273
-  time: 12.90 us
+  time: 23.45 us
   test_masks: null
   test_matrices:
   - test_3.mtx
@@ -291,7 +291,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 941
-  time: 12.60 us
+  time: 4.12 us
   test_masks: null
   test_matrices:
   - test_4.mtx
@@ -302,7 +302,7 @@ test_entries:
   - 128x128
   - 128x128
 - nnz: 3302
-  time: 14.50 us
+  time: 39.06 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -313,7 +313,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 5398
-  time: 27.10 us
+  time: 14.41 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -324,7 +324,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 2071
-  time: 41.20 us
+  time: 8.95 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -335,7 +335,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 6161
-  time: 20.40 us
+  time: 14.59 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -346,7 +346,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 2821
-  time: 15.00 us
+  time: 8.34 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -357,7 +357,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 5000
-  time: 19.50 us
+  time: 11.97 us
   test_masks: null
   test_matrices:
   - test_7.mtx
@@ -368,7 +368,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 5395
-  time: 19.10 us
+  time: 43.89 us
   test_masks: null
   test_matrices:
   - test_8.mtx
@@ -379,7 +379,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 2118
-  time: 14.30 us
+  time: 6.28 us
   test_masks: null
   test_matrices:
   - test_8.mtx
@@ -390,7 +390,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 4226
-  time: 18.10 us
+  time: 30.49 us
   test_masks: null
   test_matrices:
   - test_8.mtx
@@ -401,7 +401,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 4964
-  time: 18.00 us
+  time: 10.37 us
   test_masks: null
   test_matrices:
   - test_9.mtx
@@ -412,7 +412,7 @@ test_entries:
   - 256x256
   - 256x256
 - nnz: 4821
-  time: 18.50 us
+  time: 43.74 us
   test_masks: null
   test_matrices:
   - test_12.mtx
@@ -423,7 +423,7 @@ test_entries:
   - 512x512
   - 512x512
 - nnz: 643
-  time: 14.80 us
+  time: 2.67 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -434,7 +434,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 769
-  time: 12.70 us
+  time: 22.02 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -445,7 +445,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 727
-  time: 13.40 us
+  time: 3.68 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -456,7 +456,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 796
-  time: 12.20 us
+  time: 4.13 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -467,7 +467,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 595
-  time: 14.40 us
+  time: 2.77 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -478,7 +478,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 553
-  time: 12.10 us
+  time: 2.60 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -489,7 +489,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 631
-  time: 12.10 us
+  time: 3.18 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -500,7 +500,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 685
-  time: 13.30 us
+  time: 3.44 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -511,7 +511,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 762
-  time: 12.40 us
+  time: 26.68 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -522,7 +522,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 711
-  time: 12.80 us
+  time: 132.98 us
   test_masks: null
   test_matrices:
   - test_15.mtx
@@ -533,7 +533,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 455
-  time: 12.20 us
+  time: 2.41 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -544,7 +544,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 412
-  time: 12.40 us
+  time: 2.09 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -555,7 +555,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 504
-  time: 11.80 us
+  time: 3.64 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -566,7 +566,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 544
-  time: 16.80 us
+  time: 5.18 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -577,7 +577,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 634
-  time: 28.70 us
+  time: 3.74 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -588,7 +588,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 585
-  time: 14.30 us
+  time: 6.04 us
   test_masks: null
   test_matrices:
   - test_16.mtx
@@ -599,7 +599,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 335
-  time: 14.40 us
+  time: 2.07 us
   test_masks: null
   test_matrices:
   - test_17.mtx
@@ -610,7 +610,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 434
-  time: 13.20 us
+  time: 2.46 us
   test_masks: null
   test_matrices:
   - test_17.mtx
@@ -621,7 +621,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 386
-  time: 13.20 us
+  time: 2.39 us
   test_masks: null
   test_matrices:
   - test_17.mtx
@@ -632,7 +632,7 @@ test_entries:
   - 64x64
   - 64x64
 - nnz: 518
-  time: 12.80 us
+  time: 2.97 us
   test_masks: null
   test_matrices:
   - test_18.mtx

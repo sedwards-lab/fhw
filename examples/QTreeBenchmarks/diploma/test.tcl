@@ -75,13 +75,24 @@ for {set i 0} {$i < [llength $masks]} {incr i} {
     puts "Index $index"
 }
 
+
+puts "Current scope [current_scope]"
+
+current_scope "$mod_name\_testbench/DUT"
+
+set data_transfered [get_object -r -regexp ".*data_transfered.*"]
+
+puts "$data_transfered"
+
+add_condition -radix dec {data_transfered == 1} {set data_time [current_time]}
+
 run all
 
 set ct  [current_time]
 
 
-
 current_scope "$mod_name\_testbench"
+
 
 
 
@@ -97,6 +108,7 @@ set chan [open $options(dump) a]
 
 puts $chan "- nnz: $result_id"
 
+puts $chan "  data_time: $data_time"
 puts $chan "  time: $ct"
 
 current_scope "$mod_name\_testbench"

@@ -1,5 +1,6 @@
 tests:
 - nnz: 16950
+  data_time: 1497184 ns
   time: 2279328 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 23290
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 16951
@@ -13,6 +14,7 @@ tests:
   - test_3.mtx
   test_masks: null
 - nnz: 15855
+  data_time: 1417312 ns
   time: 2045808 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 20891
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 15856
@@ -26,6 +28,7 @@ tests:
   - test_4.mtx
   test_masks: null
 - nnz: 19266
+  data_time: 1658848 ns
   time: 3018080 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 29846
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 19267
@@ -39,6 +42,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 14340
+  data_time: 1295200 ns
   time: 1739120 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18140
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 14341
@@ -52,6 +56,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 7569
+  data_time: 683872 ns
   time: 1023120 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10353
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7570
@@ -65,6 +70,7 @@ tests:
   - test_4.mtx
   test_masks: null
 - nnz: 10285
+  data_time: 925408 ns
   time: 1456912 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 14649
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 10286
@@ -78,6 +84,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 6196
+  data_time: 561760 ns
   time: 820480 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8468
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 6197
@@ -91,6 +98,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 9259
+  data_time: 845536 ns
   time: 1243568 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12587
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 9260
@@ -104,6 +112,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 5282
+  data_time: 481888 ns
   time: 655632 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6734
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5283
@@ -117,6 +126,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 7956
+  data_time: 723424 ns
   time: 1031264 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10584
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7957
@@ -130,6 +140,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 15705
+  data_time: 1406176 ns
   time: 2079920 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 20945
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 15706
@@ -143,6 +154,7 @@ tests:
   - test_4.mtx
   test_masks: null
 - nnz: 19130
+  data_time: 1647712 ns
   time: 3033168 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 29842
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 19131
@@ -156,6 +168,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 14172
+  data_time: 1284064 ns
   time: 1763984 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18140
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 14173
@@ -169,6 +182,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 18008
+  data_time: 1567840 ns
   time: 2818384 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 27604
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18009
@@ -182,6 +196,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 13092
+  data_time: 1204192 ns
   time: 1548240 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 15824
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 13093
@@ -195,6 +210,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 16741
+  data_time: 1445728 ns
   time: 2580480 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25777
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 16742
@@ -208,6 +224,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 9147
+  data_time: 834400 ns
   time: 1252624 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 12623
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 9148
@@ -221,6 +238,7 @@ tests:
   - test_5.mtx
   test_masks: null
 - nnz: 5195
+  data_time: 470752 ns
   time: 658736 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6783
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 5196
@@ -234,6 +252,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 7835
+  data_time: 712288 ns
   time: 1020224 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 10491
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 7836
@@ -247,6 +266,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 6813
+  data_time: 632416 ns
   time: 833312 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 8609
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 6814
@@ -260,6 +280,7 @@ tests:
   - test_6.mtx
   test_masks: null
 - nnz: 18019
+  data_time: 1631200 ns
   time: 2254864 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 23283
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18020
@@ -273,6 +294,7 @@ tests:
   - test_9.mtx
   test_masks: null
 - nnz: 20859
+  data_time: 1905760 ns
   time: 2622784 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 27295
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 20860
@@ -286,6 +308,7 @@ tests:
   - test_10.mtx
   test_masks: null
 - nnz: 12307
+  data_time: 1106656 ns
   time: 1677968 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 17347
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 12308
@@ -299,6 +322,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 23934
+  data_time: 2184928 ns
   time: 2899344 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 29946
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 23935
@@ -312,6 +336,7 @@ tests:
   - test_10.mtx
   test_masks: null
 - nnz: 15110
+  data_time: 1385824 ns
   time: 1769968 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18326
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 15111
@@ -325,6 +350,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 18002
+  data_time: 1660384 ns
   time: 2165584 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 22510
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 18003
@@ -338,6 +364,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 20532
+  data_time: 1863136 ns
   time: 2489776 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 25820
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 20533
@@ -351,6 +378,7 @@ tests:
   - test_10.mtx
   test_masks: null
 - nnz: 11638
+  data_time: 1064032 ns
   time: 1365744 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 14134
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 11639
@@ -364,6 +392,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 14654
+  data_time: 1338592 ns
   time: 1818016 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 18850
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 14655
@@ -377,6 +406,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 17627
+  data_time: 1617760 ns
   time: 2073136 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 21387
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 17628
@@ -390,6 +420,7 @@ tests:
   - test_11.mtx
   test_masks: null
 - nnz: 25697
+  data_time: 2298208 ns
   time: 3498320 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 35885
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 25698
@@ -403,6 +434,7 @@ tests:
   - test_14.mtx
   test_masks: null
 - nnz: 3603
+  data_time: 317536 ns
   time: 527280 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5439
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3604
@@ -416,6 +448,7 @@ tests:
   - test_17.mtx
   test_masks: null
 - nnz: 4563
+  data_time: 398560 ns
   time: 708112 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7059
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4564
@@ -429,6 +462,7 @@ tests:
   - test_18.mtx
   test_masks: null
 - nnz: 4310
+  data_time: 377440 ns
   time: 670320 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6730
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4311
@@ -442,6 +476,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 4534
+  data_time: 392032 ns
   time: 722944 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 7314
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4535
@@ -455,6 +490,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 3479
+  data_time: 311392 ns
   time: 479680 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4839
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3480
@@ -468,6 +504,7 @@ tests:
   - test_18.mtx
   test_masks: null
 - nnz: 3257
+  data_time: 290272 ns
   time: 458416 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4637
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3258
@@ -481,6 +518,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 3463
+  data_time: 304864 ns
   time: 503984 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5159
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3464
@@ -494,6 +532,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 4134
+  data_time: 371296 ns
   time: 627536 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6194
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4135
@@ -507,6 +546,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 4391
+  data_time: 385888 ns
   time: 667136 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6659
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4392
@@ -520,6 +560,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 4179
+  data_time: 364768 ns
   time: 642432 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 6463
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 4180
@@ -533,6 +574,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 2757
+  data_time: 241120 ns
   time: 418288 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4205
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2758
@@ -546,6 +588,7 @@ tests:
   - test_18.mtx
   test_masks: null
 - nnz: 2531
+  data_time: 220 us
   time: 394592 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3959
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2532
@@ -559,6 +602,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 2661
+  data_time: 234592 ns
   time: 379184 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3909
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2662
@@ -572,6 +616,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 3406
+  data_time: 301024 ns
   time: 563504 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5530
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3407
@@ -585,6 +630,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 3611
+  data_time: 315616 ns
   time: 558416 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5567
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3612
@@ -598,6 +644,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 3367
+  data_time: 294496 ns
   time: 511824 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 5179
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3368
@@ -611,6 +658,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 2383
+  data_time: 213856 ns
   time: 360208 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3607
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2384
@@ -624,6 +672,7 @@ tests:
   - test_19.mtx
   test_masks: null
 - nnz: 2571
+  data_time: 228448 ns
   time: 362224 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3643
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2572
@@ -637,6 +686,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 2367
+  data_time: 207328 ns
   time: 349712 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 3535
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 2368
@@ -650,6 +700,7 @@ tests:
   - test_20.mtx
   test_masks: null
 - nnz: 3223
+  data_time: 288352 ns
   time: 487888 ns
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_read: 4891
   /mAddAdd_testbench/DUT/DUT/profiling_MemIn_QTree_Bool_write: 3224

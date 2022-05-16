@@ -1,0 +1,470 @@
+matrices_map:
+  data/diploma/matrix-market/64x64/GD99_b/GD99_b.mtx:
+    matrix_market_size: 127
+    qtree_size: 877
+    verilog_path: test_19.mtx
+  data/diploma/matrix-market/64x64/bfwa62/bfwa62.mtx:
+    matrix_market_size: 450
+    qtree_size: 1893
+    verilog_path: test_15.mtx
+  data/diploma/matrix-market/128x128/Journals/Journals.mtx:
+    matrix_market_size: 6096
+    qtree_size: 10253
+    verilog_path: test_2.mtx
+  data/diploma/matrix-market/64x64/diag_64x64/diag_64x64.mtx:
+    matrix_market_size: 64
+    qtree_size: 253
+    verilog_path: test_17.mtx
+  data/diploma/matrix-market/256x256/diagonal_256x256/diagonal_256x256.mtx:
+    matrix_market_size: 256
+    qtree_size: 1021
+    verilog_path: test_11.mtx
+  data/diploma/matrix-market/512x512/diagonal_512x512/diagonal_512x512.mtx:
+    matrix_market_size: 512
+    qtree_size: 2045
+    verilog_path: test_14.mtx
+  data/diploma/matrix-market/64x64/will57/will57.mtx:
+    matrix_market_size: 281
+    qtree_size: 1029
+    verilog_path: test_20.mtx
+  data/diploma/matrix-market/128x128/diagonal_128x128/diagonal_128x128.mtx:
+    matrix_market_size: 128
+    qtree_size: 509
+    verilog_path: test_6.mtx
+  data/diploma/matrix-market/64x64/can_61/can_61.mtx:
+    matrix_market_size: 309
+    qtree_size: 1161
+    verilog_path: test_16.mtx
+  data/diploma/matrix-market/256x256/can_256/can_256.mtx:
+    matrix_market_size: 1586
+    qtree_size: 6929
+    verilog_path: test_7.mtx
+  data/diploma/matrix-market/256x256/n3c5-b4/n3c5-b4.mtx:
+    matrix_market_size: 1260
+    qtree_size: 6485
+    verilog_path: test_9.mtx
+  data/diploma/matrix-market/128x128/robot/robot.mtx:
+    matrix_market_size: 870
+    qtree_size: 2729
+    verilog_path: test_1.mtx
+  data/diploma/matrix-market/256x256/dwt_245/dwt_245.mtx:
+    matrix_market_size: 853
+    qtree_size: 3577
+    verilog_path: test_8.mtx
+  data/diploma/matrix-market/64x64/dolphins/dolphins.mtx:
+    matrix_market_size: 159
+    qtree_size: 1097
+    verilog_path: test_18.mtx
+  data/diploma/matrix-market/128x128/football/football.mtx:
+    matrix_market_size: 613
+    qtree_size: 4297
+    verilog_path: test_5.mtx
+  data/diploma/matrix-market/128x128/gent113/gent113.mtx:
+    matrix_market_size: 655
+    qtree_size: 2613
+    verilog_path: test_3.mtx
+  data/diploma/matrix-market/512x512/dwb512/dwb512.mtx:
+    matrix_market_size: 2500
+    qtree_size: 9621
+    verilog_path: test_13.mtx
+  data/diploma/matrix-market/512x512/dwt_503/dwt_503.mtx:
+    matrix_market_size: 3265
+    qtree_size: 12273
+    verilog_path: test_12.mtx
+  data/diploma/matrix-market/256x256/steam1/steam1.mtx:
+    matrix_market_size: 3762
+    qtree_size: 9345
+    verilog_path: test_10.mtx
+  data/diploma/matrix-market/128x128/GD98_b/GD98_b.mtx:
+    matrix_market_size: 207
+    qtree_size: 1781
+    verilog_path: test_4.mtx
+test_name: mMapAdd
+test_entries:
+- nnz: 6560
+  time: 12.72 us
+  test_masks: null
+  test_matrices:
+  - test_1.mtx
+  - test_2.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 1420
+  time: 6.11 us
+  test_masks: null
+  test_matrices:
+  - test_1.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 1070
+  time: 5.13 us
+  test_masks: null
+  test_matrices:
+  - test_1.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 1431
+  time: 7.01 us
+  test_masks: null
+  test_matrices:
+  - test_1.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 918
+  time: 3.27 us
+  test_masks: null
+  test_matrices:
+  - test_1.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 6407
+  time: 40.80 us
+  test_masks: null
+  test_matrices:
+  - test_2.mtx
+  - test_3.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 6214
+  time: 35.20 us
+  test_masks: null
+  test_matrices:
+  - test_2.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 6237
+  time: 36.05 us
+  test_masks: null
+  test_matrices:
+  - test_2.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 6100
+  time: 11.92 us
+  test_masks: null
+  test_matrices:
+  - test_2.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 853
+  time: 25.14 us
+  test_masks: null
+  test_matrices:
+  - test_3.mtx
+  - test_4.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 1235
+  time: 6.96 us
+  test_masks: null
+  test_matrices:
+  - test_3.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 693
+  time: 2.97 us
+  test_masks: null
+  test_matrices:
+  - test_3.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 813
+  time: 5.75 us
+  test_masks: null
+  test_matrices:
+  - test_4.mtx
+  - test_5.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 335
+  time: 2.41 us
+  test_masks: null
+  test_matrices:
+  - test_4.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 741
+  time: 26.15 us
+  test_masks: null
+  test_matrices:
+  - test_5.mtx
+  - test_6.mtx
+  sizes:
+  - 128x128
+  - 128x128
+- nnz: 2071
+  time: 33.81 us
+  test_masks: null
+  test_matrices:
+  - test_7.mtx
+  - test_8.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 2821
+  time: 49.52 us
+  test_masks: null
+  test_matrices:
+  - test_7.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 5000
+  time: 110.90 us
+  test_masks: null
+  test_matrices:
+  - test_7.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 1586
+  time: 7.01 us
+  test_masks: null
+  test_matrices:
+  - test_7.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 2107
+  time: 9.87 us
+  test_masks: null
+  test_matrices:
+  - test_8.mtx
+  - test_9.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 4215
+  time: 11.64 us
+  test_masks: null
+  test_matrices:
+  - test_8.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 864
+  time: 3.62 us
+  test_masks: null
+  test_matrices:
+  - test_8.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 4948
+  time: 47.12 us
+  test_masks: null
+  test_matrices:
+  - test_9.mtx
+  - test_10.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 1516
+  time: 6.74 us
+  test_masks: null
+  test_matrices:
+  - test_9.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 3778
+  time: 9.37 us
+  test_masks: null
+  test_matrices:
+  - test_10.mtx
+  - test_11.mtx
+  sizes:
+  - 256x256
+  - 256x256
+- nnz: 4821
+  time: 19.29 us
+  test_masks: null
+  test_matrices:
+  - test_12.mtx
+  - test_13.mtx
+  sizes:
+  - 512x512
+  - 512x512
+- nnz: 3274
+  time: 12.25 us
+  test_masks: null
+  test_matrices:
+  - test_12.mtx
+  - test_14.mtx
+  sizes:
+  - 512x512
+  - 512x512
+- nnz: 2500
+  time: 7.94 us
+  test_masks: null
+  test_matrices:
+  - test_13.mtx
+  - test_14.mtx
+  sizes:
+  - 512x512
+  - 512x512
+- nnz: 641
+  time: 3.54 us
+  test_masks: null
+  test_matrices:
+  - test_15.mtx
+  - test_16.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 452
+  time: 2.29 us
+  test_masks: null
+  test_matrices:
+  - test_15.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 593
+  time: 3.40 us
+  test_masks: null
+  test_matrices:
+  - test_15.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 552
+  time: 20.08 us
+  test_masks: null
+  test_matrices:
+  - test_15.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 629
+  time: 3.30 us
+  test_masks: null
+  test_matrices:
+  - test_15.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 312
+  time: 1.42 us
+  test_masks: null
+  test_matrices:
+  - test_16.mtx
+  - test_17.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 452
+  time: 21.80 us
+  test_masks: null
+  test_matrices:
+  - test_16.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 410
+  time: 3.82 us
+  test_masks: null
+  test_matrices:
+  - test_16.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 501
+  time: 2.48 us
+  test_masks: null
+  test_matrices:
+  - test_16.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 223
+  time: 1.70 us
+  test_masks: null
+  test_matrices:
+  - test_17.mtx
+  - test_18.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 189
+  time: 1.26 us
+  test_masks: null
+  test_matrices:
+  - test_17.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 288
+  time: 1.58 us
+  test_masks: null
+  test_matrices:
+  - test_17.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 273
+  time: 2.25 us
+  test_masks: null
+  test_matrices:
+  - test_18.mtx
+  - test_19.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 427
+  time: 2.31 us
+  test_masks: null
+  test_matrices:
+  - test_18.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64
+- nnz: 381
+  time: 2.18 us
+  test_masks: null
+  test_matrices:
+  - test_19.mtx
+  - test_20.mtx
+  sizes:
+  - 64x64
+  - 64x64

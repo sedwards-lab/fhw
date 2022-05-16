@@ -10,7 +10,7 @@ test_tcl = os.path.join(os.getcwd(), "test.tcl")
 
 modulename = "mMapKron"
 
-suffix = "not-distilled"
+suffix = "distilled"
 
 config = "test.yaml"
 
